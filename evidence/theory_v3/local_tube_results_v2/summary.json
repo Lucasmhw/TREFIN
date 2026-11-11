@@ -1,7 +1,7 @@
 {
   "protocol": {
     "schema": "trefin-uniform-local-rollout-tube-v1",
-    "source_model": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\server_snapshot\\f-concord\\src\\fconcord\\model.py",
+    "source_model": "evidence/reference_source/src/fconcord/model.py",
     "source_model_sha256": "097ac9b51db52eda88fd661566cf36b99e60cc9ea956ed7739975cbcc5ab3eee",
     "bound_script_sha256": "905f5b3c3a6681e07ab67877f9b12a7178ade6845ca9dcee85e3714b74d6d607",
     "audit_script_sha256": "95efe1b1d91efc60780756a194d6c4da82d2e0848d44b53f78bdd87becc56106",

@@ -42,12 +42,12 @@
     "maximum_finite_mean_ratio": 0.0053541301665538275
   },
   "source_hashes": {
-    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\tube_bounds.py": "905f5b3c3a6681e07ab67877f9b12a7178ade6845ca9dcee85e3714b74d6d607",
-    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\tube_derivation.md": "159e98897560a41d0845ec0d40dd3bdf138e8b1468130dc73ff9603ca1fd6da6",
-    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\audit_local_tubes.py": "95efe1b1d91efc60780756a194d6c4da82d2e0848d44b53f78bdd87becc56106",
-    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\validate_tube_bounds.py": "8e6e47356af03ca681d596d30c21831e3d0342c13eea97828eb285b8be0b2af2",
-    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\summary.json": "9ad894f5e8450c910768c959a1cba15e476345d18b568854c7ad3c385ea80e78",
-    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\validation\\validation_summary.json": "77c94ecd67f0a3251e202396b8dfd5b85fce5e6d54b6a588f088fd71a26c46fb"
+    "evidence/theory_v3/tube_bounds.py": "905f5b3c3a6681e07ab67877f9b12a7178ade6845ca9dcee85e3714b74d6d607",
+    "evidence/theory_v3/tube_derivation.md": "159e98897560a41d0845ec0d40dd3bdf138e8b1468130dc73ff9603ca1fd6da6",
+    "evidence/theory_v3/audit_local_tubes.py": "95efe1b1d91efc60780756a194d6c4da82d2e0848d44b53f78bdd87becc56106",
+    "evidence/theory_v3/validate_tube_bounds.py": "8e6e47356af03ca681d596d30c21831e3d0342c13eea97828eb285b8be0b2af2",
+    "evidence/theory_v3/local_tube_results_v2/summary.json": "9ad894f5e8450c910768c959a1cba15e476345d18b568854c7ad3c385ea80e78",
+    "evidence/theory_v3/validation/validation_summary.json": "77c94ecd67f0a3251e202396b8dfd5b85fce5e6d54b6a588f088fd71a26c46fb"
   },
   "remaining_mathematical_issue": null,
   "interpretation": "Uniform analytic bounds on declared neighborhoods, evaluated in float64; bounded finite-horizon amplification, not universal contraction, unknown-dynamics accuracy, or a numerical distributional W1 certificate."

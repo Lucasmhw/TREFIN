@@ -6,7 +6,7 @@ Code and experiment records for **TREFIN: Interpretable Financial Forecasting th
 
 - `src/`, `configs/`, `runs/`, `rebuttal/`, `crossfold_v3/` and the baseline directories preserve the current execution snapshot. Configuration, selection, calibration, metric and log files are available directly in Git.
 - `evidence/` contains selected additional scientific analyses, compact numerical arrays, figure data and generators. It includes the final normalized factor-flow certificate and the original reference source required by its recorded source hashes.
-- Large server data, checkpoints and prediction arrays, together with historical server archives, are distributed in the same repository's **GitHub Releases**, under tag **`snapshot-2026-11-11`**, as **27 archive parts**. These parts belong to one snapshot; the [artifact instructions and manifest](artifacts/README.md) provide the file lookup and integrity checks. A source-only checkout does not include these large server artifacts.
+- Large server data, checkpoints and prediction arrays, together with historical server archives, are catalogued as **27 archive parts**. The [artifact instructions and manifest](artifacts/README.md) provide the file lookup and integrity checks. These large archives are separate from the source checkout; the compact evidence under `evidence/` can be inspected without them.
 - [Experiment index](docs/EXPERIMENT_INDEX.md) identifies the completed cohorts, their evidence and reproduction entry points. [Bootstrap provenance](docs/BOOTSTRAP_PROVENANCE.json) records every local supplement and its SHA256. Existing server source and run files were not overwritten when these supplements were added.
 
 Directory names such as `rebuttal`, `exploration` and `f-concord` are retained to preserve recorded paths and source provenance. Smoke, debug and partial runs remain distinguishable from the completed cohorts listed in the experiment index.
@@ -33,13 +33,13 @@ python -m fconcord run --config configs/debug.yaml --run-dir reproduction/synthe
 
 ## Reproducing the financial protocols
 
-Before evaluating saved checkpoints, download and verify the complete server artifacts with Python 3.12 or later:
+Before evaluating saved checkpoints, restore and verify the provided archive parts with Python 3.12 or later:
 
 ```bash
-python scripts/restore_artifacts.py
+python scripts/restore_artifacts.py --archive-dir PATH_TO_ARCHIVE_PARTS
 ```
 
-The [artifact guide](artifacts/README.md) explains selective restoration, storage requirements and checksums. Archives are hosted in the [complete experiment release](https://github.com/Lucasmhw/TREFIN/releases/tag/snapshot-2026-11-11).
+The [artifact guide](artifacts/README.md) explains selective restoration, storage requirements and checksums. An explicitly supplied download location can also be used with `--base-url`; no author-account download address is embedded in the repository files.
 
 For training from acquired inputs, the preparation script accepts the FinMultiTime time-series archive, its description CSV and the factor archive:
 

@@ -15,6 +15,27 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def matches_recorded_metadata_hash(path, expected):
+    """Accept exact bytes or an explicitly recorded path-only public derivative."""
+    path = Path(path).resolve()
+    actual = sha(path)
+    if actual == expected:
+        return True
+    for repository in path.parents:
+        manifest = repository/'docs/BOOTSTRAP_PROVENANCE.json'
+        if not manifest.is_file():
+            continue
+        public = read(manifest).get('public_anonymization', {})
+        if public.get('schema') != 'trefin-scientific-path-anonymization-v1':
+            return False
+        relative = path.relative_to(repository).as_posix()
+        records = [item for item in public.get('records', []) if item.get('path') == relative]
+        return (len(records) == 1 and records[0].get('original_sha256') == expected
+                and records[0].get('public_sha256') == actual
+                and records[0].get('public_bytes') == path.stat().st_size)
+    return False
+
+
 def stats(values):
     values = np.asarray(values)
     assert np.isfinite(values).all()
@@ -44,7 +65,7 @@ def main():
     assert spec['runner_sha256'] == sha(here/'audit_factor_flow.py')
     assert spec['base_protocol_sha256'] == sha(root/'decoder_results/protocol.json')
     assert original_spec['source_model_sha256'] == sha(args.model_source)
-    assert original_spec['state_protocol_sha256'] == sha(root/'local_tube_results_v2/protocol.json')
+    assert matches_recorded_metadata_hash(root/'local_tube_results_v2/protocol.json', original_spec['state_protocol_sha256'])
     original_review = read(root/'independent_decoder_result_check.json')
     assert original_review['status'] == 'passed'
     assert original_review['summary_sha256'] == sha(root/'decoder_results/summary.json')

@@ -3273,10 +3273,13 @@
       "path": "evidence/figures/R9_finite_horizon_certificate_manifest.json",
       "source": "scientific-evidence-archive",
       "source_path": "figures/R9_finite_horizon_certificate_manifest.json",
-      "bytes": 6149,
-      "sha256": "f1429171203ff914584ce0d427c048da885cbfd702878ac7724254c6b619601a",
+      "bytes": 3947,
+      "sha256": "a41648158b1f527e5ec35546a6aef898ac04241d6566a619ff028ed4b8d8c9ac",
       "purpose": "Scientific figures, source plot data and provenance.",
-      "action": "copied_byte_exact"
+      "action": "anonymized_path_metadata_from_original",
+      "original_sha256": "f1429171203ff914584ce0d427c048da885cbfd702878ac7724254c6b619601a",
+      "original_bytes": 6149,
+      "transformation": "Only personal absolute path strings changed to existing repository-relative paths; numerical values and embedded scientific hashes unchanged."
     },
     {
       "path": "evidence/figures/R9_global_bounds.csv",
@@ -4992,10 +4995,13 @@
       "path": "evidence/theory_v3/exploration/verify_flow_compact.py",
       "source": "scientific-evidence-archive",
       "source_path": "theory_v3/exploration/verify_flow_compact.py",
-      "bytes": 9136,
-      "sha256": "9854133cbbaeb06e6f49d871e57d43d863e2fb021613856db2374508a92ac922",
+      "bytes": 10136,
+      "sha256": "16460a0d2d102015ac7ff8678254dd77068afd38c9c8a4c08908d603a095fe3f",
       "purpose": "Local state/decoder/defect certificates, final normalized factor-flow analysis, mathematical checks and compact arrays.",
-      "action": "copied_byte_exact"
+      "action": "metadata_anonymization_compatible_verifier",
+      "original_sha256": "9854133cbbaeb06e6f49d871e57d43d863e2fb021613856db2374508a92ac922",
+      "original_bytes": 9136,
+      "transformation": "Add exact-path/original-digest/public-digest/byte-size validation for documented path-anonymized metadata. Numerical verification and all scientific source/data hashes are unchanged."
     },
     {
       "path": "evidence/theory_v3/independent_decoder_result_check.json",
@@ -5037,10 +5043,13 @@
       "path": "evidence/theory_v3/independent_review_results.json",
       "source": "scientific-evidence-archive",
       "source_path": "theory_v3/independent_review_results.json",
-      "bytes": 2963,
-      "sha256": "5109aafe653d7a3cf10b36e0b8071bf63156f9f730d1816c02428cd1985e73b4",
+      "bytes": 2337,
+      "sha256": "df16a448a3a14b6bb44fee28c1981d50a1b6fdbe71bb6e537665e3f03295887a",
       "purpose": "Local state/decoder/defect certificates, final normalized factor-flow analysis, mathematical checks and compact arrays.",
-      "action": "copied_byte_exact"
+      "action": "anonymized_path_metadata_from_original",
+      "original_sha256": "5109aafe653d7a3cf10b36e0b8071bf63156f9f730d1816c02428cd1985e73b4",
+      "original_bytes": 2963,
+      "transformation": "Only personal absolute path strings changed to existing repository-relative paths; numerical values and embedded scientific hashes unchanged."
     },
     {
       "path": "evidence/theory_v3/independent_transition_defect_check.json",
@@ -5217,19 +5226,25 @@
       "path": "evidence/theory_v3/local_tube_results_v2/protocol.json",
       "source": "scientific-evidence-archive",
       "source_path": "theory_v3/local_tube_results_v2/protocol.json",
-      "bytes": 1494,
-      "sha256": "152b7b338db95c1b2a4c54a61349d84e22ec398beea7d744998d3fbc0d9c225d",
+      "bytes": 1378,
+      "sha256": "c050d21d2ba8d92c04922580436da5204b60a626283cad5b50ffffd03c0a49c5",
       "purpose": "Local state/decoder/defect certificates, final normalized factor-flow analysis, mathematical checks and compact arrays.",
-      "action": "copied_byte_exact"
+      "action": "anonymized_path_metadata_from_original",
+      "original_sha256": "152b7b338db95c1b2a4c54a61349d84e22ec398beea7d744998d3fbc0d9c225d",
+      "original_bytes": 1494,
+      "transformation": "Only personal absolute path strings changed to existing repository-relative paths; numerical values and embedded scientific hashes unchanged."
     },
     {
       "path": "evidence/theory_v3/local_tube_results_v2/summary.json",
       "source": "scientific-evidence-archive",
       "source_path": "theory_v3/local_tube_results_v2/summary.json",
-      "bytes": 38075,
-      "sha256": "9ad894f5e8450c910768c959a1cba15e476345d18b568854c7ad3c385ea80e78",
+      "bytes": 37959,
+      "sha256": "253af3fe181572ce2f1c5c245bfcb702ec130c4aac53868b9e6dca2e446373c3",
       "purpose": "Local state/decoder/defect certificates, final normalized factor-flow analysis, mathematical checks and compact arrays.",
-      "action": "copied_byte_exact"
+      "action": "anonymized_path_metadata_from_original",
+      "original_sha256": "9ad894f5e8450c910768c959a1cba15e476345d18b568854c7ad3c385ea80e78",
+      "original_bytes": 38075,
+      "transformation": "Only personal absolute path strings changed to existing repository-relative paths; numerical values and embedded scientific hashes unchanged."
     },
     {
       "path": "evidence/theory_v3/plot_theory_certificate.py",
@@ -5447,5 +5462,90 @@
       "purpose": "Local state/decoder/defect certificates, final normalized factor-flow analysis, mathematical checks and compact arrays.",
       "action": "copied_byte_exact"
     }
-  ]
+  ],
+  "public_anonymization": {
+    "schema": "trefin-scientific-path-anonymization-v1",
+    "scope": "Four scientific JSON metadata files; personal absolute paths replaced by repository-relative paths.",
+    "hash_semantics": "Embedded scientific source, checkpoint, data and historical input hashes are retained unchanged. For references to one of these four derived JSON files, original_sha256 identifies the historical input and public_sha256 identifies its path-anonymized public representation.",
+    "numerical_values_unchanged": true,
+    "records": [
+      {
+        "path": "evidence/figures/R9_finite_horizon_certificate_manifest.json",
+        "original_sha256": "f1429171203ff914584ce0d427c048da885cbfd702878ac7724254c6b619601a",
+        "original_bytes": 6149,
+        "public_sha256": "a41648158b1f527e5ec35546a6aef898ac04241d6566a619ff028ed4b8d8c9ac",
+        "public_bytes": 3947,
+        "replaced_path_occurrences": 21,
+        "repository_relative_destinations": [
+          "evidence/figures/R9_finite_horizon_certificate.pdf",
+          "evidence/figures/R9_finite_horizon_certificate.png",
+          "evidence/figures/R9_finite_horizon_certificate.svg",
+          "evidence/theory_v3/local_tube_results_v2/fold_1_seed_1.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_1_seed_19.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_1_seed_37.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_1_seed_7.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_1_seed_73.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_2_seed_1.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_2_seed_19.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_2_seed_37.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_2_seed_7.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_2_seed_73.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_3_seed_1.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_3_seed_19.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_3_seed_37.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_3_seed_7.json",
+          "evidence/theory_v3/local_tube_results_v2/fold_3_seed_73.json",
+          "evidence/theory_v3/local_tube_results_v2/protocol.json",
+          "evidence/theory_v3/local_tube_results_v2/summary.json",
+          "evidence/theory_v3/validation/validation_summary.json"
+        ]
+      },
+      {
+        "path": "evidence/theory_v3/independent_review_results.json",
+        "original_sha256": "5109aafe653d7a3cf10b36e0b8071bf63156f9f730d1816c02428cd1985e73b4",
+        "original_bytes": 2963,
+        "public_sha256": "df16a448a3a14b6bb44fee28c1981d50a1b6fdbe71bb6e537665e3f03295887a",
+        "public_bytes": 2337,
+        "replaced_path_occurrences": 6,
+        "repository_relative_destinations": [
+          "evidence/theory_v3/audit_local_tubes.py",
+          "evidence/theory_v3/local_tube_results_v2/summary.json",
+          "evidence/theory_v3/tube_bounds.py",
+          "evidence/theory_v3/tube_derivation.md",
+          "evidence/theory_v3/validate_tube_bounds.py",
+          "evidence/theory_v3/validation/validation_summary.json"
+        ]
+      },
+      {
+        "path": "evidence/theory_v3/local_tube_results_v2/protocol.json",
+        "original_sha256": "152b7b338db95c1b2a4c54a61349d84e22ec398beea7d744998d3fbc0d9c225d",
+        "original_bytes": 1494,
+        "public_sha256": "c050d21d2ba8d92c04922580436da5204b60a626283cad5b50ffffd03c0a49c5",
+        "public_bytes": 1378,
+        "replaced_path_occurrences": 1,
+        "repository_relative_destinations": [
+          "evidence/reference_source/src/fconcord/model.py"
+        ]
+      },
+      {
+        "path": "evidence/theory_v3/local_tube_results_v2/summary.json",
+        "original_sha256": "9ad894f5e8450c910768c959a1cba15e476345d18b568854c7ad3c385ea80e78",
+        "original_bytes": 38075,
+        "public_sha256": "253af3fe181572ce2f1c5c245bfcb702ec130c4aac53868b9e6dca2e446373c3",
+        "public_bytes": 37959,
+        "replaced_path_occurrences": 1,
+        "repository_relative_destinations": [
+          "evidence/reference_source/src/fconcord/model.py"
+        ]
+      }
+    ],
+    "verifier_compatibility": {
+      "path": "evidence/theory_v3/exploration/verify_flow_compact.py",
+      "original_sha256": "9854133cbbaeb06e6f49d871e57d43d863e2fb021613856db2374508a92ac922",
+      "public_sha256": "16460a0d2d102015ac7ff8678254dd77068afd38c9c8a4c08908d603a095fe3f",
+      "original_bytes": 9136,
+      "public_bytes": 10136,
+      "scope": "Add exact-path/original-digest/public-digest/byte-size validation for documented path-anonymized metadata. Numerical verification and all scientific source/data hashes are unchanged."
+    }
+  }
 }

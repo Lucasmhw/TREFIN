@@ -1,5 +1,5 @@
-"""Download, verify, and safely restore this snapshot's GitHub Release assets."""
-import argparse,hashlib,json,tarfile,urllib.request
+"""Verify and restore snapshot archives from a local directory or a supplied URL."""
+import argparse,hashlib,json,tarfile,urllib.request,urllib.parse
 from pathlib import Path
 
 def sha256(path):
@@ -13,6 +13,9 @@ def main():
     p.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[1])
     p.add_argument('--verify-only',action='store_true')
     p.add_argument('--part',action='append',help='Restore only a named archive; may be repeated.')
+    source=p.add_mutually_exclusive_group()
+    source.add_argument('--archive-dir',type=Path,help='Directory containing the provided archive parts; originals are retained.')
+    source.add_argument('--base-url',help='Explicit artifact download location; no author-hosted location is embedded.')
     args=p.parse_args();root=args.root.resolve()
     manifest=json.loads((root/'artifacts/server_manifest.json').read_text())
     assets=json.loads((root/'artifacts/release_assets.json').read_text())
@@ -20,14 +23,23 @@ def main():
     known={x['asset'] for x in assets}
     if not selected <= known:raise SystemExit('Unknown asset name')
     if not args.verify_only:
-        cache=root/'.artifact_downloads';cache.mkdir(exist_ok=True)
+        if args.archive_dir is None and args.base_url is None:
+            p.error('Supply --archive-dir PATH or --base-url URL, or use --verify-only for restored files.')
+        cache=root/'.artifact_downloads'
+        if args.base_url:cache.mkdir(exist_ok=True)
         for item in assets:
             if item['asset'] not in selected:continue
-            path=cache/item['asset']
-            if not path.exists() or path.stat().st_size!=item['bytes'] or sha256(path)!=item['sha256']:
+            if Path(item['asset']).name!=item['asset']:
+                raise RuntimeError('Invalid archive filename')
+            path=(args.archive_dir if args.archive_dir is not None else cache)/item['asset']
+            valid=path.is_file() and path.stat().st_size==item['bytes'] and sha256(path)==item['sha256']
+            if args.archive_dir is not None and not valid:
+                raise RuntimeError('Missing archive or checksum mismatch: '+item['asset'])
+            if args.base_url and not valid:
                 print('Downloading',item['asset'],flush=True)
                 temp=path.with_suffix('.partial')
-                urllib.request.urlretrieve(item['url'],temp)
+                address=args.base_url.rstrip('/')+'/'+urllib.parse.quote(item['asset'],safe='')
+                urllib.request.urlretrieve(address,temp)
                 if temp.stat().st_size!=item['bytes'] or sha256(temp)!=item['sha256']:
                     raise RuntimeError('Archive checksum mismatch: '+item['asset'])
                 temp.replace(path)
@@ -38,7 +50,7 @@ def main():
                     if root not in dest.parents or not member.isfile():
                         raise RuntimeError('Unsafe archive member')
                 tar.extractall(root,filter='data')
-            path.unlink()
+            if args.base_url:path.unlink()
     checked=0
     for row in manifest['files']:
         if row['storage']=='release' and row['asset'] not in selected:continue
