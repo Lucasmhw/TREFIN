@@ -1,0 +1,191 @@
+[
+  {
+    "asset": "trefin-artifacts-01.tar.gz",
+    "bytes": 994547855,
+    "sha256": "27d9d9c6c4e85b82d3ed868f864a4fe766e46d713050d430ac675df404ecd6e5",
+    "files": 38,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-01.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-02.tar.gz",
+    "bytes": 990901895,
+    "sha256": "8404fe4ecf1e281f65b432f67604e6e84667adc36f3d489e32a6f1bd3ea76237",
+    "files": 15,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-02.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-03.tar.gz",
+    "bytes": 1043236250,
+    "sha256": "d8db7489adcadd2cc3ead8deff8e23016e83ad16ae297c2b9bd5fd0577d62ce7",
+    "files": 28,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-03.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-04.tar.gz",
+    "bytes": 1043768720,
+    "sha256": "40ba9fd8f42b7568c0405c909b097fe53b7daf7fa4536e8fb0815c9a8d8e5f92",
+    "files": 60,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-04.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-05.tar.gz",
+    "bytes": 1048316035,
+    "sha256": "05ff9771b8e194d0abe1b424943170cd9d0f406b7ffc7d6b7d00535c1287a992",
+    "files": 34,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-05.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-06.tar.gz",
+    "bytes": 1044567680,
+    "sha256": "543995c42a22d37190ace87eab15c0082299380c08d19aa7f9ce8deb17e2f945",
+    "files": 19,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-06.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-07.tar.gz",
+    "bytes": 1038432980,
+    "sha256": "a5da76486e79ed7312bf7c28eb68132c9ac2fc54d599b0f497b43b2bea49dd7d",
+    "files": 21,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-07.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-08.tar.gz",
+    "bytes": 1046472475,
+    "sha256": "7d4dcbeec85a2323fa53bc54761606708adaad6bda0ce7a996981cae6311c3de",
+    "files": 72,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-08.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-09.tar.gz",
+    "bytes": 981674145,
+    "sha256": "0a9164e7f1ca9e946464187a9856bfd2257ebc6f698993493a08bfb067de2973",
+    "files": 82,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-09.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-10.tar.gz",
+    "bytes": 1034500220,
+    "sha256": "9b03aacb032bf89a046f3fa882bae1889c62f9ba11f959a76baf7c5b84a160c9",
+    "files": 22,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-10.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-11.tar.gz",
+    "bytes": 990246440,
+    "sha256": "5451c911cf3765df59318eac49b3f63d6faf2f1079bda4ef014333cc8f565581",
+    "files": 14,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-11.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-12.tar.gz",
+    "bytes": 990410210,
+    "sha256": "9cf8c9c84b204b21d1611a2b41ecdfbc0697cb5a993a608fe2e9dc0c53df68be",
+    "files": 53,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-12.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-13.tar.gz",
+    "bytes": 1048817835,
+    "sha256": "86006ece6ff75912224b627ee1d2053ed1d66171e2801669f510c76a51cbb537",
+    "files": 51,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-13.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-14.tar.gz",
+    "bytes": 951277200,
+    "sha256": "8a93ff7568d74ad8406c2a675a664c18694d1e7f626d52c13842f814c28292f0",
+    "files": 40,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-14.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-15.tar.gz",
+    "bytes": 948942150,
+    "sha256": "83d5c33c7f25949f6d7dc6c015c295ed61e7e8293b56835010c944174c830312",
+    "files": 30,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-15.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-16.tar.gz",
+    "bytes": 945541965,
+    "sha256": "3647e30f20503a67c68d931ade7b5fdeb0eac4453576c7b7f79e970a364ab0e9",
+    "files": 30,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-16.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-17.tar.gz",
+    "bytes": 1031315030,
+    "sha256": "aea1b28df979c8a15eb6829b4e7990f1203e685f67f5b09e15df84209cb5ef70",
+    "files": 35,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-17.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-18.tar.gz",
+    "bytes": 983312630,
+    "sha256": "957c4eb3f6702970dad9a77163b67a097cd8f101abf5753f95a15c0c686cb63f",
+    "files": 82,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-18.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-19.tar.gz",
+    "bytes": 969292140,
+    "sha256": "6c9b9060b5a3913377f6d7235a801999b5343d5e69aae19976f31680e971cd7e",
+    "files": 30,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-19.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-20.tar.gz",
+    "bytes": 1038607040,
+    "sha256": "4c35cc7a73e6e65a06d7fd54db74c24e4993b337a62c41c3bbed72ad3f90ec32",
+    "files": 31,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-20.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-21.tar.gz",
+    "bytes": 1026542460,
+    "sha256": "baf5a37ce4fcac408b4250a879dfc2cb7b718ce2fced2ce1c744e5245d0a8189",
+    "files": 34,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-21.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-22.tar.gz",
+    "bytes": 970193395,
+    "sha256": "67400d12bab9160f0a321cd9499c20b57ced8fa89294c7aef5a7fb02432c1cce",
+    "files": 31,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-22.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-23.tar.gz",
+    "bytes": 969312625,
+    "sha256": "27a469b09934e571a75de4f9540124a42269a605c8bdaa6aa669f75e96597540",
+    "files": 30,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-23.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-24.tar.gz",
+    "bytes": 1038514855,
+    "sha256": "01b1edc5e28d6c008c2e2bc03d1fde7b5dce7a7700f72127bac54d6ac6a88e5e",
+    "files": 31,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-24.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-25.tar.gz",
+    "bytes": 1026685840,
+    "sha256": "3b63077a01dd29af1e33f2c320393e1ad581a9249580a760e2453ca752759cc5",
+    "files": 34,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-25.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-26.tar.gz",
+    "bytes": 1011517955,
+    "sha256": "6ea895d1ef67a925026d2031bbdc95f4663caf176566f5883493d5826b670f74",
+    "files": 65,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-26.tar.gz"
+  },
+  {
+    "asset": "trefin-artifacts-27.tar.gz",
+    "bytes": 149383450,
+    "sha256": "716616c7c8029830b160b414abe6cda86fee841e642ac5a23b86ee29cabc8f71",
+    "files": 11,
+    "url": "https://github.com/Lucasmhw/TREFIN/releases/download/snapshot-2026-11-11/trefin-artifacts-27.tar.gz"
+  }
+]
