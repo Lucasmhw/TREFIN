@@ -6,7 +6,7 @@ Code and experiment records for **TREFIN: Interpretable Financial Forecasting th
 
 - `src/`, `configs/`, `runs/`, `rebuttal/`, `crossfold_v3/` and the baseline directories preserve the current execution snapshot. Configuration, selection, calibration, metric and log files are available directly in Git.
 - `evidence/` contains selected additional scientific analyses, compact numerical arrays, figure data and generators. It includes the final normalized factor-flow certificate and the original reference source required by its recorded source hashes.
-- Large server data, checkpoints and prediction arrays, together with historical server archives, are distributed in the same repository's **GitHub Releases**, under tag **`snapshot-2026-11-11`**, as **27 archive parts**. These parts belong to one snapshot; the release manifest and restoration utility provide the file lookup and integrity checks. A source-only checkout does not include these large server artifacts.
+- Large server data, checkpoints and prediction arrays, together with historical server archives, are distributed in the same repository's **GitHub Releases**, under tag **`snapshot-2026-11-11`**, as **27 archive parts**. These parts belong to one snapshot; the [artifact instructions and manifest](artifacts/README.md) provide the file lookup and integrity checks. A source-only checkout does not include these large server artifacts.
 - [Experiment index](docs/EXPERIMENT_INDEX.md) identifies the completed cohorts, their evidence and reproduction entry points. [Bootstrap provenance](docs/BOOTSTRAP_PROVENANCE.json) records every local supplement and its SHA256. Existing server source and run files were not overwritten when these supplements were added.
 
 Directory names such as `rebuttal`, `exploration` and `f-concord` are retained to preserve recorded paths and source provenance. Smoke, debug and partial runs remain distinguishable from the completed cohorts listed in the experiment index.
@@ -33,15 +33,15 @@ python -m fconcord run --config configs/debug.yaml --run-dir reproduction/synthe
 
 ## Reproducing the financial protocols
 
-Restore the release artifacts before evaluating saved checkpoints. For training from acquired inputs, the preparation script accepts the FinMultiTime time-series archive, its description CSV and the factor archive:
-
-Download and verify the complete server artifacts with Python 3.12 or later:
+Before evaluating saved checkpoints, download and verify the complete server artifacts with Python 3.12 or later:
 
 ```bash
 python scripts/restore_artifacts.py
 ```
 
 The [artifact guide](artifacts/README.md) explains selective restoration, storage requirements and checksums. Archives are hosted in the [complete experiment release](https://github.com/Lucasmhw/TREFIN/releases/tag/snapshot-2026-11-11).
+
+For training from acquired inputs, the preparation script accepts the FinMultiTime time-series archive, its description CSV and the factor archive:
 
 ```bash
 python scripts/prepare_finmultitime.py --time-series-zip PATH_TO_TIME_SERIES_ZIP --description-csv PATH_TO_DESCRIPTION_CSV --factor-zip PATH_TO_FACTOR_ZIP --output-dir data/raw/finmultitime_us_32
@@ -50,13 +50,13 @@ python -m fconcord protocol --config configs/finmultitime_us_calibrated_protocol
 
 The registered U.S. panel contains 32 assets with a five-day forecast horizon. The rolling tests cover 2020–2021, 2022–2023 and January 2024–March 2025, with seeds `1, 7, 19, 37, 73`. Prepared metadata, resolved configurations and per-run audit records define the exact samples and preprocessing. Training estimates the preprocessing parameters; validation selects configurations, checkpoints and calibration; the held-out test periods provide the reported evaluation.
 
-The completed three-fold Full/FrozenGraph study has a separate isolated implementation and frozen selections. Its complete training orchestrator is:
+The completed three-fold Full/FrozenGraph study has a separate isolated implementation and frozen selections. After restoring its arrays, regenerate its aggregate comparison with:
 
 ```bash
-python rebuttal/frozen_graph_v7/orchestrate_study.py --root . --study-root reproduction/frozen_graph_v7 --workers 6
+python rebuttal/frozen_graph_v7/analysis_tools/analyze_frozen_graph.py --study-root rebuttal/frozen_graph_v7 --output-dir reproduction/frozen_graph_analysis
 ```
 
-Read the study's registration and the [experiment index](docs/EXPERIMENT_INDEX.md) before launching it. A complete rerun is a substantial training workload. The study compares learned graph transitions with retaining the same initial measured graph, using matched training, configuration selection and calibration.
+For a complete training rerun, initialize a separate study directory as specified in the [study implementation instructions](rebuttal/frozen_graph_v7/implementation/README.md), then use its search, selection and evaluation commands or the parent orchestrator. The study compares learned graph transitions with retaining the same initial measured graph, using matched training, configuration selection and calibration. The [experiment index](docs/EXPERIMENT_INDEX.md) identifies its completed cohort.
 
 ## Checking compact evidence without retraining
 
