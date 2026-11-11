@@ -1,0 +1,125 @@
+manual:
+  title: F-CONCORD full explanation and reproduction manual (Chinese)
+  version_date: 2026-08-15
+  sha256: 6AF5C035B2673DFE669DE199030A6AF564F2EC3F840F08F976C50BAA9AE4474E
+  pages: 39
+
+status_vocabulary:
+  implemented: Code and automated tests currently realize the manual requirement.
+  partial: A scoped implementation exists but the complete publishable protocol is not yet closed.
+  pending: Required work is explicitly not implemented and must not be claimed.
+
+requirements:
+  - id: M01
+    manual_equations: [return, targetlaw]
+    requirement: Adjusted-price excess log-return targets and joint multi-asset distribution.
+    status: implemented
+    code: [src/fconcord/data/dataset.py, src/fconcord/model.py]
+    tests: [tests/test_dataset.py, tests/test_model.py]
+  - id: M02
+    manual_equations: [weights, momentum, semivariance, jump, illiq, daily-ofi, factor-reg]
+    requirement: Fixed-order expert concept measurement with daily-proxy and interval-OFI semantics separated.
+    status: implemented
+    code: [src/fconcord/concepts.py, src/fconcord/data/dataset.py]
+    tests: [tests/test_concepts.py, tests/test_dataset.py]
+  - id: M03
+    manual_equations: [factor-reg, residual, glasso, partial-corr, smooth-graph]
+    requirement: Rolling factor residuals, training-only Graphical-Lasso selection, warm start, signed partial-correlation graph.
+    status: implemented
+    code: [src/fconcord/graph.py, src/fconcord/data/dataset.py]
+    tests: [tests/test_graph.py, tests/test_dataset.py]
+  - id: M04
+    manual_equations: [market-return, market-rv, market-dependence, market-illiquidity, regime]
+    requirement: Three named market coordinates with lagged weights and train-only robust transforms.
+    status: implemented
+    code: [src/fconcord/data/dataset.py]
+    tests: [tests/test_dataset.py]
+  - id: M05
+    manual_equations: [c-set, a-set]
+    requirement: Per-coordinate concept box and graph Frobenius ball learned from training quantiles only.
+    status: implemented
+    code: [src/fconcord/concepts.py, src/fconcord/data/dataset.py, src/fconcord/model.py]
+    tests: [tests/test_dataset.py, tests/test_model.py]
+  - id: M06
+    manual_equations: [typed-operator, concept-dynamics, graph-update]
+    requirement: Strict concept bottleneck, typed signed/unsigned diffusion, parallel old-state closed-loop update.
+    status: implemented
+    code: [src/fconcord/model.py]
+    tests: [tests/test_model.py, tests/test_graph.py]
+  - id: M07
+    manual_equations: [precision, correlation, t-shock, asymmetric-return, mean-correct]
+    requirement: SPD graph precision, centered asymmetric unit-variance multivariate Student-t decoder, and validation-only positive predictable-signal calibration.
+    status: implemented
+    code: [src/fconcord/model.py, src/fconcord/calibration.py, src/fconcord/trainer.py]
+    tests: [tests/test_model.py, tests/test_calibration.py]
+  - id: M08
+    manual_equations: [future-target, concept-loss, graph-loss, energy-score]
+    requirement: State supervision at h=0..H with normalized Huber losses and exact all-pairs finite-sample energy score.
+    status: implemented
+    code: [src/fconcord/data/dataset.py, src/fconcord/losses.py, src/fconcord/metrics.py]
+    tests: [tests/test_dataset.py, tests/test_losses.py]
+  - id: M09
+    manual_equations: [gain-matrix, gain-loss, spectral-radius]
+    requirement: Separate global structural bound and 20-step empirical JVP/VJP block-Jacobian diagnostic.
+    status: implemented
+    code: [src/fconcord/model.py, src/fconcord/certificates.py, src/fconcord/experiment.py]
+    tests: [tests/test_model.py]
+  - id: M10
+    manual_equations: [purge]
+    requirement: Purged chronological train/validation/test boundary; validation-only checkpoint selection; fresh reload before final test.
+    status: implemented
+    code: [src/fconcord/data/dataset.py, src/fconcord/trainer.py, src/fconcord/experiment.py, src/fconcord/calibration.py]
+    tests: [tests/test_dataset.py, tests/test_calibration.py]
+  - id: E01
+    manual_section: three-layer data design
+    requirement: FinMultiTime US/China daily main layer with point-in-time membership and delisting audit.
+    status: partial
+    code: [src/fconcord/data/finmultitime.py, scripts/prepare_finmultitime.py, configs/finmultitime_us_debug.yaml]
+    tests: [tests/test_finmultitime.py]
+    blocker: A single-seed US-32 implementation audit is complete; China factors, point-in-time membership/delisting treatment and the full rolling multi-seed study remain open.
+  - id: E02
+    manual_section: three-layer data design
+    requirement: FinTSBridge GSMI/OPTION/BTCF multi-horizon layer.
+    status: partial
+    code: [src/fconcord/data/fintsbridge.py, scripts/prepare_fintsbridge_btcf.py, configs/fintsbridge_btcf_debug.yaml]
+    tests: [tests/test_fintsbridge.py]
+    blocker: The exact official 43,014-row BTCF artifact has one audited H=5 run; all four horizons, five seeds and the GSMI/OPTION extensions have not yet completed.
+  - id: E03
+    manual_section: three-layer data design
+    requirement: TLOB FI-2010 and BTC microstructure external validation.
+    status: pending
+    code: []
+    tests: []
+  - id: E04
+    manual_section: rolling evaluation protocol
+    requirement: Multiple rolling folds and five seeds [1,7,19,37,73].
+    status: implemented
+    code: [src/fconcord/protocol.py, configs/finmultitime_us_protocol.yaml, scripts/audit_protocol.py]
+    tests: [tests/test_protocol.py, tests/test_dataset.py]
+    evidence: >-
+      The registered FinMultiTime US-32 protocol completed all 15 fold/seed pairs and its
+      independent protocol audit verified checkpoints, split-label boundaries, one-time
+      final tests and 750 figures. See docs/REAL_RUNS.yaml.
+  - id: E05
+    manual_section: required baselines and ablations
+    requirement: All five baseline families, five key ablations, equal budgets, completeness probe and statistical tests.
+    status: partial
+    code: [src/fconcord/benchmark.py, src/fconcord/benchmark_protocol.py, src/fconcord/benchmark_models.py, src/fconcord/benchmark_classical.py, src/fconcord/foundation.py, src/fconcord/ablation.py, src/fconcord/statistical_tests.py]
+    tests: [tests/test_benchmark_orchestrator.py, tests/test_benchmark_protocol.py, tests/test_benchmark_models.py, tests/test_benchmark_classical.py, tests/test_benchmark_training.py, tests/test_foundation.py, tests/test_ablation.py, tests/test_statistical_tests.py]
+    blocker: >-
+      The equal-budget native matrix, official Chronos-2/TimesFM-2.5 adapters, five
+      true retraining ablations, completeness controls and registered statistical
+      tests are implemented. The complete server-side fold/seed baseline, foundation
+      and retrained-ablation protocols must finish and pass artifact audit before E05
+      becomes implemented or any superiority claim is allowed.
+  - id: E06
+    manual_section: calibration tail risk and economic value
+    requirement: CRPS, PIT, interval coverage/width, VaR/ES tests, cost-aware CAGR/Sharpe/Sortino/drawdown/Calmar.
+    status: partial
+    code: [src/fconcord/metrics.py, src/fconcord/visualization.py]
+    tests: []
+    blocker: Coverage/width and illustrative cost-aware plots exist; formal CRPS, VaR/ES calibration and full decision statistics remain open.
+
+claim_rule:
+  publishable_manual_replication_requires: [M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, E01, E02, E04, E05, E06]
+  current_claim_allowed: Core model implementation audit only; not a completed three-layer ICLR experiment.

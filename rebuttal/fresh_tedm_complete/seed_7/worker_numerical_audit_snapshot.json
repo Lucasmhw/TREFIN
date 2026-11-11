@@ -1,0 +1,57 @@
+{
+  "calls": 17568,
+  "zero_zero_elements": 2,
+  "zero_denominator_elements": 224,
+  "repaired_calls": 2,
+  "events": [
+    {
+      "seed": 7,
+      "candidate": 1,
+      "epoch": 100,
+      "phase": "val",
+      "optimizer_update": 3400,
+      "training_batch_offset": 2112,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        729,
+        8,
+        0
+      ]
+    },
+    {
+      "seed": 7,
+      "candidate": 2,
+      "epoch": 16,
+      "phase": "val",
+      "optimizer_update": 544,
+      "training_batch_offset": 2112,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        729,
+        8,
+        0
+      ]
+    }
+  ],
+  "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+}

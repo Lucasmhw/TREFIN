@@ -1,0 +1,155 @@
+{
+  "family": "tedm",
+  "seed": 1,
+  "scope": "NEW supplemental experiments; no claim to reconstruct the historical separate-host experiments",
+  "selected_candidate": {
+    "candidate": 1,
+    "learning_rate": 0.001,
+    "best_epoch": 100,
+    "best_validation_es": 0.12845744408270487,
+    "epochs_completed": 100,
+    "optimizer_updates": 5000,
+    "training_and_validation_seconds": 7326.520035028458,
+    "parameters": 5002416,
+    "checkpoint": "seed_1/candidate_01/best.pt",
+    "checkpoint_sha256": "527d3605eeecbd3553cf2a02363eddceb5b70a0157d2b784df3a8e9e98525fbf"
+  },
+  "candidate_summaries": [
+    {
+      "candidate": 1,
+      "learning_rate": 0.001,
+      "best_epoch": 100,
+      "best_validation_es": 0.12845744408270487,
+      "epochs_completed": 100,
+      "optimizer_updates": 5000,
+      "training_and_validation_seconds": 7326.520035028458,
+      "parameters": 5002416,
+      "checkpoint": "seed_1/candidate_01/best.pt",
+      "checkpoint_sha256": "527d3605eeecbd3553cf2a02363eddceb5b70a0157d2b784df3a8e9e98525fbf"
+    },
+    {
+      "candidate": 2,
+      "learning_rate": 0.0003,
+      "best_epoch": 1,
+      "best_validation_es": 0.12865522439760202,
+      "epochs_completed": 16,
+      "optimizer_updates": 800,
+      "training_and_validation_seconds": 1108.7318260669708,
+      "parameters": 5002416,
+      "checkpoint": "seed_1/candidate_02/best.pt",
+      "checkpoint_sha256": "0a5887aa86d04fc0932459dd0f21eddb34d2be43eff234b6747b195cd59ff301"
+    }
+  ],
+  "rho": 0.05,
+  "before": {
+    "mse": 0.0005974018556423652,
+    "rmse": 0.02444180549064175,
+    "mae": 0.017500625925582883,
+    "directional_accuracy": 0.49812091503267975,
+    "msic": -0.010920430907859255,
+    "msir": -0.023306592789714812,
+    "energy_score": 0.11775279699390098,
+    "coverage_90": 0.20557598039215685,
+    "width_90": 0.010913703685143173
+  },
+  "after": {
+    "mse": 0.00034003555811652325,
+    "rmse": 0.018440053094189376,
+    "mae": 0.012447991299422572,
+    "directional_accuracy": 0.49812091503267975,
+    "msic": -0.010920430907859258,
+    "msir": -0.02330659278971481,
+    "energy_score": 0.08414401526665323,
+    "coverage_90": 0.3046977124183007,
+    "width_90": 0.010913703685143173
+  },
+  "test_origins": 306,
+  "test_seconds": 83.78585243225098,
+  "reload_validation_ES_difference": 0.0,
+  "pairwise_translation_error": 6.938893903907228e-18,
+  "source_data_sha256": "b57b281c7b2f006c9021513819bf1d31e5051b8d39f52e6f4f6dbb40244ac5fa",
+  "protocol_sha256": "a366b9535de5f60c39d8946d0535954621fe7c0c08ce2201efddecb151b2dfac",
+  "test_predictions_sha256": "db0f6154a3bc08adc445fde9e31e7647f194e858ab5de5f6da089708bab5522e",
+  "test_targets_float32_bytes_sha256": "68e6dda3b05e783c17b14bd0b3e08d9b39c91df9357748637b36b9e0e5253a9d",
+  "numerical_audit_cumulative": {
+    "calls": 21160,
+    "zero_zero_elements": 3,
+    "zero_denominator_elements": 337,
+    "repaired_calls": 3,
+    "events": [
+      {
+        "seed": 1,
+        "candidate": 1,
+        "epoch": 1,
+        "phase": "val",
+        "optimizer_update": 50,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          1191,
+          23,
+          0
+        ]
+      },
+      {
+        "seed": 1,
+        "candidate": 1,
+        "epoch": 30,
+        "phase": "val",
+        "optimizer_update": 1500,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2315,
+          23,
+          0
+        ]
+      },
+      {
+        "seed": 1,
+        "candidate": 1,
+        "epoch": 35,
+        "phase": "val",
+        "optimizer_update": 1750,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          113
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 112,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          741,
+          13,
+          0
+        ]
+      }
+    ],
+    "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+  }
+}

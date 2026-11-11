@@ -1,0 +1,100 @@
+{
+  "schema": "trefin-fresh-point-baseline-v1",
+  "status": "NEW supplemental experiments; no claim to reconstruct historical separate-host results",
+  "family": "timexer",
+  "upstream": {
+    "url": "https://github.com/thuml/Time-Series-Library",
+    "revision": "4e938a1767106324dd753b2a44832bf870a0252e",
+    "license": "MIT",
+    "files": {
+      "models/TimeXer.py": "498165f2532a8434c39060471e5a150af81a16fa9124dc6163d33e885fa2aeae",
+      "layers/SelfAttention_Family.py": "0fea961b640b1a7db471df2e389abfb843ce8e5767aca5af141ee22dd43be66f",
+      "layers/Embed.py": "0a29593e3796b5a3798bd3d37c1150fc2256c559abdee36e83eecd1a05787247",
+      "utils/masking.py": "c22de70ad076f4eeecc857aba984741da05da54375333399ff2742b041544986",
+      "LICENSE": "3892254202fc16573828d34ec901ab765d8eb73a03d174b131a49771adcd8d64",
+      "README.md": "f79bd90ec18fe84a51aa8f4f60356466632e06c74597f72aae6c48a7e22b513f"
+    }
+  },
+  "source_manifest_sha256": "ec6dd6cb175b6783eb291aab64aedc856f2904854364014df1e37ee7d114ab7d",
+  "data_manifest_sha256": "460d54315b42fff0d84cb11bd414ab90c418c241e73952351631875cd513b622",
+  "data_sha256": "b57b281c7b2f006c9021513819bf1d31e5051b8d39f52e6f4f6dbb40244ac5fa",
+  "script_sha256": "98984772ce27d2a55330ee8e9d6537dcf249d866f72d69b7a52303804a36743c",
+  "common_helper_sha256": "3d9bd8e9ab7d9c57f16f7fc7580cfd11c889f84ed31e5b61d5af1026c026f143",
+  "seeds": [
+    19
+  ],
+  "learning_rate_candidates": [
+    0.001,
+    0.0003
+  ],
+  "architecture_candidates": 1,
+  "max_epochs": 100,
+  "patience_epochs": 15,
+  "batch_size": 64,
+  "validation_samples": 64,
+  "test_samples": 256,
+  "evaluation_rng_seed": 271828,
+  "test_rng_seed": 271829,
+  "configuration": {
+    "task_name": "short_term_forecast",
+    "features": "M",
+    "seq_len": 126,
+    "pred_len": 5,
+    "use_norm": true,
+    "patch_len": 21,
+    "enc_in": 32,
+    "d_model": 128,
+    "d_ff": 512,
+    "n_heads": 4,
+    "e_layers": 3,
+    "dropout": 0.1,
+    "factor": 5,
+    "embed": "timeF",
+    "freq": "d",
+    "activation": "gelu"
+  },
+  "normalization": "per-asset mean and population SD fitted to unique raw training rows including purged training labels only",
+  "selection": "uncalibrated validation ES on all 496 exact fold 3 origins after every epoch; identical initialization/shuffle seed perLR; no test-outcome use in training, selection or calibration",
+  "mean_calibration": "after checkpoint/candidate selection; rho in[.05,1] selected by validation ES with frozen centered-training-residual innovations; exact empirical-adapter predictive mean from backbone, not sample mean",
+  "inputs": "126 historical excess log returns for all32 assets; no FF5 values, volume, concepts, graphs or future calendar covariates; differs from TREFIN concept/factor/volume predictors",
+  "adapter": "Unchanged author TimeXer from MIT-licensed TSLib; native multivariate mode; six21-day patches+global token per asset; all32 observed returns also supply variate embeddings; no external covariates or future features; direct5-step head.",
+  "scenarios": "whole[5,32] centered training residual paths sampled with replacement, same adapter as fresh Timer-XL; point model itself is not natively probabilistic",
+  "training": "pointMSE; Adam(.9,.999), no weight decay; epoch cosine scheduler to1e-8; gradclip1;100full-data epochs cap,15validation-check patience",
+  "device": "cuda",
+  "outer_point_inference_batch_size": 64,
+  "effective_native_inference_batch_size": 64,
+  "fold": 3,
+  "data_file": "fold3_raw_returns.npz",
+  "split_sizes": {
+    "train": 3143,
+    "val": 496,
+    "test": 306
+  },
+  "split_date_ranges": {
+    "train": {
+      "samples": 3143,
+      "forecast_origin_start": "2009-07-02T00:00:00.000000000",
+      "forecast_origin_end": "2021-12-23T00:00:00.000000000",
+      "last_label_date": "2021-12-31T00:00:00.000000000"
+    },
+    "val": {
+      "samples": 496,
+      "forecast_origin_start": "2022-01-03T00:00:00.000000000",
+      "forecast_origin_end": "2023-12-21T00:00:00.000000000",
+      "last_label_date": "2023-12-29T00:00:00.000000000"
+    },
+    "test": {
+      "samples": 306,
+      "forecast_origin_start": "2024-01-02T00:00:00.000000000",
+      "forecast_origin_end": "2025-03-21T00:00:00.000000000",
+      "last_label_date": "2025-03-28T00:00:00.000000000"
+    }
+  },
+  "normalization_fit_rows_inclusive": [
+    1,
+    3272
+  ],
+  "crossfold_loader_sha256": "256271b6ee5c50e94d09c835ce29e0c5b9bb989266f6d21a74d51811bbd16637",
+  "test_targets_float32_bytes_sha256": "68e6dda3b05e783c17b14bd0b3e08d9b39c91df9357748637b36b9e0e5253a9d",
+  "frozen_fold1_runner_sha256": "2eaf75cf5016853619927d8035bf7391ca434a5279cc6a513ab7e3bdf7d1c42a"
+}

@@ -1,0 +1,194 @@
+{
+  "schema": "trefin-crossfold-supplement-data-v3",
+  "description": "Frozen fold-1 baseline protocol applied to the archived chronological fold",
+  "fold": 2,
+  "data_file": "fold2_raw_returns.npz",
+  "history": 126,
+  "horizon": 5,
+  "assets": [
+    "AAPL",
+    "AMZN",
+    "BA",
+    "BIDU",
+    "BKNG",
+    "C",
+    "CAT",
+    "CMCSA",
+    "CVX",
+    "DIS",
+    "EBAY",
+    "GE",
+    "GILD",
+    "GOOG",
+    "GS",
+    "HAL",
+    "IBM",
+    "INTC",
+    "JNJ",
+    "JPM",
+    "KO",
+    "MRK",
+    "MSFT",
+    "MU",
+    "ORCL",
+    "PFE",
+    "QCOM",
+    "T",
+    "V",
+    "WFC",
+    "WMT",
+    "XOM"
+  ],
+  "split_sizes": {
+    "train": 2638,
+    "val": 500,
+    "test": 496
+  },
+  "split_date_ranges": {
+    "train": {
+      "samples": 2638,
+      "forecast_origin_start": "2009-07-02T00:00:00.000000000",
+      "forecast_origin_end": "2019-12-23T00:00:00.000000000",
+      "last_label_date": "2019-12-31T00:00:00.000000000"
+    },
+    "val": {
+      "samples": 500,
+      "forecast_origin_start": "2020-01-02T00:00:00.000000000",
+      "forecast_origin_end": "2021-12-23T00:00:00.000000000",
+      "last_label_date": "2021-12-31T00:00:00.000000000"
+    },
+    "test": {
+      "samples": 496,
+      "forecast_origin_start": "2022-01-03T00:00:00.000000000",
+      "forecast_origin_end": "2023-12-21T00:00:00.000000000",
+      "last_label_date": "2023-12-29T00:00:00.000000000"
+    }
+  },
+  "normalization": "per-asset mean and population SD fitted to unique raw training rows including purged training labels only",
+  "normalization_fit_rows_inclusive": [
+    1,
+    2767
+  ],
+  "normalization_rows_equal_unique_training_history_and_label_rows": true,
+  "normalization_fit_end_before_first_validation_origin": true,
+  "panel_sha256": "d7eb99b965900f5341b2db7ec7fe5e8e046d677efccae5def9db75720fdab472",
+  "factors_sha256": "7845a4afa8dec576071dc14bb5142c5235f1a8289af5368ee0844829f741efef",
+  "reference_prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+  "targets_match_archived_exactly": true,
+  "all_ten_archived_fold_references_match": [
+    {
+      "protocol": "finmultitime_us_rolling_3fold_5seed_v1",
+      "seed": 1,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "042a81fcda62c90773a8acf8ac147ce6cce590daec1e5ae34c88af0b3aa9f29c",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_rolling_3fold_5seed_v1",
+      "seed": 7,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "e64f64c1ef2dbf3a3b69cda72ff977477e7f68f8474ac83d14574c3758c9ea14",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_rolling_3fold_5seed_v1",
+      "seed": 19,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "3c0bc8b625af4260940d9abf8d477bb69e7a7a99c127770feff431f774ed0529",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_rolling_3fold_5seed_v1",
+      "seed": 37,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "b4125267936c0294fae8a659489a788b327656e10a0a3ae917618683bacfcdcb",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_rolling_3fold_5seed_v1",
+      "seed": 73,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "3e4d9656ba94d3704db2d45922a15bc54ca32053fc96513d2dbc5820583e83c0",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_calibrated_rolling_3fold_5seed_v1",
+      "seed": 1,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "19a0a2aa5b83e6495000fc18d2476772ee6302671cbebf9cd7b3258e8d92e763",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_calibrated_rolling_3fold_5seed_v1",
+      "seed": 7,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "faa4431d13e0b3c5067d26cea59760750725c8863e9eb0bff3b483c7aaec0d8f",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_calibrated_rolling_3fold_5seed_v1",
+      "seed": 19,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "fbc3e876e675c19b5641e03611dbd90849ffa02c2a9fb116f130b4ffa24e9ed7",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_calibrated_rolling_3fold_5seed_v1",
+      "seed": 37,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "ef34bc0f12da24eff403494b01035d8af9dfb7346f3d49d556dec049babd66b8",
+      "origins_targets_splits_match": true
+    },
+    {
+      "protocol": "finmultitime_us_calibrated_rolling_3fold_5seed_v1",
+      "seed": 73,
+      "prepared_metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "configuration_sha256": "d46c6c4d7355a73a6c0631be3990bf108cb594d9cd12ff7b706c259252569edb",
+      "origins_targets_splits_match": true
+    }
+  ],
+  "origins_bytes_sha256": "b96e43823821f07fd11a7ae54b4ff8e411a3e152a89e9e5cdb024b0c2c923c73",
+  "targets_float32_bytes_sha256": "ba73175c905f7a422cf5017cd18e2023d0f2d2d3385a50bcb81a041cb67cb821",
+  "test_targets_float32_bytes_sha256": "97970215305ae41d9bedc907cf9923f8fd2b23ca60b4f55b17fd091ed3a2d860",
+  "test_positions_bytes_sha256": "1538190e511560efb81dc78c3c0cdbb39f442894582f7b229ad90fe56312bc2c",
+  "data_sha256": "07d16b48f9446bb60bf73e3ecb44678debe0e930936964a6230ddd3d5ccc01d7",
+  "preparation_script_sha256": "49e9b4c8daafb36ceaa675b2822380bcab9373660ae27bd639709d3c5f0342d2",
+  "frozen_fold1_data_sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b",
+  "upstreams": {
+    "tedm": {
+      "url": "https://gitlab.com/dlr-dw/tedm",
+      "revision": "1d65888cc1ead587f738a0081a150d3c15d97b17",
+      "files": {
+        "models/networks.py": "24135ce4f6c99087de29648a7ca9b7da46432809893d9076b56abbfca491cbf8",
+        "models/noise.py": "c9279a59b9147ce0c230f893e197abd397c0916a1086b7b34ca8b7905bad024d",
+        "models/precond.py": "7069b5e74442e91b3abbb965774abb02e6217d8ded7c66df9feb3f294c9bd532",
+        "models/filters.py": "d5503ab856813e69e722a885d8a627b2ac0ab6bbb2ce14f7f300365ce43fcbcf",
+        "training/sampler.py": "a0d058f5e767367b5e43e4e3ce41cbc3435a38c8c46ed8b1271818c380dfd36d",
+        "training/scheduler.py": "1365c2cdb226e07bd67a1b86f54523e8e5b24c28c7cb3085b064dd344706814c",
+        "utils/__init__.py": "242a91221b2399491dba09d37204e84edde75695a31385768d1342ed2f2c3f5e",
+        "utils/io.py": "0a1f77ee80fc3ccc40ce2c2e1885d650708930438bed416c11c3338aae53bee5",
+        "utils/seed.py": "99133a234dea37c50d43a3096d1e99bc1723ca990af4d443cbe16e7217fefef9",
+        "utils/stats.py": "e2b853a77f17a6547f301c6ed90dbbb059fff30ad1ac9f004417d44290d660ee",
+        "config/custom.yaml": "edbee01f1fa9c84d8c0ecb22824bf5ebd79d1037b472686643af9f0111f05e99",
+        "config/exchange.yaml": "8d713b6d2b5bc175d569857834aadbe984e6af8e5bc3d0c1d162ca118a9cf5ea",
+        "LICENSE": "e26279a349eca84747fa0ce502e98740ec4af07b4e8028ad394226891a615b42",
+        "README.md": "cac2a8374ae2c0b46b80e5f62f434dd4f55c2d351be92c67a44c8c7b1b21b6f1"
+      }
+    },
+    "OpenLTM": {
+      "url": "https://github.com/thuml/OpenLTM",
+      "revision": "0b3005099d380ecc00d512f72553c7fe8fccca99",
+      "files": {
+        "models/timer_xl.py": "13f59058569073e937b419faf62866812638dfbcbe66358c47938576def5c280",
+        "layers/Transformer_EncDec.py": "f569fffbaedb1f01ef293bbdc11e69b87555a638462bca2aeb2caeaed010e0a4",
+        "layers/SelfAttention_Family.py": "53f5e8d757d4536192ccb74331ce4f8015559852cf1c8b44ec30198567a5ea90",
+        "layers/Attn_Bias.py": "127082ac724d5dc1c6760f31b381ad71982c272b0f1444f14f8a78dc1822923b",
+        "layers/Attn_Projection.py": "62ca7bffae64155993d81fdc416220c90541f7b947a532e72b2df1f8b44e4115",
+        "utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utils/masking.py": "fcca808cdb703076fb7d017a525bc08a9601c1689261f25b35f47c9a0d58dfdc",
+        "LICENSE": "e57c6daecaa62d6739d0b9c5db07f01b69349ae86a4cb7690d22bf4c121febc1",
+        "README.md": "0947a1277340efd07d9ee80999f4ec897c4cdff4d3b9d1e57def32c71c4a2d33"
+      }
+    }
+  }
+}

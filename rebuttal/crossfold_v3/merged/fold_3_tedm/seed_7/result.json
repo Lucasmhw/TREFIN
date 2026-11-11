@@ -1,0 +1,251 @@
+{
+  "family": "tedm",
+  "seed": 7,
+  "scope": "NEW supplemental experiments; no claim to reconstruct the historical separate-host experiments",
+  "selected_candidate": {
+    "candidate": 1,
+    "learning_rate": 0.001,
+    "best_epoch": 99,
+    "best_validation_es": 0.1285487014366557,
+    "epochs_completed": 100,
+    "optimizer_updates": 5000,
+    "training_and_validation_seconds": 7325.330971002579,
+    "parameters": 5002416,
+    "checkpoint": "seed_7/candidate_01/best.pt",
+    "checkpoint_sha256": "863c267465949a7c7ee6a5382a52715834424b150a9e67cbe5537df7eca7998e"
+  },
+  "candidate_summaries": [
+    {
+      "candidate": 1,
+      "learning_rate": 0.001,
+      "best_epoch": 99,
+      "best_validation_es": 0.1285487014366557,
+      "epochs_completed": 100,
+      "optimizer_updates": 5000,
+      "training_and_validation_seconds": 7325.330971002579,
+      "parameters": 5002416,
+      "checkpoint": "seed_7/candidate_01/best.pt",
+      "checkpoint_sha256": "863c267465949a7c7ee6a5382a52715834424b150a9e67cbe5537df7eca7998e"
+    },
+    {
+      "candidate": 2,
+      "learning_rate": 0.0003,
+      "best_epoch": 1,
+      "best_validation_es": 0.1286586226672826,
+      "epochs_completed": 16,
+      "optimizer_updates": 800,
+      "training_and_validation_seconds": 1099.0576837062836,
+      "parameters": 5002416,
+      "checkpoint": "seed_7/candidate_02/best.pt",
+      "checkpoint_sha256": "de15989f90c58edaf5d40c902f2c154ff3176fbcb7fbc0225c752a4f000fe40f"
+    }
+  ],
+  "rho": 0.05,
+  "before": {
+    "mse": 0.0005981850275397679,
+    "rmse": 0.024457821398067486,
+    "mae": 0.017509835764744446,
+    "directional_accuracy": 0.49875408496732027,
+    "msic": -0.010958789103377607,
+    "msir": -0.023388102700007084,
+    "energy_score": 0.11781360332157062,
+    "coverage_90": 0.20580065359477123,
+    "width_90": 0.010926916414847486
+  },
+  "after": {
+    "mse": 0.00034004067501761006,
+    "rmse": 0.01844019183787441,
+    "mae": 0.012448165304568248,
+    "directional_accuracy": 0.49875408496732027,
+    "msic": -0.010958789103377616,
+    "msir": -0.023388102700007102,
+    "energy_score": 0.0841344705380575,
+    "coverage_90": 0.30443218954248363,
+    "width_90": 0.010926916414847486
+  },
+  "test_origins": 306,
+  "test_seconds": 82.27160477638245,
+  "reload_validation_ES_difference": 0.0,
+  "pairwise_translation_error": 3.469446951953614e-18,
+  "source_data_sha256": "b57b281c7b2f006c9021513819bf1d31e5051b8d39f52e6f4f6dbb40244ac5fa",
+  "protocol_sha256": "355a4fddcd89aa008b41761f849da5cc9b12355c7cfd26eb3d85ce8de6b09881",
+  "test_predictions_sha256": "ec84877099e158710bbba3bc0bc279153e2c28fc20cf008abf979d1e5e16813a",
+  "test_targets_float32_bytes_sha256": "68e6dda3b05e783c17b14bd0b3e08d9b39c91df9357748637b36b9e0e5253a9d",
+  "numerical_audit_cumulative": {
+    "calls": 21160,
+    "zero_zero_elements": 7,
+    "zero_denominator_elements": 785,
+    "repaired_calls": 7,
+    "events": [
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 8,
+        "phase": "val",
+        "optimizer_update": 400,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          1094,
+          18,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 54,
+        "phase": "val",
+        "optimizer_update": 2700,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          3072,
+          32,
+          113
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 112,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2503,
+          16,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 62,
+        "phase": "val",
+        "optimizer_update": 3100,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          3408,
+          23,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 78,
+        "phase": "val",
+        "optimizer_update": 3900,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2020,
+          30,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 83,
+        "phase": "val",
+        "optimizer_update": 4150,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          3072,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          204,
+          10,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 90,
+        "phase": "val",
+        "optimizer_update": 4500,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          1606,
+          15,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 91,
+        "phase": "val",
+        "optimizer_update": 4550,
+        "training_batch_offset": 3136,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          1606,
+          15,
+          0
+        ]
+      }
+    ],
+    "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+  }
+}

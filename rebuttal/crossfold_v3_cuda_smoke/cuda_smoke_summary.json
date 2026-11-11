@@ -1,0 +1,53 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "id": "fold_2_tedm_seed_1",
+      "returncode": 2,
+      "seconds": 0.016223430633544922,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_2_tedm_seed_1.log"
+    },
+    {
+      "id": "fold_2_timemixerpp_seed_1",
+      "returncode": 2,
+      "seconds": 0.01624608039855957,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_2_timemixerpp_seed_1.log"
+    },
+    {
+      "id": "fold_2_timerxl_seed_1",
+      "returncode": 2,
+      "seconds": 0.015888452529907227,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_2_timerxl_seed_1.log"
+    },
+    {
+      "id": "fold_2_timexer_seed_1",
+      "returncode": 2,
+      "seconds": 0.015819311141967773,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_2_timexer_seed_1.log"
+    },
+    {
+      "id": "fold_3_tedm_seed_1",
+      "returncode": 2,
+      "seconds": 0.016330480575561523,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_3_tedm_seed_1.log"
+    },
+    {
+      "id": "fold_3_timemixerpp_seed_1",
+      "returncode": 2,
+      "seconds": 0.013048887252807617,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_3_timemixerpp_seed_1.log"
+    },
+    {
+      "id": "fold_3_timerxl_seed_1",
+      "returncode": 2,
+      "seconds": 0.015494346618652344,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_3_timerxl_seed_1.log"
+    },
+    {
+      "id": "fold_3_timexer_seed_1",
+      "returncode": 2,
+      "seconds": 0.015601158142089844,
+      "log": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/crossfold_v3_cuda_smoke/fold_3_timexer_seed_1.log"
+    }
+  ]
+}

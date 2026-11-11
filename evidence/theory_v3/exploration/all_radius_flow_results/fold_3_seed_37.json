@@ -1,0 +1,8 @@
+{
+  "fold": 3,
+  "seed": 37,
+  "checkpoint_sha256": "d31f67ef680f37ac312d428c06323f8321890f9b3d8b11b38a5514e7c14bc6a6",
+  "base_npz_sha256": "1357ede6878177a3360bade869f018e227467ba637bb334a879b6aee0ffbfbd0",
+  "npz_sha256": "c1c35ef8996fdef942187d85ce8c6565d2539eaceff6f54e4bea285c0b343ae1",
+  "seconds": 11.831884900006116
+}

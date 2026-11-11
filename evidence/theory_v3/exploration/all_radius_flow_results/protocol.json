@@ -1,0 +1,19 @@
+{
+  "scope": "exploratory uniform factor-flow coupling, full existing cohort; no fitting or test labels",
+  "radii_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "radius_values": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "dtype": "float64",
+  "source_sha256": "753f3898d555dee287605b1483918681a7f41f1346f104e195819132008f9240",
+  "runner_sha256": "4634f32d71e91228d5f7b758eb65706c1f90fac6766105cc9591b6b7b9cc900d",
+  "base_protocol_sha256": "b43fe7425a77540dff3524f28fdcb57d3538bcf1c31b25c23769cfb199c827bd"
+}

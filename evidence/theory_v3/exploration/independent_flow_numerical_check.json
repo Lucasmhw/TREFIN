@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "signed_region_cases": 192,
+  "factor_flow_identity_checks": 576,
+  "maximum_ratios": {
+    "q_coefficient_ratio": 0.22080141129742206,
+    "lambda_coefficient_ratio": 0.7316320149519451,
+    "graph_relative_ratio": 0.38284298742401546,
+    "graph_flow_ratio": 0.21113249095864148,
+    "envelope_eigenvalue_ratio": 1.0
+  },
+  "source_sha256": "753f3898d555dee287605b1483918681a7f41f1346f104e195819132008f9240",
+  "scope": "Independent small-matrix consistency checks of the flow identity and coefficients; analytic proof supplies uniform validity."
+}

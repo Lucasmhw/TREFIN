@@ -1,0 +1,3 @@
+2026-11-09 12:58:27,965 | INFO | final_test_started frozen_selection_sha=140699433fd2713200068945e9696aa6786cd80bff21ae4ce00dac6b7d823bf3
+2026-11-09 12:58:40,376 | INFO | COMPLETE fold=1 seed=1 variant=FrozenGraph mse=0.000682097685 es=0.0894281087
+{"event": "complete", "fold": 1, "seed": 1, "variant": "FrozenGraph", "mse": 0.0006820976850576699, "es": 0.08942810872562906}

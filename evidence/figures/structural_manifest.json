@@ -1,0 +1,16 @@
+{
+  "fold": 1,
+  "fixed_summary": "<ORIGINAL_WORKSPACE>\\work\\server_results\\rebuttal\\retraining\\summary\\summary.json",
+  "fixed_summary_sha256": "ff01c43a82ae09d6b7b975ecfdc13a1c9998868f924b2c8deef2dd584f9ae035",
+  "tuned_summary": "<ORIGINAL_WORKSPACE>\\work\\server_results\\rebuttal\\retraining_tuned\\summary\\summary.json",
+  "tuned_summary_sha256": "f9cf81aaa449d8e8aaaac32a9ec9f75af220c5673ea5a57a55a4f717b3240b83",
+  "script_sha256": "6c5c052c828159945f708fbde8afd8e54879ed6dfa81fa08c8090442c6b2200e",
+  "all_required_runs_complete": true,
+  "fixed_es_precision": "exact float64 recomputation from complete scenarios",
+  "tuned_es_precision": "exact float64 recomputation from complete scenarios",
+  "outputs": [
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R6_structural_comparison.png",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R6_structural_comparison.svg",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R6_structural_comparison.pdf"
+  ]
+}

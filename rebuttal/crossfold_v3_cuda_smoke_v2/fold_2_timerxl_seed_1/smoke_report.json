@@ -1,0 +1,23 @@
+{
+  "family": "timerxl",
+  "passed": true,
+  "script_sha256": "3d9bd8e9ab7d9c57f16f7fc7580cfd11c889f84ed31e5b61d5af1026c026f143",
+  "training_loss": 2.5670077800750732,
+  "gradient_norm_sum": 92.89829876777367,
+  "mean_shape": [
+    2,
+    5,
+    32
+  ],
+  "sample_shape": [
+    3,
+    2,
+    5,
+    32
+  ],
+  "upstream_deterministic_rollout_max_error": null,
+  "track_origin_axis_checks": "not applicable",
+  "ES_max_error": 1.3877787807814457e-17,
+  "reload_max_error": 0.0,
+  "registered_parameters": 598557
+}

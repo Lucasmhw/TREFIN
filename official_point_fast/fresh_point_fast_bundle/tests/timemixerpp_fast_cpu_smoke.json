@@ -1,0 +1,23 @@
+{
+  "family": "timemixerpp",
+  "passed": true,
+  "script_sha256": "80367c51ad69326123c351b6d0e570f4b627cae136ae08c40c851dad9e77bbcf",
+  "training_loss": 2.5731918811798096,
+  "gradient_norm_sum": 29.01664667634759,
+  "mean_shape": [
+    2,
+    5,
+    32
+  ],
+  "sample_shape": [
+    3,
+    2,
+    5,
+    32
+  ],
+  "ES_max_error": 1.3877787807814457e-17,
+  "reload_max_error": 0.0,
+  "inference_batch_invariance_error": 0.0,
+  "registered_parameters": 600306,
+  "source_manifest_sha256": "854f6b623bf59f26dcc333cf5fe741510264a8f73206226a17f11e3c949f1aad"
+}

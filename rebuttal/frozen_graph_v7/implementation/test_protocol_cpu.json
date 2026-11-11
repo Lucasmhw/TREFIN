@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "configuration_checks": {
+    "fold_1_seed_1": true,
+    "fold_1_seed_7": true,
+    "fold_1_seed_19": true,
+    "fold_1_seed_37": true,
+    "fold_1_seed_73": true,
+    "fold_2_seed_1": true,
+    "fold_2_seed_7": true,
+    "fold_2_seed_19": true,
+    "fold_2_seed_37": true,
+    "fold_2_seed_73": true,
+    "fold_3_seed_1": true,
+    "fold_3_seed_7": true,
+    "fold_3_seed_19": true,
+    "fold_3_seed_37": true,
+    "fold_3_seed_73": true
+  },
+  "effective_unique_candidates": {
+    "Full": 4,
+    "FrozenGraph": 3
+  },
+  "physical_test_exclusion_and_original_input_nonmutation": true,
+  "guard": {
+    "retained_original_indices": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "train_count": 4,
+    "validation_count": 2,
+    "excluded_test_origin_count": 3,
+    "test_split_key_removed": true,
+    "test_dataset_construction_raises_KeyError": true,
+    "origin_arrays_physically_subset": true
+  },
+  "implementation_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "protocol.py": "a4a1c3f30e649a669dabd0d1f16172219efb13ce3c52a1684b5837d96202fdbd",
+    "search_validation.py": "904431231b36b231c416bf1eb84cc02b564248f76e1ed8ac98bda1b06fdadcac",
+    "freeze_selections.py": "f06ac1a6198851cb2a6f0e878c8c4650bde3681d7b2c12f570bfc0f0b7909335",
+    "run_selected.py": "c510e1d8319223b5b5a830ce15107e18666a8c8958375c338355dda8aced3f66"
+  },
+  "scope": "Configuration/guard fixtures only; no experimental outcomes"
+}

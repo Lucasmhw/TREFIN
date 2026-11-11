@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "actual_checkpoint": "fold_1_seed_1",
+  "radius_count": 4,
+  "origin_count": 32,
+  "lead_count": 5,
+  "npz_array_exact_equality": {
+    "values": true,
+    "fields": true
+  },
+  "validation_json_exact_equality": true,
+  "original_audit_arrays_sha256": "13096760af7807bbb15041aee9fb4d1b4f401070ece4d78733816d1d9f599b40",
+  "portable_audit_arrays_sha256": "13096760af7807bbb15041aee9fb4d1b4f401070ece4d78733816d1d9f599b40",
+  "source_hashes": {
+    "normalized_factor_flow.py": "753f3898d555dee287605b1483918681a7f41f1346f104e195819132008f9240",
+    "audit_factor_flow.py": "4634f32d71e91228d5f7b758eb65706c1f90fac6766105cc9591b6b7b9cc900d",
+    "reproduce_factor_flow.py": "d5fb2f90eea5e2cfe97c2d22a45ac47caa025eb02f902a1321d8448fd838d0ca",
+    "validate_factor_flow.py": "7d50a4932260927dd752073d8b4d6c2b991cebde2105d732fcd3245214a0834b",
+    "reproduce_factor_flow_validation.py": "0d659b0aede8aa295d6cdaa9b5962206793f7f9e5c4b1c5e691327dce98008e4"
+  },
+  "scope": "Path/argument adapters only; this parity check compares completed real-checkpoint outputs, not fabricated fixtures."
+}

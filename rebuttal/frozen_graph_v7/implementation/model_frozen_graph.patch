@@ -1,0 +1,62 @@
+--- base/model.py
++++ frozen_graph_v7/model.py
+@@ -104,6 +104,7 @@
+         self.ablation_variant = str(config.get("ablation_variant", "Full"))
+         valid_variants = {
+             "Full",
++            "FrozenGraph",
+             "NoGraph",
+             "NoMarketState",
+             "NoRiskConcepts",
+@@ -116,6 +117,7 @@
+         if self.ablation_variant not in valid_variants:
+             raise ValueError(f"Unknown ablation variant: {self.ablation_variant}")
+         self.use_graph = self.ablation_variant != "NoGraph"
++        self.freeze_graph = self.ablation_variant == "FrozenGraph"
+         self.use_market_state = self.ablation_variant != "NoMarketState"
+         self.use_risk_concepts = self.ablation_variant != "NoRiskConcepts"
+         self.gaussian_symmetric_decoder = (
+@@ -288,7 +290,11 @@
+         )
+         concept_next = concept_next * self.active_concept_mask.view(1, 1, -1)
+ 
+-        if self.use_graph:
++        if self.freeze_graph:
++            # The initial measured graph remains active in every concept and
++            # decoder computation, but its future transition is the identity.
++            graph_next = graph
++        elif self.use_graph:
+             proposal = self._graph_proposal(concepts, market, lead)
+             graph_next = (1.0 - self.graph_refresh) * graph + self.graph_refresh * proposal
+             graph_next = project_graph(graph_next, self.graph_bound)
+@@ -470,6 +476,14 @@
+             self.diffusion_max * l_laplacian_a * b_c + l_f_a
+         )
+ 
++        if self.freeze_graph:
++            # Augmented-state map (C,A) -> (F_C(C,A), A): retain C <- A
++            # sensitivity, remove the inactive learned proposal's dependence.
++            zero = torch.zeros_like(m_cc)
++            one = torch.ones_like(m_cc)
++            matrix = torch.stack([torch.stack([m_cc, m_ca]), torch.stack([zero, one])])
++            return matrix, torch.maximum(m_cc, one)
++
+         market_abs = torch.maximum(
+             self.market_lower_bound.abs(), self.market_upper_bound.abs()
+         )
+@@ -554,6 +568,15 @@
+         m_ca = self.delta * (
+             diffusion.max() * l_laplacian_a * b_c + l_f_a
+         )
++
++        if self.freeze_graph:
++            # The graph is retained rather than zeroed: dA_next/dA = I.
++            # max(m_cc,1) avoids the non-differentiable sqrt((m_cc-1)^2)
++            # expression's 0/0 autograd path at the repeated eigenvalue.
++            zero = torch.zeros_like(m_cc)
++            one = torch.ones_like(m_cc)
++            matrix = torch.stack([torch.stack([m_cc, m_ca]), torch.stack([zero, one])])
++            return matrix, torch.maximum(m_cc, one)
+ 
+         batch = concepts.shape[0]
+         lead_bounds = self.lead_embedding.weight

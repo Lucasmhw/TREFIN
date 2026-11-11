@@ -1,0 +1,23 @@
+{
+  "python": "3.12.3",
+  "system": "Linux",
+  "architecture": "x86_64",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "numpy": "2.3.2",
+    "scipy": "1.18.1",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.5",
+    "pillow": "11.3.0",
+    "einops": "0.8.1",
+    "ema-pytorch": "0.2.1",
+    "PyYAML": "6.0.2",
+    "scikit-learn": "1.9.1"
+  },
+  "script_sha256": "86eba03acb3e1fab385ba4bcabcdfe102db724c235221d7b673ae268b0bfabf9",
+  "torch_compiled_cuda_version": "12.8",
+  "torch_cudnn_version": 91002,
+  "nvidia_gpu": [
+    "NVIDIA RTX 6000D, 85651 MiB, 595.71.05"
+  ]
+}

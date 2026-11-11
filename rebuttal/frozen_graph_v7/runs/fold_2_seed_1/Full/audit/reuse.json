@@ -1,0 +1,5 @@
+{
+  "source": "search/fold_2/Full/weaker_state_supervision/checkpoints/best.pt",
+  "source_sha256": "794b743a681a05402615065f609f62cd1379c8907de05111a019146d0e7b6303",
+  "reason": "Reuse this fold/variant validation-selected seed1 checkpoint before its first test evaluation"
+}

@@ -1,0 +1,116 @@
+experiment:
+  name: frozen_graph_v7_fold_3_seed_7_FrozenGraph_stronger_dynamics
+  seed: 7
+  deterministic: true
+  run_root: runs
+  device: cuda
+data:
+  source: csv
+  prepared_cache: true
+  prepared_cache_dir: data/prepared_cache
+  input_path: data/raw/finmultitime_us_32/panel.csv
+  factor_path: data/raw/finmultitime_us_32/factors.csv
+  manifest_path: data/raw/finmultitime_us_32/manifest.json
+  horizon: 5
+  embargo: 5
+  graph_window: 126
+  graph_refit_stride: 5
+  graph_solver_max_iter: 500
+  graph_solver_tolerance: 0.0001
+  concept_scales:
+  - 5
+  - 21
+  - 63
+  - 126
+  market_scale: 21
+  train_fraction: 0.65
+  val_fraction: 0.15
+  ridge_alpha: 0.1
+  graph_alpha: 0.03
+  graph_alpha_selection: rolling_train
+  graph_alpha_candidates:
+  - 0.01
+  - 0.03
+  - 0.1
+  - 0.3
+  graph_alpha_selection_origins: 12
+  graph_edge_stability_weight: 0.05
+  graph_gate_center: 0.1
+  graph_gate_temperature: 0.05
+  projection_quantiles:
+  - 0.001
+  - 0.999
+  projection_margin_fraction: 0.05
+  graph_bound_quantile: 0.999
+  graph_bound_margin_fraction: 0.05
+  risk_free_column: risk_free
+  risk_free_policy: require_column
+  market_weight_policy: equal_weight
+  order_flow_mode: daily_signed_dollar_volume_proxy
+  split_dates:
+    train_start: '2009-01-02'
+    train_end: '2021-12-31'
+    val_start: '2022-01-03'
+    val_end: '2023-12-29'
+    test_start: '2024-01-02'
+    test_end: '2025-03-28'
+model:
+  hidden_dim: 64
+  lead_dim: 12
+  graph_embedding_dim: 24
+  delta: 0.2
+  gamma_min: 0.12
+  gamma_max: 0.9
+  diffusion_max: 0.15
+  force_max: 0.4
+  graph_refresh: 0.1
+  future_graph_gate_center: 0.1
+  future_graph_gate_temperature: 0.05
+  q_epsilon: 0.02
+  nu_min: 2.1
+  mean_bound_multiplier: 5.0
+  signal_shrinkage: 1.0
+  scale_floor: 0.05
+  risk_strength_max: 1.0
+  residual_scale: 0.05
+  ablation_variant: FrozenGraph
+training:
+  epochs: 20
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 6
+  grad_clip: 1.0
+  train_samples: 16
+  eval_samples: 64
+  validation_samples: 64
+  test_samples: 256
+  selection_metric: energy_score
+  selection_min_delta: 1.0e-06
+  evaluation_seed: 271828
+  signal_shrinkage_calibration: true
+  signal_shrinkage_lower: 0.05
+  signal_shrinkage_upper: 1.0
+  signal_shrinkage_tolerance: 1.0e-05
+  lambda_concept: 0.25
+  lambda_graph: 0.0
+  lambda_monotonicity: 0.01
+  lambda_gain: 0.1
+  gain_target: 0.995
+  num_workers: 0
+evaluation:
+  alpha_levels:
+  - 0.5
+  - 0.8
+  - 0.9
+  - 0.95
+  - 0.99
+  transaction_cost_bps: 10.0
+  top_fraction: 0.1
+  empirical_certificate_iterations: 4
+  empirical_certificate_max_states: 8
+  empirical_certificate_batch_size: 4
+figures:
+  dpi: 160
+  formats:
+  - png

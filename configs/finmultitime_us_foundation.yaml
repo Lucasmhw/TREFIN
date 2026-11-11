@@ -1,0 +1,25 @@
+foundation:
+  name: finmultitime_us_official_foundations_v1
+  device: auto
+  history_length: 126
+
+evaluation:
+  test_samples: 256
+  evaluation_seed: 271828
+  alpha_levels: [0.50, 0.80, 0.90, 0.95, 0.99]
+
+statistical_tests:
+  block_length: 5
+  bootstrap_repetitions: 2000
+  confidence: 0.95
+  seed: 314159
+
+models:
+  Chronos2:
+    model_id: amazon/chronos-2
+    origin_batch_size: 64
+  TimesFM2p5:
+    model_id: google/timesfm-2.5-200m-pytorch
+    origin_batch_size: 64
+    max_context: 1024
+    max_horizon: 256

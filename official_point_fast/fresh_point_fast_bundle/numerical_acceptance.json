@@ -1,0 +1,52 @@
+{
+  "schema": "timemixerpp-numerical-equivalence-acceptance-v2",
+  "recorded_utc": "2026-11-08T07:20:39.450780+00:00",
+  "decision": "accept grouped independent-origin evaluation at outer batch32; training remains batch64",
+  "decision_scope": "Numerical implementation equivalence, not a forecasting-performance or significance result; decided before full optimized training and test evaluation",
+  "criteria": {
+    "return_unit_max_absolute_error": 1e-06,
+    "normalized_max_absolute_error": 0.0001,
+    "normalized_relative_rms_error": 0.0001
+  },
+  "additional_requirements": "finite outputs; exact training losses/gradients; identical tested FFT top-k membership and rank",
+  "checks": {
+    "finite_all_outputs": true,
+    "all_training_checks_exact": true,
+    "all_topk_memberships_identical": true,
+    "all_topk_ranks_identical": true,
+    "return_unit_max_absolute_error": true,
+    "normalized_max_absolute_error": true,
+    "normalized_relative_rms_error": true
+  },
+  "original_strict_normalized_threshold": 2e-05,
+  "original_strict_threshold_passed": false,
+  "original_failures_retained": true,
+  "maximum_observed": {
+    "return_unit_max_absolute_error": 6.165963569088707e-07,
+    "normalized_max_absolute_error": 3.707408905029297e-05,
+    "normalized_relative_rms_error": 2.9532688625565355e-05
+  },
+  "maximum_raw_error_basis_points": 0.006165963569088707,
+  "evidence_file": "timemixerpp_cuda_diagnostic.json",
+  "evidence_sha256": "11e7fe8e419cb45ea47f7399498ef1c0cbfc7d20d4cbe5786939758f0f17a1b9",
+  "evidence_states": [
+    "random_initialization",
+    "two_training_updates",
+    "existing_fitted_checkpoint"
+  ],
+  "checkpoint_sha256": "21465b171121f8466b58cff3cf33d5b649b80687b73da0966fc01603b2d93b35",
+  "tested_validation_origins": 32,
+  "tested_outer_batches": [
+    1,
+    4,
+    16,
+    32
+  ],
+  "production_outer_inference_batch": 32,
+  "training_batch_size": 64,
+  "fast_module_sha256": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+  "torch_cuda_version": "2.8.0+cu128",
+  "TF32": "disabled for matmul and cuDNN in both runner and diagnostic",
+  "interpretation": "Batch1 outputs are exact. Grouped CUDA differences start in finer-scale block outputs, with exact coarse FFT inputs/scores/selections; consistent with batch-shape-dependent float32 kernel roundoff. The fitted forecast RMS-relative discrepancy is about0.00295%, and maximum discrepancy is0.00617basispoints. This is not a bitwise-CUDA-equivalence claim or a guarantee for every possible input.",
+  "rationale": "Retain raw-return tolerance0.01basispoint as the primary observable-unit criterion, add normalized maximum and RMS-relative guards1e-4; the original2e-5 normalized guard was more restrictive than this documented implementation-agreement criterion. No model hyperparameter, data split, fitting objective, calibration rule or test outcome informed this numerical decision."
+}

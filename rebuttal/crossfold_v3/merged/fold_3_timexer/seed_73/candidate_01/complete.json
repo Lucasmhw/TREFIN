@@ -1,0 +1,12 @@
+{
+  "candidate": 1,
+  "learning_rate": 0.001,
+  "best_epoch": 6,
+  "best_validation_es": 0.07750137783993012,
+  "epochs_completed": 21,
+  "optimizer_updates": 1050,
+  "training_and_validation_seconds": 91.03647804260254,
+  "parameters": 821509,
+  "checkpoint": "seed_73/candidate_01/best.pt",
+  "checkpoint_sha256": "5d35f1f2baf031571c1e09994d958eacb0416a7b10360840f450a09df4d46205"
+}

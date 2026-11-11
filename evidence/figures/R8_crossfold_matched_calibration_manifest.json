@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "script_sha256": "d24bb8e76b7bc572c31e2f7ef27833ecccac037e9bc84cc3f1c23466af258e23",
+  "source_results_sha256": "0ad0e0333dbd906aab65d40cdd5475a530ade977dd79fb278258a9a9a2ccfbd1",
+  "independent_audit_sha256": "e768c36b877abefc2d9719ae9a4c5afc7a17aaa7d616d1860c798917249e8cc3",
+  "rows": 30,
+  "complete_baseline_runs": 60,
+  "original_trefin_reference_runs": 15,
+  "files": {
+    "R8_crossfold_matched_calibration.pdf": "285cc7e4180e3e7018c16c2eaca68ad5018457cbeb446315045303198cc68493",
+    "R8_crossfold_matched_calibration.png": "dc526317c850d35901376b71ae67138e71e36dcd08353d2fc9661ba32f8eb2e7",
+    "R8_crossfold_matched_calibration.svg": "42e0819e5aee06b9e7f759a994184e0d144fba2e4e16d4dc79ba5a57f30bed92",
+    "R8_crossfold_matched_calibration_caption.txt": "b9eb5ff94a9942f912750fb29da316458739927991991e852371b689d909955f",
+    "R8_crossfold_matched_calibration_data.csv": "f77a29c9defa01d505dd5d6f01b05aafdc796f111ddf9f8f0d9620567c2be53a"
+  }
+}

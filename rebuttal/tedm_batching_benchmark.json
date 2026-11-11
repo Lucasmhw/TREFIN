@@ -1,0 +1,44 @@
+[
+  {
+    "origin_batch": 8,
+    "validation_origins": 128,
+    "scenarios": 64,
+    "seconds": 3.8468846194446087,
+    "peak_allocated_MB": 263.456256,
+    "shape": [
+      64,
+      128,
+      5,
+      32
+    ],
+    "score_computed": false
+  },
+  {
+    "origin_batch": 32,
+    "validation_origins": 128,
+    "scenarios": 64,
+    "seconds": 1.7441199664026499,
+    "peak_allocated_MB": 899.870208,
+    "shape": [
+      64,
+      128,
+      5,
+      32
+    ],
+    "score_computed": false
+  },
+  {
+    "origin_batch": 64,
+    "validation_origins": 128,
+    "scenarios": 64,
+    "seconds": 1.567225718870759,
+    "peak_allocated_MB": 1752.09216,
+    "shape": [
+      64,
+      128,
+      5,
+      32
+    ],
+    "score_computed": false
+  }
+]

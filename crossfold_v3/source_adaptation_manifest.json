@@ -1,0 +1,59 @@
+{
+  "schema": "trefin-crossfold-source-adaptation-v3",
+  "records": [
+    {
+      "source_relative_to_work": "scripts/fresh_official_baselines.py",
+      "frozen_source_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+      "updated_path": "official_runners/fresh_official_baselines.py",
+      "updated_sha256": "3d9bd8e9ab7d9c57f16f7fc7580cfd11c889f84ed31e5b61d5af1026c026f143",
+      "frozen_copy": "official_runners/frozen_fold1/fresh_official_baselines.py"
+    },
+    {
+      "source_relative_to_work": "scripts/stable_tedm_baselines.py",
+      "frozen_source_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+      "updated_path": "official_runners/stable_tedm_baselines.py",
+      "updated_sha256": "b26fe8e24c15955fdaaf585364715b1439480f45fc0ee29639724cccd07a0c14",
+      "frozen_copy": "official_runners/frozen_fold1/stable_tedm_baselines.py"
+    },
+    {
+      "source_relative_to_work": "scripts/tedm_noise_scale_adapter.py",
+      "frozen_source_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+      "updated_path": "official_runners/tedm_noise_scale_adapter.py",
+      "updated_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+      "frozen_copy": "official_runners/frozen_fold1/tedm_noise_scale_adapter.py"
+    },
+    {
+      "source_relative_to_work": "fresh_point_fast_bundle/fresh_point_baselines.py",
+      "frozen_source_sha256": "2eaf75cf5016853619927d8035bf7391ca434a5279cc6a513ab7e3bdf7d1c42a",
+      "updated_path": "point_bundle/fresh_point_baselines.py",
+      "updated_sha256": "98984772ce27d2a55330ee8e9d6537dcf249d866f72d69b7a52303804a36743c",
+      "frozen_copy": "point_bundle/frozen_fold1/fresh_point_baselines.py"
+    },
+    {
+      "source_relative_to_work": "fresh_point_fast_bundle/fresh_point_baselines_fast.py",
+      "frozen_source_sha256": "f9c20a917e1133c13ccd476da5f90bc565f1741ebe253f08ff739c4ca1d89e81",
+      "updated_path": "point_bundle/fresh_point_baselines_fast.py",
+      "updated_sha256": "74cfbc7c3dae8b12861e7a7626ad1ad52d215379cfcf5af7d536b5dbc38bb7a0",
+      "frozen_copy": "point_bundle/frozen_fold1/fresh_point_baselines_fast.py"
+    },
+    {
+      "source_relative_to_work": "fresh_point_fast_bundle/fresh_official_common_v1.py",
+      "frozen_source_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+      "updated_path": "point_bundle/fresh_official_common_v1.py",
+      "updated_sha256": "3d9bd8e9ab7d9c57f16f7fc7580cfd11c889f84ed31e5b61d5af1026c026f143",
+      "frozen_copy": "point_bundle/frozen_fold1/fresh_official_common_v1.py"
+    }
+  ],
+  "shared_loader_sha256": "256271b6ee5c50e94d09c835ce29e0c5b9bb989266f6d21a74d51811bbd16637",
+  "data_registry_sha256": "0de704beb529799b0815578fffc8b9efb322584ee4e1bbcf43d2a8df828bf267",
+  "point_bundle_manifest_sha256": "ec6dd6cb175b6783eb291aab64aedc856f2904854364014df1e37ee7d114ab7d",
+  "frozen_seed_list": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "changes": "Data path/registered fold validation and protocol metadata only; training and selection loop is unchanged",
+  "source_originals_unchanged": true
+}

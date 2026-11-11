@@ -1,0 +1,452 @@
+{
+  "registration_sha256": "235faf8d9be73939df2acb08115478c60199556ef3746a81e437c1f2cc90c0a8",
+  "selections": {
+    "Full": {
+      "variant": "Full",
+      "selection_fold": 1,
+      "selection_training_seed": 1,
+      "selected_candidate": "stronger_dynamics",
+      "selected_calibrated_validation_energy_score": 0.06356221205004119,
+      "best_overrides": {
+        "model": {
+          "residual_scale": 0.05,
+          "graph_refresh": 0.1
+        },
+        "training": {}
+      },
+      "required_variant_overrides": {
+        "model": {
+          "ablation_variant": "Full",
+          "signal_shrinkage": 1.0
+        },
+        "training": {
+          "lambda_concept": 0.25,
+          "lambda_graph": 0.08
+        }
+      },
+      "selected_checkpoint": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/search_A/Full/stronger_dynamics/checkpoints/best.pt",
+      "selected_checkpoint_sha256": "e2578ab10740f28a88b08c63894fa707619c8a45cc8fafb4995d19d2faf8dfda",
+      "nominal_slots": 4,
+      "executed_unique_candidates": 4,
+      "trials": [
+        {
+          "variant": "Full",
+          "candidate": "base",
+          "order": 0,
+          "effective_fingerprint": "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "executed": true,
+          "calibrated_validation_energy_score": 0.06356619926999063,
+          "selected_signal_shrinkage": 0.27516934387657394,
+          "training_summary": {
+            "best_epoch": 5,
+            "best_val": 0.06362837420632783,
+            "selection_metric": "energy_score",
+            "train_seconds": 79.09127282723784,
+            "epochs_completed": 11,
+            "signal_shrinkage_calibration": {
+              "selected_signal_shrinkage": 0.27516934387657394,
+              "lower_bound": 0.05,
+              "upper_bound": 1.0,
+              "tolerance": 1e-05,
+              "selection_split": "validation",
+              "selection_metric": "energy_score",
+              "convex_objective": true,
+              "pairwise_energy_term_invariant": true,
+              "pairwise_invariance_max_error": 1.3877787807814457e-17,
+              "optimizer_success": true,
+              "optimizer_evaluations": 9,
+              "uncalibrated_validation_metrics": {
+                "mse": 0.0002870369439246499,
+                "rmse": 0.01694216467647065,
+                "mae": 0.011713498282894716,
+                "directional_accuracy": 0.5223268072289157,
+                "msic": -0.00787425588060835,
+                "msir": -0.015980481232541383,
+                "energy_score": 0.06363463242730853
+              },
+              "calibrated_validation_metrics": {
+                "mse": 0.00028642265020376636,
+                "rmse": 0.01692402582731917,
+                "mae": 0.011719234082221766,
+                "directional_accuracy": 0.5223268072289157,
+                "msic": -0.00787425588060835,
+                "msir": -0.015980481232541387,
+                "energy_score": 0.06356619926999063
+              }
+            }
+          },
+          "checkpoint_sha256": "74107ca5a27b2455c3a6bb4eb9413d3369dcd4f59c39283d0795e0ec2647a57e",
+          "checkpoint_reload": {
+            "max_abs_difference": 0.0,
+            "passed": true
+          },
+          "test_access_count": 0
+        },
+        {
+          "variant": "Full",
+          "candidate": "slow_graph",
+          "order": 1,
+          "effective_fingerprint": "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "executed": true,
+          "calibrated_validation_energy_score": 0.06358633210866933,
+          "selected_signal_shrinkage": 0.35450197905303843,
+          "training_summary": {
+            "best_epoch": 4,
+            "best_val": 0.06361771341121845,
+            "selection_metric": "energy_score",
+            "train_seconds": 75.24037062004209,
+            "epochs_completed": 10,
+            "signal_shrinkage_calibration": {
+              "selected_signal_shrinkage": 0.35450197905303843,
+              "lower_bound": 0.05,
+              "upper_bound": 1.0,
+              "tolerance": 1e-05,
+              "selection_split": "validation",
+              "selection_metric": "energy_score",
+              "convex_objective": true,
+              "pairwise_energy_term_invariant": true,
+              "pairwise_invariance_max_error": 1.3877787807814457e-17,
+              "optimizer_success": true,
+              "optimizer_evaluations": 8,
+              "uncalibrated_validation_metrics": {
+                "mse": 0.0002868770565613697,
+                "rmse": 0.016937445396557584,
+                "mae": 0.011712397997789463,
+                "directional_accuracy": 0.5238955823293173,
+                "msic": 0.005871871406487176,
+                "msir": 0.011953946813576678,
+                "energy_score": 0.06362049222963165
+              },
+              "calibrated_validation_metrics": {
+                "mse": 0.0002864837388236962,
+                "rmse": 0.016925830520943312,
+                "mae": 0.011719029058107833,
+                "directional_accuracy": 0.5238955823293173,
+                "msic": 0.005871871406487176,
+                "msir": 0.011953946813576678,
+                "energy_score": 0.06358633210866933
+              }
+            }
+          },
+          "checkpoint_sha256": "325addb73f2572fec09c409b3ac6a0369bc0dd10c4717fcc75ca0b9e97a015c8",
+          "checkpoint_reload": {
+            "max_abs_difference": 0.0,
+            "passed": true
+          },
+          "test_access_count": 0
+        },
+        {
+          "variant": "Full",
+          "candidate": "stronger_dynamics",
+          "order": 2,
+          "effective_fingerprint": "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "executed": true,
+          "calibrated_validation_energy_score": 0.06356221205004119,
+          "selected_signal_shrinkage": 0.2843726613501139,
+          "training_summary": {
+            "best_epoch": 5,
+            "best_val": 0.06362242578566439,
+            "selection_metric": "energy_score",
+            "train_seconds": 82.45617037452757,
+            "epochs_completed": 11,
+            "signal_shrinkage_calibration": {
+              "selected_signal_shrinkage": 0.2843726613501139,
+              "lower_bound": 0.05,
+              "upper_bound": 1.0,
+              "tolerance": 1e-05,
+              "selection_split": "validation",
+              "selection_metric": "energy_score",
+              "convex_objective": true,
+              "pairwise_energy_term_invariant": true,
+              "pairwise_invariance_max_error": 1.3877787807814457e-17,
+              "optimizer_success": true,
+              "optimizer_evaluations": 9,
+              "uncalibrated_validation_metrics": {
+                "mse": 0.00028700466787236016,
+                "rmse": 0.01694121211343392,
+                "mae": 0.011713571155048405,
+                "directional_accuracy": 0.5223644578313253,
+                "msic": -0.007584181418051181,
+                "msir": -0.015380285016844863,
+                "energy_score": 0.06362800633641577
+              },
+              "calibrated_validation_metrics": {
+                "mse": 0.0002864159145843222,
+                "rmse": 0.016923826830369134,
+                "mae": 0.011719085227152946,
+                "directional_accuracy": 0.5223644578313253,
+                "msic": -0.007584181418051177,
+                "msir": -0.015380285016844856,
+                "energy_score": 0.06356221205004119
+              }
+            }
+          },
+          "checkpoint_sha256": "e2578ab10740f28a88b08c63894fa707619c8a45cc8fafb4995d19d2faf8dfda",
+          "checkpoint_reload": {
+            "max_abs_difference": 0.0,
+            "passed": true
+          },
+          "test_access_count": 0
+        },
+        {
+          "variant": "Full",
+          "candidate": "weaker_state_supervision",
+          "order": 3,
+          "effective_fingerprint": "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a",
+          "executed": true,
+          "calibrated_validation_energy_score": 0.06356721426420135,
+          "selected_signal_shrinkage": 0.28359698041068826,
+          "training_summary": {
+            "best_epoch": 5,
+            "best_val": 0.06362789145166443,
+            "selection_metric": "energy_score",
+            "train_seconds": 82.70773705281317,
+            "epochs_completed": 11,
+            "signal_shrinkage_calibration": {
+              "selected_signal_shrinkage": 0.28359698041068826,
+              "lower_bound": 0.05,
+              "upper_bound": 1.0,
+              "tolerance": 1e-05,
+              "selection_split": "validation",
+              "selection_metric": "energy_score",
+              "convex_objective": true,
+              "pairwise_energy_term_invariant": true,
+              "pairwise_invariance_max_error": 1.3877787807814457e-17,
+              "optimizer_success": true,
+              "optimizer_evaluations": 9,
+              "uncalibrated_validation_metrics": {
+                "mse": 0.00028700692676779464,
+                "rmse": 0.016941278781951338,
+                "mae": 0.011713226886365138,
+                "directional_accuracy": 0.5232680722891566,
+                "msic": -0.009535288043196416,
+                "msir": -0.019253886474534323,
+                "energy_score": 0.0636335465393846
+              },
+              "calibrated_validation_metrics": {
+                "mse": 0.0002864152170150679,
+                "rmse": 0.016923806221269135,
+                "mae": 0.011718954402112394,
+                "directional_accuracy": 0.5232680722891566,
+                "msic": -0.009535288043196416,
+                "msir": -0.019253886474534323,
+                "energy_score": 0.06356721426420135
+              }
+            }
+          },
+          "checkpoint_sha256": "951186e52b7eae9ac27d250c6800258184727b01038400c84dbbab24520fe18d",
+          "checkpoint_reload": {
+            "max_abs_difference": 0.0,
+            "passed": true
+          },
+          "test_access_count": 0
+        }
+      ],
+      "test_access_count": 0,
+      "selection_frozen_before_any_test_evaluation": true,
+      "follow_up": "Freeze best_overrides; retrain/evaluate all requested seeds using the same training/calibration protocol. Apply variant-specific zero loss coefficients after candidate overrides."
+    },
+    "NoGraph": {
+      "variant": "NoGraph",
+      "selection_fold": 1,
+      "selection_training_seed": 1,
+      "selected_candidate": "weaker_state_supervision",
+      "selected_calibrated_validation_energy_score": 0.0639889589494714,
+      "best_overrides": {
+        "model": {},
+        "training": {
+          "lambda_concept": 0.1,
+          "lambda_graph": 0.02
+        }
+      },
+      "required_variant_overrides": {
+        "model": {
+          "ablation_variant": "NoGraph",
+          "signal_shrinkage": 1.0
+        },
+        "training": {
+          "lambda_concept": 0.1,
+          "lambda_graph": 0.0
+        }
+      },
+      "selected_checkpoint": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/search_A/NoGraph/weaker_state_supervision/checkpoints/best.pt",
+      "selected_checkpoint_sha256": "6f91a36063fdc19ae0486b4ce2f290bc2dfa35915ed39cf4613bcb4381be74c4",
+      "nominal_slots": 4,
+      "executed_unique_candidates": 3,
+      "trials": [
+        {
+          "variant": "NoGraph",
+          "candidate": "base",
+          "order": 0,
+          "effective_fingerprint": "5d9b96da4cd6d0f56336e55b6f8b0dc12d1a15f7d011d287ee2a90cca44474cb",
+          "executed": true,
+          "calibrated_validation_energy_score": 0.0639894065949057,
+          "selected_signal_shrinkage": 0.5826373678648814,
+          "training_summary": {
+            "best_epoch": 4,
+            "best_val": 0.06402575538035676,
+            "selection_metric": "energy_score",
+            "train_seconds": 49.4691348914057,
+            "epochs_completed": 10,
+            "signal_shrinkage_calibration": {
+              "selected_signal_shrinkage": 0.5826373678648814,
+              "lower_bound": 0.05,
+              "upper_bound": 1.0,
+              "tolerance": 1e-05,
+              "selection_split": "validation",
+              "selection_metric": "energy_score",
+              "convex_objective": true,
+              "pairwise_energy_term_invariant": true,
+              "pairwise_invariance_max_error": 2.7755575615628914e-17,
+              "optimizer_success": true,
+              "optimizer_evaluations": 9,
+              "uncalibrated_validation_metrics": {
+                "mse": 0.00028682391874185865,
+                "rmse": 0.016935876674735756,
+                "mae": 0.011710267708198129,
+                "directional_accuracy": 0.5267444779116466,
+                "msic": 0.00305683906884102,
+                "msir": 0.006027798543622729,
+                "energy_score": 0.06400249994974544
+              },
+              "calibrated_validation_metrics": {
+                "mse": 0.00028654149907561625,
+                "rmse": 0.01692753671021322,
+                "mae": 0.011714085594194252,
+                "directional_accuracy": 0.5267444779116466,
+                "msic": 0.0030568390688410184,
+                "msir": 0.006027798543622725,
+                "energy_score": 0.0639894065949057
+              }
+            }
+          },
+          "checkpoint_sha256": "482191dcef5ea9df35d7ae81d71b82b089fb03a4032b796cd82262f9a6d38b9d",
+          "checkpoint_reload": {
+            "max_abs_difference": 0.0,
+            "passed": true
+          },
+          "test_access_count": 0
+        },
+        {
+          "candidate": "slow_graph",
+          "order": 1,
+          "effective_duplicate_of": "base",
+          "calibrated_validation_energy_score": 0.0639894065949057,
+          "effective_fingerprint": "5d9b96da4cd6d0f56336e55b6f8b0dc12d1a15f7d011d287ee2a90cca44474cb",
+          "executed": false
+        },
+        {
+          "variant": "NoGraph",
+          "candidate": "stronger_dynamics",
+          "order": 2,
+          "effective_fingerprint": "6726f564670683cc67d2396b9f5c59ad38148a900d29c0f7045f4144ee09baa1",
+          "executed": true,
+          "calibrated_validation_energy_score": 0.06398974112391276,
+          "selected_signal_shrinkage": 0.5833899005628008,
+          "training_summary": {
+            "best_epoch": 4,
+            "best_val": 0.06402594571287891,
+            "selection_metric": "energy_score",
+            "train_seconds": 48.01770105957985,
+            "epochs_completed": 10,
+            "signal_shrinkage_calibration": {
+              "selected_signal_shrinkage": 0.5833899005628008,
+              "lower_bound": 0.05,
+              "upper_bound": 1.0,
+              "tolerance": 1e-05,
+              "selection_split": "validation",
+              "selection_metric": "energy_score",
+              "convex_objective": true,
+              "pairwise_energy_term_invariant": true,
+              "pairwise_invariance_max_error": 1.3877787807814457e-17,
+              "optimizer_success": true,
+              "optimizer_evaluations": 9,
+              "uncalibrated_validation_metrics": {
+                "mse": 0.00028682192420783676,
+                "rmse": 0.01693581778975662,
+                "mae": 0.011710363703153117,
+                "directional_accuracy": 0.5267193775100402,
+                "msic": 0.0034683747503520867,
+                "msir": 0.006863363092417921,
+                "energy_score": 0.06400275767321022
+              },
+              "calibrated_validation_metrics": {
+                "mse": 0.0002865411289838799,
+                "rmse": 0.016927525778561967,
+                "mae": 0.011714136906208393,
+                "directional_accuracy": 0.5267193775100402,
+                "msic": 0.003468374750352086,
+                "msir": 0.0068633630924179205,
+                "energy_score": 0.06398974112391276
+              }
+            }
+          },
+          "checkpoint_sha256": "f10a4707302491418a3809b6bdee9495a306b160616f2f73b421763dab17f820",
+          "checkpoint_reload": {
+            "max_abs_difference": 0.0,
+            "passed": true
+          },
+          "test_access_count": 0
+        },
+        {
+          "variant": "NoGraph",
+          "candidate": "weaker_state_supervision",
+          "order": 3,
+          "effective_fingerprint": "20e08859b85bcffc7f612d244713716f6eeb7a84948fed2e65f17c53e56b944d",
+          "executed": true,
+          "calibrated_validation_energy_score": 0.0639889589494714,
+          "selected_signal_shrinkage": 0.5826979873636642,
+          "training_summary": {
+            "best_epoch": 4,
+            "best_val": 0.06402538694651916,
+            "selection_metric": "energy_score",
+            "train_seconds": 49.382248347625136,
+            "epochs_completed": 10,
+            "signal_shrinkage_calibration": {
+              "selected_signal_shrinkage": 0.5826979873636642,
+              "lower_bound": 0.05,
+              "upper_bound": 1.0,
+              "tolerance": 1e-05,
+              "selection_split": "validation",
+              "selection_metric": "energy_score",
+              "convex_objective": true,
+              "pairwise_energy_term_invariant": true,
+              "pairwise_invariance_max_error": 1.3877787807814457e-17,
+              "optimizer_success": true,
+              "optimizer_evaluations": 9,
+              "uncalibrated_validation_metrics": {
+                "mse": 0.00028682393095816414,
+                "rmse": 0.016935877035399262,
+                "mae": 0.011710274075675169,
+                "directional_accuracy": 0.5266817269076305,
+                "msic": 0.003090738997166693,
+                "msir": 0.006096105248838363,
+                "energy_score": 0.06400206311256439
+              },
+              "calibrated_validation_metrics": {
+                "mse": 0.00028654132816882894,
+                "rmse": 0.016927531662024115,
+                "mae": 0.011714086480175839,
+                "directional_accuracy": 0.5266817269076305,
+                "msic": 0.0030907389971666912,
+                "msir": 0.006096105248838361,
+                "energy_score": 0.0639889589494714
+              }
+            }
+          },
+          "checkpoint_sha256": "6f91a36063fdc19ae0486b4ce2f290bc2dfa35915ed39cf4613bcb4381be74c4",
+          "checkpoint_reload": {
+            "max_abs_difference": 0.0,
+            "passed": true
+          },
+          "test_access_count": 0
+        }
+      ],
+      "test_access_count": 0,
+      "selection_frozen_before_any_test_evaluation": true,
+      "follow_up": "Freeze best_overrides; retrain/evaluate all requested seeds using the same training/calibration protocol. Apply variant-specific zero loss coefficients after candidate overrides."
+    }
+  },
+  "wall_seconds": 469.61887454241514,
+  "test_access_count": 0
+}

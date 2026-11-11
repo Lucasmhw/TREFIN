@@ -1,0 +1,76 @@
+{
+  "started_utc": "2026-11-08T09:57:20.068954+00:00",
+  "source_script_sha256": "0b0029e48abff742e119b088b397b904b795b0441a8bc1b44ec159398e843c4d",
+  "groups": {
+    "fold_2_tedm": {
+      "fold": 2,
+      "family": "tedm",
+      "state": "complete",
+      "started_utc": "2026-11-08T13:52:41.517762+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T13:52:47.544113+00:00"
+    },
+    "fold_2_timerxl": {
+      "fold": 2,
+      "family": "timerxl",
+      "state": "complete",
+      "started_utc": "2026-11-08T12:28:54.683540+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T12:28:58.755398+00:00"
+    },
+    "fold_2_timexer": {
+      "fold": 2,
+      "family": "timexer",
+      "state": "complete",
+      "started_utc": "2026-11-08T12:18:50.530029+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T12:18:54.656648+00:00"
+    },
+    "fold_2_timemixerpp": {
+      "fold": 2,
+      "family": "timemixerpp",
+      "state": "complete",
+      "started_utc": "2026-11-08T13:34:34.821470+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T13:34:38.744024+00:00"
+    },
+    "fold_3_tedm": {
+      "fold": 3,
+      "family": "tedm",
+      "state": "complete",
+      "started_utc": "2026-11-08T13:54:47.551086+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T13:54:52.374043+00:00"
+    },
+    "fold_3_timerxl": {
+      "fold": 3,
+      "family": "timerxl",
+      "state": "complete",
+      "started_utc": "2026-11-08T13:28:31.933133+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T13:28:34.805072+00:00"
+    },
+    "fold_3_timexer": {
+      "fold": 3,
+      "family": "timexer",
+      "state": "complete",
+      "started_utc": "2026-11-08T13:20:28.892241+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T13:20:31.910852+00:00"
+    },
+    "fold_3_timemixerpp": {
+      "fold": 3,
+      "family": "timemixerpp",
+      "state": "complete",
+      "started_utc": "2026-11-08T13:49:38.789448+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-08T13:49:41.508875+00:00"
+    }
+  },
+  "updated_utc": "2026-11-08T13:54:52.374132+00:00",
+  "status": "all_eight_groups_verified",
+  "archive_file": "crossfold_v3_compact_complete.tar.gz",
+  "archive_sha256": "e6d0ba871eeb128175ebacb361ef2a328e62ed85f976fb73189e142c2a986434",
+  "archive_bytes": 1286018,
+  "finished_utc": "2026-11-08T13:54:52.542779+00:00"
+}

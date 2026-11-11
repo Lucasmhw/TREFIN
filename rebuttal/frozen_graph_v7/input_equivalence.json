@@ -1,0 +1,306 @@
+{
+  "status": "passed",
+  "folds": {
+    "1": {
+      "compact_sha256": "07eceb8041b8e0954c0b407a18b6182514a9ae542158199362b501077373c674",
+      "metadata_sha256": "b166c1f84722e99f4f05d40a57ce12746e5e8a10a56261afa86e3d297dd075e5",
+      "array_fields": {
+        "origins": {
+          "sha256": "b96e43823821f07fd11a7ae54b4ff8e411a3e152a89e9e5cdb024b0c2c923c73",
+          "shape": [
+            3955
+          ],
+          "dtype": "int64"
+        },
+        "y": {
+          "sha256": "ba73175c905f7a422cf5017cd18e2023d0f2d2d3385a50bcb81a041cb67cb821",
+          "shape": [
+            3955,
+            5,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "s0": {
+          "sha256": "cbda1080190e14b97785e84084cd9f30c05d03d1a85d3ede88bf8fd6bee5276c",
+          "shape": [
+            3955,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "directional_mask": {
+          "sha256": "563e39c89c20e9e2ce0cdbe783121d90ef55729ca0c678c68172b1186e30f8c3",
+          "shape": [
+            26
+          ],
+          "dtype": "float32"
+        },
+        "risk_indices": {
+          "sha256": "af15db86337cd6376ec26abfde04c04aa2e38f4cf6b1f6a0bfa39b53c5011773",
+          "shape": [
+            12
+          ],
+          "dtype": "int64"
+        },
+        "c_target": {
+          "sha256": "8c20fca193e26b952d3bc0b549604a8e972b4688bf5683f7a857638e85668c11",
+          "shape": [
+            3955,
+            6,
+            32,
+            26
+          ],
+          "dtype": "float32"
+        },
+        "c0": {
+          "sha256": "4f53d0051cc11aabc8f2c00f4983a0201826199f7a0228f92b66e7916a05263b",
+          "shape": [
+            3955,
+            32,
+            26
+          ],
+          "dtype": "float32"
+        },
+        "a_target": {
+          "sha256": "fdcce68f51c445c9bf8d239a9c7cc916edc3493c9cde21b8f651903133ac5784",
+          "shape": [
+            3955,
+            6,
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "a0": {
+          "sha256": "5da6d370b2413dc5effbf66422b3d6f51405a0e34a71d0146b0ec21052e788ee",
+          "shape": [
+            3955,
+            32,
+            32
+          ],
+          "dtype": "float32"
+        }
+      },
+      "split_counts": {
+        "train": 2135,
+        "val": 498,
+        "test": 500
+      },
+      "all_model_consumed_fields_equal_original": true,
+      "omitted_diagnostic_fields_not_model_inputs": [
+        "beta0",
+        "graph_alpha_used",
+        "graph_converged",
+        "graph_fallback",
+        "graph_iterations",
+        "graph_refit",
+        "historical_mean",
+        "last_return",
+        "partial_corr",
+        "raw_corr"
+      ]
+    },
+    "2": {
+      "compact_sha256": "8bc886cc782bfa8308ef96f4c44a4dd0384bae7a680af6dd0eb3240a6ab4d671",
+      "metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "array_fields": {
+        "origins": {
+          "sha256": "b96e43823821f07fd11a7ae54b4ff8e411a3e152a89e9e5cdb024b0c2c923c73",
+          "shape": [
+            3955
+          ],
+          "dtype": "int64"
+        },
+        "y": {
+          "sha256": "ba73175c905f7a422cf5017cd18e2023d0f2d2d3385a50bcb81a041cb67cb821",
+          "shape": [
+            3955,
+            5,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "s0": {
+          "sha256": "11da5c37dbd90ffdf9dc05718432526f2df79ac012fa2a5fa549f6414fd9a3d0",
+          "shape": [
+            3955,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "directional_mask": {
+          "sha256": "563e39c89c20e9e2ce0cdbe783121d90ef55729ca0c678c68172b1186e30f8c3",
+          "shape": [
+            26
+          ],
+          "dtype": "float32"
+        },
+        "risk_indices": {
+          "sha256": "af15db86337cd6376ec26abfde04c04aa2e38f4cf6b1f6a0bfa39b53c5011773",
+          "shape": [
+            12
+          ],
+          "dtype": "int64"
+        },
+        "c_target": {
+          "sha256": "6d33d5cfe0cd89232f8e2b9108ef159fe08d676151e4735a82778ad7a9262373",
+          "shape": [
+            3955,
+            6,
+            32,
+            26
+          ],
+          "dtype": "float32"
+        },
+        "c0": {
+          "sha256": "7c4d804c5decab6e8638f5135d27be72e1b336bf153b4cf0380085775179489c",
+          "shape": [
+            3955,
+            32,
+            26
+          ],
+          "dtype": "float32"
+        },
+        "a_target": {
+          "sha256": "fdcce68f51c445c9bf8d239a9c7cc916edc3493c9cde21b8f651903133ac5784",
+          "shape": [
+            3955,
+            6,
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "a0": {
+          "sha256": "5da6d370b2413dc5effbf66422b3d6f51405a0e34a71d0146b0ec21052e788ee",
+          "shape": [
+            3955,
+            32,
+            32
+          ],
+          "dtype": "float32"
+        }
+      },
+      "split_counts": {
+        "train": 2638,
+        "val": 500,
+        "test": 496
+      },
+      "all_model_consumed_fields_equal_original": true,
+      "omitted_diagnostic_fields_not_model_inputs": [
+        "beta0",
+        "graph_alpha_used",
+        "graph_converged",
+        "graph_fallback",
+        "graph_iterations",
+        "graph_refit",
+        "historical_mean",
+        "last_return",
+        "partial_corr",
+        "raw_corr"
+      ]
+    },
+    "3": {
+      "compact_sha256": "2276a1a3565f414326428b4d26c88557b641c1ace85303945df20ba5f97789f0",
+      "metadata_sha256": "fc939302818146284cbee90c41d0204c5d18189749f63644adb766aa1b3c010c",
+      "array_fields": {
+        "origins": {
+          "sha256": "b96e43823821f07fd11a7ae54b4ff8e411a3e152a89e9e5cdb024b0c2c923c73",
+          "shape": [
+            3955
+          ],
+          "dtype": "int64"
+        },
+        "y": {
+          "sha256": "ba73175c905f7a422cf5017cd18e2023d0f2d2d3385a50bcb81a041cb67cb821",
+          "shape": [
+            3955,
+            5,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "s0": {
+          "sha256": "983978e58517b0e0f599ac950bc3b4243a0c4c14e61f382261ef1450f0cbeb36",
+          "shape": [
+            3955,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "directional_mask": {
+          "sha256": "563e39c89c20e9e2ce0cdbe783121d90ef55729ca0c678c68172b1186e30f8c3",
+          "shape": [
+            26
+          ],
+          "dtype": "float32"
+        },
+        "risk_indices": {
+          "sha256": "af15db86337cd6376ec26abfde04c04aa2e38f4cf6b1f6a0bfa39b53c5011773",
+          "shape": [
+            12
+          ],
+          "dtype": "int64"
+        },
+        "c_target": {
+          "sha256": "17fbe531fb0c139b4ff761c52b9c8cc54d82e154981266c16f92ca4d72077d24",
+          "shape": [
+            3955,
+            6,
+            32,
+            26
+          ],
+          "dtype": "float32"
+        },
+        "c0": {
+          "sha256": "5b725da070cb48b9861869b3396e08d404549d5b7fddf5222a78ae828030db56",
+          "shape": [
+            3955,
+            32,
+            26
+          ],
+          "dtype": "float32"
+        },
+        "a_target": {
+          "sha256": "fdcce68f51c445c9bf8d239a9c7cc916edc3493c9cde21b8f651903133ac5784",
+          "shape": [
+            3955,
+            6,
+            32,
+            32
+          ],
+          "dtype": "float32"
+        },
+        "a0": {
+          "sha256": "5da6d370b2413dc5effbf66422b3d6f51405a0e34a71d0146b0ec21052e788ee",
+          "shape": [
+            3955,
+            32,
+            32
+          ],
+          "dtype": "float32"
+        }
+      },
+      "split_counts": {
+        "train": 3143,
+        "val": 496,
+        "test": 306
+      },
+      "all_model_consumed_fields_equal_original": true,
+      "omitted_diagnostic_fields_not_model_inputs": [
+        "beta0",
+        "graph_alpha_used",
+        "graph_converged",
+        "graph_fallback",
+        "graph_iterations",
+        "graph_refit",
+        "historical_mean",
+        "last_return",
+        "partial_corr",
+        "raw_corr"
+      ]
+    }
+  },
+  "purpose": "Lossless reconstruction of existing frozen measurement arrays; no fitting or selection."
+}

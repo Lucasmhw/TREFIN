@@ -1,0 +1,57 @@
+fold,protocol,panel,variant,metric,estimate_display,lower_display,upper_display,interval_type,display_multiplier
+1,Fixed configuration,(a) Point error,Full,mse,6.817432818934321,6.8109613391822155,6.823904298686427,mean plus/minus sampleSD across five seeds,10000.0
+1,Fixed configuration,(a) Point error,NoGraph,mse,6.826808210462332,6.817570977872912,6.836045443051751,mean plus/minus sampleSD across five seeds,10000.0
+1,Fixed configuration,(a) Point error,SingleSigned,mse,6.817575776949525,6.811163692660441,6.823987861238609,mean plus/minus sampleSD across five seeds,10000.0
+1,Fixed configuration,(a) Point error,SingleUnsigned,mse,6.818520138040185,6.811692913445308,6.825347362635062,mean plus/minus sampleSD across five seeds,10000.0
+1,Fixed configuration,(a) Point error,NoStateSupervision,mse,6.821074988692999,6.818768078364354,6.823381899021644,mean plus/minus sampleSD across five seeds,10000.0
+1,Validation-selected configuration,(a) Point error,Full,mse,6.816956331022084,6.811490919742033,6.822421742302135,mean plus/minus sampleSD across five seeds,10000.0
+1,Validation-selected configuration,(a) Point error,NoGraph,mse,6.826792843639851,6.817516676924752,6.836069010354949,mean plus/minus sampleSD across five seeds,10000.0
+1,Validation-selected configuration,(a) Point error,SingleSigned,mse,6.816974258981645,6.811445401795731,6.822503116167559,mean plus/minus sampleSD across five seeds,10000.0
+1,Validation-selected configuration,(a) Point error,SingleUnsigned,mse,6.819253438152373,6.8149066140362775,6.823600262268468,mean plus/minus sampleSD across five seeds,10000.0
+1,Validation-selected configuration,(a) Point error,NoStateSupervision,mse,6.819163099862635,6.8147605500098045,6.823565649715466,mean plus/minus sampleSD across five seeds,10000.0
+1,Fixed configuration,(b) Distribution score,Full,energy_score,8.975236900709563,8.957270595318025,8.9932032061011,mean plus/minus sampleSD across five seeds,100.0
+1,Fixed configuration,(b) Distribution score,NoGraph,energy_score,9.056862334206174,9.027174371265462,9.086550297146887,mean plus/minus sampleSD across five seeds,100.0
+1,Fixed configuration,(b) Distribution score,SingleSigned,energy_score,8.974634298019778,8.956309230213972,8.992959365825584,mean plus/minus sampleSD across five seeds,100.0
+1,Fixed configuration,(b) Distribution score,SingleUnsigned,energy_score,8.969473484009008,8.93794969725187,9.000997270766145,mean plus/minus sampleSD across five seeds,100.0
+1,Fixed configuration,(b) Distribution score,NoStateSupervision,energy_score,8.971359937330703,8.939217412242835,9.003502462418572,mean plus/minus sampleSD across five seeds,100.0
+1,Validation-selected configuration,(b) Distribution score,Full,energy_score,8.975356135527006,8.95620826088555,8.994504010168463,mean plus/minus sampleSD across five seeds,100.0
+1,Validation-selected configuration,(b) Distribution score,NoGraph,energy_score,9.056877714759784,9.027283836015886,9.086471593503681,mean plus/minus sampleSD across five seeds,100.0
+1,Validation-selected configuration,(b) Distribution score,SingleSigned,energy_score,8.975626593275953,8.956303720075145,8.994949466476761,mean plus/minus sampleSD across five seeds,100.0
+1,Validation-selected configuration,(b) Distribution score,SingleUnsigned,energy_score,8.949530475105409,8.92841103285509,8.970649917355727,mean plus/minus sampleSD across five seeds,100.0
+1,Validation-selected configuration,(b) Distribution score,NoStateSupervision,energy_score,8.95602649873781,8.937703620619283,8.974349376856336,mean plus/minus sampleSD across five seeds,100.0
+1,Fixed configuration,(c) Concept prediction,Full,concept_mae_overall,0.4922757128052987,0.488543075721524,0.4960083498890734,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(c) Concept prediction,NoGraph,concept_mae_overall,0.5140056437769761,0.493485230538695,0.5345260570152572,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(c) Concept prediction,SingleSigned,concept_mae_overall,0.49283985516199696,0.48833716419056256,0.4973425461334314,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(c) Concept prediction,SingleUnsigned,concept_mae_overall,0.4930189426529866,0.4883845822651061,0.49765330304086713,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(c) Concept prediction,NoStateSupervision,concept_mae_overall,0.7087190907620468,0.7047315018871544,0.7127066796369391,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(c) Concept prediction,Full,concept_mae_overall,0.4925149931070896,0.48785427133933645,0.4971757148748428,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(c) Concept prediction,NoGraph,concept_mae_overall,0.5141469295953328,0.4936876397820136,0.534606219408652,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(c) Concept prediction,SingleSigned,concept_mae_overall,0.49279296738597067,0.48811074862211706,0.4974751861498243,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(c) Concept prediction,SingleUnsigned,concept_mae_overall,0.49201231446976845,0.4903160331006336,0.4937085958389033,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(c) Concept prediction,NoStateSupervision,concept_mae_overall,0.7098048806648989,0.7045571929207213,0.7150525684090765,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(d) Paired point-error differences,NoGraph,mse,0.009375643415732772,-0.007378161383621379,0.028513566914914176,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Fixed configuration,(d) Paired point-error differences,SingleSigned,mse,0.00014294692967000127,-8.536727907104191e-05,0.0005210567718576412,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Fixed configuration,(d) Paired point-error differences,SingleUnsigned,mse,0.0010873485677828179,-0.00029699468722668156,0.0029515967745237745,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Fixed configuration,(d) Paired point-error differences,NoStateSupervision,mse,0.0036422033940802906,-0.005036404375161035,0.01300151818611356,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Validation-selected configuration,(d) Paired point-error differences,NoGraph,mse,0.00983679773409593,-0.00722032651579472,0.029655302195009364,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Validation-selected configuration,(d) Paired point-error differences,SingleSigned,mse,1.8130584488097747e-05,-0.0006996233879939544,0.0007551902759570533,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Validation-selected configuration,(d) Paired point-error differences,SingleUnsigned,mse,0.00229756707504695,-0.0013501648329631124,0.007186281390473802,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Validation-selected configuration,(d) Paired point-error differences,NoStateSupervision,mse,0.0022072146194859,-0.0021372604426570132,0.008667225472814268,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,10000.0
+1,Fixed configuration,(e) Paired distribution-score differences,NoGraph,energy_score,0.08162541720476821,0.04070136248717691,0.13889226126354237,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Fixed configuration,(e) Paired distribution-score differences,SingleSigned,energy_score,-0.0006026027789208185,-0.0010926875585268007,-0.00014167919476408943,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Fixed configuration,(e) Paired distribution-score differences,SingleUnsigned,energy_score,-0.005763489951460769,-0.008754320774377138,-0.0034678176872547494,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Fixed configuration,(e) Paired distribution-score differences,NoStateSupervision,energy_score,-0.0038770413211465095,-0.011784250331507106,0.004297194340440299,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Validation-selected configuration,(e) Paired distribution-score differences,NoGraph,energy_score,0.08152153394360144,0.040505184148356056,0.1386675238257203,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Validation-selected configuration,(e) Paired distribution-score differences,SingleSigned,energy_score,0.00027044859954566676,-0.0004218089491587858,0.0011243019682310137,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Validation-selected configuration,(e) Paired distribution-score differences,SingleUnsigned,energy_score,-0.02582568520709039,-0.04201659096806168,-0.013616454554496527,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Validation-selected configuration,(e) Paired distribution-score differences,NoStateSupervision,energy_score,-0.01932961370002817,-0.02840531241688718,-0.010557862105716468,95% paired circular-block bootstrapCI; block20; matched seed losses averaged at each origin,100.0
+1,Fixed configuration,(f) Graph support,Full,graph_iou_overall,0.7208912714029406,0.7201099467448168,0.7216725960610645,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(f) Graph support,NoGraph,graph_iou_overall,0.0,0.0,0.0,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(f) Graph support,SingleSigned,graph_iou_overall,0.7209143916466187,0.720161361689633,0.7216674216036045,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(f) Graph support,SingleUnsigned,graph_iou_overall,0.7207517603218662,0.7198181775026704,0.7216853431410619,mean plus/minus sampleSD across five seeds,1.0
+1,Fixed configuration,(f) Graph support,NoStateSupervision,graph_iou_overall,0.7208395967770456,0.7196556052546182,0.7220235882994729,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(f) Graph support,Full,graph_iou_overall,0.720881273951056,0.7202225411438223,0.7215400067582896,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(f) Graph support,NoGraph,graph_iou_overall,0.0,0.0,0.0,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(f) Graph support,SingleSigned,graph_iou_overall,0.7208339344056272,0.7200628982445515,0.7216049705667028,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(f) Graph support,SingleUnsigned,graph_iou_overall,0.7937026572403522,0.793446989861697,0.7939583246190073,mean plus/minus sampleSD across five seeds,1.0
+1,Validation-selected configuration,(f) Graph support,NoStateSupervision,graph_iou_overall,0.7935314466170336,0.7931460272196129,0.7939168660144542,mean plus/minus sampleSD across five seeds,1.0

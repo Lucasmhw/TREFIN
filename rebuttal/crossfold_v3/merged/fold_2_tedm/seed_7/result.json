@@ -1,0 +1,563 @@
+{
+  "family": "tedm",
+  "seed": 7,
+  "scope": "NEW supplemental experiments; no claim to reconstruct the historical separate-host experiments",
+  "selected_candidate": {
+    "candidate": 1,
+    "learning_rate": 0.001,
+    "best_epoch": 97,
+    "best_validation_es": 0.14844997528980447,
+    "epochs_completed": 100,
+    "optimizer_updates": 4200,
+    "training_and_validation_seconds": 6904.446544647217,
+    "parameters": 5002416,
+    "checkpoint": "seed_7/candidate_01/best.pt",
+    "checkpoint_sha256": "7dc20418a2916c26f674dfe246780305730ce2f888df21fa65703544d452c665"
+  },
+  "candidate_summaries": [
+    {
+      "candidate": 1,
+      "learning_rate": 0.001,
+      "best_epoch": 97,
+      "best_validation_es": 0.14844997528980447,
+      "epochs_completed": 100,
+      "optimizer_updates": 4200,
+      "training_and_validation_seconds": 6904.446544647217,
+      "parameters": 5002416,
+      "checkpoint": "seed_7/candidate_01/best.pt",
+      "checkpoint_sha256": "7dc20418a2916c26f674dfe246780305730ce2f888df21fa65703544d452c665"
+    },
+    {
+      "candidate": 2,
+      "learning_rate": 0.0003,
+      "best_epoch": 1,
+      "best_validation_es": 0.14851384870728737,
+      "epochs_completed": 16,
+      "optimizer_updates": 672,
+      "training_and_validation_seconds": 1020.4923295974731,
+      "parameters": 5002416,
+      "checkpoint": "seed_7/candidate_02/best.pt",
+      "checkpoint_sha256": "74e5d69f6133f00e819cc99c21b8cf235f68211ee8be537b66851c48a58162eb"
+    }
+  ],
+  "rho": 0.05,
+  "before": {
+    "mse": 0.0007306116403086303,
+    "rmse": 0.02702982871400835,
+    "mae": 0.01981529711784896,
+    "directional_accuracy": 0.5089213709677419,
+    "msic": 0.00911420556432431,
+    "msir": 0.01796662518682122,
+    "energy_score": 0.12829011979123375,
+    "coverage_90": 0.219140625,
+    "width_90": 0.012965050284357373
+  },
+  "after": {
+    "mse": 0.0004079568044747011,
+    "rmse": 0.020197940599840893,
+    "mae": 0.01430497592139835,
+    "directional_accuracy": 0.5089213709677419,
+    "msic": 0.009114205564324313,
+    "msir": 0.017966625186821232,
+    "energy_score": 0.09152126287020562,
+    "coverage_90": 0.3020791330645161,
+    "width_90": 0.012965050284357373
+  },
+  "test_origins": 496,
+  "test_seconds": 142.1620910167694,
+  "reload_validation_ES_difference": 0.0,
+  "pairwise_translation_error": 3.469446951953614e-18,
+  "source_data_sha256": "07d16b48f9446bb60bf73e3ecb44678debe0e930936964a6230ddd3d5ccc01d7",
+  "protocol_sha256": "85aa04e0fbc9a0b19863984defc0d87d0a9f494b688fe738e313eb69d7ac53b3",
+  "test_predictions_sha256": "f580381101b89979583b04a64b23e7220a588894d6c2094b0185c22a36f981bd",
+  "test_targets_float32_bytes_sha256": "97970215305ae41d9bedc907cf9923f8fd2b23ca60b4f55b17fd091ed3a2d860",
+  "numerical_audit_cumulative": {
+    "calls": 19424,
+    "zero_zero_elements": 123,
+    "zero_denominator_elements": 13776,
+    "repaired_calls": 123,
+    "events": [
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 1,
+        "phase": "val",
+        "optimizer_update": 42,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 2,
+        "phase": "val",
+        "optimizer_update": 84,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 3,
+        "phase": "val",
+        "optimizer_update": 126,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 4,
+        "phase": "val",
+        "optimizer_update": 168,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 5,
+        "phase": "val",
+        "optimizer_update": 210,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 6,
+        "phase": "val",
+        "optimizer_update": 252,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 7,
+        "phase": "val",
+        "optimizer_update": 294,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 8,
+        "phase": "val",
+        "optimizer_update": 336,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 9,
+        "phase": "val",
+        "optimizer_update": 378,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 10,
+        "phase": "val",
+        "optimizer_update": 420,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 11,
+        "phase": "val",
+        "optimizer_update": 462,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 12,
+        "phase": "val",
+        "optimizer_update": 504,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 13,
+        "phase": "val",
+        "optimizer_update": 546,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 14,
+        "phase": "val",
+        "optimizer_update": 588,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 15,
+        "phase": "val",
+        "optimizer_update": 630,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 16,
+        "phase": "val",
+        "optimizer_update": 672,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 17,
+        "phase": "val",
+        "optimizer_update": 714,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 18,
+        "phase": "val",
+        "optimizer_update": 756,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 19,
+        "phase": "val",
+        "optimizer_update": 798,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      },
+      {
+        "seed": 7,
+        "candidate": 1,
+        "epoch": 20,
+        "phase": "val",
+        "optimizer_update": 840,
+        "training_batch_offset": 2624,
+        "event": "zero_denominator",
+        "shape": [
+          4096,
+          32,
+          112
+        ],
+        "zero_zero_elements": 1,
+        "nonzero_over_zero_elements": 111,
+        "mode": "repair",
+        "input_all_finite": true,
+        "mean_all_finite": true,
+        "first_zero_zero_index": [
+          2174,
+          12,
+          0
+        ]
+      }
+    ],
+    "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+  }
+}

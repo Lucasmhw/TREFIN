@@ -1,0 +1,102 @@
+[
+  {
+    "decay": 0.9,
+    "degrees_of_freedom": 3,
+    "validation_energy_score": 0.08980062900604009
+  },
+  {
+    "decay": 0.9,
+    "degrees_of_freedom": 5,
+    "validation_energy_score": 0.08873659777230318
+  },
+  {
+    "decay": 0.9,
+    "degrees_of_freedom": 8,
+    "validation_energy_score": 0.08865174285689338
+  },
+  {
+    "decay": 0.9,
+    "degrees_of_freedom": 15,
+    "validation_energy_score": 0.08867894043248338
+  },
+  {
+    "decay": 0.9,
+    "degrees_of_freedom": 30,
+    "validation_energy_score": 0.08871474353850249
+  },
+  {
+    "decay": 0.94,
+    "degrees_of_freedom": 3,
+    "validation_energy_score": 0.0897929293327326
+  },
+  {
+    "decay": 0.94,
+    "degrees_of_freedom": 5,
+    "validation_energy_score": 0.08884924893001045
+  },
+  {
+    "decay": 0.94,
+    "degrees_of_freedom": 8,
+    "validation_energy_score": 0.08881108812705096
+  },
+  {
+    "decay": 0.94,
+    "degrees_of_freedom": 15,
+    "validation_energy_score": 0.08886756308822394
+  },
+  {
+    "decay": 0.94,
+    "degrees_of_freedom": 30,
+    "validation_energy_score": 0.08891800171756924
+  },
+  {
+    "decay": 0.97,
+    "degrees_of_freedom": 3,
+    "validation_energy_score": 0.08992182445497875
+  },
+  {
+    "decay": 0.97,
+    "degrees_of_freedom": 5,
+    "validation_energy_score": 0.08918574687446973
+  },
+  {
+    "decay": 0.97,
+    "degrees_of_freedom": 8,
+    "validation_energy_score": 0.08922941554914525
+  },
+  {
+    "decay": 0.97,
+    "degrees_of_freedom": 15,
+    "validation_energy_score": 0.08933776260063825
+  },
+  {
+    "decay": 0.97,
+    "degrees_of_freedom": 30,
+    "validation_energy_score": 0.08941400367512198
+  },
+  {
+    "decay": 0.99,
+    "degrees_of_freedom": 3,
+    "validation_energy_score": 0.09024176859139312
+  },
+  {
+    "decay": 0.99,
+    "degrees_of_freedom": 5,
+    "validation_energy_score": 0.08985209437374636
+  },
+  {
+    "decay": 0.99,
+    "degrees_of_freedom": 8,
+    "validation_energy_score": 0.09003228956638586
+  },
+  {
+    "decay": 0.99,
+    "degrees_of_freedom": 15,
+    "validation_energy_score": 0.09022717475951296
+  },
+  {
+    "decay": 0.99,
+    "degrees_of_freedom": 30,
+    "validation_energy_score": 0.09034649504238207
+  }
+]

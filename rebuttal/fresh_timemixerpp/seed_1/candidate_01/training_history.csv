@@ -1,0 +1,2 @@
+epoch,optimizer_updates,training_loss,validation_energy_score,validation_mse,learning_rate,epoch_seconds
+1,34,0.9064590930938721,0.06405056127630104,0.0002904655898971231,0.000999753282650064,85.557124376297

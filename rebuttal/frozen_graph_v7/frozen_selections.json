@@ -1,0 +1,85 @@
+{
+  "schema": "trefin-frozen-graph-v7-selections",
+  "status": "frozen_before_test",
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "variants": [
+    "Full",
+    "FrozenGraph"
+  ],
+  "seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "final_runs": 30,
+  "unique_search_fits": 21,
+  "additional_seed_fits": 24,
+  "seed1_reuses_validation_selected_checkpoint": true,
+  "implementation_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "protocol.py": "a4a1c3f30e649a669dabd0d1f16172219efb13ce3c52a1684b5837d96202fdbd",
+    "search_validation.py": "904431231b36b231c416bf1eb84cc02b564248f76e1ed8ac98bda1b06fdadcac",
+    "freeze_selections.py": "f06ac1a6198851cb2a6f0e878c8c4650bde3681d7b2c12f570bfc0f0b7909335",
+    "run_selected.py": "c510e1d8319223b5b5a830ce15107e18666a8c8958375c338355dda8aced3f66"
+  },
+  "source_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "trainer.py": "3391e67a5ce3b484acb2dc9634507f897718d6cccb9449ca2adb797479ff9e85",
+    "losses.py": "a6288b562db7bb30cf5da4e3d73ab1d458626ab3c6651f766ef8fbee028dc368",
+    "calibration.py": "e38d49ba04d31899f957ba9c73b638dc3cbc13530f9ae18fb62a550039a7ecbf",
+    "metrics.py": "a4e96bdba0fc81d8483c66ea524c0a558499f5753d70436be60ef0ba51ac163c",
+    "experiment.py": "c94f73e3e376c44bde9f5a775dd1634917e594f3d9a995eb21b1d81686d477cc",
+    "utils.py": "b349cde603a18ed52684adfb3c090db90330951d678de0b053f6be9a0d1d746d"
+  },
+  "selections": {
+    "fold_1/Full": {
+      "selection_path": "search/fold_1/Full/selection.json",
+      "selection_sha256": "203e7b2d04e5c6e58936244696facda01ca4d159092ed0c7f305c49f7419dd40",
+      "registration_path": "search/fold_1/Full/search_registration.json",
+      "registration_sha256": "0be267dd560b295d3956dad9b271689433b5f91f473d5d92a76749dd4fdc482e",
+      "selected_candidate": "stronger_dynamics"
+    },
+    "fold_1/FrozenGraph": {
+      "selection_path": "search/fold_1/FrozenGraph/selection.json",
+      "selection_sha256": "38e910c842d1862e42bfb5732491183cc1f79a8ae8ec89e4695d7b743be18322",
+      "registration_path": "search/fold_1/FrozenGraph/search_registration.json",
+      "registration_sha256": "150c530ac72f0b0a387e96f8c20051889a4387199878e475a4f1bc3263c4c23f",
+      "selected_candidate": "base"
+    },
+    "fold_2/Full": {
+      "selection_path": "search/fold_2/Full/selection.json",
+      "selection_sha256": "efc8886addc9e62bd280624b8678c7f9723da1743e5028f54b463fdb7f6cf2f7",
+      "registration_path": "search/fold_2/Full/search_registration.json",
+      "registration_sha256": "045c59f8cbd9d6095b6d5646befaf79248139da36a744cfde8f609baa30066d3",
+      "selected_candidate": "weaker_state_supervision"
+    },
+    "fold_2/FrozenGraph": {
+      "selection_path": "search/fold_2/FrozenGraph/selection.json",
+      "selection_sha256": "aa2cb9f33083faba66d55024c470048fc848a5c75c2f8513853977251f90cc64",
+      "registration_path": "search/fold_2/FrozenGraph/search_registration.json",
+      "registration_sha256": "69e6c49122b3f3eb39156565a05221124cdc94e1b82dc55896287f8462707dbe",
+      "selected_candidate": "base"
+    },
+    "fold_3/Full": {
+      "selection_path": "search/fold_3/Full/selection.json",
+      "selection_sha256": "ece112bae1a674c82bfb4c901a5f5557c687c0cad13ac21492d1cd4a5bab8e66",
+      "registration_path": "search/fold_3/Full/search_registration.json",
+      "registration_sha256": "0785568b96a512454106510e8b39ac0415d0233889f98b0d0285c481f3ff9fe2",
+      "selected_candidate": "base"
+    },
+    "fold_3/FrozenGraph": {
+      "selection_path": "search/fold_3/FrozenGraph/selection.json",
+      "selection_sha256": "85634e6d6ffe29ed3d21d5d4384aaf6fccd5f845a8af4b9f93e7c87eb0182067",
+      "registration_path": "search/fold_3/FrozenGraph/search_registration.json",
+      "registration_sha256": "3e1e0eef9e8747b4466dd67af08c2fb65f8c0670da907246da5bd27625945278",
+      "selected_candidate": "stronger_dynamics"
+    }
+  },
+  "test_used_for_selection": false
+}

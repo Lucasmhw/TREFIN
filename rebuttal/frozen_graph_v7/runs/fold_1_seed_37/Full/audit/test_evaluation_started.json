@@ -1,0 +1,6 @@
+{
+  "global_selection_sha256": "140699433fd2713200068945e9696aa6786cd80bff21ae4ce00dac6b7d823bf3",
+  "checkpoint_sha256": "318bb6b07b115a659199e5a88c5ffcdc0c60bc52447dfbb6494dad999defdad9",
+  "sampling_seed": 38,
+  "test_scenarios": 256
+}

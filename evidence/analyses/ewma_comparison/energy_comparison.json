@@ -1,0 +1,236 @@
+{
+  "definition": "TREFIN minus EWMA Student-t; negative favors TREFIN; seeds averaged within each origin before resampling",
+  "folds": {
+    "fold_1": {
+      "trefin_seed_energy_scores": [
+        0.08966896300964444,
+        0.08991848241908922,
+        0.08953342424608707,
+        0.08988818696846447,
+        0.08970938067030318
+      ],
+      "trefin_mean_energy_score": 0.08974368746271767,
+      "ewma_energy_score": 0.08937016732153244,
+      "paired_tests": [
+        {
+          "mean_difference": 0.00037352014118523057,
+          "confidence_interval_95": [
+            -0.0001678308517655597,
+            0.0009527529641620081
+          ],
+          "centered_two_sided_p": 0.20135972805438912,
+          "block_length": 5,
+          "repetitions": 5000,
+          "random_seed": 20261108,
+          "origins": 500
+        },
+        {
+          "mean_difference": 0.00037352014118523057,
+          "confidence_interval_95": [
+            -0.00022175957653285447,
+            0.0010045209131293667
+          ],
+          "centered_two_sided_p": 0.23055388922215556,
+          "block_length": 10,
+          "repetitions": 5000,
+          "random_seed": 20261109,
+          "origins": 500
+        },
+        {
+          "mean_difference": 0.00037352014118523057,
+          "confidence_interval_95": [
+            -0.00037934566623864244,
+            0.0010826665321809117
+          ],
+          "centered_two_sided_p": 0.3121375724855029,
+          "block_length": 20,
+          "repetitions": 5000,
+          "random_seed": 20261110,
+          "origins": 500
+        }
+      ],
+      "trefin_sources": [
+        {
+          "seed": 1,
+          "sha256": "061334a69e29fc8253f3198d6b18099f7c298dc9f274326b19edb67bcf9b69ed",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_1_seed_1\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 7,
+          "sha256": "88126a157fa73c6eaa44e1cdff21f23a4e2fc101bdb0f075629a264815a66531",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_1_seed_7\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 19,
+          "sha256": "b3111875840e1e533809c11e9243afb2f4e441bef4391f7ff134ad79ea192cb8",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_1_seed_19\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 37,
+          "sha256": "1bacaff03d31d7ea6deaf8d282d5fd4acaca0a2e644c15e215be29882bec52f6",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_1_seed_37\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 73,
+          "sha256": "83604b4e756fb85290fcc6c174842f6b3920a140d300188ec2cea1c75d87aa56",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_1_seed_73\\predictions\\test_predictions.npz"
+        }
+      ],
+      "ewma_sha256": "bdf81b105e53027f848835b19a849030c33ba74651c6ddd3a38cd6a4a6531134"
+    },
+    "fold_2": {
+      "trefin_seed_energy_scores": [
+        0.07639895019664338,
+        0.07638660538006847,
+        0.07632786702398045,
+        0.07636135061384852,
+        0.07638565385807222
+      ],
+      "trefin_mean_energy_score": 0.07637208541452262,
+      "ewma_energy_score": 0.07632485101730677,
+      "paired_tests": [
+        {
+          "mean_difference": 4.723439721584858e-05,
+          "confidence_interval_95": [
+            -0.00018430532561661926,
+            0.0002938568642722308
+          ],
+          "centered_two_sided_p": 0.6998600279944012,
+          "block_length": 5,
+          "repetitions": 5000,
+          "random_seed": 20261108,
+          "origins": 496
+        },
+        {
+          "mean_difference": 4.723439721584858e-05,
+          "confidence_interval_95": [
+            -0.00021602239333530894,
+            0.00031299544546602534
+          ],
+          "centered_two_sided_p": 0.7258548290341932,
+          "block_length": 10,
+          "repetitions": 5000,
+          "random_seed": 20261109,
+          "origins": 496
+        },
+        {
+          "mean_difference": 4.723439721584858e-05,
+          "confidence_interval_95": [
+            -0.00020056743394293635,
+            0.0003134427465652824
+          ],
+          "centered_two_sided_p": 0.7236552689462108,
+          "block_length": 20,
+          "repetitions": 5000,
+          "random_seed": 20261110,
+          "origins": 496
+        }
+      ],
+      "trefin_sources": [
+        {
+          "seed": 1,
+          "sha256": "b50bc4380cf37957a9062f9c4cc5272b50710d167a7cd8aca961753286945cf6",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_2_seed_1\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 7,
+          "sha256": "817fc1c2f280147d3be25c1c59d831079285f1347dc51c0f22e761813d2f2e31",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_2_seed_7\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 19,
+          "sha256": "e9aa8093f55917d1bd36e0d2387b064206569915b81d9f78e12c7b15df76b9c5",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_2_seed_19\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 37,
+          "sha256": "b5a62ddad0d479e1d0ef2c61db8ef08829b76d5d19d90bab0854448b4a1d7c70",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_2_seed_37\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 73,
+          "sha256": "86cc6db74b3094e158e0cce2371e38308867945f3a577d1db30a8b5c9d3015b8",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_2_seed_73\\predictions\\test_predictions.npz"
+        }
+      ],
+      "ewma_sha256": "fd418290a288bb12ea5259811db7a6959a3b5c9998f7ae14fb80617c2dbba90d"
+    },
+    "fold_3": {
+      "trefin_seed_energy_scores": [
+        0.07011037422615099,
+        0.07011630620237118,
+        0.07000872873542034,
+        0.07014818105171243,
+        0.0701216516538599
+      ],
+      "trefin_mean_energy_score": 0.07010104837390298,
+      "ewma_energy_score": 0.06988788344530679,
+      "paired_tests": [
+        {
+          "mean_difference": 0.0002131649285961811,
+          "confidence_interval_95": [
+            4.93955368488352e-05,
+            0.00039956511329444376
+          ],
+          "centered_two_sided_p": 0.01919616076784643,
+          "block_length": 5,
+          "repetitions": 5000,
+          "random_seed": 20261108,
+          "origins": 306
+        },
+        {
+          "mean_difference": 0.0002131649285961811,
+          "confidence_interval_95": [
+            4.226229184513741e-05,
+            0.00039259542535166153
+          ],
+          "centered_two_sided_p": 0.019396120775844832,
+          "block_length": 10,
+          "repetitions": 5000,
+          "random_seed": 20261109,
+          "origins": 306
+        },
+        {
+          "mean_difference": 0.0002131649285961811,
+          "confidence_interval_95": [
+            6.231328354570718e-05,
+            0.00038611352325124273
+          ],
+          "centered_two_sided_p": 0.011797640471905619,
+          "block_length": 20,
+          "repetitions": 5000,
+          "random_seed": 20261110,
+          "origins": 306
+        }
+      ],
+      "trefin_sources": [
+        {
+          "seed": 1,
+          "sha256": "b02a03ab5743b23c0161e0ab5cf6aa86589ba40a141b3ee462a411a7a75ecc32",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_3_seed_1\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 7,
+          "sha256": "13c43a40019ede67da7b4f0a66e19c943ed60c37ef2850f90bd7177684590f22",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_3_seed_7\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 19,
+          "sha256": "68a81f05b0d559ba12f231086348817d0638c018a5d58564ea71fa37a9b9e138",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_3_seed_19\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 37,
+          "sha256": "cf9e158d605da112136bbd4a4cbe7682513056a339a6faed94a6f0463e7061f5",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_3_seed_37\\predictions\\test_predictions.npz"
+        },
+        {
+          "seed": 73,
+          "sha256": "cdb6f1c63eb5df41ef5a8f6435caeb98e2d8bbfeb0145ae5d22106f565b80996",
+          "path": "<ORIGINAL_WORKSPACE>\\work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_3_seed_73\\predictions\\test_predictions.npz"
+        }
+      ],
+      "ewma_sha256": "0fccb15a787f6e5d521513808f487f11388e68584c62bf4067a1768ed7841924"
+    }
+  }
+}

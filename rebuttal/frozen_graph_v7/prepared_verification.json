@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "folds": {
+    "1": {
+      "arrays_sha256": "298676d881e32367f3b0e5ea64904feb59831dece0a336ec82236086491750f0",
+      "metadata_sha256": "b166c1f84722e99f4f05d40a57ce12746e5e8a10a56261afa86e3d297dd075e5",
+      "model_array_hashes_verified": true,
+      "split_counts": {
+        "train": 2135,
+        "val": 498,
+        "test": 500
+      }
+    },
+    "2": {
+      "arrays_sha256": "a8c1ff019c49ca86c6aae61c018e43f962f167540934322bd680de827dce18a0",
+      "metadata_sha256": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18",
+      "model_array_hashes_verified": true,
+      "split_counts": {
+        "train": 2638,
+        "val": 500,
+        "test": 496
+      }
+    },
+    "3": {
+      "arrays_sha256": "caf0564bad829edf8652df34540ebe768975e4fb253a6ca25c8caeef949fe3f3",
+      "metadata_sha256": "fc939302818146284cbee90c41d0204c5d18189749f63644adb766aa1b3c010c",
+      "model_array_hashes_verified": true,
+      "split_counts": {
+        "train": 3143,
+        "val": 496,
+        "test": 306
+      }
+    }
+  }
+}

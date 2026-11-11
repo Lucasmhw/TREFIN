@@ -1,0 +1,145 @@
+{
+  "status": "passed",
+  "runs": 15,
+  "same_domain_readout_neighborhoods": 9600,
+  "all_four_prespecified_radii_retained": true,
+  "per_cell_minima_and_state_compositions_recomputed": true,
+  "all_summary_statistics_recomputed": true,
+  "maximum_new_to_old_block_ratio": 1.0000000000000002,
+  "validation_totals": {
+    "dense_log_head_block_checks": 960,
+    "finite_gaussian_pairs": 4320,
+    "finite_log_head_checks": 8640,
+    "edge_sign_changes": 369628
+  },
+  "validation_maxima": {
+    "maximum_dense_log_head_ratio": 0.9985454936001588,
+    "maximum_log_head_ratio": 0.1459981868922082,
+    "maximum_gaussian_parameter_ratio": 0.11477059471725905,
+    "maximum_gaussian_state_ratio": 0.07822584889854642,
+    "maximum_parameter_to_state_ratio": 0.9861972686917473
+  },
+  "dense_count_scope": "240 unique log-head C/A Jacobian blocks checked at four radii, giving 960 checks from 60 joint Jacobian evaluations.",
+  "portable_runner_parity_verified": true,
+  "flow_source_sha256": "753f3898d555dee287605b1483918681a7f41f1346f104e195819132008f9240",
+  "restored_model_source_sha256_verified": "097ac9b51db52eda88fd661566cf36b99e60cc9ea956ed7739975cbcc5ab3eee",
+  "summary_sha256": "c909aeae15e9cc1bdd5f4023265e5643dbd394287548fc00324085290ed9fe12",
+  "validation_sha256": "c40fb9a59a1f3ad79b19763cdd29e394e476df838c3983cba718ebdc44d3e228",
+  "primary_results": {
+    "1": {
+      "concept_radius": 0.1,
+      "old_LD": {
+        "n": 800,
+        "minimum": 38.60800408355866,
+        "median": 377.40185558159476,
+        "q95": 5757.270702066194,
+        "maximum": 17801.642922136743
+      },
+      "new_LD": {
+        "n": 800,
+        "minimum": 5.626997877139193,
+        "median": 36.0840810316843,
+        "q95": 225.52191815348615,
+        "maximum": 344.8201201454192
+      },
+      "new_over_old": {
+        "n": 800,
+        "minimum": 0.01249496010521906,
+        "median": 0.10388478636275378,
+        "q95": 0.25273274744958335,
+        "maximum": 0.3507728699837054
+      },
+      "new_lead5_W1_bp": {
+        "n": 160,
+        "minimum": 813.6917809822612,
+        "median": 2218.8589158196673,
+        "q95": 15477.490659676145,
+        "maximum": 29838.314164328254
+      },
+      "old_lead5_W1_bp": {
+        "n": 160,
+        "minimum": 2889.137594151975,
+        "median": 18700.737979354846,
+        "q95": 235872.98059315706,
+        "maximum": 653588.940921115
+      }
+    },
+    "2": {
+      "concept_radius": 0.1,
+      "old_LD": {
+        "n": 800,
+        "minimum": 8.790861264713293,
+        "median": 375.45261920388987,
+        "q95": 2325.2145107382908,
+        "maximum": 4607.738474801306
+      },
+      "new_LD": {
+        "n": 800,
+        "minimum": 1.8323497554451813,
+        "median": 43.5362806880784,
+        "q95": 173.74479120966467,
+        "maximum": 362.30320759450694
+      },
+      "new_over_old": {
+        "n": 800,
+        "minimum": 0.028085059264618087,
+        "median": 0.1191901824224322,
+        "q95": 0.2626102182888291,
+        "maximum": 0.3572564995976159
+      },
+      "new_lead5_W1_bp": {
+        "n": 160,
+        "minimum": 372.0450794268448,
+        "median": 2365.1855646945723,
+        "q95": 8306.309800922769,
+        "maximum": 14494.095618697398
+      },
+      "old_lead5_W1_bp": {
+        "n": 160,
+        "minimum": 1392.5923824008107,
+        "median": 14330.916316408207,
+        "q95": 106601.08816941176,
+        "maximum": 315340.14435045776
+      }
+    },
+    "3": {
+      "concept_radius": 0.1,
+      "old_LD": {
+        "n": 800,
+        "minimum": 21.057518853918307,
+        "median": 147.05643799642496,
+        "q95": 568.6489158373516,
+        "maximum": 5137.271461342116
+      },
+      "new_LD": {
+        "n": 800,
+        "minimum": 7.0286261530886724,
+        "median": 31.317758793960095,
+        "q95": 87.30024465081696,
+        "maximum": 370.63882436600466
+      },
+      "new_over_old": {
+        "n": 800,
+        "minimum": 0.058475648560127165,
+        "median": 0.21568772317675483,
+        "q95": 0.32437248110388156,
+        "maximum": 0.4266560626177944
+      },
+      "new_lead5_W1_bp": {
+        "n": 160,
+        "minimum": 580.8988730932213,
+        "median": 1783.6519781723682,
+        "q95": 3877.7980353963476,
+        "maximum": 12368.779432001571
+      },
+      "old_lead5_W1_bp": {
+        "n": 160,
+        "minimum": 2286.811517189095,
+        "median": 7840.72519969401,
+        "q95": 18234.58014372186,
+        "maximum": 68139.21522928309
+      }
+    }
+  },
+  "scope": "Uniform analytic tightening on the identical domains and complete cohort; no true-law decoder defect is estimated."
+}

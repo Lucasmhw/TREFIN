@@ -1,0 +1,18 @@
+{
+  "input": "<ORIGINAL_WORKSPACE>\\work\\rolling_interval_calibration\\aggregate.csv",
+  "input_sha256": "e93a026ba65099071b361ba9aec8e6e3e421c67846f69df3ae2eb8d93ef50f26",
+  "script_sha256": "d6e6a7be2d8f4a762413c800c05be0358f587b189a8f54512902dee2e351f7db",
+  "plotted_seed_count": 5,
+  "error_bars": "sample standard deviation, ddof=1",
+  "methods": [
+    "original",
+    "validation_ES_scale",
+    "validation_90pct_scale",
+    "causal_rolling_90pct_scale"
+  ],
+  "outputs": [
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R5_interval_calibration.png",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R5_interval_calibration.svg",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R5_interval_calibration.pdf"
+  ]
+}

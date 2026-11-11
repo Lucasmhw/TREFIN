@@ -1,0 +1,109 @@
+{
+  "schema": "trefin-crossfold-point-implementations-v3",
+  "upstreams": {
+    "TimeSeriesLibrary": {
+      "url": "https://github.com/thuml/Time-Series-Library",
+      "revision": "4e938a1767106324dd753b2a44832bf870a0252e",
+      "license": "MIT",
+      "files": {
+        "models/TimeXer.py": "498165f2532a8434c39060471e5a150af81a16fa9124dc6163d33e885fa2aeae",
+        "layers/SelfAttention_Family.py": "0fea961b640b1a7db471df2e389abfb843ce8e5767aca5af141ee22dd43be66f",
+        "layers/Embed.py": "0a29593e3796b5a3798bd3d37c1150fc2256c559abdee36e83eecd1a05787247",
+        "utils/masking.py": "c22de70ad076f4eeecc857aba984741da05da54375333399ff2742b041544986",
+        "LICENSE": "3892254202fc16573828d34ec901ab765d8eb73a03d174b131a49771adcd8d64",
+        "README.md": "f79bd90ec18fe84a51aa8f4f60356466632e06c74597f72aae6c48a7e22b513f"
+      }
+    },
+    "PyPOTS": {
+      "url": "https://github.com/WenjieDu/PyPOTS",
+      "revision": "2271533587bab250163437ed39cfe13cefd8b80a",
+      "license": "BSD-3-Clause",
+      "files": {
+        "pypots/nn/modules/timemixerpp/backbone.py": "e403c50683224f36f207d21f90d7ce04de0558b67275bd2463ae7ea720c6e57a",
+        "pypots/nn/modules/timemixerpp/layers.py": "1e0c1cb99c1cfc661ebc6c8392e3789c0a06a6ffd74d1c1147b86980c2bd2e57",
+        "pypots/nn/modules/timemixerpp/__init__.py": "573a962ad08c04e119735477e8f59e9522296a6d53707229bb41525c033589ea",
+        "pypots/nn/modules/revin/layers.py": "4604d173101b86d4c93bbe44e91f69628e262a3b88e4fb7857dee1e96a85bae7",
+        "pypots/nn/modules/revin/__init__.py": "40472d9af12cc19a320a13308553dcb224d10d09a065ffb7d9be86c4d880bce6",
+        "pypots/nn/modules/inception/layers.py": "f4e0c746327217c6bc62f3a4c3b2d379a8bdad325b783c6053070ec7a69374bd",
+        "pypots/nn/modules/inception/__init__.py": "732f075cf93c1409b56b6aa2bad37aa468a0c8b138556d54e5c40df7d2b4c9d6",
+        "pypots/nn/modules/transformer/attention.py": "31c0ff8e7ebe33b4b752c9ef659b04b446ccf4cf1a9bfc033f93319b8adf5377",
+        "pypots/nn/modules/transformer/embedding.py": "8db6ff71b983ee90d707078c083839b56c52d81e82a307338709da705e5aea93",
+        "pypots/forecasting/timemixerpp/core.py": "8b1cb63e4e4c810ba4fbcfc7b14fdd4c788a3c0823a0061dc799f2416a0f7e7d",
+        "LICENSE": "bd329b165242bbd70635eb77e15a833aec33a615134ad8a21797c4368f4ac1fe",
+        "README.md": "60135758ce44a8c1c3639f81c63c79749d5f3bf6a25e0852850fd4d02f4bf412"
+      }
+    }
+  },
+  "files": {
+    "fresh_official_common_v1.py": "3d9bd8e9ab7d9c57f16f7fc7580cfd11c889f84ed31e5b61d5af1026c026f143",
+    "fresh_point_baselines.py": "98984772ce27d2a55330ee8e9d6537dcf249d866f72d69b7a52303804a36743c",
+    "fresh_point_baselines_fast.py": "74cfbc7c3dae8b12861e7a7626ad1ad52d215379cfcf5af7d536b5dbc38bb7a0",
+    "timemixerpp_fast_eval.py": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+    "test_timemixerpp_fast_eval.py": "ac63701f9d8fe41f27476528bde53de6c960fdcfe7af94652ce000568467d850",
+    "numerical_acceptance.json": "adfdf8fa8a1b0dff169dfab19d081849e0594de23e08d7ca45d8193b009d9a1e",
+    "crossfold_data.py": "256271b6ee5c50e94d09c835ce29e0c5b9bb989266f6d21a74d51811bbd16637"
+  },
+  "timexer_standalone_model_content_identical": true,
+  "timexer_standalone_revision": "76011909357972bd55a27adba2e1be994d81b327",
+  "timemixerpp_provenance": {
+    "implementation": "PyPOTS maintained implementation, not author-repository reproduction",
+    "author_review_source": "https://anonymous.4open.science/r/TimeMixerPP",
+    "author_source_retrieval_status": "repository_expired on 2026-11-08",
+    "maintainer_reference": "https://github.com/WenjieDu/PyPOTS/issues/789",
+    "forecast_head": "unchanged upstream final/coarsest-scale head; no averaging of heads"
+  },
+  "evaluation_acceleration": {
+    "semantics": "Per-origin FFT selection; native branch operators grouped over independent batch rows; exact native top-k rank order and stack/softmax/multiply/sum retained without merging duplicate weights",
+    "training": "unchanged original block forward",
+    "parameters": "identical names/shapes/count; existing checkpoint compatible",
+    "tolerance": "See hashed numerical_acceptance.json: rawmax<=1e-6, normalizedmax<=1e-4, RMS-relative<=1e-4, exact tested training and FFT selection; original stricter normalized failures retained; inferencebatch32 fixed, trainingbatch64."
+  },
+  "frozen_fold1_source_manifest_sha256": "3779a67d2369a662e18739805d3dc6b6f3bc21ad5da5823e0f5c2b7e4b5e00aa",
+  "frozen_fold1_data_reference": {
+    "path_argument": "--data-bundle",
+    "file": "fold1_raw_returns.npz",
+    "sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b"
+  },
+  "data_references": {
+    "1": {
+      "fold": 1,
+      "directory": "fold_1",
+      "data_file": "fold1_raw_returns.npz",
+      "data_sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b",
+      "manifest_sha256": "889da56a127f27e749b4bd0805f9713f7e0fcef7c005c3a9965a0e7a07f116af",
+      "split_sizes": {
+        "train": 2135,
+        "val": 498,
+        "test": 500
+      },
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    "2": {
+      "fold": 2,
+      "directory": "fold_2",
+      "data_file": "fold2_raw_returns.npz",
+      "data_sha256": "07d16b48f9446bb60bf73e3ecb44678debe0e930936964a6230ddd3d5ccc01d7",
+      "manifest_sha256": "98f24175732b1aa469117599781e98c6d8d72f161fb6916c2236578e6e9559e7",
+      "split_sizes": {
+        "train": 2638,
+        "val": 500,
+        "test": 496
+      },
+      "test_targets_float32_bytes_sha256": "97970215305ae41d9bedc907cf9923f8fd2b23ca60b4f55b17fd091ed3a2d860"
+    },
+    "3": {
+      "fold": 3,
+      "directory": "fold_3",
+      "data_file": "fold3_raw_returns.npz",
+      "data_sha256": "b57b281c7b2f006c9021513819bf1d31e5051b8d39f52e6f4f6dbb40244ac5fa",
+      "manifest_sha256": "460d54315b42fff0d84cb11bd414ab90c418c241e73952351631875cd513b622",
+      "split_sizes": {
+        "train": 3143,
+        "val": 496,
+        "test": 306
+      },
+      "test_targets_float32_bytes_sha256": "68e6dda3b05e783c17b14bd0b3e08d9b39c91df9357748637b36b9e0e5253a9d"
+    }
+  },
+  "changes_from_frozen_fold1": "Manifest-driven fold loading and protocol provenance only; architecture, objectives, optimizers, schedules, candidates, scenario generation and calibration unchanged"
+}

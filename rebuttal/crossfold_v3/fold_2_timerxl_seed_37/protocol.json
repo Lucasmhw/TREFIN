@@ -1,0 +1,132 @@
+{
+  "schema": "trefin-fresh-official-baseline-v1",
+  "status": "NEW supplemental experiments; no claim to reconstruct the historical separate-host experiments",
+  "family": "timerxl",
+  "upstream": {
+    "url": "https://github.com/thuml/OpenLTM",
+    "revision": "0b3005099d380ecc00d512f72553c7fe8fccca99",
+    "files": {
+      "models/timer_xl.py": "13f59058569073e937b419faf62866812638dfbcbe66358c47938576def5c280",
+      "layers/Transformer_EncDec.py": "f569fffbaedb1f01ef293bbdc11e69b87555a638462bca2aeb2caeaed010e0a4",
+      "layers/SelfAttention_Family.py": "53f5e8d757d4536192ccb74331ce4f8015559852cf1c8b44ec30198567a5ea90",
+      "layers/Attn_Bias.py": "127082ac724d5dc1c6760f31b381ad71982c272b0f1444f14f8a78dc1822923b",
+      "layers/Attn_Projection.py": "62ca7bffae64155993d81fdc416220c90541f7b947a532e72b2df1f8b44e4115",
+      "utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utils/masking.py": "fcca808cdb703076fb7d017a525bc08a9601c1689261f25b35f47c9a0d58dfdc",
+      "LICENSE": "e57c6daecaa62d6739d0b9c5db07f01b69349ae86a4cb7690d22bf4c121febc1",
+      "README.md": "0947a1277340efd07d9ee80999f4ec897c4cdff4d3b9d1e57def32c71c4a2d33"
+    }
+  },
+  "data_manifest_sha256": "98f24175732b1aa469117599781e98c6d8d72f161fb6916c2236578e6e9559e7",
+  "data_sha256": "07d16b48f9446bb60bf73e3ecb44678debe0e930936964a6230ddd3d5ccc01d7",
+  "script_sha256": "3d9bd8e9ab7d9c57f16f7fc7580cfd11c889f84ed31e5b61d5af1026c026f143",
+  "seeds": [
+    37
+  ],
+  "learning_rate_candidates": [
+    0.001,
+    0.0003
+  ],
+  "max_epochs": 100,
+  "patience_epochs": 15,
+  "batch_size": 64,
+  "validation_samples": 64,
+  "test_samples": 256,
+  "evaluation_rng_seed": 271828,
+  "configuration": {
+    "timer": {
+      "input_token_len": 21,
+      "output_token_len": 5,
+      "d_model": 128,
+      "d_ff": 512,
+      "e_layers": 3,
+      "n_heads": 4,
+      "dropout": 0.1,
+      "output_attention": false,
+      "covariate": false,
+      "flash_attention": false,
+      "activation": "gelu",
+      "use_norm": true
+    },
+    "tedm_network": {
+      "feat_size": 32,
+      "seq_len": 112,
+      "past_k": 13,
+      "model_channels": 32,
+      "num_blocks": 2,
+      "channel_mult": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "attn_resolutions": [
+        112,
+        56,
+        28,
+        14
+      ],
+      "sigma_from_t": false,
+      "kaiser_size": 6,
+      "kaiser_beta": 14.77,
+      "dropout": 0.1
+    },
+    "tedm_noise": {
+      "sigma_data": 1.0,
+      "var_min": 0.001,
+      "var_max": 5.0,
+      "scale_min": 1.0,
+      "scale_max": 8.0,
+      "scale_from_data": true,
+      "stats": "cumulative",
+      "sliding_window": 60,
+      "ema_beta": 0.99
+    }
+  },
+  "normalization": "per-asset mean and population SD fitted to unique raw training rows including purged training labels only",
+  "selection": "validation ES on 500 exact fold 2 origins after every epoch; same initialization seed for LR candidates; no test access during training or selection",
+  "mean_calibration": "after checkpoint/candidate selection; rho in [0.05,1] selected by validation ES with frozen innovations",
+  "inputs": "126 historical one-period excess log returns for all 32 assets; factor file used only for risk-free-return subtraction when reconstructing labels; no FF5 values, concepts or OHLCV as predictor inputs",
+  "timer_adapter": "official Timer-XL point backbone, six21-day input tokens and5-day output head, retain last output token; training-residual joint paths for scenarios",
+  "tedm_adapter": "official UNet/noise/preconditioner/native stochastic sampler;112denoised positions+13conditioning offset+1padding=126total observed rows;five rollout steps;lastfive outputs;explicit track-major reshape correction",
+  "tedm_training": "official weighted denoising objective on126-row training windows ending at each purged target+5; EMA beta.995 every10updates; Adam betas(.9,.96), no weight decay; native plateau scheduler with100update warmup, factor.9 patience15 threshold.01",
+  "timer_training": "point MSE over5futurereturns; Adam betas(.9,.999), no weight decay; epoch cosine scheduler; last-token task adaptation",
+  "device": "cuda",
+  "effective_sampler_origin_batch": 8,
+  "effective_sampler_track_chunk": 64,
+  "fold": 2,
+  "data_file": "fold2_raw_returns.npz",
+  "split_sizes": {
+    "train": 2638,
+    "val": 500,
+    "test": 496
+  },
+  "split_date_ranges": {
+    "train": {
+      "samples": 2638,
+      "forecast_origin_start": "2009-07-02T00:00:00.000000000",
+      "forecast_origin_end": "2019-12-23T00:00:00.000000000",
+      "last_label_date": "2019-12-31T00:00:00.000000000"
+    },
+    "val": {
+      "samples": 500,
+      "forecast_origin_start": "2020-01-02T00:00:00.000000000",
+      "forecast_origin_end": "2021-12-23T00:00:00.000000000",
+      "last_label_date": "2021-12-31T00:00:00.000000000"
+    },
+    "test": {
+      "samples": 496,
+      "forecast_origin_start": "2022-01-03T00:00:00.000000000",
+      "forecast_origin_end": "2023-12-21T00:00:00.000000000",
+      "last_label_date": "2023-12-29T00:00:00.000000000"
+    }
+  },
+  "normalization_fit_rows_inclusive": [
+    1,
+    2767
+  ],
+  "crossfold_loader_sha256": "256271b6ee5c50e94d09c835ce29e0c5b9bb989266f6d21a74d51811bbd16637",
+  "test_targets_float32_bytes_sha256": "97970215305ae41d9bedc907cf9923f8fd2b23ca60b4f55b17fd091ed3a2d860",
+  "frozen_fold1_runner_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720"
+}

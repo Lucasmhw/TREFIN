@@ -1,0 +1,14 @@
+{
+  "base_file": "work/ablation_patch/model.py",
+  "base_sha256": "7c8d0c16c315f9ba34d3d0668da86f8e043a508d46f00c78aa5cae56620097da",
+  "patched_file": "model.py",
+  "patched_sha256": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+  "changed_regions": [
+    "variant registration",
+    "identity graph transition",
+    "structural gain graph row 0,1",
+    "batch gain graph row 0,1"
+  ],
+  "full_computation_unchanged": true,
+  "old_source_modified": false
+}

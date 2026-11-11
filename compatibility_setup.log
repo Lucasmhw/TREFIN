@@ -1,0 +1,31 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Collecting pandas<3,>=2.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/e5/63/cd7d615331b328e287d8233ba9fdf191a9c2d11b6af0c7a59cfcec23de68/pandas-2.3.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 2.8 MB/s eta 0:00:00
+Collecting pytest<9,>=8
+  Downloading http://mirrors.aliyun.com/pypi/packages/a8/a4/20da314d277121d6534b3a980b29035dcd51e6744bd79075a6ce8fa4eb8d/pytest-8.4.2-py3-none-any.whl (365 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 57.2 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.26.0 in ./miniconda3/lib/python3.12/site-packages (from pandas<3,>=2.2) (2.3.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./miniconda3/lib/python3.12/site-packages (from pandas<3,>=2.2) (2.9.0.post0)
+Collecting pytz>=2020.1 (from pandas<3,>=2.2)
+  Downloading http://mirrors.aliyun.com/pypi/packages/b6/25/564f3fc5b70c1398d706c51f2b1470d0ea0b1b2f96fee67877b6f5bdf3b6/pytz-2026.6-py2.py3-none-any.whl (506 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 72.4 MB/s eta 0:00:00
+Collecting tzdata>=2022.7 (from pandas<3,>=2.2)
+  Downloading http://mirrors.aliyun.com/pypi/packages/0a/66/9a06c2227fedfd4919f0eaaa8b94377d9730882a7e4f95823c9a331ab5e1/tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.2/348.2 kB 67.4 MB/s eta 0:00:00
+Requirement already satisfied: iniconfig>=1 in ./miniconda3/lib/python3.12/site-packages (from pytest<9,>=8) (2.3.1)
+Requirement already satisfied: packaging>=20 in ./miniconda3/lib/python3.12/site-packages (from pytest<9,>=8) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in ./miniconda3/lib/python3.12/site-packages (from pytest<9,>=8) (1.7.0)
+Requirement already satisfied: pygments>=2.7.2 in ./miniconda3/lib/python3.12/site-packages (from pytest<9,>=8) (2.19.2)
+Requirement already satisfied: six>=1.5 in ./miniconda3/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas<3,>=2.2) (1.17.0)
+Installing collected packages: pytz, tzdata, pytest, pandas
+  Attempting uninstall: pytest
+    Found existing installation: pytest 9.2.0
+    Uninstalling pytest-9.2.0:
+      Successfully uninstalled pytest-9.2.0
+  Attempting uninstall: pandas
+    Found existing installation: pandas 3.1.1
+    Uninstalling pandas-3.1.1:
+      Successfully uninstalled pandas-3.1.1
+Successfully installed pandas-2.3.3 pytest-8.4.2 pytz-2026.6 tzdata-2026.6
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv

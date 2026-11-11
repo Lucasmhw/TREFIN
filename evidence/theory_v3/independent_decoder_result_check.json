@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "runs": 15,
+  "decoder_bound_vectors": 38400,
+  "propagated_compositions_recomputed": 38400,
+  "all_fields_finite": true,
+  "all_normalization_clamps_inactive": true,
+  "all_summary_fields_recomputed": true,
+  "compact_summary_recomputed": true,
+  "actual_checkpoint_validation_verified": true,
+  "validation_totals": {
+    "dense_head_blocks": 2880,
+    "finite_head_pairs": 8640,
+    "factor_pairs": 1440
+  },
+  "validation_maxima": {
+    "max_dense_ratio": 0.9987587784613677,
+    "max_head_difference_ratio": 0.19185237096810218,
+    "max_factor_difference_ratio": 0.025341345617758918,
+    "max_covariance_factor_identity_error": 2.5357493882438575e-13
+  },
+  "dense_check_count_scope": "720 unique C/A head-Jacobian blocks checked against four radii, giving 2880 block-bound checks; 60 joint head-Jacobian evaluations.",
+  "source_hashes_verified": {
+    "decoder_bound_source_sha256": "70d5b4a0ebd1e360e1037a5db981f99d2b36d0ed142998680af686219f35f32c",
+    "local_mlp_bound_source_sha256": "b743962fc914c3bd65e02b28f25e013ae90ab865d56b590ca12503d51e20cc11",
+    "audit_source_sha256": "82f6ab26be3307e00ee79548228cf862e6da3c6359a2288938c1dcf77b669ce8",
+    "source_model_sha256": "097ac9b51db52eda88fd661566cf36b99e60cc9ea956ed7739975cbcc5ab3eee",
+    "state_protocol_sha256": "152b7b338db95c1b2a4c54a61349d84e22ec398beea7d744998d3fbc0d9c225d"
+  },
+  "summary_sha256": "5dc1631852e6454f7601cf0599a9e3ba10136f8a417294a434ef527a8b012edf",
+  "selected_descriptive_results": {
+    "1": {
+      "0.001": {
+        "LD_all_leads": {
+          "n": 800,
+          "minimum": 3.245177636242553,
+          "median": 16.912333058799188,
+          "q95": 307.39853986554834,
+          "maximum": 1044.0111894204035
+        },
+        "lead5_propagated_W1": {
+          "n": 160,
+          "minimum": 0.00025575816533793467,
+          "median": 0.0009470244664254868,
+          "q95": 0.018939281886143536,
+          "maximum": 0.05580106323167059
+        }
+      },
+      "0.1": {
+        "LD_all_leads": {
+          "n": 800,
+          "minimum": 38.60800408355866,
+          "median": 377.40185558159476,
+          "q95": 5757.270702066194,
+          "maximum": 17801.642922136743
+        },
+        "lead5_propagated_W1": {
+          "n": 160,
+          "minimum": 0.2889137594151975,
+          "median": 1.8700737979354844,
+          "q95": 23.587298059315703,
+          "maximum": 65.3588940921115
+        }
+      }
+    },
+    "2": {
+      "0.001": {
+        "LD_all_leads": {
+          "n": 800,
+          "minimum": 1.1702226191301146,
+          "median": 28.389022320918134,
+          "q95": 118.68601058585591,
+          "maximum": 206.93070735248577
+        },
+        "lead5_propagated_W1": {
+          "n": 160,
+          "minimum": 0.00017294270154482984,
+          "median": 0.0014953174184603635,
+          "q95": 0.005600319921995739,
+          "maximum": 0.007093064080894996
+        }
+      },
+      "0.1": {
+        "LD_all_leads": {
+          "n": 800,
+          "minimum": 8.790861264713293,
+          "median": 375.45261920388987,
+          "q95": 2325.2145107382908,
+          "maximum": 4607.738474801306
+        },
+        "lead5_propagated_W1": {
+          "n": 160,
+          "minimum": 0.13925923824008107,
+          "median": 1.4330916316408207,
+          "q95": 10.660108816941175,
+          "maximum": 31.534014435045776
+        }
+      }
+    },
+    "3": {
+      "0.001": {
+        "LD_all_leads": {
+          "n": 800,
+          "minimum": 1.9620342464725906,
+          "median": 8.295298659033426,
+          "q95": 15.873340492604372,
+          "maximum": 45.74658523927334
+        },
+        "lead5_propagated_W1": {
+          "n": 160,
+          "minimum": 0.00017508199553243896,
+          "median": 0.00045467052849968185,
+          "q95": 0.0008563187478386972,
+          "maximum": 0.0017818185766314827
+        }
+      },
+      "0.1": {
+        "LD_all_leads": {
+          "n": 800,
+          "minimum": 21.057518853918307,
+          "median": 147.05643799642496,
+          "q95": 568.6489158373516,
+          "maximum": 5137.271461342116
+        },
+        "lead5_propagated_W1": {
+          "n": 160,
+          "minimum": 0.2286811517189095,
+          "median": 0.7840725199694011,
+          "q95": 1.8234580143721861,
+          "maximum": 6.813921522928308
+        }
+      }
+    }
+  },
+  "scope": "Independent source and complete-cohort consistency audit; not a reference-law accuracy claim."
+}

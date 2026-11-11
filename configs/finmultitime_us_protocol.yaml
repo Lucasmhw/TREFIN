@@ -1,0 +1,30 @@
+protocol:
+  name: finmultitime_us_rolling_3fold_5seed
+  base_config: finmultitime_us_debug.yaml
+  minimum_seeds: 5
+  seeds: [1, 7, 19, 37, 73]
+  folds:
+    - id: fold_1
+      split_dates:
+        train_start: "2009-01-02"
+        train_end: "2017-12-29"
+        val_start: "2018-01-02"
+        val_end: "2019-12-31"
+        test_start: "2020-01-02"
+        test_end: "2021-12-31"
+    - id: fold_2
+      split_dates:
+        train_start: "2009-01-02"
+        train_end: "2019-12-31"
+        val_start: "2020-01-02"
+        val_end: "2021-12-31"
+        test_start: "2022-01-03"
+        test_end: "2023-12-29"
+    - id: fold_3
+      split_dates:
+        train_start: "2009-01-02"
+        train_end: "2021-12-31"
+        val_start: "2022-01-03"
+        val_end: "2023-12-29"
+        test_start: "2024-01-02"
+        test_end: "2025-03-28"

@@ -1,0 +1,31 @@
+{
+  "selected_signal_shrinkage": 0.3346608207108803,
+  "lower_bound": 0.05,
+  "upper_bound": 1.0,
+  "tolerance": 1e-05,
+  "selection_split": "validation",
+  "selection_metric": "energy_score",
+  "convex_objective": true,
+  "pairwise_energy_term_invariant": true,
+  "pairwise_invariance_max_error": 2.7755575615628914e-17,
+  "optimizer_success": true,
+  "optimizer_evaluations": 8,
+  "uncalibrated_validation_metrics": {
+    "mse": 0.0002869399831787237,
+    "rmse": 0.01693930291301043,
+    "mae": 0.011715474636702172,
+    "directional_accuracy": 0.5227660642570281,
+    "msic": -0.0004803605454227802,
+    "msir": -0.0009765109127731313,
+    "energy_score": 0.06363260065214763
+  },
+  "calibrated_validation_metrics": {
+    "mse": 0.00028647314263484565,
+    "rmse": 0.016925517499764835,
+    "mae": 0.011720068210192117,
+    "directional_accuracy": 0.5227660642570281,
+    "msic": -0.0004803605454227805,
+    "msir": -0.0009765109127731313,
+    "energy_score": 0.06359042473622344
+  }
+}

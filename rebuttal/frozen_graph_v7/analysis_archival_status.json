@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "started_utc": "2026-11-09T05:09:31.792758+00:00",
+  "phases": [
+    {
+      "phase": "analysis",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:11:00.880400+00:00"
+    },
+    {
+      "phase": "compact_archive",
+      "exit_code": 1,
+      "ended_utc": "2026-11-09T05:11:01.339917+00:00"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "calls": 14658,
+  "zero_zero_elements": 0,
+  "zero_denominator_elements": 0,
+  "repaired_calls": 0,
+  "events": [],
+  "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+}

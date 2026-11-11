@@ -1,0 +1,16 @@
+{
+  "all_data_hashes_unchanged": true,
+  "hashes": {
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\concept_leadwise_plot_data.csv": "cd4b4f76395049cc1378f185a3cc6395266073190bb2d70f45ba10cf94f6b76d",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\mean_absolute_rank_plot_data.csv": "27392fb74642829c1bcc7e2a06db8c5ceade21cd3db605ed1eeac88d950eb4a6",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\mean_signed_distribution_plot_data.csv": "0fd91dd6a7e092f0e2eff9b544500031fae95d619aac694287778e64d33f9e92",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R5_interval_calibration_data.csv": "9657d9286e2f31f9bbf10cdaf1207289dc3edd1a430487212eb97647b2baa03d",
+    "<ORIGINAL_WORKSPACE>\\work\\figures\\R6_structural_comparison_data.csv": "b7da8dad553a6870c643b005b65d25dc6134c80fbbd153a81e96a57c2e4ab693",
+    "<ORIGINAL_WORKSPACE>\\work\\native_calibration_v2\\summary.json": "9553d419e3d2e06b4b522635dfb336508e526c0af1d69480887238df81ee1366"
+  },
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ]
+}

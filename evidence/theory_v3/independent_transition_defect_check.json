@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "trajectory_radius_cases": 1920,
+  "all_five_prefixes_checked": true,
+  "all_beta_005_cases_contained": true,
+  "verification": "Independent explicit sum of time-ordered tail products; all source hashes and summaries checked.",
+  "source_result_sha256": "4e4f184abc5cca1943fd28b710c9b3fdfcca6437b4f9e82a4425c4dbd7ce25ec",
+  "primary_results": {
+    "1": {
+      "concept_radius": 0.1,
+      "graph_radius": 0.05,
+      "trajectories": 160,
+      "admissible_fraction": {
+        "n": 160,
+        "minimum": 0.07869819889418844,
+        "median": 0.1665805717641224,
+        "maximum": 0.18455215024484517
+      },
+      "common_admissible_fraction_rounded_down_6dp": 0.078698,
+      "fixed_beta_certified_count": 160,
+      "fixed_beta_maximum_normalized_state_error": 0.7508284758606862
+    },
+    "2": {
+      "concept_radius": 0.1,
+      "graph_radius": 0.05,
+      "trajectories": 160,
+      "admissible_fraction": {
+        "n": 160,
+        "minimum": 0.06657772081302073,
+        "median": 0.17259432041696654,
+        "maximum": 0.18399223575034157
+      },
+      "common_admissible_fraction_rounded_down_6dp": 0.066577,
+      "fixed_beta_certified_count": 160,
+      "fixed_beta_maximum_normalized_state_error": 0.8421026279205792
+    },
+    "3": {
+      "concept_radius": 0.1,
+      "graph_radius": 0.05,
+      "trajectories": 160,
+      "admissible_fraction": {
+        "n": 160,
+        "minimum": 0.14326506609830875,
+        "median": 0.18143326048276529,
+        "maximum": 0.18927010010796746
+      },
+      "common_admissible_fraction_rounded_down_6dp": 0.143265,
+      "fixed_beta_certified_count": 160,
+      "fixed_beta_maximum_normalized_state_error": 0.44739905272668146
+    }
+  },
+  "scope": "Conditional on an admissible comparison trajectory (or projected perturbation updates) with the stated initial and transition-residual budgets. Actual reference/true transition defects are not estimated."
+}

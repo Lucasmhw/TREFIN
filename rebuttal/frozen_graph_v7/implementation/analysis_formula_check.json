@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "Independent mathematical fixtures and built-in self-tests only; no forecasting outcomes",
+  "analysis_script_sha256": "3617be4753505a06a39ee8a5220319e57b2a776fd188ff868e22696b97993524",
+  "independent_fixture_sha256": "02996eb287078a866014a6aff3528e7e477e128d0fbaac1abd04317312ba66da",
+  "checks": {
+    "ES_explicit_all_ordered_pairs_denominator_and_H_separation": true,
+    "ES_translation_and_scenario_asset_permutation": true,
+    "msIC_msIR_population_Pearson_horizon_and_constant_paths": true,
+    "graph_strict_absolute_threshold_sign_and_diagonal_exclusion": true,
+    "state_future_only_reductions_and_frozen_identity": true,
+    "five_seed_sample_SD_and_Frozen_minus_Full_pairing": true,
+    "circular_block_indices_and_chronological_seed_averaging": true
+  },
+  "max_absolute_ES_error": 4.440892098500626e-16
+}

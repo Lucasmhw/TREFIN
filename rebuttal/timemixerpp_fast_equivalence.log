@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/trefin_rebuttal_20261108/official_point_fast/fresh_point_fast_bundle/test_timemixerpp_fast_eval.py", line 96, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/root/autodl-tmp/trefin_rebuttal_20261108/official_point_fast/fresh_point_fast_bundle/test_timemixerpp_fast_eval.py", line 87, in main
+    assert norm_error<2e-5 and raw_error<1e-6,(state_name,batch,norm_error,raw_error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('random_initialization', 4, 3.707408905029297e-05, 5.761079970404027e-07)

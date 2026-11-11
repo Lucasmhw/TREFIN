@@ -1,0 +1,94 @@
+{
+  "schema": "trefin-frozen-graph-v7-prospective-orchestration",
+  "registered_utc": "2026-11-09T04:48:30.800042+00:00",
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "variants": [
+    "Full",
+    "FrozenGraph"
+  ],
+  "candidate_order": [
+    {
+      "id": "base",
+      "model": {},
+      "training": {}
+    },
+    {
+      "id": "slow_graph",
+      "model": {
+        "graph_refresh": 0.02
+      },
+      "training": {}
+    },
+    {
+      "id": "stronger_dynamics",
+      "model": {
+        "residual_scale": 0.05,
+        "graph_refresh": 0.1
+      },
+      "training": {}
+    },
+    {
+      "id": "weaker_state_supervision",
+      "model": {},
+      "training": {
+        "lambda_concept": 0.1,
+        "lambda_graph": 0.02
+      }
+    }
+  ],
+  "selection_seed": 1,
+  "epoch_ceiling": 20,
+  "patience": 6,
+  "batch_size": 64,
+  "training_scenarios": 16,
+  "validation_scenarios": 64,
+  "test_scenarios": 256,
+  "checkpoint_selection": "uncalibrated validation ES, original trainer min_delta=1e-6",
+  "configuration_selection": "minimum validation ES after positive mean calibration; ties in registered order",
+  "mean_calibration": {
+    "split": "validation",
+    "bounds": [
+      0.05,
+      1.0
+    ],
+    "tolerance": 1e-05,
+    "innovations_unchanged": true
+  },
+  "FrozenGraph": "A_h=A_0 in transition and decoder; graph supervision zero; augmented gain [[m_CC,m_CA],[0,1]]",
+  "duplicate": "FrozenGraph slow_graph aliases base; no reallocation of unused slot",
+  "unique_search_fits": 21,
+  "additional_selected_fits": 24,
+  "final_evaluations": 30,
+  "all_six_selections_frozen_before_any_test": true,
+  "selected_seed1_checkpoint_reused": true,
+  "implementation_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "protocol.py": "a4a1c3f30e649a669dabd0d1f16172219efb13ce3c52a1684b5837d96202fdbd",
+    "search_validation.py": "904431231b36b231c416bf1eb84cc02b564248f76e1ed8ac98bda1b06fdadcac",
+    "freeze_selections.py": "f06ac1a6198851cb2a6f0e878c8c4650bde3681d7b2c12f570bfc0f0b7909335",
+    "run_selected.py": "c510e1d8319223b5b5a830ce15107e18666a8c8958375c338355dda8aced3f66"
+  },
+  "orchestrator_sha256": "a9ed79a9f044dcfc7ba693d3cb008fdebc2783398d6b64b6a7b73e9da0dd26d5",
+  "input_equivalence_sha256": "e03c2ec3589a8dbc61d1893368f3e70e36170b68ea612b5e0f9073bbdb0c7c10",
+  "prepared_verification_sha256": "8f379431124da35d6ee8d740cbeff18bb40c8680676d9c36154b6ab1bb4675fb",
+  "gpu_semantics_sha256": "c860cb7df1141885d962056bd81333052090142deb496a436c5d1876422658f3",
+  "preflight_sha256": "81fe120022c21c44d4c63bc48ff82c41f0ea085e5561b612431dac7fe3bd2439",
+  "execution": {
+    "parallel_workers": 6,
+    "threads_per_worker": 2,
+    "device": "cuda"
+  },
+  "reporting": "All 30 selected evaluations; float64 per-origin point losses and unbiased-pair Monte Carlo ES; five-seed sample SD; same target/origin checks",
+  "reference_cohort": "New selected Full/FrozenGraph study; does not replace original forecasting/theory checkpoints"
+}

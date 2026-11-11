@@ -1,0 +1,23 @@
+{
+  "family": "tedm",
+  "passed": true,
+  "script_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+  "training_loss": 2.9918673038482666,
+  "gradient_norm_sum": 0.5272450987249613,
+  "mean_shape": [
+    2,
+    5,
+    32
+  ],
+  "sample_shape": [
+    3,
+    2,
+    5,
+    32
+  ],
+  "upstream_deterministic_rollout_max_error": 0.0,
+  "track_origin_axis_checks": "passed",
+  "ES_max_error": 1.3877787807814457e-17,
+  "reload_max_error": 0.0,
+  "registered_parameters": 5002416
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "trefin-fresh-point-baseline-v1",
+  "status": "NEW supplemental experiments; no claim to reconstruct historical separate-host results",
+  "family": "timexer",
+  "upstream": {
+    "url": "https://github.com/thuml/Time-Series-Library",
+    "revision": "4e938a1767106324dd753b2a44832bf870a0252e",
+    "license": "MIT",
+    "files": {
+      "models/TimeXer.py": "498165f2532a8434c39060471e5a150af81a16fa9124dc6163d33e885fa2aeae",
+      "layers/SelfAttention_Family.py": "0fea961b640b1a7db471df2e389abfb843ce8e5767aca5af141ee22dd43be66f",
+      "layers/Embed.py": "0a29593e3796b5a3798bd3d37c1150fc2256c559abdee36e83eecd1a05787247",
+      "utils/masking.py": "c22de70ad076f4eeecc857aba984741da05da54375333399ff2742b041544986",
+      "LICENSE": "3892254202fc16573828d34ec901ab765d8eb73a03d174b131a49771adcd8d64",
+      "README.md": "f79bd90ec18fe84a51aa8f4f60356466632e06c74597f72aae6c48a7e22b513f"
+    }
+  },
+  "source_manifest_sha256": "067856ca0ae56ab5df23baac58a030126936a5d726b38a97f2409fe3c5113e85",
+  "data_manifest_sha256": "342d17ac65c28a69cf8f0d0c69daa045f53d627c1a1293ac9fa5cd7a07966ce0",
+  "data_sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b",
+  "script_sha256": "2eaf75cf5016853619927d8035bf7391ca434a5279cc6a513ab7e3bdf7d1c42a",
+  "common_helper_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+  "seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "learning_rate_candidates": [
+    0.001,
+    0.0003
+  ],
+  "architecture_candidates": 1,
+  "max_epochs": 100,
+  "patience_epochs": 15,
+  "batch_size": 64,
+  "validation_samples": 64,
+  "test_samples": 256,
+  "evaluation_rng_seed": 271828,
+  "test_rng_seed": 271829,
+  "configuration": {
+    "task_name": "short_term_forecast",
+    "features": "M",
+    "seq_len": 126,
+    "pred_len": 5,
+    "use_norm": true,
+    "patch_len": 21,
+    "enc_in": 32,
+    "d_model": 128,
+    "d_ff": 512,
+    "n_heads": 4,
+    "e_layers": 3,
+    "dropout": 0.1,
+    "factor": 5,
+    "embed": "timeF",
+    "freq": "d",
+    "activation": "gelu"
+  },
+  "normalization": "per-asset mean and population SD fitted to unique raw training rows including purged training labels only",
+  "selection": "uncalibrated validation ES on all498 exact fold1 origins after every epoch; identical initialization/shuffle seed perLR; no test-outcome use in training, selection or calibration",
+  "mean_calibration": "after checkpoint/candidate selection; rho in[.05,1] selected by validation ES with frozen centered-training-residual innovations; exact empirical-adapter predictive mean from backbone, not sample mean",
+  "inputs": "126 historical excess log returns for all32 assets; no FF5 values, volume, concepts, graphs or future calendar covariates; differs from TREFIN concept/factor/volume predictors",
+  "adapter": "Unchanged author TimeXer from MIT-licensed TSLib; native multivariate mode; six21-day patches+global token per asset; all32 observed returns also supply variate embeddings; no external covariates or future features; direct5-step head.",
+  "scenarios": "whole[5,32] centered training residual paths sampled with replacement, same adapter as fresh Timer-XL; point model itself is not natively probabilistic",
+  "training": "pointMSE; Adam(.9,.999), no weight decay; epoch cosine scheduler to1e-8; gradclip1;100full-data epochs cap,15validation-check patience",
+  "device": "cuda",
+  "outer_point_inference_batch_size": 64,
+  "effective_native_inference_batch_size": 64
+}

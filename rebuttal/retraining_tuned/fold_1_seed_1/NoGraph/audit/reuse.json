@@ -1,0 +1,4 @@
+{
+  "source": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/search_A/NoGraph/weaker_state_supervision/checkpoints/best.pt",
+  "reason": "validation-selected seed1 checkpoint reused before its first test evaluation"
+}

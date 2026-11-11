@@ -1,0 +1,119 @@
+{
+  "schema": "trefin-rebuttal-figures-v1",
+  "script": "<ORIGINAL_WORKSPACE>\\work\\scripts\\plot_rebuttal_evidence.py",
+  "script_sha256": "1bfe6c4997387fc922f6179381b2dbbc6695bdf4c3abe60d54f21a4d9682bd48",
+  "sources": [
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\archived_evidence\\evidence.json",
+      "sha256": "5ecf600cbb79a6d64583fdb52f4ff0d93f92c9f9c95f3d199cb9dd3e3d6788f3"
+    },
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\archived_evidence\\concept_persistence.csv",
+      "sha256": "5b6ebc5ed705874d785d45bc866981eeef0f163e12757234df14967a23fdc6dc"
+    },
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\archived_evidence\\graph_persistence.csv",
+      "sha256": "3e3feab3aefc9cb9904ede338d82d119a5a9ccdd33a5497f0ac9bb2033f47fdd"
+    },
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\mean_sensitivity\\mean_sensitivity.json",
+      "sha256": "d1eefa1e33f1d7d69d6e201f7f671d7614533e137d38354c0f537e29379a773b"
+    },
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\mean_sensitivity\\mean_sensitivity_arrays.npz",
+      "sha256": "f4ce48848819708bd1d5445760b93b344ae2b19d28ccc4ed895279bf949f1a42"
+    },
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\compact_prepared\\fold_1.json",
+      "sha256": "b166c1f84722e99f4f05d40a57ce12746e5e8a10a56261afa86e3d297dd075e5"
+    }
+  ],
+  "figures": [
+    {
+      "id": "R1_concept_persistence",
+      "caption": "Revised concept-path diagnostic. (a) Fold-1 coordinate-level MAE skill relative to persistence, 100(1 \u2212 MAE_learned/MAE_persistence), for all 26 concepts and leads 1\u20135. Each MAE is averaged over the same 500 held-out origins, 32 assets and five fitted seeds. Positive values indicate lower learned MAE; negative values favor persistence. Colors use a symmetric linear scale centered at zero without clipping; cell labels are rounded percentages, and exact values are in the source table. (b\u2013d) Absolute mean concept MAE across the three chronological folds, in train-fitted robust-standardized projected coordinates. Persistence carries the measured input C_0 to every future lead. Curves are five-seed means.",
+      "artifacts": [
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R1_concept_persistence.png",
+          "sha256": "ac41cfa2b301db0316cdd12b0318281de361e386a7bbc2cd0c6b5d693cdfb6ed"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R1_concept_persistence.svg",
+          "sha256": "b4709ee3c289a5e261421ef5180e2c29178b25108a3e2cf7e5e067b7e55476c8"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R1_concept_persistence.pdf",
+          "sha256": "6f84d138b4caf1a38fac82d02aa465af3cb7dc9a7fddcab49440d1384b97eac9"
+        }
+      ]
+    },
+    {
+      "id": "R2_graph_persistence",
+      "caption": "Revised graph-path diagnostic. Mean per-origin support intersection-over-union for learned graph forecasts and matched persistence A_hat_h=A_0, using the same targets and origins in each fold. Support is defined by strict |A_ij|>0.05 on off-diagonal entries, and empty unions receive zero, exactly matching the stored-evidence evaluator. Lines average over five seeds; blue bands show \u00b11 sample standard deviation across seeds. Persistence is deterministic for the fixed prepared data. Measured graphs are carried forward between five-observation refits. Persistence has higher IoU at every displayed lead in all three folds. The full IoU range is shown.",
+      "artifacts": [
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R2_graph_persistence.png",
+          "sha256": "2be9140f7d077212e863a30a62c419ed9c4d7da46dae8c133e403bbe330c39d5"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R2_graph_persistence.svg",
+          "sha256": "b55d162476ea354b6c8f77f98b154ffa7f745f9434910572cac82915eb6c2e58"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R2_graph_persistence.pdf",
+          "sha256": "9e396841e017aac0dae8534a6c6c731b99b142d2f2bce5479c688d2bf652316f"
+        }
+      ]
+    },
+    {
+      "id": "R3_direct_mean_signed",
+      "caption": "Direct own-asset mean sensitivities at evolved predicted states. For each fold, derivatives \u2202\u03bc_(t,h,i)/\u2202C_hat_(t,h,i,k) are computed by autograd for all 26 concept coordinates, 32 evenly spaced held-out origins, five forecast leads, 32 assets and all five training seeds (25,600 derivatives per coordinate and fold). These are conditional responses of the fitted decoder, holding the evolved graph, other concept coordinates, observed market state, lead embedding and fitted parameters fixed. The plotted means include the original validation-fitted positive scalar. Values are decimal-return derivatives multiplied by 10,000, hence basis points per robust-standardized concept unit. Dots show medians, thick segments interquartile ranges, and thin segments 5th\u201395th percentiles of the sampled derivatives. All panels use the same signed horizontal scale.",
+      "artifacts": [
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R3_direct_mean_signed.png",
+          "sha256": "a74502c577cab80a299c5926eb71bc8dd37f1153c0fbc519d345ae40db10e272"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R3_direct_mean_signed.svg",
+          "sha256": "94db6da055cebafe0c137ac1e314cde13c9f64cd75c1a8caa5671be2217cfe63"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R3_direct_mean_signed.pdf",
+          "sha256": "4c4e21c4e00c3e1af33c39ccc59c276cd3c4e37ecaec4edf911ae1218b0817e0"
+        }
+      ]
+    },
+    {
+      "id": "R4_direct_mean_magnitude",
+      "caption": "Magnitude of direct mean responses using the same derivative sample as R3. Bars show the mean absolute own-asset derivative, averaged equally over sampled origins, leads, assets and seeds; five open points show each seed's corresponding mean absolute value. Coordinates are sorted once by the fold-1 pooled magnitude, and that ordering is retained in folds 2 and 3. All panels share an axis beginning at zero and the same units (basis points per robust-standardized concept unit). The derivative includes each checkpoint's original validation-fitted positive mean scalar, so differences across folds include differences in mean shrinkage.",
+      "artifacts": [
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R4_direct_mean_magnitude.png",
+          "sha256": "b38650fee5c4b8975a0859f704b5d5a19af55eb077bb7cd525a3548273501b2a"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R4_direct_mean_magnitude.svg",
+          "sha256": "18adfca8f337e14ebf7828ab3fcafdb7263bec7a1a8a60225eded4fb571b884d"
+        },
+        {
+          "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\R4_direct_mean_magnitude.pdf",
+          "sha256": "9b3dd5df35fbac9a6763017df1f354908c5548650cc81c44258210d68c5b2f33"
+        }
+      ]
+    }
+  ],
+  "generated_data_tables": [
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\concept_leadwise_plot_data.csv",
+      "sha256": "cd4b4f76395049cc1378f185a3cc6395266073190bb2d70f45ba10cf94f6b76d"
+    },
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\mean_absolute_rank_plot_data.csv",
+      "sha256": "27392fb74642829c1bcc7e2a06db8c5ceade21cd3db605ed1eeac88d950eb4a6"
+    },
+    {
+      "path": "<ORIGINAL_WORKSPACE>\\work\\figures\\mean_signed_distribution_plot_data.csv",
+      "sha256": "0fd91dd6a7e092f0e2eff9b544500031fae95d619aac694287778e64d33f9e92"
+    }
+  ]
+}

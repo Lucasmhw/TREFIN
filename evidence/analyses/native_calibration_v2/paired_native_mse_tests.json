@@ -1,0 +1,380 @@
+{
+  "DLinear": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.7544293486321632e-06,
+      "confidence_interval": [
+        -1.1599231273315567e-06,
+        5.096701121912191e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.252
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.7544293486321632e-06,
+      "confidence_interval": [
+        -1.5827528600825046e-06,
+        5.409831892791808e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.32
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 1.7544293486321632e-06,
+      "hac_long_run_variance": 1.2027664389016946e-09,
+      "standard_error": 1.5509780391106089e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.1209949821790808,
+      "two_sided_p_value": 0.26228999830829525,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 1.0
+  },
+  "GRU": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.7599164305976283e-06,
+      "confidence_interval": [
+        -6.177386334480655e-07,
+        4.6699800413071275e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.1676
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.7599164305976283e-06,
+      "confidence_interval": [
+        -1.173549719343195e-06,
+        4.971368982728277e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.2556
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 1.7599164305976283e-06,
+      "hac_long_run_variance": 8.946130889406203e-10,
+      "standard_error": 1.3376195938611398e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.303865690048583,
+      "two_sided_p_value": 0.1922793802808711,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 1.0
+  },
+  "HistGradientBoosting": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 2.11977055857049e-06,
+      "confidence_interval": [
+        -3.8886154459208476e-07,
+        5.205069922701812e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.1024
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 2.11977055857049e-06,
+      "confidence_interval": [
+        -7.646353043441824e-07,
+        5.481422376817871e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.1716
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 2.11977055857049e-06,
+      "hac_long_run_variance": 1.0097710627273893e-09,
+      "standard_error": 1.4211059515232418e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.478208962379291,
+      "two_sided_p_value": 0.13935185576242703,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 0.8192
+  },
+  "MASTER": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 8.881139679696368e-07,
+      "confidence_interval": [
+        -1.46576052479216e-06,
+        3.5491154743192137e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.4612
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 8.881139679696368e-07,
+      "confidence_interval": [
+        -2.759568602228805e-06,
+        4.273554466873057e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.5828
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 8.881139679696368e-07,
+      "hac_long_run_variance": 7.590080836227907e-10,
+      "standard_error": 1.2320779874852003e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 0.7143382992860879,
+      "two_sided_p_value": 0.47501801499651664,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 1.0
+  },
+  "PatchTST": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.6558389550530646e-06,
+      "confidence_interval": [
+        -1.3443856517160528e-06,
+        5.006847957345843e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.284
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.6558389550530646e-06,
+      "confidence_interval": [
+        -1.8037155878179849e-06,
+        5.458911356269037e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.3604
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 1.6558389550530646e-06,
+      "hac_long_run_variance": 1.2415826837299153e-09,
+      "standard_error": 1.5758062594937967e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.041330784880926,
+      "two_sided_p_value": 0.29772205381446926,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 1.0
+  },
+  "RawHistoryMLP": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.835923842922256e-06,
+      "confidence_interval": [
+        -1.302178203437461e-06,
+        5.41562311142902e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.2544
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.835923842922256e-06,
+      "confidence_interval": [
+        -1.633824974233015e-06,
+        5.693041143781768e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.3188
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 1.835923842922256e-06,
+      "hac_long_run_variance": 1.3705663180460802e-09,
+      "standard_error": 1.6556366256193296e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.0989123904869658,
+      "two_sided_p_value": 0.2718062815784309,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 1.0
+  },
+  "ShrunkVAR": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 2.4004658737064012e-06,
+      "confidence_interval": [
+        -8.243842681565057e-08,
+        5.327393332207688e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.058
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 2.4004658737064012e-06,
+      "confidence_interval": [
+        -6.953854567901975e-07,
+        5.9001221673404675e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.1396
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 2.4004658737064012e-06,
+      "hac_long_run_variance": 9.484386732309387e-10,
+      "standard_error": 1.377271703935675e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.727226706910334,
+      "two_sided_p_value": 0.08412695622062835,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 0.522
+  },
+  "StateMLP": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.3987337520732756e-06,
+      "confidence_interval": [
+        -4.1700257515064514e-07,
+        3.515586653907024e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.1432
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.3987337520732756e-06,
+      "confidence_interval": [
+        -5.786093560232307e-07,
+        3.623692334119771e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.1876
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 1.3987337520732756e-06,
+      "hac_long_run_variance": 5.050862248082326e-10,
+      "standard_error": 1.0050733553410245e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.3791475370628767,
+      "two_sided_p_value": 0.16784926966111513,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 1.0
+  },
+  "iTransformer": {
+    "definition": "mean calibrated native loss minus mean calibrated TREFIN loss, averaged across five training seeds at each of 500 origins",
+    "primary_block20": {
+      "origins": 500,
+      "block_length": 20,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.862324179057679e-06,
+      "confidence_interval": [
+        -1.1199552220426996e-06,
+        5.319205926991191e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.2348
+    },
+    "sensitivity_block5": {
+      "origins": 500,
+      "block_length": 5,
+      "repetitions": 5000,
+      "confidence": 0.95,
+      "seed": 20261108,
+      "mean_loss_difference_candidate_minus_reference": 1.862324179057679e-06,
+      "confidence_interval": [
+        -1.5355364592064844e-06,
+        5.645068500475666e-06
+      ],
+      "two_sided_bootstrap_p_value": 0.3012
+    },
+    "dm_hac20": {
+      "origins": 500,
+      "horizon": 5,
+      "hac_lag": 20,
+      "mean_loss_difference_candidate_minus_reference": 1.862324179057679e-06,
+      "hac_long_run_variance": 1.2786104803085134e-09,
+      "standard_error": 1.5991313143757228e-06,
+      "harvey_correction": 0.9909994954590038,
+      "dm_statistic": 1.1541030465954847,
+      "two_sided_p_value": 0.24845792449882786,
+      "direction": "reference_better_or_tied"
+    },
+    "primary_bootstrap_holm_p": 1.0
+  }
+}

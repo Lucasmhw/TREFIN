@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "device": "cuda",
+  "torch": "2.8.0+cu128",
+  "checks": {
+    "Full_bitwise_forward_loss_gradients_optimizer_torch.float32": true,
+    "Full_bitwise_forward_loss_gradients_optimizer_torch.float64": true,
+    "FrozenGraph_identity_all_leads_and_A0_derivative": true,
+    "FrozenGraph_augmented_gain_row_0_1_and_retained_C_from_A": true,
+    "FrozenGraph_retains_typed_propagation_AC_mean_and_precision_influence": true,
+    "FrozenGraph_graph_loss_zero_and_unused_proposal_gradients_absent": true,
+    "FrozenGraph_refresh_and_proposal_parameters_do_not_affect_any_output": true,
+    "FrozenGraph_gain_floor_and_tie_gradient_finite": true
+  },
+  "base_model_sha256": "7c8d0c16c315f9ba34d3d0668da86f8e043a508d46f00c78aa5cae56620097da",
+  "patched_model_sha256": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+  "losses_sha256": "a6288b562db7bb30cf5da4e3d73ab1d458626ab3c6651f766ef8fbee028dc368",
+  "scope": "Small deterministic semantic fixtures only; not forecast evidence."
+}

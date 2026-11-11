@@ -1,0 +1,73 @@
+{
+  "schema": "trefin-four-slot-validation-search-v1",
+  "fold": 1,
+  "training_seed": 1,
+  "variants": [
+    "SingleSigned",
+    "SingleUnsigned",
+    "NoStateSupervision"
+  ],
+  "candidates_in_tie_break_order": [
+    {
+      "id": "base",
+      "model": {},
+      "training": {}
+    },
+    {
+      "id": "slow_graph",
+      "model": {
+        "graph_refresh": 0.02
+      },
+      "training": {}
+    },
+    {
+      "id": "stronger_dynamics",
+      "model": {
+        "residual_scale": 0.05,
+        "graph_refresh": 0.1
+      },
+      "training": {}
+    },
+    {
+      "id": "weaker_state_supervision",
+      "model": {},
+      "training": {
+        "lambda_concept": 0.1,
+        "lambda_graph": 0.02
+      }
+    }
+  ],
+  "base_configuration_sha256": "b7cc5da660c5529994a4a6b01144debaa5020edaac9495e36192a1111030fa3e",
+  "prepared_arrays_sha256": "298676d881e32367f3b0e5ea64904feb59831dece0a336ec82236086491750f0",
+  "prepared_metadata_sha256": "b166c1f84722e99f4f05d40a57ce12746e5e8a10a56261afa86e3d297dd075e5",
+  "source_sha256": {
+    "model.py": "7c8d0c16c315f9ba34d3d0668da86f8e043a508d46f00c78aa5cae56620097da",
+    "trainer.py": "3391e67a5ce3b484acb2dc9634507f897718d6cccb9449ca2adb797479ff9e85",
+    "losses.py": "a6288b562db7bb30cf5da4e3d73ab1d458626ab3c6651f766ef8fbee028dc368",
+    "calibration.py": "e38d49ba04d31899f957ba9c73b638dc3cbc13530f9ae18fb62a550039a7ecbf"
+  },
+  "script_sha256": "faecd453d6499f06ba8b0d5c6898da86dc809f2b2971131a4b16c90c88331ab6",
+  "training_budget_per_effective_candidate": {
+    "epochs_ceiling": 20,
+    "patience": 6,
+    "seed": 1
+  },
+  "candidate_selection": "minimum calibrated validation energy score from train_model summary; exact tie chooses earlier registered candidate",
+  "post_checkpoint_calibration": "identical validation-only positive mean scalar rho in [0.05,1] for every candidate and variant",
+  "nominal_candidate_slots_per_variant": 4,
+  "duplicate_policy": "skip mathematically identical effective candidates and record aliases; do not reallocate the unused slot",
+  "known_effective_duplicates": {
+    "NoGraph/slow_graph": "NoGraph/base",
+    "NoStateSupervision/weaker_state_supervision": "NoStateSupervision/base"
+  },
+  "test_evaluation_permitted": false,
+  "test_used_for_selection": false,
+  "guard": {
+    "train_count": 2135,
+    "validation_count": 498,
+    "excluded_test_origin_count": 500,
+    "test_split_key_removed": true,
+    "test_dataset_construction_raises_KeyError": true,
+    "all_origin_arrays_physically_subset_to_train_and_validation": true
+  }
+}

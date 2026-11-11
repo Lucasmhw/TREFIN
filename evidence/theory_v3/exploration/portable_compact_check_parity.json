@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "adapter_sha256": "9854133cbbaeb06e6f49d871e57d43d863e2fb021613856db2374508a92ac922",
+  "original_independent_check_sha256": "83ec1737ab427ef2ea53e88d1303695dc4790a506a56ecb7cc021d679054359d",
+  "original_report_sha256": "e1e2cdbe4112b8a2f83a2fa6e527ef7e7317e4dfaa730a6c878a9569e06b9737",
+  "reproduced_report_sha256": "e1e2cdbe4112b8a2f83a2fa6e527ef7e7317e4dfaa730a6c878a9569e06b9737",
+  "all_9600_readouts_checked": true,
+  "byte_identical_report": true,
+  "checkpoint_access_required": false
+}

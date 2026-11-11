@@ -1,0 +1,58 @@
+{
+  "script_sha256": "d6390c1f2c5852e351fa850bbcb10fd6e420783dd6824afc5237efcd8078bf77",
+  "source_files": [
+    {
+      "path": "evidence/analyses/native_calibration_v2/summary.json",
+      "sha256": "9553d419e3d2e06b4b522635dfb336508e526c0af1d69480887238df81ee1366"
+    },
+    {
+      "path": "configs/table4_trefin/uncalibrated/fold_1_seed_1/run_summary.json",
+      "sha256": "91adad984f64802e2d0a9c678e62bd013546c97597c3d30dcbc1c47d0ad13120"
+    },
+    {
+      "path": "configs/table4_trefin/uncalibrated/fold_1_seed_7/run_summary.json",
+      "sha256": "2cfdd59ce5eac9dca9e622b35982162b4f3075c6164d577bd90e14c7c6efd841"
+    },
+    {
+      "path": "configs/table4_trefin/uncalibrated/fold_1_seed_19/run_summary.json",
+      "sha256": "aa57ba4ccc1d5ea8e6952c22b37cedc23edf408bbf3832d714045d9651d1ff4c"
+    },
+    {
+      "path": "configs/table4_trefin/uncalibrated/fold_1_seed_37/run_summary.json",
+      "sha256": "d08ec964f067eaa0539104403b9ae3049fec884a4bbc29e5c2e5d78930fb1608"
+    },
+    {
+      "path": "configs/table4_trefin/uncalibrated/fold_1_seed_73/run_summary.json",
+      "sha256": "6ad7ee34faaa9b0d7a69c638246c11b25d18dbce24af5ac4204fd5c7eef19c61"
+    },
+    {
+      "path": "configs/table4_trefin/calibrated/fold_1_seed_1/run_summary.json",
+      "sha256": "6136898158bc783261094d2a895b13b8f2170d9970f73e1d0ff65068a69f2277"
+    },
+    {
+      "path": "configs/table4_trefin/calibrated/fold_1_seed_7/run_summary.json",
+      "sha256": "253b83a72117576ed8071f8b2dd90f1cc5f4a752b855d604043f5443a3314fe0"
+    },
+    {
+      "path": "configs/table4_trefin/calibrated/fold_1_seed_19/run_summary.json",
+      "sha256": "eae66ecdd72919942bee1bc65dcd0d0f59351debc3ff38a17841a823043e8034"
+    },
+    {
+      "path": "configs/table4_trefin/calibrated/fold_1_seed_37/run_summary.json",
+      "sha256": "09236361d05d81bea828baeece0fab742c857c2ca844ce02003861d53d831c4d"
+    },
+    {
+      "path": "configs/table4_trefin/calibrated/fold_1_seed_73/run_summary.json",
+      "sha256": "1493fe9f7924242638ab08986fc5a8eb41a0fbd1bd9bc5d76ff467ecaab4e61a"
+    }
+  ],
+  "outputs": [
+    "figures/R7_native_matched_calibration.png",
+    "figures/R7_native_matched_calibration.svg",
+    "figures/R7_native_matched_calibration.pdf"
+  ],
+  "numerical_definition": "All original means/sampleSD unchanged; only optional packaged-summary input and output-path controls added",
+  "current_caption_source_sha256": "9a279ce1bbc3cc5491a1d3af40175d8d7aa23f7fbee446e0afea3c382355b868",
+  "caption_sha256": "45cd3f613f72b0eec2a4590ed81fe4d36c962facd6f5cd62bc1f08edda177caa",
+  "generation_provenance_note": "script_sha256 records the version that generated the unchanged figures; current_caption_source_sha256 records two subsequent caption-only wording edits"
+}

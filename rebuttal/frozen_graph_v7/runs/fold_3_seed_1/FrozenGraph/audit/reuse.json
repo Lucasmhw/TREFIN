@@ -1,0 +1,5 @@
+{
+  "source": "search/fold_3/FrozenGraph/stronger_dynamics/checkpoints/best.pt",
+  "source_sha256": "78c9623e7286175e9056258a759c10e7d74d80b5b5a0b5bbfa6ec34f2dbe7c8c",
+  "reason": "Reuse this fold/variant validation-selected seed1 checkpoint before its first test evaluation"
+}

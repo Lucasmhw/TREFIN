@@ -1,0 +1,31 @@
+{
+  "schema": "trefin-native-matched-calibration-v1",
+  "scope": "Additional native baseline comparison; NOT the manuscript separate-host Table 1",
+  "checkpoint_selection": "Frozen historically selected checkpoint, no retraining/reselection",
+  "calibration": {
+    "selection_split": "validation",
+    "metric": "energy_score",
+    "bounds": [
+      0.05,
+      1.0
+    ],
+    "tolerance": 1e-05
+  },
+  "scenario_adapter": "point forecast plus fixed centered empirical joint training residual paths",
+  "test_reuse": "Post-submission diagnostic replay of archived held-out predictions; no test-driven selection",
+  "device_replay_tolerance_return_units": 1e-05,
+  "device_replay_note": "Recovered checkpoints evaluated on requested device; original archived train residuals and test means retained exactly. Validation predictions may have bounded cross-device floating-point drift.",
+  "folds": [
+    1
+  ],
+  "seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "models": "all archived native models",
+  "script_sha256": "b308bcef06f63c379297c784064f55ef7865c606fdc97ea8aa3e77ed0f615b22",
+  "device": "cpu"
+}

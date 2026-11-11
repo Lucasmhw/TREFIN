@@ -1,0 +1,129 @@
+{
+  "calls": 17568,
+  "zero_zero_elements": 5,
+  "zero_denominator_elements": 561,
+  "repaired_calls": 5,
+  "events": [
+    {
+      "seed": 19,
+      "candidate": 1,
+      "epoch": 8,
+      "phase": "val",
+      "optimizer_update": 272,
+      "training_batch_offset": 2112,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        113
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 112,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2729,
+        5,
+        0
+      ]
+    },
+    {
+      "seed": 19,
+      "candidate": 1,
+      "epoch": 22,
+      "phase": "val",
+      "optimizer_update": 748,
+      "training_batch_offset": 2112,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        1026,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 19,
+      "candidate": 1,
+      "epoch": 33,
+      "phase": "val",
+      "optimizer_update": 1122,
+      "training_batch_offset": 2112,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        3891,
+        14,
+        0
+      ]
+    },
+    {
+      "seed": 19,
+      "candidate": 1,
+      "epoch": 39,
+      "phase": "val",
+      "optimizer_update": 1326,
+      "training_batch_offset": 2112,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        1678,
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 19,
+      "candidate": 1,
+      "epoch": 93,
+      "phase": "val",
+      "optimizer_update": 3162,
+      "training_batch_offset": 2112,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        3958,
+        9,
+        0
+      ]
+    }
+  ],
+  "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+}

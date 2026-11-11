@@ -1,0 +1,15 @@
+{
+  "schema": "trefin-float64-exact-ES-reference-v1",
+  "seed": 1,
+  "source": "work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_1_seed_1\\predictions\\test_predictions.npz",
+  "source_sha256": "061334a69e29fc8253f3198d6b18099f7c298dc9f274326b19edb67bcf9b69ed",
+  "loss_sha256": "28f7b42cee056ab156e1a256b3a754d91317ca6e05463f58b19982ae42c891b8",
+  "target_hash": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2",
+  "energy_score_recomputed": 0.08966896300964444,
+  "difference_from_archived_float32_reduction": 7.342948471489308e-10,
+  "scenarios": 256,
+  "origins": 500,
+  "horizon": 5,
+  "assets": 32,
+  "pairwise_method": "scipy.spatial.distance.pdist in float64, all unordered pairs, divisor S*(S-1)"
+}

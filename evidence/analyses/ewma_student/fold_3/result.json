@@ -1,0 +1,112 @@
+{
+  "schema": "trefin-zero-mean-student-ewma-v1",
+  "fold": "fold_3",
+  "selection": {
+    "selected": {
+      "decay": 0.97,
+      "degrees_of_freedom": 8,
+      "validation_energy_score": 0.07595165342685602
+    },
+    "selection_metric": "validation Energy Score",
+    "decay_grid": [
+      0.9,
+      0.94,
+      0.97,
+      0.99
+    ],
+    "degrees_grid": [
+      3,
+      5,
+      8,
+      15,
+      30
+    ],
+    "validation_samples": 64,
+    "test_samples": 256,
+    "common_random_numbers": true,
+    "random_seed": 271828,
+    "test_used_for_selection": false
+  },
+  "test_metrics": {
+    "mse": 0.000339054868384965,
+    "rmse": 0.018413442600039923,
+    "mae": 0.012419901777651034,
+    "energy_score": 0.06988788344530679,
+    "coverage": {
+      "0.5": 0.5223039215686275,
+      "0.8": 0.8104779411764705,
+      "0.9": 0.8945261437908497,
+      "0.95": 0.938031045751634,
+      "0.99": 0.9741217320261438
+    },
+    "interval_width": {
+      "0.5": 0.02023184454474536,
+      "0.8": 0.03989830116042674,
+      "0.9": 0.05289589479947379,
+      "0.95": 0.06510395968811593,
+      "0.99": 0.09083545674670693
+    }
+  },
+  "training_covariance": {
+    "estimator": "uncentered second moment of unique purged training target dates",
+    "observations": 3147,
+    "initialization_row": 3272,
+    "initialization_date": "2021-12-31",
+    "ridge": "1e-6 times mean diagonal; covariance saved after each origin update"
+  },
+  "forecast_semantics": {
+    "mean": "zero for all assets/leads",
+    "covariance_update": "Q_t=lambda Q_(t-1)+(1-lambda)r_t r_t^T; observations only through t",
+    "horizons": "same conditional marginal covariance at every lead; independent Student-t draws across leads",
+    "student_scaling": "sqrt((nu-2)/chi2_nu) times N(0,Q), giving covariance Q",
+    "return_units": "decimal excess log return; stored risk_free column already log(1+RF)"
+  },
+  "alignment_max_absolute_errors": {
+    "train": 1.2073688215874512e-08,
+    "val": 7.104086124920528e-09,
+    "test": 6.613027792035098e-09
+  },
+  "asset_order": [
+    "AAPL",
+    "AMZN",
+    "BA",
+    "BIDU",
+    "BKNG",
+    "C",
+    "CAT",
+    "CMCSA",
+    "CVX",
+    "DIS",
+    "EBAY",
+    "GE",
+    "GILD",
+    "GOOG",
+    "GS",
+    "HAL",
+    "IBM",
+    "INTC",
+    "JNJ",
+    "JPM",
+    "KO",
+    "MRK",
+    "MSFT",
+    "MU",
+    "ORCL",
+    "PFE",
+    "QCOM",
+    "T",
+    "V",
+    "WFC",
+    "WMT",
+    "XOM"
+  ],
+  "test_origins": 306,
+  "source_hashes": {
+    "work\\server_snapshot\\f-concord\\data\\raw\\finmultitime_us_32\\panel.csv": "d7eb99b965900f5341b2db7ec7fe5e8e046d677efccae5def9db75720fdab472",
+    "work\\server_snapshot\\f-concord\\data\\raw\\finmultitime_us_32\\factors.csv": "7845a4afa8dec576071dc14bb5142c5235f1a8289af5368ee0844829f741efef",
+    "work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_3_seed_1\\audit\\prepared_arrays.npz": "648442bc03de269b4931d858274d934900176ca159982e40493fabe00330e4e7",
+    "work\\server_snapshot\\f-concord\\runs\\protocols\\finmultitime_us_calibrated_rolling_3fold_5seed_v1\\runs\\fold_3_seed_1\\audit\\prepared_metadata.json": "fc939302818146284cbee90c41d0204c5d18189749f63644adb766aa1b3c010c"
+  },
+  "script_sha256": "fcfc948cae2e38808545c7ee78a128dffef931c71283cd3eba42f5e636a43d9a",
+  "seconds": 10.632304906845093
+}

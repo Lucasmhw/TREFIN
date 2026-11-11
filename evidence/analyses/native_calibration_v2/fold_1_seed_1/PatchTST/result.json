@@ -1,0 +1,43 @@
+{
+  "fold": 1,
+  "seed": 1,
+  "model": "PatchTST",
+  "rho": 0.05,
+  "before": {
+    "mse": 0.0006918879109727529,
+    "rmse": 0.026303762296917773,
+    "mae": 0.016908607630310237,
+    "directional_accuracy": 0.5050375,
+    "msic": -0.0033992599815367733,
+    "msir": -0.006689870056230339,
+    "energy_score": 0.09308987554652712,
+    "coverage_90": 0.769275,
+    "width_90": 0.047020841865484546
+  },
+  "after": {
+    "mse": 0.0006834860770471796,
+    "rmse": 0.026143566647402562,
+    "mae": 0.016719486632542482,
+    "directional_accuracy": 0.5050375,
+    "msic": -0.0033992599815367746,
+    "msir": -0.006689870056230342,
+    "energy_score": 0.09216163391889394,
+    "coverage_90": 0.77265,
+    "width_90": 0.047020841865484546
+  },
+  "scope": "Additional native baseline comparison; NOT the manuscript separate-host Table 1",
+  "script_sha256": "b308bcef06f63c379297c784064f55ef7865c606fdc97ea8aa3e77ed0f615b22",
+  "source_checkpoint": "runs\\benchmarks\\finmultitime_us_native_3fold_5seed_v1\\runs\\fold_1_seed_1\\candidates\\PatchTST\\candidate_01\\checkpoints\\best.pt",
+  "checkpoint_sha256": "a7aef025edd1b6589bf1d01310116f1ebd2a4662fbade7261814d05b1a74b543",
+  "source_predictions": "runs\\benchmarks\\finmultitime_us_native_3fold_5seed_v1\\runs\\fold_1_seed_1\\selected\\PatchTST\\reproducible_predictions.npz",
+  "prediction_sha256": "d3a52fcc8faf5d71306287f0d8baead4faac182e41de0c3c65527ee99bab75f8",
+  "selected_candidate": 1,
+  "validation_score_replay_abs_difference": 5.6112363935878484e-08,
+  "test_mean_replay_max_error": 2.5830231606960297e-06,
+  "training_residual_replay_max_error": 2.736225724220276e-06,
+  "pairwise_translation_invariance_max_error": 1.3877787807814457e-17,
+  "train_origins": 2135,
+  "validation_origins": 498,
+  "test_origins": 500,
+  "scenario_adapter": "point forecast plus fixed centered empirical joint training residual paths"
+}

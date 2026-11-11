@@ -1,0 +1,47 @@
+{
+  "schema": "trefin-crossfold-data-registry-v3",
+  "folds": {
+    "1": {
+      "fold": 1,
+      "directory": "fold_1",
+      "data_file": "fold1_raw_returns.npz",
+      "data_sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b",
+      "manifest_sha256": "889da56a127f27e749b4bd0805f9713f7e0fcef7c005c3a9965a0e7a07f116af",
+      "split_sizes": {
+        "train": 2135,
+        "val": 498,
+        "test": 500
+      },
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    "2": {
+      "fold": 2,
+      "directory": "fold_2",
+      "data_file": "fold2_raw_returns.npz",
+      "data_sha256": "07d16b48f9446bb60bf73e3ecb44678debe0e930936964a6230ddd3d5ccc01d7",
+      "manifest_sha256": "98f24175732b1aa469117599781e98c6d8d72f161fb6916c2236578e6e9559e7",
+      "split_sizes": {
+        "train": 2638,
+        "val": 500,
+        "test": 496
+      },
+      "test_targets_float32_bytes_sha256": "97970215305ae41d9bedc907cf9923f8fd2b23ca60b4f55b17fd091ed3a2d860"
+    },
+    "3": {
+      "fold": 3,
+      "directory": "fold_3",
+      "data_file": "fold3_raw_returns.npz",
+      "data_sha256": "b57b281c7b2f006c9021513819bf1d31e5051b8d39f52e6f4f6dbb40244ac5fa",
+      "manifest_sha256": "460d54315b42fff0d84cb11bd414ab90c418c241e73952351631875cd513b622",
+      "split_sizes": {
+        "train": 3143,
+        "val": 496,
+        "test": 306
+      },
+      "test_targets_float32_bytes_sha256": "68e6dda3b05e783c17b14bd0b3e08d9b39c91df9357748637b36b9e0e5253a9d"
+    }
+  },
+  "frozen_fold1_data_sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b",
+  "frozen_fold1_manifest_sha256": "342d17ac65c28a69cf8f0d0c69daa045f53d627c1a1293ac9fa5cd7a07966ce0",
+  "preparation_script_sha256": "49e9b4c8daafb36ceaa675b2822380bcab9373660ae27bd639709d3c5f0342d2"
+}

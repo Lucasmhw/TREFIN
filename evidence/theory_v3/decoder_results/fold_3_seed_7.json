@@ -1,0 +1,25 @@
+{
+  "fold": 3,
+  "seed": 7,
+  "checkpoint_sha256": "281af1f61c1b507f89174bce068dd0af2943eb0e4e8de2a03b51396edd339c75",
+  "state_result_sha256": "52ae09732c77bbd3f71191102dcf3c41ed0ff8f061145068df7a3ff8f9cc1ac5",
+  "arrays_sha256": "750e5eb2b9d5789aa5a049be8a1ce19f1470d4ae8959362094bb6d3b788ba608",
+  "arrays_file": "fold_3_seed_7.npz",
+  "gaussian_symmetric_decoder": false,
+  "wall_seconds": 17.041227300011087,
+  "normalization_clamp_inactive_everywhere": true,
+  "primary_implemented_LD": {
+    "n": 160,
+    "minimum": 27.141714603037727,
+    "median": 112.86424166031082,
+    "q95": 367.1665500676376,
+    "maximum": 1922.291307286972
+  },
+  "smallest_implemented_LD": {
+    "n": 160,
+    "minimum": 2.215626872560734,
+    "median": 7.211608318774811,
+    "q95": 14.97175798237808,
+    "maximum": 29.95248982711959
+  }
+}

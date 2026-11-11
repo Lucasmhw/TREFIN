@@ -1,0 +1,79 @@
+benchmark:
+  name: finmultitime_us_equal_budget_native_debug
+  seed: 1
+  deterministic: true
+  device: auto
+  history_length: 126
+  candidate_budget: 2
+
+training:
+  epochs: 2
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 2
+  grad_clip: 1.0
+  selection_min_delta: 0.000001
+  validation_samples: 8
+  test_samples: 16
+  evaluation_seed: 271828
+  alpha_levels: [0.50, 0.80, 0.90, 0.95, 0.99]
+
+evaluation:
+  validation_samples: 8
+  test_samples: 16
+  evaluation_seed: 271828
+  alpha_levels: [0.50, 0.80, 0.90, 0.95, 0.99]
+
+statistical_tests:
+  block_length: 5
+  bootstrap_repetitions: 100
+  confidence: 0.95
+  seed: 314159
+
+models:
+  ShrunkVAR:
+    kind: classical
+    candidates:
+      - {lags: 5, alpha: 1.0}
+      - {lags: 21, alpha: 10.0}
+  HistGradientBoosting:
+    kind: classical
+    candidates:
+      - {lags: 21, learning_rate: 0.05, max_iter: 5, max_leaf_nodes: 15, l2_regularization: 1.0}
+      - {lags: 63, learning_rate: 0.03, max_iter: 8, max_leaf_nodes: 15, l2_regularization: 3.0}
+  StateMLP:
+    kind: neural
+    candidates:
+      - {hidden_dim: 48}
+      - {hidden_dim: 64}
+  RawHistoryMLP:
+    kind: neural
+    candidates:
+      - {hidden_dim: 22}
+      - {hidden_dim: 32}
+  DLinear:
+    kind: neural
+    candidates:
+      - {moving_average: 21, individual: false}
+      - {moving_average: 63, individual: false}
+  GRU:
+    kind: neural
+    candidates:
+      - {hidden_dim: 64, layers: 1, dropout: 0.0}
+      - {hidden_dim: 96, layers: 2, dropout: 0.1}
+  PatchTST:
+    kind: neural
+    candidates:
+      - {patch_size: 16, stride: 8, d_model: 32, heads: 4, layers: 2, dropout: 0.1}
+      - {patch_size: 21, stride: 7, d_model: 48, heads: 4, layers: 2, dropout: 0.1}
+  iTransformer:
+    kind: neural
+    candidates:
+      - {d_model: 32, heads: 4, layers: 2, dropout: 0.1}
+      - {d_model: 64, heads: 4, layers: 2, dropout: 0.1}
+  MASTER:
+    kind: neural
+    candidates:
+      - {d_model: 32, heads: 4, dropout: 0.1}
+      - {d_model: 48, heads: 4, dropout: 0.1}

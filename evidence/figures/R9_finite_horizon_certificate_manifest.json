@@ -1,0 +1,94 @@
+{
+  "figure": "R9_finite_horizon_certificate",
+  "script_sha256": "4d5c3636df0fa68e04a8a0128556bac02dbd6a0b3909fc1343ec950e05d4bd6b",
+  "inputs": [
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\summary.json",
+      "sha256": "9ad894f5e8450c910768c959a1cba15e476345d18b568854c7ad3c385ea80e78"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\protocol.json",
+      "sha256": "152b7b338db95c1b2a4c54a61349d84e22ec398beea7d744998d3fbc0d9c225d"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\validation\\validation_summary.json",
+      "sha256": "77c94ecd67f0a3251e202396b8dfd5b85fce5e6d54b6a588f088fd71a26c46fb"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_1_seed_1.json",
+      "sha256": "2927c36a6f8bdfdf1057f48818e5ae22b91fd32d3e7a2f0901b1f9e3ad20e929"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_1_seed_19.json",
+      "sha256": "01fb8d2df39db85f2849f5f610550b0beadce743d6ec44c7509c53b44419885d"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_1_seed_37.json",
+      "sha256": "7c415aea739f5182e90c072f5429a590fd1dba63a43e35d8e00c868d89310949"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_1_seed_7.json",
+      "sha256": "5e21f2916da30ca56a7e9fd8eedd6e89ca7c2a1468273453899ea532d0325e3b"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_1_seed_73.json",
+      "sha256": "911b5a07e3ebb74247ac8c177a73db74982a01df37d619ca42de1e588020a5a5"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_2_seed_1.json",
+      "sha256": "d07dc5e123c91b71bc3cb35f7faa95cfcf94bdae0318b5b3aad9e491876567f3"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_2_seed_19.json",
+      "sha256": "44ac21845d089c033205fe0ab8b99b41e882fe892fe7d3494f8684ccf4c0c3ce"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_2_seed_37.json",
+      "sha256": "d4b9042beae3d73e04e79b8203477590b13896486e25e889a4124a8c200a48fa"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_2_seed_7.json",
+      "sha256": "f109260596e69653c75b15e23ea93b03aecb6317e2d92aa32b0f0ed3d5b27265"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_2_seed_73.json",
+      "sha256": "8a06d74933c1c53f64bafe9060feb1ec98fc2e4252324c51b987accf19e56f50"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_3_seed_1.json",
+      "sha256": "b5a66abd4084ec9167db9d4a58b6186e4765fc908a12ddb85a39565872b2828b"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_3_seed_19.json",
+      "sha256": "90cb970d3545bebcd77661546666af43fa8b2067d3144bcb55cd5344d39b969e"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_3_seed_37.json",
+      "sha256": "fbb911d01b6518e9444f72531188ec9577b7687031edb7ad161a3eca8d8b5d4f"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_3_seed_7.json",
+      "sha256": "52ae09732c77bbd3f71191102dcf3c41ed0ff8f061145068df7a3ff8f9cc1ac5"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\fold_3_seed_73.json",
+      "sha256": "9b5ad84543c7cbef090dcd0bba37576c52d6e0de87801b42a2e283321ecff6de"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\figures\\R9_finite_horizon_certificate.png",
+      "sha256": "f3895bd3ac31c55342283b18bcc9478f1bcb7e75fd28a25f423c621150d6b2fd"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\figures\\R9_finite_horizon_certificate.svg",
+      "sha256": "88a6612fced52666d6c6a071b8f5aad520494d367c1082dd0304c5af0500ee75"
+    },
+    {
+      "path": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\figures\\R9_finite_horizon_certificate.pdf",
+      "sha256": "cf85c5ba5d26c2917a872e5fe7ccb59aa178d2d2f44077ddb2dfa7ca9d38e98c"
+    }
+  ],
+  "all_checks_passed": true,
+  "all_numeric_values_from_completed_analyses": true
+}

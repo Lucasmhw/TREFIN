@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "archive": "frozen_graph_v7_compact.tar.gz",
+  "archive_sha256": "babe21a34f23459e98daf038e149cca3de20375efadeac9278e1e74754584af1",
+  "archive_bytes": 63015565,
+  "member_count": 837,
+  "inventory_sha256": "73a20244bc8c85d85a2edfbb6e7f4eec87783a4a2bd9fbbe5824deed462cccf4",
+  "all_member_hashes_verified": true,
+  "all_30_final_runs_original_artifacts_verified": true,
+  "all_21_search_checkpoints_verified": true,
+  "final_analysis_manifest_and_files_verified": true,
+  "raw_forecast_files_in_archive": 0,
+  "authentication_helpers_in_archive": 0
+}

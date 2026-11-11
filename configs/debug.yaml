@@ -1,0 +1,88 @@
+experiment:
+  name: debug_synthetic
+  seed: 42
+  deterministic: true
+  run_root: runs
+  device: auto
+
+data:
+  source: synthetic
+  prepared_cache: false
+  num_steps: 220
+  num_assets: 8
+  num_factors: 3
+  horizon: 3
+  embargo: 3
+  graph_window: 32
+  graph_refit_stride: 1
+  graph_solver_max_iter: 500
+  graph_solver_tolerance: 0.0001
+  concept_scales: [5, 10]
+  market_scale: 10
+  train_fraction: 0.60
+  val_fraction: 0.20
+  ridge_alpha: 0.10
+  graph_alpha: 0.08
+  graph_alpha_selection: rolling_train
+  graph_alpha_candidates: [0.01, 0.03, 0.10, 0.30]
+  graph_alpha_selection_origins: 8
+  graph_edge_stability_weight: 0.05
+  graph_gate_center: 0.08
+  graph_gate_temperature: 0.04
+  projection_quantiles: [0.001, 0.999]
+  projection_margin_fraction: 0.05
+  graph_bound_quantile: 0.999
+  graph_bound_margin_fraction: 0.05
+  order_flow_mode: provided_interval
+
+model:
+  hidden_dim: 32
+  lead_dim: 8
+  graph_embedding_dim: 16
+  delta: 0.20
+  gamma_min: 0.12
+  gamma_max: 0.80
+  diffusion_max: 0.60
+  force_max: 0.50
+  graph_refresh: 0.15
+  future_graph_gate_center: 0.08
+  future_graph_gate_temperature: 0.06
+  q_epsilon: 0.05
+  nu_min: 2.20
+  mean_bound_multiplier: 5.0
+  scale_floor: 0.05
+  risk_strength_max: 1.0
+  residual_scale: 0.02
+
+training:
+  epochs: 20
+  batch_size: 16
+  learning_rate: 0.002
+  weight_decay: 0.0001
+  patience: 8
+  grad_clip: 1.0
+  train_samples: 16
+  eval_samples: 128
+  validation_samples: 64
+  test_samples: 256
+  selection_metric: energy_score
+  selection_min_delta: 0.00000001
+  evaluation_seed: 271828
+  lambda_concept: 0.25
+  lambda_graph: 0.08
+  lambda_monotonicity: 0.01
+  lambda_gain: 0.10
+  gain_target: 0.995
+  num_workers: 0
+
+evaluation:
+  alpha_levels: [0.50, 0.80, 0.95]
+  transaction_cost_bps: 10.0
+  top_fraction: 0.25
+  empirical_certificate_iterations: 4
+  empirical_certificate_max_states: 4
+  empirical_certificate_batch_size: 4
+
+figures:
+  dpi: 150
+  formats: [png]

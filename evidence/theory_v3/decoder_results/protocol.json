@@ -1,0 +1,78 @@
+{
+  "schema": "trefin-explicit-local-decoder-W1-v1",
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "state_protocol_sha256": "152b7b338db95c1b2a4c54a61349d84e22ec398beea7d744998d3fbc0d9c225d",
+  "source_model_sha256": "097ac9b51db52eda88fd661566cf36b99e60cc9ea956ed7739975cbcc5ab3eee",
+  "decoder_bound_source_sha256": "70d5b4a0ebd1e360e1037a5db981f99d2b36d0ed142998680af686219f35f32c",
+  "local_mlp_bound_source_sha256": "b743962fc914c3bd65e02b28f25e013ae90ab865d56b590ca12503d51e20cc11",
+  "audit_source_sha256": "82f6ab26be3307e00ee79548228cf862e6da3c6359a2288938c1dcf77b669ce8",
+  "dtype": "float64",
+  "fields": [
+    "L_C",
+    "L_A",
+    "L_D_sum_block_norm",
+    "mean_C",
+    "mean_A",
+    "scale_C",
+    "scale_A",
+    "precision_C",
+    "precision_A",
+    "nu_C",
+    "nu_A",
+    "precision_floor",
+    "precision_diagonal_upper",
+    "covariance_diagonal_lower",
+    "nu_lower",
+    "nu_upper",
+    "nu_kernel_bound",
+    "kappa_bound",
+    "sigma_max",
+    "correlation_eigenvalue_upper",
+    "original_precision_factor_C",
+    "original_precision_factor_A",
+    "normalized_precision_factor_C",
+    "normalized_precision_factor_A",
+    "normalization_clamp_inactive",
+    "propagated_W1_upper_bound"
+  ],
+  "axes": [
+    "origin",
+    "radius",
+    "lead",
+    "law_and_network_bound",
+    "field"
+  ],
+  "variants": [
+    "ideal_spectral",
+    "implemented_spectral",
+    "ideal_local",
+    "implemented_local"
+  ],
+  "metric": "W1 with Euclidean cost on one 32-asset lead, state inputs use the sum of Frobenius block norms",
+  "scope": "uniform on each registered local state tube, fixed market and lead; no true-law decoder defect estimated",
+  "ideal_law": {
+    "correlation_jitter": 0,
+    "chi_floor": 0
+  },
+  "implemented_law": {
+    "correlation_jitter": 2e-05,
+    "chi_floor": 1e-08,
+    "covariance_diagonal_floor": 1e-08
+  },
+  "chi_shared_across_assets_within_lead": true,
+  "signal_shrinkage_applies_to_mean_only": true,
+  "test_labels_used": false,
+  "model_fitting": false,
+  "all_state_radii_retained": true
+}

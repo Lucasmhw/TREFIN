@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "cases": 192,
+  "network_seeds": 8,
+  "pooled_and_nonpooled": true,
+  "concept_radius": 0.2,
+  "graph_radius": 0.1,
+  "mask": [
+    1.0,
+    0.0,
+    1.0
+  ],
+  "maximum_observed_to_bound_ratios": {
+    "concept_jacobian": 0.8556462744774431,
+    "graph_jacobian": 0.7668853113382881,
+    "argument_interval": 0.22046356130546102
+  },
+  "source_sha256": "b743962fc914c3bd65e02b28f25e013ae90ab865d56b590ca12503d51e20cc11",
+  "scope": "Independent numerical consistency check; analytic inequalities establish uniform validity."
+}

@@ -1,0 +1,2 @@
+2026-11-08 14:44:20,084 | INFO | final_test_started checkpoint=best.pt
+2026-11-08 14:44:30,201 | INFO | COMPLETE fold=1 seed=1 variant=SingleUnsigned mse=0.000682230573 es=0.0893004007

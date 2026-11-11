@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "Synthetic NPZ header parser fixtures only; no forecast computation",
+  "numpy": "2.5.2",
+  "checks": {
+    "(1, 0)": true,
+    "(2, 0)": true,
+    "unknown_version_rejected": true
+  },
+  "builder_sha256": "022917c6f35047482989ad1d6c4aed183b9a7b17e0f158fa38cda0b9a8bec60c",
+  "public_APIs": [
+    "read_magic",
+    "read_array_header_1_0",
+    "read_array_header_2_0"
+  ]
+}

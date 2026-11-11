@@ -1,0 +1,9 @@
+fold_2_timexer complete
+fold_2_timerxl complete
+fold_3_timexer complete
+fold_3_timerxl complete
+fold_2_timemixerpp complete
+fold_3_timemixerpp complete
+fold_2_tedm complete
+fold_3_tedm complete
+{"started_utc": "2026-11-08T09:57:20.068954+00:00", "source_script_sha256": "0b0029e48abff742e119b088b397b904b795b0441a8bc1b44ec159398e843c4d", "updated_utc": "2026-11-08T13:54:52.374132+00:00", "status": "all_eight_groups_verified", "archive_file": "crossfold_v3_compact_complete.tar.gz", "archive_sha256": "e6d0ba871eeb128175ebacb361ef2a328e62ed85f976fb73189e142c2a986434", "archive_bytes": 1286018, "finished_utc": "2026-11-08T13:54:52.542779+00:00"}

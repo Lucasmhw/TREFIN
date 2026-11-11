@@ -1,0 +1,6 @@
+{
+  "model_sha256": "7c8d0c16c315f9ba34d3d0668da86f8e043a508d46f00c78aa5cae56620097da",
+  "prepared_sha256": "298676d881e32367f3b0e5ea64904feb59831dece0a336ec82236086491750f0",
+  "selection": "original 20-epoch ceiling, validation ES, same positive rho for all variants",
+  "test_used_for_selection": false
+}

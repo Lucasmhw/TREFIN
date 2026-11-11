@@ -1,0 +1,39 @@
+benchmark:
+  name: finmultitime_us_timemixer_equal_budget_supplement_v1
+  seed: 1
+  deterministic: true
+  device: auto
+  history_length: 126
+  candidate_budget: 2
+
+training:
+  epochs: 20
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 6
+  grad_clip: 1.0
+  selection_min_delta: 0.000001
+  validation_samples: 64
+  test_samples: 256
+  evaluation_seed: 271828
+  alpha_levels: [0.50, 0.80, 0.90, 0.95, 0.99]
+
+evaluation:
+  validation_samples: 64
+  test_samples: 256
+  evaluation_seed: 271828
+  alpha_levels: [0.50, 0.80, 0.90, 0.95, 0.99]
+
+statistical_tests:
+  block_length: 5
+  bootstrap_repetitions: 2000
+  confidence: 0.95
+  seed: 314159
+
+models:
+  TimeMixer:
+    kind: neural
+    candidates:
+      - {downsampling_factors: [1, 2, 4], moving_average: 21, dropout: 0.1}
+      - {downsampling_factors: [1, 3, 7], moving_average: 21, dropout: 0.1}

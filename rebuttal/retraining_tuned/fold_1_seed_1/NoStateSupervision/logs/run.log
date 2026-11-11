@@ -1,0 +1,2 @@
+2026-11-08 14:44:33,565 | INFO | final_test_started checkpoint=best.pt
+2026-11-08 14:44:44,085 | INFO | COMPLETE fold=1 seed=1 variant=NoStateSupervision mse=0.000682014856 es=0.0893379173

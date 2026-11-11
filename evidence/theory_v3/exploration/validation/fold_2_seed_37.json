@@ -1,0 +1,15 @@
+{
+  "fold": 2,
+  "seed": 37,
+  "checkpoint_sha256": "d2a1e95dfd40e3eadc7c3e7668249eaed13ef3a1e85dd35fb2d10673cd72a8cc",
+  "dense_log_head_block_checks": 64,
+  "finite_gaussian_pairs": 288,
+  "finite_log_head_checks": 576,
+  "maximum_dense_log_head_ratio": 0.9980655800437966,
+  "maximum_log_head_ratio": 0.08269537606591865,
+  "maximum_gaussian_parameter_ratio": 0.07448175816492177,
+  "maximum_gaussian_state_ratio": 0.060364039914936655,
+  "maximum_parameter_to_state_ratio": 0.976350299777161,
+  "edge_sign_changes": 24528,
+  "passed": true
+}

@@ -1,0 +1,26 @@
+{
+  "selected": {
+    "decay": 0.9,
+    "degrees_of_freedom": 8,
+    "validation_energy_score": 0.08865174285689338
+  },
+  "selection_metric": "validation Energy Score",
+  "decay_grid": [
+    0.9,
+    0.94,
+    0.97,
+    0.99
+  ],
+  "degrees_grid": [
+    3,
+    5,
+    8,
+    15,
+    30
+  ],
+  "validation_samples": 64,
+  "test_samples": 256,
+  "common_random_numbers": true,
+  "random_seed": 271828,
+  "test_used_for_selection": false
+}

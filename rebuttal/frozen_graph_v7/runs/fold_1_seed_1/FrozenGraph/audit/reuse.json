@@ -1,0 +1,5 @@
+{
+  "source": "search/fold_1/FrozenGraph/base/checkpoints/best.pt",
+  "source_sha256": "1f9d26800d8c05d4528dedd6fe7cb724e26738ecaf0725c092c51350f26ce9dd",
+  "reason": "Reuse this fold/variant validation-selected seed1 checkpoint before its first test evaluation"
+}

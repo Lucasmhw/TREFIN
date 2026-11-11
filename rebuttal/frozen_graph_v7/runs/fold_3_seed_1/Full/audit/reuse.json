@@ -1,0 +1,5 @@
+{
+  "source": "search/fold_3/Full/base/checkpoints/best.pt",
+  "source_sha256": "aee54749da46c3948b95f5bfc5082b06195f8f0afff8a593e74757ab356d2ad0",
+  "reason": "Reuse this fold/variant validation-selected seed1 checkpoint before its first test evaluation"
+}

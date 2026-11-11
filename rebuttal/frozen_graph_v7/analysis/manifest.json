@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "script_sha256": "3617be4753505a06a39ee8a5220319e57b2a776fd188ff868e22696b97993524",
+  "global_selection_sha256": "140699433fd2713200068945e9696aa6786cd80bff21ae4ce00dac6b7d823bf3",
+  "files": {
+    "all_metrics.csv": "840acb25aaf0e5a3982450fb6b58aff8eeb788a5dcb1cbaf06c4ab6a1d360bc9",
+    "main_six_rows.csv": "68bf587e68698a7070cfb12f4cde206992b53f5dc9d5f63d6b18ab4c4d5e71e4",
+    "paired_graph_updates.pdf": "95a51fadaac9de04d6fde9947bc5cc1606d8bec869ae2ff9c57381ecd2b873eb",
+    "paired_graph_updates.png": "9dc20db97d36819506e9889050f332bb9ac1823e5d79bdde4e6c9c8126fff26c",
+    "paired_graph_updates.svg": "3f4ad32e908c6abf4b1b3ec8cb39c80aa832301ae3d0523a8e2260dd28887ec9",
+    "paired_graph_updates_caption.txt": "bf889b328304e159a012526b6191c42ddd5fa97a2302ff46c2cc02b65d288d0d",
+    "paired_graph_updates_plot_data.csv": "a7547baf11d74bdc5b89c23af019433217c8ce5f8d4d4fceca26d1509b41996c",
+    "paired_origin_arrays.npz": "87993ac70d55c159aa83d3fafa57e94d86f6a471f2c02e1e42a2da6b2f114252",
+    "paired_origin_differences.csv": "f0ef1344f14fc467a6153a84af703786c613f9200716c21c86b2064e224ebead",
+    "paired_seed_differences.csv": "8f3291c92c72e3175f62f7ce21fa2760a7548ffdb33db946d0364f6be400fc1b",
+    "per_run_metrics.csv": "d4afe66d36201ffd444b9f88c07c6908853d3c1cc8b6829b9dd94f3211760657",
+    "report.md": "725438268cbab99e029c7d12ee6cdcd16103a2d5a55477f3dd51994ccb8bf1e3",
+    "results.json": "23f0498ffc0aec13935b9d4e548a66bde5c29c12c6290bf81e68e26d7166a062",
+    "state_coordinate_leadwise.csv": "a10c197ac623efc27971e055c0600174bff2a9da48258792a09c6d06ca7a3788",
+    "state_leadwise.csv": "7ed312122f999d8d35ae5fedacc91aab8d6479f9ac180d62d6816330ac60e873"
+  },
+  "figure_derivation": "Only paired seed values from verified runs; no smoothing, fitting or omitted seeds."
+}

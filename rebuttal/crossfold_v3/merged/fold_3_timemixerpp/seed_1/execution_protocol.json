@@ -1,0 +1,166 @@
+{
+  "schema": "trefin-fresh-point-baseline-fast-eval-v1",
+  "evaluation_acceleration": "Group independent origins by native per-origin FFT period; unchanged training, architecture, randomization and calibration; equivalent to separate-origin inference up to floating-point reduction roundoff",
+  "status": "NEW supplemental experiments; no claim to reconstruct historical separate-host results",
+  "family": "timemixerpp",
+  "upstream": {
+    "url": "https://github.com/WenjieDu/PyPOTS",
+    "revision": "2271533587bab250163437ed39cfe13cefd8b80a",
+    "license": "BSD-3-Clause",
+    "files": {
+      "pypots/nn/modules/timemixerpp/backbone.py": "e403c50683224f36f207d21f90d7ce04de0558b67275bd2463ae7ea720c6e57a",
+      "pypots/nn/modules/timemixerpp/layers.py": "1e0c1cb99c1cfc661ebc6c8392e3789c0a06a6ffd74d1c1147b86980c2bd2e57",
+      "pypots/nn/modules/timemixerpp/__init__.py": "573a962ad08c04e119735477e8f59e9522296a6d53707229bb41525c033589ea",
+      "pypots/nn/modules/revin/layers.py": "4604d173101b86d4c93bbe44e91f69628e262a3b88e4fb7857dee1e96a85bae7",
+      "pypots/nn/modules/revin/__init__.py": "40472d9af12cc19a320a13308553dcb224d10d09a065ffb7d9be86c4d880bce6",
+      "pypots/nn/modules/inception/layers.py": "f4e0c746327217c6bc62f3a4c3b2d379a8bdad325b783c6053070ec7a69374bd",
+      "pypots/nn/modules/inception/__init__.py": "732f075cf93c1409b56b6aa2bad37aa468a0c8b138556d54e5c40df7d2b4c9d6",
+      "pypots/nn/modules/transformer/attention.py": "31c0ff8e7ebe33b4b752c9ef659b04b446ccf4cf1a9bfc033f93319b8adf5377",
+      "pypots/nn/modules/transformer/embedding.py": "8db6ff71b983ee90d707078c083839b56c52d81e82a307338709da705e5aea93",
+      "pypots/forecasting/timemixerpp/core.py": "8b1cb63e4e4c810ba4fbcfc7b14fdd4c788a3c0823a0061dc799f2416a0f7e7d",
+      "LICENSE": "bd329b165242bbd70635eb77e15a833aec33a615134ad8a21797c4368f4ac1fe",
+      "README.md": "60135758ce44a8c1c3639f81c63c79749d5f3bf6a25e0852850fd4d02f4bf412"
+    }
+  },
+  "source_manifest_sha256": "ec6dd6cb175b6783eb291aab64aedc856f2904854364014df1e37ee7d114ab7d",
+  "data_manifest_sha256": "460d54315b42fff0d84cb11bd414ab90c418c241e73952351631875cd513b622",
+  "data_sha256": "b57b281c7b2f006c9021513819bf1d31e5051b8d39f52e6f4f6dbb40244ac5fa",
+  "script_sha256": "74cfbc7c3dae8b12861e7a7626ad1ad52d215379cfcf5af7d536b5dbc38bb7a0",
+  "common_helper_sha256": "3d9bd8e9ab7d9c57f16f7fc7580cfd11c889f84ed31e5b61d5af1026c026f143",
+  "seeds": [
+    1
+  ],
+  "learning_rate_candidates": [
+    0.001,
+    0.0003
+  ],
+  "architecture_candidates": 1,
+  "max_epochs": 100,
+  "patience_epochs": 15,
+  "batch_size": 64,
+  "validation_samples": 64,
+  "test_samples": 256,
+  "evaluation_rng_seed": 271828,
+  "test_rng_seed": 271829,
+  "configuration": {
+    "task_name": "short_term_forecast",
+    "n_steps": 126,
+    "n_features": 32,
+    "n_pred_steps": 5,
+    "n_pred_features": 32,
+    "n_layers": 2,
+    "d_model": 32,
+    "d_ffn": 64,
+    "n_heads": 2,
+    "dropout": 0.1,
+    "top_k": 3,
+    "n_kernels": 3,
+    "channel_mixing": true,
+    "channel_independence": true,
+    "downsampling_layers": 2,
+    "downsampling_window": 3,
+    "downsampling_method": "avg",
+    "use_future_temporal_feature": false,
+    "use_norm": true,
+    "embed": "fixed",
+    "freq": "d"
+  },
+  "normalization": "per-asset mean and population SD fitted to unique raw training rows including purged training labels only",
+  "selection": "uncalibrated validation ES on all 496 exact fold 3 origins after every epoch; identical initialization/shuffle seed perLR; no test-outcome use in training, selection or calibration",
+  "mean_calibration": "after checkpoint/candidate selection; rho in[.05,1] selected by validation ES with frozen centered-training-residual innovations; exact empirical-adapter predictive mean from backbone, not sample mean",
+  "inputs": "126 historical excess log returns for all32 assets; no FF5 values, volume, concepts, graphs or future calendar covariates; differs from TREFIN concept/factor/volume predictors",
+  "adapter": "PyPOTS maintained TimeMixer++ implementation, not an official-author-source reproduction; unchanged forecast/backbone/layers; three exact scales126/42/14; two32-width mixer blocks with64-width FF/inception channels, top3 periods,3 kernels, channel mixing and independence, native RevIN; preserves upstream final/coarsest prediction head. Because native FFT period selection averages its batch, evaluation selects periods independently per origin and groups equal-period convolution/attention branches across origins without mixing information; training retains shuffled minibatches.",
+  "scenarios": "whole[5,32] centered training residual paths sampled with replacement, same adapter as fresh Timer-XL; point model itself is not natively probabilistic",
+  "training": "pointMSE; Adam(.9,.999), no weight decay; epoch cosine scheduler to1e-8; gradclip1;100full-data epochs cap,15validation-check patience",
+  "device": "cuda",
+  "outer_point_inference_batch_size": 32,
+  "effective_native_inference_batch_size": 32,
+  "FFT_selection_origin_group": 1,
+  "numerical_acceptance": {
+    "schema": "timemixerpp-numerical-equivalence-acceptance-v2",
+    "recorded_utc": "2026-11-08T07:20:39.450780+00:00",
+    "decision": "accept grouped independent-origin evaluation at outer batch32; training remains batch64",
+    "decision_scope": "Numerical implementation equivalence, not a forecasting-performance or significance result; decided before full optimized training and test evaluation",
+    "criteria": {
+      "return_unit_max_absolute_error": 1e-06,
+      "normalized_max_absolute_error": 0.0001,
+      "normalized_relative_rms_error": 0.0001
+    },
+    "additional_requirements": "finite outputs; exact training losses/gradients; identical tested FFT top-k membership and rank",
+    "checks": {
+      "finite_all_outputs": true,
+      "all_training_checks_exact": true,
+      "all_topk_memberships_identical": true,
+      "all_topk_ranks_identical": true,
+      "return_unit_max_absolute_error": true,
+      "normalized_max_absolute_error": true,
+      "normalized_relative_rms_error": true
+    },
+    "original_strict_normalized_threshold": 2e-05,
+    "original_strict_threshold_passed": false,
+    "original_failures_retained": true,
+    "maximum_observed": {
+      "return_unit_max_absolute_error": 6.165963569088707e-07,
+      "normalized_max_absolute_error": 3.707408905029297e-05,
+      "normalized_relative_rms_error": 2.9532688625565355e-05
+    },
+    "maximum_raw_error_basis_points": 0.006165963569088707,
+    "evidence_file": "timemixerpp_cuda_diagnostic.json",
+    "evidence_sha256": "11e7fe8e419cb45ea47f7399498ef1c0cbfc7d20d4cbe5786939758f0f17a1b9",
+    "evidence_states": [
+      "random_initialization",
+      "two_training_updates",
+      "existing_fitted_checkpoint"
+    ],
+    "checkpoint_sha256": "21465b171121f8466b58cff3cf33d5b649b80687b73da0966fc01603b2d93b35",
+    "tested_validation_origins": 32,
+    "tested_outer_batches": [
+      1,
+      4,
+      16,
+      32
+    ],
+    "production_outer_inference_batch": 32,
+    "training_batch_size": 64,
+    "fast_module_sha256": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+    "torch_cuda_version": "2.8.0+cu128",
+    "TF32": "disabled for matmul and cuDNN in both runner and diagnostic",
+    "interpretation": "Batch1 outputs are exact. Grouped CUDA differences start in finer-scale block outputs, with exact coarse FFT inputs/scores/selections; consistent with batch-shape-dependent float32 kernel roundoff. The fitted forecast RMS-relative discrepancy is about0.00295%, and maximum discrepancy is0.00617basispoints. This is not a bitwise-CUDA-equivalence claim or a guarantee for every possible input.",
+    "rationale": "Retain raw-return tolerance0.01basispoint as the primary observable-unit criterion, add normalized maximum and RMS-relative guards1e-4; the original2e-5 normalized guard was more restrictive than this documented implementation-agreement criterion. No model hyperparameter, data split, fitting objective, calibration rule or test outcome informed this numerical decision."
+  },
+  "numerical_acceptance_sha256": "adfdf8fa8a1b0dff169dfab19d081849e0594de23e08d7ca45d8193b009d9a1e",
+  "fold": 3,
+  "data_file": "fold3_raw_returns.npz",
+  "split_sizes": {
+    "train": 3143,
+    "val": 496,
+    "test": 306
+  },
+  "split_date_ranges": {
+    "train": {
+      "samples": 3143,
+      "forecast_origin_start": "2009-07-02T00:00:00.000000000",
+      "forecast_origin_end": "2021-12-23T00:00:00.000000000",
+      "last_label_date": "2021-12-31T00:00:00.000000000"
+    },
+    "val": {
+      "samples": 496,
+      "forecast_origin_start": "2022-01-03T00:00:00.000000000",
+      "forecast_origin_end": "2023-12-21T00:00:00.000000000",
+      "last_label_date": "2023-12-29T00:00:00.000000000"
+    },
+    "test": {
+      "samples": 306,
+      "forecast_origin_start": "2024-01-02T00:00:00.000000000",
+      "forecast_origin_end": "2025-03-21T00:00:00.000000000",
+      "last_label_date": "2025-03-28T00:00:00.000000000"
+    }
+  },
+  "normalization_fit_rows_inclusive": [
+    1,
+    3272
+  ],
+  "crossfold_loader_sha256": "256271b6ee5c50e94d09c835ce29e0c5b9bb989266f6d21a74d51811bbd16637",
+  "test_targets_float32_bytes_sha256": "68e6dda3b05e783c17b14bd0b3e08d9b39c91df9357748637b36b9e0e5253a9d",
+  "frozen_fold1_runner_sha256": "f9c20a917e1133c13ccd476da5f90bc565f1741ebe253f08ff739c4ca1d89e81"
+}

@@ -1,0 +1,489 @@
+{
+  "calls": 19424,
+  "zero_zero_elements": 121,
+  "zero_denominator_elements": 13554,
+  "repaired_calls": 121,
+  "events": [
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 1,
+      "phase": "val",
+      "optimizer_update": 42,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 2,
+      "phase": "val",
+      "optimizer_update": 84,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 3,
+      "phase": "val",
+      "optimizer_update": 126,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 4,
+      "phase": "val",
+      "optimizer_update": 168,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 4,
+      "phase": "val",
+      "optimizer_update": 168,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        3328,
+        32,
+        113
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 112,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        1137,
+        4,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 5,
+      "phase": "val",
+      "optimizer_update": 210,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 6,
+      "phase": "val",
+      "optimizer_update": 252,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 7,
+      "phase": "val",
+      "optimizer_update": 294,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 8,
+      "phase": "val",
+      "optimizer_update": 336,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 9,
+      "phase": "val",
+      "optimizer_update": 378,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 10,
+      "phase": "val",
+      "optimizer_update": 420,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 11,
+      "phase": "val",
+      "optimizer_update": 462,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 12,
+      "phase": "val",
+      "optimizer_update": 504,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 13,
+      "phase": "val",
+      "optimizer_update": 546,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 14,
+      "phase": "val",
+      "optimizer_update": 588,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 15,
+      "phase": "val",
+      "optimizer_update": 630,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 16,
+      "phase": "val",
+      "optimizer_update": 672,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 17,
+      "phase": "val",
+      "optimizer_update": 714,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 18,
+      "phase": "val",
+      "optimizer_update": 756,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 19,
+      "phase": "val",
+      "optimizer_update": 798,
+      "training_batch_offset": 2624,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2174,
+        12,
+        0
+      ]
+    }
+  ],
+  "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+}

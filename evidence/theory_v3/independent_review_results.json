@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "independent_review": "Analytic derivation and implementation read; stored product arithmetic, source hashes, cohort completeness, and validation summaries independently cross-checked.",
+  "runs": 15,
+  "neighborhoods": 1920,
+  "matrix_steps": 9600,
+  "certified_prefixes": 9600,
+  "one_step_bounds_above_one": 7739,
+  "primary_five_step_bound": {
+    "1": {
+      "n": 160,
+      "minimum": 0.9424918927413031,
+      "median": 1.1633948284807905,
+      "q95": 2.3356281564656443,
+      "maximum": 3.173524997997451
+    },
+    "2": {
+      "n": 160,
+      "minimum": 0.9610310347261487,
+      "median": 1.0906520925263539,
+      "q95": 2.8955110693020347,
+      "maximum": 3.6586897135403533
+    },
+    "3": {
+      "n": 160,
+      "minimum": 0.9057609318984464,
+      "median": 0.9839666649631897,
+      "q95": 1.3259710591801843,
+      "maximum": 1.5114614137398745
+    }
+  },
+  "validation_totals": {
+    "runs": 15,
+    "centers": 2880,
+    "dense_jacobians": 75,
+    "finite_perturbation_leads": 3600,
+    "wall_seconds": 39.07430789999489
+  },
+  "max_validation_ratios": {
+    "maximum_dense_block_ratio": 0.9999999998988889,
+    "maximum_finite_state_ratio": 0.9666439214333974,
+    "maximum_finite_mean_ratio": 0.0053541301665538275
+  },
+  "source_hashes": {
+    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\tube_bounds.py": "905f5b3c3a6681e07ab67877f9b12a7178ade6845ca9dcee85e3714b74d6d607",
+    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\tube_derivation.md": "159e98897560a41d0845ec0d40dd3bdf138e8b1468130dc73ff9603ca1fd6da6",
+    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\audit_local_tubes.py": "95efe1b1d91efc60780756a194d6c4da82d2e0848d44b53f78bdd87becc56106",
+    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\validate_tube_bounds.py": "8e6e47356af03ca681d596d30c21831e3d0342c13eea97828eb285b8be0b2af2",
+    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\local_tube_results_v2\\summary.json": "9ad894f5e8450c910768c959a1cba15e476345d18b568854c7ad3c385ea80e78",
+    "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\theory_v3\\validation\\validation_summary.json": "77c94ecd67f0a3251e202396b8dfd5b85fce5e6d54b6a588f088fd71a26c46fb"
+  },
+  "remaining_mathematical_issue": null,
+  "interpretation": "Uniform analytic bounds on declared neighborhoods, evaluated in float64; bounded finite-horizon amplification, not universal contraction, unknown-dynamics accuracy, or a numerical distributional W1 certificate."
+}

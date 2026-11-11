@@ -1,0 +1,53 @@
+{
+  "variant": "NoGraph",
+  "candidate": "stronger_dynamics",
+  "order": 2,
+  "effective_fingerprint": "6726f564670683cc67d2396b9f5c59ad38148a900d29c0f7045f4144ee09baa1",
+  "executed": true,
+  "calibrated_validation_energy_score": 0.06398974112391276,
+  "selected_signal_shrinkage": 0.5833899005628008,
+  "training_summary": {
+    "best_epoch": 4,
+    "best_val": 0.06402594571287891,
+    "selection_metric": "energy_score",
+    "train_seconds": 48.01770105957985,
+    "epochs_completed": 10,
+    "signal_shrinkage_calibration": {
+      "selected_signal_shrinkage": 0.5833899005628008,
+      "lower_bound": 0.05,
+      "upper_bound": 1.0,
+      "tolerance": 1e-05,
+      "selection_split": "validation",
+      "selection_metric": "energy_score",
+      "convex_objective": true,
+      "pairwise_energy_term_invariant": true,
+      "pairwise_invariance_max_error": 1.3877787807814457e-17,
+      "optimizer_success": true,
+      "optimizer_evaluations": 9,
+      "uncalibrated_validation_metrics": {
+        "mse": 0.00028682192420783676,
+        "rmse": 0.01693581778975662,
+        "mae": 0.011710363703153117,
+        "directional_accuracy": 0.5267193775100402,
+        "msic": 0.0034683747503520867,
+        "msir": 0.006863363092417921,
+        "energy_score": 0.06400275767321022
+      },
+      "calibrated_validation_metrics": {
+        "mse": 0.0002865411289838799,
+        "rmse": 0.016927525778561967,
+        "mae": 0.011714136906208393,
+        "directional_accuracy": 0.5267193775100402,
+        "msic": 0.003468374750352086,
+        "msir": 0.0068633630924179205,
+        "energy_score": 0.06398974112391276
+      }
+    }
+  },
+  "checkpoint_sha256": "f10a4707302491418a3809b6bdee9495a306b160616f2f73b421763dab17f820",
+  "checkpoint_reload": {
+    "max_abs_difference": 0.0,
+    "passed": true
+  },
+  "test_access_count": 0
+}

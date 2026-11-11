@@ -1,0 +1,161 @@
+schema: fconcord-audited-real-runs-v1
+claim_policy: >-
+  These are end-to-end real-data implementation audits. The FinMultiTime entry includes
+  a completed three-fold/five-seed fixed-cohort protocol, but the full three-layer,
+  equal-budget modern-baseline study remains incomplete and must not be described as SOTA.
+
+runs:
+  - id: fintsbridge_btcf_officialsplit_debug_20260821T0050Z
+    role: official FinTSBridge BTCF H=5 implementation audit
+    server_path: /root/autodl-tmp/f-concord/runs/fintsbridge_btcf_officialsplit_debug_20260821T0050Z
+    local_compact_path: server_evidence/fintsbridge_btcf_officialsplit_debug_20260821T0050Z
+    compact_archive_sha256: C6AF5BA7712E85BF7A842B5CC0C8DA6648660488CA39D62F95039D0F135A05F4
+    source_sha256:
+      panel: 293e0656481cfdc01a9d2e41fe356aae14b259dbe2444b7a6014b46ba065f12c
+      factors: afe981fe6cd9c8893ee03f77ed6c92ad3e882d3354d56a7cac85b74bcfb31844
+    split_origins: {train: 29593, validation: 4298, test: 8597}
+    best_epoch: 10
+    checkpoint_reload_max_abs_difference: 0.0
+    test:
+      rmse: 0.005527079571038485
+      mae: 0.00362414657138288
+      directional_accuracy: 0.4992904501570315
+      energy_score: 0.0038333388129963937
+      msic: 0.0024698346582080494
+      msir: 0.005015368772531585
+    integrity_passed: true
+    figures: 50
+    global_structural_certificate_passed: false
+    full_prediction_arrays: server_only
+
+  - id: finmultitime_us_calibrated_rolling_3fold_5seed_v1
+    role: exploratory validation-calibrated FinMultiTime US-32 H=5 rolling protocol
+    server_path: /root/autodl-tmp/f-concord/runs/protocols/finmultitime_us_calibrated_rolling_3fold_5seed_v1
+    local_compact_path: server_evidence/finmultitime_us_calibrated_rolling_3fold_5seed_v1
+    compact_archive_sha256: EC5C02F1A3D813925A3238E7F43D3BCE831E73F8C6CD6F374A7DB56427B540BB
+    source_sha256:
+      panel: d7eb99b965900f5341b2db7eec7fe5e8e046d677efccae5def9db75720fdab472
+      factors: 7845a4afa8dec576071dc14bb5142c55235f1a8289af5368ee0844829f741efef
+    seeds: [1, 7, 19, 37, 73]
+    runs_completed: 15
+    expected_runs: 15
+    equal_run_aggregate_test:
+      mse: {mean: 0.0004761721, sample_std: 0.0001532251}
+      rmse: {mean: 0.0215719055, sample_std: 0.0034056218}
+      mae: {mean: 0.0144735262, sample_std: 0.0018158540}
+      directional_accuracy: {mean: 0.5114284004, sample_std: 0.0060857077}
+      energy_score: {mean: 0.0787389405, sample_std: 0.0084798721}
+      msic: {mean: 0.0019493895, sample_std: 0.0040591714}
+      msir: {mean: 0.0039929287, sample_std: 0.0081876249}
+    zero_return_mse: 0.0004767555
+    oos_r2_zero:
+      equal_run_mean: 0.0008177471
+      pooled: 0.0013334187
+      by_fold: {fold_1: 0.0027642842, fold_2: -0.0004965537, fold_3: 0.0001855110}
+    signal_calibration:
+      selection_split: validation
+      rho_min: 0.05
+      rho_mean: 0.3268079395
+      rho_max: 0.7179404236
+      maximum_pairwise_invariance_error: 5.551115123125783e-17
+      all_validation_energy_scores_nonworsening: true
+    checkpoint_reload_max_abs_difference: 0.0
+    audit:
+      passed: true
+      checkpoints_loadable: 30
+      single_final_test_sequences_verified: 15
+      label_paths_within_registered_split_ends: true
+      temporal_purges_verified: true
+      figures: 750
+      maximum_local_sampled_radius: 0.9739615321
+      global_structural_certificate_coverage: 0.0
+    mape_reported: false
+    claim_limit: >-
+      Exploratory post-registration mechanism; the overall advantage over ZeroReturn is tiny
+      and fold 2 is negative. Confirmatory claims require untouched external evidence.
+    full_prediction_arrays: server_only
+
+  - id: finmultitime_us32_weeklygraph_tol1e4_debug_20260821T0140Z
+    role: FinMultiTime US-32 H=5 daily implementation audit
+    server_path: /root/autodl-tmp/f-concord/runs/finmultitime_us32_weeklygraph_tol1e4_debug_20260821T0140Z
+    local_compact_path: server_evidence/finmultitime_us32_weeklygraph_tol1e4_debug_20260821T0140Z
+    compact_archive_sha256: 47D79E3E85500EFF49DE71EB2CC577BCF54356C096FB982DDD180B08B4BB828C
+    source_sha256:
+      panel: d7eb99b965900f5341b2db7eec7fe5e8e046d677efccae5def9db75720fdab472
+      factors: 7845a4afa8dec576071dc14bb5142c55235f1a8289af5368ee0844829f741efef
+    split_origins: {train: 2565, validation: 589, test: 791}
+    best_epoch: 6
+    checkpoint_reload_max_abs_difference: 0.0
+    graph:
+      refit_stride: 5
+      refit_count: 791
+      convergence_rate: 0.9810366624525917
+      fallback_rate: 0.018963337547408345
+      carry_forward_max_error: 0.0
+    test:
+      rmse: 0.01949390210211277
+      mae: 0.013540275394916534
+      directional_accuracy: 0.508367572692794
+      energy_score: 0.07392369530977111
+      msic: 0.00023994074005156534
+      msir: 0.00040307479025071926
+    integrity_passed: true
+    figures: 50
+    global_structural_certificate_passed: false
+    full_prediction_arrays: server_only
+
+  - id: finmultitime_us_rolling_3fold_5seed_v1
+    role: FinMultiTime US-32 H=5 registered rolling protocol
+    server_path: /root/autodl-tmp/f-concord/runs/protocols/finmultitime_us_rolling_3fold_5seed_v1
+    local_compact_path: server_evidence/finmultitime_us_rolling_3fold_5seed_v1
+    compact_archive_sha256: F17D7344797AD69632800F6B6E45766C65919E0E9269E02ED5549B0429EDF2BA
+    source_sha256:
+      panel: d7eb99b965900f5341b2db7eec7fe5e8e046d677efccae5def9db75720fdab472
+      factors: 7845a4afa8dec576071dc14bb5142c55235f1a8289af5368ee0844829f741efef
+    folds:
+      fold_1:
+        split_origins: {train: 2135, validation: 498, test: 500}
+        test_label_end: 2021-12-31
+        mean_test: {rmse: 0.0261804290, mae: 0.0167642143, directional_accuracy: 0.5120950000, energy_score: 0.0900600463}
+      fold_2:
+        split_origins: {train: 2638, validation: 500, test: 496}
+        test_label_end: 2023-12-29
+        mean_test: {rmse: 0.0202230670, mae: 0.0143227682, directional_accuracy: 0.5046370968, energy_score: 0.0765017863}
+      fold_3:
+        split_origins: {train: 3143, validation: 496, test: 306}
+        test_label_end: 2025-03-28
+        mean_test: {rmse: 0.0184105333, mae: 0.0124102402, directional_accuracy: 0.5175531046, energy_score: 0.0700865186}
+    seeds: [1, 7, 19, 37, 73]
+    runs_completed: 15
+    expected_runs: 15
+    equal_run_aggregate_test:
+      rmse: {mean: 0.0216046764, sample_std: 0.0034358480}
+      mae: {mean: 0.0144990742, sample_std: 0.0018447624}
+      directional_accuracy: {mean: 0.5114284004, sample_std: 0.0060857077}
+      energy_score: {mean: 0.0788827837, sample_std: 0.0086206220}
+      msic: {mean: 0.0019493895, sample_std: 0.0040591713}
+      msir: {mean: 0.0039929288, sample_std: 0.0081876247}
+    checkpoint_reload_max_abs_difference: 0.0
+    audit:
+      passed: true
+      checkpoints_loadable: 30
+      single_final_test_sequences_verified: 15
+      label_paths_within_registered_split_ends: true
+      temporal_purges_verified: true
+      figures: 750
+      minimum_graph_convergence_rate: 0.9810366625
+      maximum_graph_fallback_rate: 0.0189633375
+      graph_carry_forward_max_error: 0.0
+      maximum_local_sampled_radius: 0.9739615321
+      local_sampled_contraction_coverage: 1.0
+      global_structural_radius_range: [43.3606796265, 60.6511726379]
+      global_structural_certificate_coverage: 0.0
+    lightweight_point_baseline_note: >-
+      Across the 15 run/fold pairs, ZeroReturn has slightly lower mean RMSE and MAE;
+      this protocol is therefore not evidence of predictive SOTA.
+    full_prediction_arrays: server_only
+
+diagnostic_runs:
+  - id: finmultitime_us32_weeklygraph_debug_20260821T0115Z
+    reason_not_headline: Graphical-Lasso tolerance was over-strict; 66.37% declared fallback.
+    compact_archive_sha256: 42DD3D6089289A019CD719C932CED39114DF12D619B52641880D9F1DB8F394C2

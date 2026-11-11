@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Preserve scientific logs, configurations and manifest hashes byte-for-byte.
+* -text

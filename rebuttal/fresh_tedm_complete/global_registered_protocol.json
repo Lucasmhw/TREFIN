@@ -1,0 +1,116 @@
+{
+  "schema": "trefin-fresh-official-baseline-v1",
+  "status": "NEW supplemental experiments; no claim to reconstruct the historical separate-host experiments",
+  "family": "tedm",
+  "upstream": {
+    "url": "https://gitlab.com/dlr-dw/tedm",
+    "revision": "1d65888cc1ead587f738a0081a150d3c15d97b17",
+    "files": {
+      "models/networks.py": "24135ce4f6c99087de29648a7ca9b7da46432809893d9076b56abbfca491cbf8",
+      "models/noise.py": "c9279a59b9147ce0c230f893e197abd397c0916a1086b7b34ca8b7905bad024d",
+      "models/precond.py": "7069b5e74442e91b3abbb965774abb02e6217d8ded7c66df9feb3f294c9bd532",
+      "models/filters.py": "d5503ab856813e69e722a885d8a627b2ac0ab6bbb2ce14f7f300365ce43fcbcf",
+      "training/sampler.py": "a0d058f5e767367b5e43e4e3ce41cbc3435a38c8c46ed8b1271818c380dfd36d",
+      "training/scheduler.py": "1365c2cdb226e07bd67a1b86f54523e8e5b24c28c7cb3085b064dd344706814c",
+      "utils/__init__.py": "242a91221b2399491dba09d37204e84edde75695a31385768d1342ed2f2c3f5e",
+      "utils/io.py": "0a1f77ee80fc3ccc40ce2c2e1885d650708930438bed416c11c3338aae53bee5",
+      "utils/seed.py": "99133a234dea37c50d43a3096d1e99bc1723ca990af4d443cbe16e7217fefef9",
+      "utils/stats.py": "e2b853a77f17a6547f301c6ed90dbbb059fff30ad1ac9f004417d44290d660ee",
+      "config/custom.yaml": "edbee01f1fa9c84d8c0ecb22824bf5ebd79d1037b472686643af9f0111f05e99",
+      "config/exchange.yaml": "8d713b6d2b5bc175d569857834aadbe984e6af8e5bc3d0c1d162ca118a9cf5ea",
+      "LICENSE": "e26279a349eca84747fa0ce502e98740ec4af07b4e8028ad394226891a615b42",
+      "README.md": "cac2a8374ae2c0b46b80e5f62f434dd4f55c2d351be92c67a44c8c7b1b21b6f1"
+    }
+  },
+  "data_manifest_sha256": "342d17ac65c28a69cf8f0d0c69daa045f53d627c1a1293ac9fa5cd7a07966ce0",
+  "data_sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b",
+  "script_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+  "seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "learning_rate_candidates": [
+    0.001,
+    0.0003
+  ],
+  "max_epochs": 100,
+  "patience_epochs": 15,
+  "batch_size": 64,
+  "validation_samples": 64,
+  "test_samples": 256,
+  "evaluation_rng_seed": 271828,
+  "configuration": {
+    "timer": {
+      "input_token_len": 21,
+      "output_token_len": 5,
+      "d_model": 128,
+      "d_ff": 512,
+      "e_layers": 3,
+      "n_heads": 4,
+      "dropout": 0.1,
+      "output_attention": false,
+      "covariate": false,
+      "flash_attention": false,
+      "activation": "gelu",
+      "use_norm": true
+    },
+    "tedm_network": {
+      "feat_size": 32,
+      "seq_len": 112,
+      "past_k": 13,
+      "model_channels": 32,
+      "num_blocks": 2,
+      "channel_mult": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "attn_resolutions": [
+        112,
+        56,
+        28,
+        14
+      ],
+      "sigma_from_t": false,
+      "kaiser_size": 6,
+      "kaiser_beta": 14.77,
+      "dropout": 0.1
+    },
+    "tedm_noise": {
+      "sigma_data": 1.0,
+      "var_min": 0.001,
+      "var_max": 5.0,
+      "scale_min": 1.0,
+      "scale_max": 8.0,
+      "scale_from_data": true,
+      "stats": "cumulative",
+      "sliding_window": 60,
+      "ema_beta": 0.99
+    }
+  },
+  "normalization": "per-asset mean and population SD fitted to unique raw training rows including purged training labels only",
+  "selection": "validation ES on 498 exact fold1 origins after every epoch; same initialization seed for LR candidates; no test access during training or selection",
+  "mean_calibration": "after checkpoint/candidate selection; rho in [0.05,1] selected by validation ES with frozen innovations",
+  "inputs": "126 historical one-period excess log returns for all 32 assets; factor file used only for risk-free-return subtraction when reconstructing labels; no FF5 values, concepts or OHLCV as predictor inputs",
+  "timer_adapter": "official Timer-XL point backbone, six21-day input tokens and5-day output head, retain last output token; training-residual joint paths for scenarios",
+  "tedm_adapter": "official UNet/noise/preconditioner/native stochastic sampler;112denoised positions+13conditioning offset+1padding=126total observed rows;five rollout steps;lastfive outputs;explicit track-major reshape correction",
+  "tedm_training": "official weighted denoising objective on126-row training windows ending at each purged target+5; EMA beta.995 every10updates; Adam betas(.9,.96), no weight decay; native plateau scheduler with100update warmup, factor.9 patience15 threshold.01",
+  "timer_training": "point MSE over5futurereturns; Adam betas(.9,.999), no weight decay; epoch cosine scheduler; last-token task adaptation",
+  "device": "cuda",
+  "effective_sampler_origin_batch": 64,
+  "effective_sampler_track_chunk": 64,
+  "numerical_adapter": {
+    "source_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+    "original_runner_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+    "rule": "Only finite-input undefined0/0 cumulative-mean ratios receive neutral scale1; signed nonzero/zero retains original infinity clipping; every finite original clipped result preserved exactly",
+    "scope": "new complete runs from scratch; original failed attempt retained separately; no test access in failed attempt",
+    "nonfinite_policy": "reject nonfinite noise inputs/cumulative means, gradients or model weights; never replace forecast outputs",
+    "audit_file": "numerical_audit.json",
+    "first_event_tensor_file": "first_noise_scale_event.pt"
+  }
+}

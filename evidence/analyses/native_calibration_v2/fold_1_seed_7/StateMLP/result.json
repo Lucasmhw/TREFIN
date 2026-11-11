@@ -1,0 +1,43 @@
+{
+  "fold": 1,
+  "seed": 7,
+  "model": "StateMLP",
+  "rho": 0.3598961665217748,
+  "before": {
+    "mse": 0.000684210172070497,
+    "rmse": 0.02615741141761732,
+    "mae": 0.01671906592496921,
+    "directional_accuracy": 0.510775,
+    "msic": 0.003757110957361117,
+    "msir": 0.0076221389869960965,
+    "energy_score": 0.09222043593115069,
+    "coverage_90": 0.774925,
+    "width_90": 0.047384793937561336
+  },
+  "after": {
+    "mse": 0.0006833047302459276,
+    "rmse": 0.02614009812999805,
+    "mae": 0.016710906023169388,
+    "directional_accuracy": 0.510775,
+    "msic": 0.003757110957361116,
+    "msir": 0.007622138986996095,
+    "energy_score": 0.09214132788579266,
+    "coverage_90": 0.774925,
+    "width_90": 0.047384793937561336
+  },
+  "scope": "Additional native baseline comparison; NOT the manuscript separate-host Table 1",
+  "script_sha256": "b308bcef06f63c379297c784064f55ef7865c606fdc97ea8aa3e77ed0f615b22",
+  "source_checkpoint": "runs\\benchmarks\\finmultitime_us_native_3fold_5seed_v1\\runs\\fold_1_seed_7\\candidates\\StateMLP\\candidate_02\\checkpoints\\best.pt",
+  "checkpoint_sha256": "8f1d7747df5a77453be40df9035f977ef3641a065919b1edc6fbc58a424e69e3",
+  "source_predictions": "runs\\benchmarks\\finmultitime_us_native_3fold_5seed_v1\\runs\\fold_1_seed_7\\selected\\StateMLP\\reproducible_predictions.npz",
+  "prediction_sha256": "43062b37fb9dfb93d1a8f9e434155ca0a1cda60fe3f44b58936af5c4c4e4febf",
+  "selected_candidate": 2,
+  "validation_score_replay_abs_difference": 4.2870310079656804e-10,
+  "test_mean_replay_max_error": 7.450580596923828e-09,
+  "training_residual_replay_max_error": 1.4901161193847656e-08,
+  "pairwise_translation_invariance_max_error": 1.3877787807814457e-17,
+  "train_origins": 2135,
+  "validation_origins": 498,
+  "test_origins": 500,
+  "scenario_adapter": "point forecast plus fixed centered empirical joint training residual paths"
+}

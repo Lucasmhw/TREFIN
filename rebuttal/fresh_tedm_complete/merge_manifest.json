@@ -1,0 +1,583 @@
+{
+  "schema": "trefin-tedm-seed-worker-merge-v1",
+  "status": "complete",
+  "registered_global_seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "global_registered_protocol_sha256": "77b83159601ee612eec73ec5a70844c42a1097dfc98e57df2459b5702f0eff6d",
+  "protocol_normalization": "Remove seeds only; every other JSON value must compare equal",
+  "all_test_origins_and_target_hashes_identical": true,
+  "execution_workers": [
+    {
+      "seed": 1,
+      "source_worker": "fresh_tedm_b64",
+      "source_run": "fresh_tedm_b64/seed_1",
+      "source_result_sha256": "8fbd09b7b9dfd969e871bd5b9b06c8e3771e20309f80e94216f8252130090d14",
+      "source_paired_losses_sha256": "f3e47c213f20b44e75dbf85df341b45ac69a3a81871105f89cf754e5a717fb0c",
+      "execution_protocol_source": "fresh_tedm_b64/protocol.json",
+      "execution_protocol_sha256": "77b83159601ee612eec73ec5a70844c42a1097dfc98e57df2459b5702f0eff6d",
+      "execution_protocol_seeds": [
+        1,
+        7,
+        19,
+        37,
+        73
+      ],
+      "registered_script_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+      "numerical_adapter": {
+        "source_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+        "original_runner_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+        "rule": "Only finite-input undefined0/0 cumulative-mean ratios receive neutral scale1; signed nonzero/zero retains original infinity clipping; every finite original clipped result preserved exactly",
+        "scope": "new complete runs from scratch; original failed attempt retained separately; no test access in failed attempt",
+        "nonfinite_policy": "reject nonfinite noise inputs/cumulative means, gradients or model weights; never replace forecast outputs",
+        "audit_file": "numerical_audit.json",
+        "first_event_tensor_file": "first_noise_scale_event.pt"
+      },
+      "source_test_predictions": "fresh_tedm_b64/seed_1/test_predictions.npz",
+      "test_predictions_sha256": "d30499e4838182cd794685871bc730da3af698e9168be7ea01a024dc74b50c02",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_tedm_b64/seed_1/candidate_01/best.pt",
+          "checkpoint_sha256": "79c8001cb5eeabf8e137fe4a59f4bc664fc664e1cced57db6d9fc4a3328100b0",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_tedm_b64/seed_1/candidate_02/best.pt",
+          "checkpoint_sha256": "6bf21f87807f1c61a414e51dd0804ec199986d80411ee4b51548c415164ea1ea",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 7,
+      "source_worker": "fresh_tedm_seed_7",
+      "source_run": "fresh_tedm_seed_7/seed_7",
+      "source_result_sha256": "69c2cdf6d790eb1e6513a7483ae0c532a79dd563cf446b77f4c03842a505440b",
+      "source_paired_losses_sha256": "46deb89ff43bcc5c5fbeb0d7f953c79a6309690cddd9e2f594c62da0c8f0d797",
+      "execution_protocol_source": "fresh_tedm_seed_7/protocol.json",
+      "execution_protocol_sha256": "4f1a534cb4a7413311aaa45d8f9ffc4b74d0c19261bedbb25eb5af1de75afd77",
+      "execution_protocol_seeds": [
+        7
+      ],
+      "registered_script_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+      "numerical_adapter": {
+        "source_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+        "original_runner_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+        "rule": "Only finite-input undefined0/0 cumulative-mean ratios receive neutral scale1; signed nonzero/zero retains original infinity clipping; every finite original clipped result preserved exactly",
+        "scope": "new complete runs from scratch; original failed attempt retained separately; no test access in failed attempt",
+        "nonfinite_policy": "reject nonfinite noise inputs/cumulative means, gradients or model weights; never replace forecast outputs",
+        "audit_file": "numerical_audit.json",
+        "first_event_tensor_file": "first_noise_scale_event.pt"
+      },
+      "source_test_predictions": "fresh_tedm_seed_7/seed_7/test_predictions.npz",
+      "test_predictions_sha256": "83de78a014d024b39d41c5e1a7d56d5cec64c81344b85ac3e6f0728e7190ec76",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_tedm_seed_7/seed_7/candidate_01/best.pt",
+          "checkpoint_sha256": "a549cf1c774e6a350c4b049c8a9679b50dc768ddddfbe4f2fb1b3a7e4800534f",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_tedm_seed_7/seed_7/candidate_02/best.pt",
+          "checkpoint_sha256": "7df8f277ba6a2b98b64432c799a9c9527826857b27328be9a00fb58faef6b1b4",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 19,
+      "source_worker": "fresh_tedm_seed_19",
+      "source_run": "fresh_tedm_seed_19/seed_19",
+      "source_result_sha256": "3203b296bc50d81a9494180eb71725dafb9f323394ffe2596fd904c2c3852c07",
+      "source_paired_losses_sha256": "6fc686daf13033a7428244f0edf1ec5450125419c24faa29f76d536cf9ed0588",
+      "execution_protocol_source": "fresh_tedm_seed_19/protocol.json",
+      "execution_protocol_sha256": "dae56d3d52a4121450b5cef7b849ce9b73c5674806030da3cf6800330558ec40",
+      "execution_protocol_seeds": [
+        19
+      ],
+      "registered_script_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+      "numerical_adapter": {
+        "source_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+        "original_runner_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+        "rule": "Only finite-input undefined0/0 cumulative-mean ratios receive neutral scale1; signed nonzero/zero retains original infinity clipping; every finite original clipped result preserved exactly",
+        "scope": "new complete runs from scratch; original failed attempt retained separately; no test access in failed attempt",
+        "nonfinite_policy": "reject nonfinite noise inputs/cumulative means, gradients or model weights; never replace forecast outputs",
+        "audit_file": "numerical_audit.json",
+        "first_event_tensor_file": "first_noise_scale_event.pt"
+      },
+      "source_test_predictions": "fresh_tedm_seed_19/seed_19/test_predictions.npz",
+      "test_predictions_sha256": "171446c06b729ca7937e55b49a2480812c4f8d473c53475a0c4a0887bee45c39",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_tedm_seed_19/seed_19/candidate_01/best.pt",
+          "checkpoint_sha256": "d50a37d8d3d6795be5283cf6fda8eb182c545f552d65a74523c7e0968ae707b4",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_tedm_seed_19/seed_19/candidate_02/best.pt",
+          "checkpoint_sha256": "a55ec336c775609d6b439498c8c1e8e257b7a3bba40cd506ef7a5c86d74197d4",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 37,
+      "source_worker": "fresh_tedm_seed_37",
+      "source_run": "fresh_tedm_seed_37/seed_37",
+      "source_result_sha256": "c9003f310a7846bf853ddd5b9892ffe975b75d1328645460a4c1061187a9eead",
+      "source_paired_losses_sha256": "6231870e1429dbb266eaa8daba89dfeb95f3d07136ffa091c7df3c000a5fe731",
+      "execution_protocol_source": "fresh_tedm_seed_37/protocol.json",
+      "execution_protocol_sha256": "bc5cb389b94fd21d1321e404fcbeae93bb65f69acba030731664350a3f175c19",
+      "execution_protocol_seeds": [
+        37
+      ],
+      "registered_script_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+      "numerical_adapter": {
+        "source_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+        "original_runner_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+        "rule": "Only finite-input undefined0/0 cumulative-mean ratios receive neutral scale1; signed nonzero/zero retains original infinity clipping; every finite original clipped result preserved exactly",
+        "scope": "new complete runs from scratch; original failed attempt retained separately; no test access in failed attempt",
+        "nonfinite_policy": "reject nonfinite noise inputs/cumulative means, gradients or model weights; never replace forecast outputs",
+        "audit_file": "numerical_audit.json",
+        "first_event_tensor_file": "first_noise_scale_event.pt"
+      },
+      "source_test_predictions": "fresh_tedm_seed_37/seed_37/test_predictions.npz",
+      "test_predictions_sha256": "b76ea089c0bffe5a536cd85f315997e3822b4772896bbb581cae78210c3e4f5b",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_tedm_seed_37/seed_37/candidate_01/best.pt",
+          "checkpoint_sha256": "0a2d8cf68bea57a8fcba6d4bc68ac8abd28ab00a7a5123a270c66682fc8e21a9",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_tedm_seed_37/seed_37/candidate_02/best.pt",
+          "checkpoint_sha256": "5e265bc03b13edaf52c876804582bf2f34716a41b5c185e6443a825fa025c79c",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 73,
+      "source_worker": "fresh_tedm_seed_73",
+      "source_run": "fresh_tedm_seed_73/seed_73",
+      "source_result_sha256": "cc83246868d88d343101ce23078ebfb8c99bf86f495c51b01ed61938904a8c18",
+      "source_paired_losses_sha256": "4e067ab75728312fb62a45d7bd2935490493d21aa8d67e3dd8925d6725eab892",
+      "execution_protocol_source": "fresh_tedm_seed_73/protocol.json",
+      "execution_protocol_sha256": "f802763be42ab19f034e7f93d508335550bd30be3ad3f21486f61c39fb0b6925",
+      "execution_protocol_seeds": [
+        73
+      ],
+      "registered_script_sha256": "929022387eb179e73eef83609cd81a7ae11ca83fb75d4522178dab564d1f2560",
+      "numerical_adapter": {
+        "source_sha256": "3f5f0dc3576c73fe7f79ac3f38b030a46db522609867f734bbd301924a4bd29e",
+        "original_runner_sha256": "2d6e98117c6d93042c804cf33d39123e8d6a81cfe4303ffa9a525701e993f720",
+        "rule": "Only finite-input undefined0/0 cumulative-mean ratios receive neutral scale1; signed nonzero/zero retains original infinity clipping; every finite original clipped result preserved exactly",
+        "scope": "new complete runs from scratch; original failed attempt retained separately; no test access in failed attempt",
+        "nonfinite_policy": "reject nonfinite noise inputs/cumulative means, gradients or model weights; never replace forecast outputs",
+        "audit_file": "numerical_audit.json",
+        "first_event_tensor_file": "first_noise_scale_event.pt"
+      },
+      "source_test_predictions": "fresh_tedm_seed_73/seed_73/test_predictions.npz",
+      "test_predictions_sha256": "2b05479d5aab4f953615082046796736f2d0b5bd53e6b511c1530e78380066d9",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_tedm_seed_73/seed_73/candidate_01/best.pt",
+          "checkpoint_sha256": "0e2f76177b7d7e06ebea02ced57bda61455a315e13f743857289fc4437690ce4",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_tedm_seed_73/seed_73/candidate_02/best.pt",
+          "checkpoint_sha256": "416abee1f70006b27f39dcbcace2c6f98ee99be07ad3231bc37324b188baad6c",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    }
+  ],
+  "copied_artifacts": [
+    {
+      "seed": null,
+      "source": "fresh_tedm_b64/protocol.json",
+      "destination": "global_registered_protocol.json",
+      "sha256": "77b83159601ee612eec73ec5a70844c42a1097dfc98e57df2459b5702f0eff6d",
+      "bytes": 5524
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/calibration.json",
+      "destination": "seed_1/calibration.json",
+      "sha256": "a548c58df769c754bd5947ec089820abe4ceb9055c65c9274f17c1999b733f1a",
+      "bytes": 969
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/candidate_01/complete.json",
+      "destination": "seed_1/candidate_01/complete.json",
+      "sha256": "3ce4cf064d5ed45033fc0d5cda06c1f4c76b70bad1ba0aaa46dcfe3f79fa6255",
+      "bytes": 388
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/candidate_01/training_history.csv",
+      "destination": "seed_1/candidate_01/training_history.csv",
+      "sha256": "bd3486b6b1eb888f45109a305018ff9f539a4be7096e668b1b92b68904610324",
+      "bytes": 10967
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/candidate_02/complete.json",
+      "destination": "seed_1/candidate_02/complete.json",
+      "sha256": "505dc1490b547214a8b4bf0bb8efb40f6573ad236c0132fc66ebf1df256865c1",
+      "bytes": 384
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/candidate_02/training_history.csv",
+      "destination": "seed_1/candidate_02/training_history.csv",
+      "sha256": "ca700b9384958293f2f48e4f3bb73387a8145ecbc2bb4f29f14bccb5928be2ae",
+      "bytes": 1978
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/paired_losses.npz",
+      "destination": "seed_1/paired_losses.npz",
+      "sha256": "f3e47c213f20b44e75dbf85df341b45ac69a3a81871105f89cf754e5a717fb0c",
+      "bytes": 24329
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/result.json",
+      "destination": "seed_1/result.json",
+      "sha256": "8fbd09b7b9dfd969e871bd5b9b06c8e3771e20309f80e94216f8252130090d14",
+      "bytes": 2958
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/seed_1/selected_candidate.json",
+      "destination": "seed_1/selected_candidate.json",
+      "sha256": "3ce4cf064d5ed45033fc0d5cda06c1f4c76b70bad1ba0aaa46dcfe3f79fa6255",
+      "bytes": 388
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/protocol.json",
+      "destination": "seed_1/execution_protocol.json",
+      "sha256": "77b83159601ee612eec73ec5a70844c42a1097dfc98e57df2459b5702f0eff6d",
+      "bytes": 5524
+    },
+    {
+      "seed": 1,
+      "source": "fresh_tedm_b64/numerical_audit.json",
+      "destination": "seed_1/worker_numerical_audit_snapshot.json",
+      "sha256": "4297562754e046484d351eed645ed38ea6a3e98a90e8ce4e6abaaf9a65343b4e",
+      "bytes": 209
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/calibration.json",
+      "destination": "seed_7/calibration.json",
+      "sha256": "befa43ac82ae69025d4c3ade1e56f1929628a7d7725f2659f8fc36e65a193fbc",
+      "bytes": 969
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/candidate_01/complete.json",
+      "destination": "seed_7/candidate_01/complete.json",
+      "sha256": "31ad8128ed91f06efbf81efdab8d1c4e2ca927ddea42ea00dd4247553615ca5d",
+      "bytes": 388
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/candidate_01/training_history.csv",
+      "destination": "seed_7/candidate_01/training_history.csv",
+      "sha256": "28a72696b4fcadb4fb25f03bb97ae772258ad9248b5435743401a462c7fc3659",
+      "bytes": 10988
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/candidate_02/complete.json",
+      "destination": "seed_7/candidate_02/complete.json",
+      "sha256": "d1efc55e952eab0ea682eac1164b2956a8fce2cbdb4ed370cad79050d9e5fc81",
+      "bytes": 383
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/candidate_02/training_history.csv",
+      "destination": "seed_7/candidate_02/training_history.csv",
+      "sha256": "3da32282c864f734fa5541dbc81585aed3f18bf77d33120627a40b4353b98504",
+      "bytes": 1973
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/paired_losses.npz",
+      "destination": "seed_7/paired_losses.npz",
+      "sha256": "46deb89ff43bcc5c5fbeb0d7f953c79a6309690cddd9e2f594c62da0c8f0d797",
+      "bytes": 24328
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/result.json",
+      "destination": "seed_7/result.json",
+      "sha256": "69c2cdf6d790eb1e6513a7483ae0c532a79dd563cf446b77f4c03842a505440b",
+      "bytes": 4052
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/seed_7/selected_candidate.json",
+      "destination": "seed_7/selected_candidate.json",
+      "sha256": "31ad8128ed91f06efbf81efdab8d1c4e2ca927ddea42ea00dd4247553615ca5d",
+      "bytes": 388
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/protocol.json",
+      "destination": "seed_7/execution_protocol.json",
+      "sha256": "4f1a534cb4a7413311aaa45d8f9ffc4b74d0c19261bedbb25eb5af1de75afd77",
+      "bytes": 5493
+    },
+    {
+      "seed": 7,
+      "source": "fresh_tedm_seed_7/numerical_audit.json",
+      "destination": "seed_7/worker_numerical_audit_snapshot.json",
+      "sha256": "1cca1553823df3bd3e7cb07d1ec88f089eb26b9ca47e4b0ad0336a2eb9f49f27",
+      "bytes": 1203
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/calibration.json",
+      "destination": "seed_19/calibration.json",
+      "sha256": "1d1b199ece8bc62c52f2f77204405fa7b05879135ad6f542507ecd4525addbb4",
+      "bytes": 971
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/candidate_01/complete.json",
+      "destination": "seed_19/candidate_01/complete.json",
+      "sha256": "8bcc14bc8044829fc33b61f637bccf520f97b8119039291e6f287d1fa049b1e2",
+      "bytes": 388
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/candidate_01/training_history.csv",
+      "destination": "seed_19/candidate_01/training_history.csv",
+      "sha256": "f4dead1c8ccedf59a0af24513132c64164eb8497cebbf04780fbeef29f6f79a3",
+      "bytes": 10971
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/candidate_02/complete.json",
+      "destination": "seed_19/candidate_02/complete.json",
+      "sha256": "c9a910b6adb2e4c8ae09e1c35450ad2680604dc39cb8a3427b43d00e422b4069",
+      "bytes": 385
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/candidate_02/training_history.csv",
+      "destination": "seed_19/candidate_02/training_history.csv",
+      "sha256": "af96a45037228bebbea3ba6cf152fb7a18d465ead44919ac766a431e08251fc1",
+      "bytes": 1983
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/paired_losses.npz",
+      "destination": "seed_19/paired_losses.npz",
+      "sha256": "6fc686daf13033a7428244f0edf1ec5450125419c24faa29f76d536cf9ed0588",
+      "bytes": 24292
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/result.json",
+      "destination": "seed_19/result.json",
+      "sha256": "3203b296bc50d81a9494180eb71725dafb9f323394ffe2596fd904c2c3852c07",
+      "bytes": 5694
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/seed_19/selected_candidate.json",
+      "destination": "seed_19/selected_candidate.json",
+      "sha256": "8bcc14bc8044829fc33b61f637bccf520f97b8119039291e6f287d1fa049b1e2",
+      "bytes": 388
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/protocol.json",
+      "destination": "seed_19/execution_protocol.json",
+      "sha256": "dae56d3d52a4121450b5cef7b849ce9b73c5674806030da3cf6800330558ec40",
+      "bytes": 5494
+    },
+    {
+      "seed": 19,
+      "source": "fresh_tedm_seed_19/numerical_audit.json",
+      "destination": "seed_19/worker_numerical_audit_snapshot.json",
+      "sha256": "5d60a8a341a59f22900801dd9ef8a2b97c37cfd454b55f22f9ceb2918ffb8f43",
+      "bytes": 2697
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/calibration.json",
+      "destination": "seed_37/calibration.json",
+      "sha256": "bff1f7bbb4bbd72644750dca6fd08826a74ed66d7aa67f4ca00a9d674e973607",
+      "bytes": 970
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/candidate_01/complete.json",
+      "destination": "seed_37/candidate_01/complete.json",
+      "sha256": "c7c3ae000b1a199dad54d9110e616c8c206691697581743684193407e9536cf1",
+      "bytes": 387
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/candidate_01/training_history.csv",
+      "destination": "seed_37/candidate_01/training_history.csv",
+      "sha256": "15b31faf5e3080bdc8670ed6c7fe9a9a603b3987806d8cda9ad97793efc38456",
+      "bytes": 10962
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/candidate_02/complete.json",
+      "destination": "seed_37/candidate_02/complete.json",
+      "sha256": "ec6ee81dda688dfd6fa542b7edf4f393eeae0909e377776ebeb6d7d9297c3f42",
+      "bytes": 384
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/candidate_02/training_history.csv",
+      "destination": "seed_37/candidate_02/training_history.csv",
+      "sha256": "715815c339103e6bc7144315dfe2cd5fbedbca282265d40fedcc729b74b2a55e",
+      "bytes": 1969
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/paired_losses.npz",
+      "destination": "seed_37/paired_losses.npz",
+      "sha256": "6231870e1429dbb266eaa8daba89dfeb95f3d07136ffa091c7df3c000a5fe731",
+      "bytes": 24319
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/result.json",
+      "destination": "seed_37/result.json",
+      "sha256": "c9003f310a7846bf853ddd5b9892ffe975b75d1328645460a4c1061187a9eead",
+      "bytes": 2959
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/seed_37/selected_candidate.json",
+      "destination": "seed_37/selected_candidate.json",
+      "sha256": "c7c3ae000b1a199dad54d9110e616c8c206691697581743684193407e9536cf1",
+      "bytes": 387
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/protocol.json",
+      "destination": "seed_37/execution_protocol.json",
+      "sha256": "bc5cb389b94fd21d1321e404fcbeae93bb65f69acba030731664350a3f175c19",
+      "bytes": 5494
+    },
+    {
+      "seed": 37,
+      "source": "fresh_tedm_seed_37/numerical_audit.json",
+      "destination": "seed_37/worker_numerical_audit_snapshot.json",
+      "sha256": "4297562754e046484d351eed645ed38ea6a3e98a90e8ce4e6abaaf9a65343b4e",
+      "bytes": 209
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/calibration.json",
+      "destination": "seed_73/calibration.json",
+      "sha256": "bbf366be21ae7d0232af734c8cc4f6675a4f57d108c7b9071d07350ddb3381b1",
+      "bytes": 970
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/candidate_01/complete.json",
+      "destination": "seed_73/candidate_01/complete.json",
+      "sha256": "9419e4aeaf8c129a1a1c26b4ee92f278845677b9e969e9c3df270c0a9b35b62c",
+      "bytes": 387
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/candidate_01/training_history.csv",
+      "destination": "seed_73/candidate_01/training_history.csv",
+      "sha256": "ab19f48627da274e492ce89680f6829b5dc57fcd36acac5b81f25a53e97e6768",
+      "bytes": 10971
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/candidate_02/complete.json",
+      "destination": "seed_73/candidate_02/complete.json",
+      "sha256": "f35c0003bc78247ae12068168332af0a6c703e2c8082cb0ede98f71a63ca0ed6",
+      "bytes": 385
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/candidate_02/training_history.csv",
+      "destination": "seed_73/candidate_02/training_history.csv",
+      "sha256": "c02be18b7a7915ae29aaec16c56a09246bd731bb8db543d8abb73f0fd40e1bba",
+      "bytes": 1975
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/paired_losses.npz",
+      "destination": "seed_73/paired_losses.npz",
+      "sha256": "4e067ab75728312fb62a45d7bd2935490493d21aa8d67e3dd8925d6725eab892",
+      "bytes": 24305
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/result.json",
+      "destination": "seed_73/result.json",
+      "sha256": "cc83246868d88d343101ce23078ebfb8c99bf86f495c51b01ed61938904a8c18",
+      "bytes": 5690
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/seed_73/selected_candidate.json",
+      "destination": "seed_73/selected_candidate.json",
+      "sha256": "9419e4aeaf8c129a1a1c26b4ee92f278845677b9e969e9c3df270c0a9b35b62c",
+      "bytes": 387
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/protocol.json",
+      "destination": "seed_73/execution_protocol.json",
+      "sha256": "f802763be42ab19f034e7f93d508335550bd30be3ad3f21486f61c39fb0b6925",
+      "bytes": 5494
+    },
+    {
+      "seed": 73,
+      "source": "fresh_tedm_seed_73/numerical_audit.json",
+      "destination": "seed_73/worker_numerical_audit_snapshot.json",
+      "sha256": "7f1c8ccb3c1e75a2f32545f36cb695cef242f5816072d7dfb12931698f372f97",
+      "bytes": 2698
+    }
+  ],
+  "summary_sha256": "96a057dd5785b7781b0c9bcc19da5104ae18c701efce1be49b9eeaab6cb8a89d",
+  "assembled_protocol_sha256": "1d95851162d1a76b1f2ae2244d4ea5398edde12d88ee509672d3a5b55d362020",
+  "source_script_sha256": "4d2df9404859e919ab250ad142c67260ae1f2a174e6ea189997447536015e476",
+  "compact_artifact_note": "Recorded source checkpoint/prediction paths are relative to --root. They are genuine source artifacts; they are not asserted to exist in this compact assembly."
+}

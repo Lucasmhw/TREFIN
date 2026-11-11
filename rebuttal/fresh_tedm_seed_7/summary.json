@@ -1,0 +1,209 @@
+{
+  "family": "tedm",
+  "seeds": [
+    7
+  ],
+  "runs": [
+    {
+      "family": "tedm",
+      "seed": 7,
+      "scope": "NEW supplemental experiments; no claim to reconstruct the historical separate-host experiments",
+      "selected_candidate": {
+        "candidate": 1,
+        "learning_rate": 0.001,
+        "best_epoch": 100,
+        "best_validation_es": 0.10787950528362127,
+        "epochs_completed": 100,
+        "optimizer_updates": 3400,
+        "training_and_validation_seconds": 4061.8761065006256,
+        "parameters": 5002416,
+        "checkpoint": "seed_7/candidate_01/best.pt",
+        "checkpoint_sha256": "a549cf1c774e6a350c4b049c8a9679b50dc768ddddfbe4f2fb1b3a7e4800534f"
+      },
+      "candidate_summaries": [
+        {
+          "candidate": 1,
+          "learning_rate": 0.001,
+          "best_epoch": 100,
+          "best_validation_es": 0.10787950528362127,
+          "epochs_completed": 100,
+          "optimizer_updates": 3400,
+          "training_and_validation_seconds": 4061.8761065006256,
+          "parameters": 5002416,
+          "checkpoint": "seed_7/candidate_01/best.pt",
+          "checkpoint_sha256": "a549cf1c774e6a350c4b049c8a9679b50dc768ddddfbe4f2fb1b3a7e4800534f"
+        },
+        {
+          "candidate": 2,
+          "learning_rate": 0.0003,
+          "best_epoch": 1,
+          "best_validation_es": 0.10830688045595545,
+          "epochs_completed": 16,
+          "optimizer_updates": 544,
+          "training_and_validation_seconds": 984.466068983078,
+          "parameters": 5002416,
+          "checkpoint": "seed_7/candidate_02/best.pt",
+          "checkpoint_sha256": "7df8f277ba6a2b98b64432c799a9c9527826857b27328be9a00fb58faef6b1b4"
+        }
+      ],
+      "rho": 0.05,
+      "before": {
+        "mse": 0.0011509945964654261,
+        "rmse": 0.0339263112711274,
+        "mae": 0.022958417192313528,
+        "directional_accuracy": 0.4974875,
+        "msic": 0.013731944552533622,
+        "msir": 0.02823331372502931,
+        "energy_score": 0.14839330100715006,
+        "coverage_90": 0.214325,
+        "width_90": 0.014120617230353457
+      },
+      "after": {
+        "mse": 0.0006829479318211759,
+        "rmse": 0.02613327250501123,
+        "mae": 0.016743200821105596,
+        "directional_accuracy": 0.4974875,
+        "msic": 0.013731944552533626,
+        "msir": 0.02823331372502932,
+        "energy_score": 0.10592390915776297,
+        "coverage_90": 0.3027875,
+        "width_90": 0.014120617230353457
+      },
+      "test_origins": 500,
+      "test_seconds": 146.14304518699646,
+      "reload_validation_ES_difference": 0.0,
+      "pairwise_translation_error": 6.938893903907228e-18,
+      "source_data_sha256": "ae39294d8397d62da90165df6953ce55a8c62e00d74a6ac955dfd05b7749b57b",
+      "protocol_sha256": "4f1a534cb4a7413311aaa45d8f9ffc4b74d0c19261bedbb25eb5af1de75afd77",
+      "test_predictions_sha256": "83de78a014d024b39d41c5e1a7d56d5cec64c81344b85ac3e6f0728e7190ec76",
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2",
+      "numerical_audit_cumulative": {
+        "calls": 17568,
+        "zero_zero_elements": 2,
+        "zero_denominator_elements": 224,
+        "repaired_calls": 2,
+        "events": [
+          {
+            "seed": 7,
+            "candidate": 1,
+            "epoch": 100,
+            "phase": "val",
+            "optimizer_update": 3400,
+            "training_batch_offset": 2112,
+            "event": "zero_denominator",
+            "shape": [
+              4096,
+              32,
+              112
+            ],
+            "zero_zero_elements": 1,
+            "nonzero_over_zero_elements": 111,
+            "mode": "repair",
+            "input_all_finite": true,
+            "mean_all_finite": true,
+            "first_zero_zero_index": [
+              729,
+              8,
+              0
+            ]
+          },
+          {
+            "seed": 7,
+            "candidate": 2,
+            "epoch": 16,
+            "phase": "val",
+            "optimizer_update": 544,
+            "training_batch_offset": 2112,
+            "event": "zero_denominator",
+            "shape": [
+              4096,
+              32,
+              112
+            ],
+            "zero_zero_elements": 1,
+            "nonzero_over_zero_elements": 111,
+            "mode": "repair",
+            "input_all_finite": true,
+            "mean_all_finite": true,
+            "first_zero_zero_index": [
+              729,
+              8,
+              0
+            ]
+          }
+        ],
+        "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+      }
+    }
+  ],
+  "metrics": {
+    "before": {
+      "mse": {
+        "mean": 0.0011509945964654261,
+        "sample_std": null
+      },
+      "rmse": {
+        "mean": 0.0339263112711274,
+        "sample_std": null
+      },
+      "mae": {
+        "mean": 0.022958417192313528,
+        "sample_std": null
+      },
+      "energy_score": {
+        "mean": 0.14839330100715006,
+        "sample_std": null
+      },
+      "msic": {
+        "mean": 0.013731944552533622,
+        "sample_std": null
+      },
+      "msir": {
+        "mean": 0.02823331372502931,
+        "sample_std": null
+      },
+      "coverage_90": {
+        "mean": 0.214325,
+        "sample_std": null
+      },
+      "width_90": {
+        "mean": 0.014120617230353457,
+        "sample_std": null
+      }
+    },
+    "after": {
+      "mse": {
+        "mean": 0.0006829479318211759,
+        "sample_std": null
+      },
+      "rmse": {
+        "mean": 0.02613327250501123,
+        "sample_std": null
+      },
+      "mae": {
+        "mean": 0.016743200821105596,
+        "sample_std": null
+      },
+      "energy_score": {
+        "mean": 0.10592390915776297,
+        "sample_std": null
+      },
+      "msic": {
+        "mean": 0.013731944552533626,
+        "sample_std": null
+      },
+      "msir": {
+        "mean": 0.02823331372502932,
+        "sample_std": null
+      },
+      "coverage_90": {
+        "mean": 0.3027875,
+        "sample_std": null
+      },
+      "width_90": {
+        "mean": 0.014120617230353457,
+        "sample_std": null
+      }
+    }
+  }
+}

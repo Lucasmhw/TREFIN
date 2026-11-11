@@ -1,0 +1,43 @@
+{
+  "schema": "trefin-crossfold-analysis-registration-v3",
+  "registered_utc": "2026-11-08 09:34:56 UTC",
+  "registration_scope": "Local analysis specification fixed before any fold-2/fold-3 baseline test result was available; fold-1 results are already known and remain separately archived",
+  "folds": [1, 2, 3],
+  "seeds": [1, 7, 19, 37, 73],
+  "required_complete_runs_per_family_fold": 5,
+  "primary_comparators": ["TEDM", "Timer-XL"],
+  "descriptive_only_comparators": ["TimeXer", "TimeMixer++"],
+  "reference": "Archived calibrated TREFIN on exactly matching fold-specific origin indices, targets and asset order",
+  "losses": ["mse", "mae", "es"],
+  "primary_loss": "mse",
+  "secondary_losses": ["mae", "es"],
+  "comparison_stage": "after validation-selected mean calibration",
+  "difference_direction": "Comparator minus TREFIN; positive favors TREFIN",
+  "seed_treatment": "Average the five seed losses at each origin before temporal inference; seeds are not independent temporal observations",
+  "fold_treatment": "Separate chronological origin series and tests within each fold; no pooling across folds or across seeds",
+  "bootstrap": {
+    "primary_block_length": 20,
+    "sensitivity_block_lengths": [5, 10],
+    "repetitions": 10000,
+    "rng_seed": 20261108,
+    "sampling": "Paired circular contiguous blocks within each fold, truncated to that fold's original origin count",
+    "confidence_interval": "Unadjusted two-sided percentile 95% interval of uncentered block means",
+    "p_value": "Two-sided null-centered block means with (1+exceedance count)/(10000+1)"
+  },
+  "dm_sensitivity": {"horizon": 5, "HAC_lag": 20, "kernel": "Bartlett", "finite_sample_adjustment": "Harvey correction", "tails": 2},
+  "multiplicity": {
+    "method": "Holm step-down",
+    "family_size": 6,
+    "comparisons": ["fold_1/TEDM", "fold_1/Timer-XL", "fold_2/TEDM", "fold_2/Timer-XL", "fold_3/TEDM", "fold_3/Timer-XL"],
+    "bootstrap_scope": "Separate six-comparison family for each loss and each block length",
+    "dm_scope": "Separate six-comparison family for each loss",
+    "alpha": 0.05,
+    "confidence_interval_scope": "Holm adjusts p values only; reported per-comparison intervals are not simultaneous intervals",
+    "original_fold1_inference": "Existing two-comparator fold-1 Holm outputs remain unchanged and separately labeled; expanded-family adjusted p values are new outputs"
+  },
+  "descriptive_metrics": ["mse", "rmse", "mae", "energy_score", "msic", "msir", "coverage_90", "width_90"],
+  "descriptive_stages": ["before", "after"],
+  "dispersion": "Arithmetic mean and sample SD over the five registered seeds",
+  "completion_rule": "No family/fold summary from fewer than all five registered completed runs; final crossfold inference requires all registered families and folds",
+  "excluded_operations": ["test-based configuration selection", "dropping unfavorable seeds or folds", "changing the primary multiplicity family after seeing fold-2/fold-3 test results"]
+}

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "decision": "GO for completed-run analysis",
+  "scope": "Independent read-only code review and mathematical fixtures; no new study forecasting outputs inspected",
+  "analysis_script": "work/frozen_graph_v7/editorial/analyze_frozen_graph.py",
+  "analysis_script_sha256": "3617be4753505a06a39ee8a5220319e57b2a776fd188ff868e22696b97993524",
+  "runner_sha256": "c510e1d8319223b5b5a830ce15107e18666a8c8958375c338355dda8aced3f66",
+  "fixture_report_sha256": "4a6e0d45f04a881777fa73be1d59ca28d73e779d1672789666d1f0b4ffba352b",
+  "findings_resolved": [
+    {
+      "item": "Uncalibrated interval coverage verification",
+      "resolution": "Final analyzer recomputes uncalibrated quantiles with the exact original float32 sample translation and checks both coverage and width."
+    }
+  ],
+  "checks": {
+    "all_30_registered_runs_required": true,
+    "six_frozen_choices_and_best_checkpoint_hashes_checked": true,
+    "no_training_selection_or_calibration_mutation": true,
+    "all_registered_artifacts_hashed": true,
+    "original_evaluator_values_preserved_for_tables": true,
+    "independent_float64_per_origin_point_and_ES_checks": true,
+    "ES_unordered_pairs_divided_by_S_times_S_minus_1": true,
+    "five_leads_averaged_after_cross_sectional_ES": true,
+    "per_run_RMSE_before_seed_aggregation": true,
+    "five_seed_sample_SD_ddof1": true,
+    "paired_sign_FrozenGraph_minus_Full": true,
+    "paired_seed_differences_plotted_without_omission": true,
+    "origin_bootstrap_averages_seeds_before_temporal_resampling": true,
+    "optional_all_block_lengths_20_5_10_no_significance_labels": true,
+    "exact_within_fold_origin_input_target_identity_required": true,
+    "FrozenGraph_path_and_persistence_diagnostics_identity_enforced": true,
+    "strict_graph_abs_threshold_0_05_offdiagonal_empty_union_0": true,
+    "all_26_coordinates_all_5_leads_retained": true,
+    "positive_scale_nu_gt2_and_precision_PD_checked": true
+  },
+  "expected_test_origins_verified_against_original_metadata": {
+    "1": 500,
+    "2": 496,
+    "3": 306
+  },
+  "rounding_note": "Tables retain original evaluator reductions; independent point/ES checks and paired origin losses use float64. Actual residuals are emitted for each run. Uncalibrated coverage uses original float32 translation to avoid boundary ambiguities.",
+  "pending": "Independent numerical review against completed actual run records, including all Full/FrozenGraph state identities."
+}

@@ -1,0 +1,29 @@
+{
+  "fold": 3,
+  "seed": 1,
+  "rho": 0.05,
+  "scale_coverage90": 1.1131685581788375,
+  "scale_es": 1.0651242236464882,
+  "validation_samples": 256,
+  "bounds": [
+    0.25,
+    4.0
+  ],
+  "selection_split": "validation",
+  "coverage90_validation_at_selected": 0.9000126008064516,
+  "validation_es_base": 0.07616005709296546,
+  "validation_es_scaled": 0.07609581268872287,
+  "risk_response": "positive constant scales entire mean-centered innovation; derivative multiplied by a>0",
+  "test_used_for_selection": false,
+  "device": "cpu",
+  "torch_version": "2.13.0+cpu",
+  "validation_random_seed": 271845,
+  "optimizer_success": true,
+  "coverage_quantile_method": "higher; pooled marginal origin/lead/asset required-scale quantile",
+  "coverage_scale_at_boundary": false,
+  "conditional_guarantee_scope": "fixed decoder graph, other concepts, market state and lead; scale is frozen, positive, and independent of intervention",
+  "checkpoint_sha256": "5af366381a3036cf8734919f190ef922af4f3794e38e9cbe05c8b653771cae67",
+  "script_sha256": "f1f80cebd36afabf5159bde335d5a568c7518536773a4e2b099c75fdcc9d63ba",
+  "config_sha256": "0905f476a2177f3ce404a7ed8f99062e4e50f5fd3eac4fcaae6a286e5980d540",
+  "prepared_arrays_sha256": "648442bc03de269b4931d858274d934900176ca159982e40493fabe00330e4e7"
+}

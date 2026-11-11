@@ -1,0 +1,225 @@
+{
+  "registered_utc": "2026-11-09T04:48:30.800042+00:00",
+  "phase": "complete",
+  "jobs": {
+    "search_f1_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:48:30.801904+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:56:51.009920+00:00"
+    },
+    "search_f1_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:48:30.803059+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:52:49.527684+00:00"
+    },
+    "search_f2_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:48:30.804018+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:56:58.229919+00:00"
+    },
+    "search_f2_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:48:30.804897+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:53:09.777887+00:00"
+    },
+    "search_f3_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:48:30.806089+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:58:19.762673+00:00"
+    },
+    "search_f3_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:48:30.806939+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:54:24.683865+00:00"
+    },
+    "final_f1_s1_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:19.872501+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:58:42.420112+00:00"
+    },
+    "final_f1_s1_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:19.874016+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:58:41.151857+00:00"
+    },
+    "final_f2_s1_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:19.875799+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:58:42.618032+00:00"
+    },
+    "final_f2_s1_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:19.876514+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:58:41.516468+00:00"
+    },
+    "final_f3_s1_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:19.877174+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:58:37.297414+00:00"
+    },
+    "final_f3_s1_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:19.878075+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T04:58:36.566502+00:00"
+    },
+    "final_f1_s7_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:36.567292+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:01:06.374485+00:00"
+    },
+    "final_f1_s7_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:37.298128+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:00:21.162790+00:00"
+    },
+    "final_f2_s7_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:41.152630+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:01:12.352650+00:00"
+    },
+    "final_f2_s7_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:41.517293+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:00:25.346455+00:00"
+    },
+    "final_f3_s7_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:42.420788+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:01:23.611349+00:00"
+    },
+    "final_f3_s7_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T04:58:42.618809+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:00:33.898422+00:00"
+    },
+    "final_f1_s19_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:00:21.163832+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:03:02.634275+00:00"
+    },
+    "final_f1_s19_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:00:25.347299+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:02:12.876482+00:00"
+    },
+    "final_f2_s19_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:00:33.899605+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:03:13.729901+00:00"
+    },
+    "final_f2_s19_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:01:06.375565+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:02:54.057484+00:00"
+    },
+    "final_f3_s19_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:01:12.353750+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:03:50.454307+00:00"
+    },
+    "final_f3_s19_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:01:23.612485+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:03:33.839299+00:00"
+    },
+    "final_f1_s37_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:02:12.877250+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:04:26.042463+00:00"
+    },
+    "final_f1_s37_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:02:54.058367+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:04:30.245339+00:00"
+    },
+    "final_f2_s37_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:03:02.635440+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:06:12.967938+00:00"
+    },
+    "final_f2_s37_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:03:13.731060+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:05:18.440060+00:00"
+    },
+    "final_f3_s37_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:03:33.840438+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:06:31.501442+00:00"
+    },
+    "final_f3_s37_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:03:50.455475+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:05:50.501700+00:00"
+    },
+    "final_f1_s73_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:04:26.043626+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:06:52.462410+00:00"
+    },
+    "final_f1_s73_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:04:30.246536+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:06:10.624291+00:00"
+    },
+    "final_f2_s73_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:05:18.441273+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:08:14.857956+00:00"
+    },
+    "final_f2_s73_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:05:50.502935+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:07:52.523636+00:00"
+    },
+    "final_f3_s73_Full": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:06:10.625471+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:08:37.136576+00:00"
+    },
+    "final_f3_s73_FrozenGraph": {
+      "status": "complete",
+      "started_utc": "2026-11-09T05:06:12.969150+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-11-09T05:08:07.285267+00:00"
+    }
+  },
+  "failed": false,
+  "selection_frozen_utc": "2026-11-09T04:58:19.871419+00:00",
+  "ended_utc": "2026-11-09T05:08:37.138593+00:00"
+}

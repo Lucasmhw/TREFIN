@@ -1,0 +1,43 @@
+{
+  "fold": 1,
+  "seed": 73,
+  "model": "DLinear",
+  "rho": 0.05,
+  "before": {
+    "mse": 0.0006896064667744528,
+    "rmse": 0.026260359227825745,
+    "mae": 0.01683567268417268,
+    "directional_accuracy": 0.5060125,
+    "msic": 0.0028923658675868583,
+    "msir": 0.006014615513789439,
+    "energy_score": 0.09271731716737523,
+    "coverage_90": 0.7715,
+    "width_90": 0.04709061921103421
+  },
+  "after": {
+    "mse": 0.0006834529519367471,
+    "rmse": 0.02614293311655651,
+    "mae": 0.01671771701775517,
+    "directional_accuracy": 0.5060125,
+    "msic": 0.002892365867586857,
+    "msir": 0.006014615513789427,
+    "energy_score": 0.09214033925314377,
+    "coverage_90": 0.7734625,
+    "width_90": 0.04709061921103421
+  },
+  "scope": "Additional native baseline comparison; NOT the manuscript separate-host Table 1",
+  "script_sha256": "b308bcef06f63c379297c784064f55ef7865c606fdc97ea8aa3e77ed0f615b22",
+  "source_checkpoint": "runs\\benchmarks\\finmultitime_us_native_3fold_5seed_v1\\runs\\fold_1_seed_73\\candidates\\DLinear\\candidate_01\\checkpoints\\best.pt",
+  "checkpoint_sha256": "0d10ac02249c9701b2bd233f36ca44ca4fc9d4c7a23a025c91b0ce4578ef09cd",
+  "source_predictions": "runs\\benchmarks\\finmultitime_us_native_3fold_5seed_v1\\runs\\fold_1_seed_73\\selected\\DLinear\\reproducible_predictions.npz",
+  "prediction_sha256": "d83cdbac84e5836c62718202365b9f90a144fb6a119cc1e984025a57e2696aa6",
+  "selected_candidate": 1,
+  "validation_score_replay_abs_difference": 2.1858755083759007e-10,
+  "test_mean_replay_max_error": 8.498318493366241e-09,
+  "training_residual_replay_max_error": 1.4901161193847656e-08,
+  "pairwise_translation_invariance_max_error": 1.3877787807814457e-17,
+  "train_origins": 2135,
+  "validation_origins": 498,
+  "test_origins": 500,
+  "scenario_adapter": "point forecast plus fixed centered empirical joint training residual paths"
+}

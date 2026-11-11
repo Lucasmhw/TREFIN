@@ -1,0 +1,33 @@
+{
+  "calls": 21160,
+  "zero_zero_elements": 1,
+  "zero_denominator_elements": 112,
+  "repaired_calls": 1,
+  "events": [
+    {
+      "seed": 73,
+      "candidate": 1,
+      "epoch": 53,
+      "phase": "val",
+      "optimizer_update": 2650,
+      "training_batch_offset": 3136,
+      "event": "zero_denominator",
+      "shape": [
+        4096,
+        32,
+        112
+      ],
+      "zero_zero_elements": 1,
+      "nonzero_over_zero_elements": 111,
+      "mode": "repair",
+      "input_all_finite": true,
+      "mean_all_finite": true,
+      "first_zero_zero_index": [
+        2143,
+        6,
+        0
+      ]
+    }
+  ],
+  "rule": "Only undefined0/0 -> neutral1; all finite upstream clipped values unchanged"
+}

@@ -1,0 +1,2 @@
+2026-11-09 12:58:28,737 | INFO | final_test_started frozen_selection_sha=140699433fd2713200068945e9696aa6786cd80bff21ae4ce00dac6b7d823bf3
+2026-11-09 12:58:36,553 | INFO | COMPLETE fold=3 seed=1 variant=Full mse=0.000339015358 es=0.0701036525

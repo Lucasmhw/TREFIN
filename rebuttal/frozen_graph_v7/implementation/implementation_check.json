@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "scope": "FrozenGraph implementation and protocol validation before experimental outcome analysis",
+  "scientific_file_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "protocol.py": "a4a1c3f30e649a669dabd0d1f16172219efb13ce3c52a1684b5837d96202fdbd",
+    "search_validation.py": "904431231b36b231c416bf1eb84cc02b564248f76e1ed8ac98bda1b06fdadcac",
+    "freeze_selections.py": "f06ac1a6198851cb2a6f0e878c8c4650bde3681d7b2c12f570bfc0f0b7909335",
+    "run_selected.py": "c510e1d8319223b5b5a830ce15107e18666a8c8958375c338355dda8aced3f66"
+  },
+  "validation_records": {
+    "cpu_semantics": {
+      "path": "implementation/test_semantics_cpu.json",
+      "sha256": "ffe7153a083639f2645b2ff9cdbb456c7b054297ec25f6b250ca59a6c91b0afe"
+    },
+    "gpu_semantics": {
+      "path": "test_semantics_gpu.json",
+      "sha256": "c860cb7df1141885d962056bd81333052090142deb496a436c5d1876422658f3"
+    },
+    "cpu_configuration_and_guard": {
+      "path": "implementation/test_protocol_cpu.json",
+      "sha256": "020264fbfac453a9681a866b08434dc59e5161efbdab9f2e80def7ce04fc813f"
+    },
+    "gpu_real_training_batch_preflight": {
+      "path": "preflight_gpu.json",
+      "sha256": "81fe120022c21c44d4c63bc48ff82c41f0ea085e5561b612431dac7fe3bd2439"
+    },
+    "independent_review": {
+      "path": "theory/independent_implementation_review.json",
+      "sha256": "6c8a8261b7be23d87933ca91f40934b7bab6ca479b7e35c27463ff05963d14ef"
+    },
+    "independent_guard_and_es_fixtures": {
+      "path": "theory/check_frozen_graph_protocol_independently.json",
+      "sha256": "e820dcd55d99efa5ff10a697efece92c164f486c9378beeef0c7810c26387977"
+    }
+  },
+  "checks": {
+    "Full_float32_float64_bitwise_equivalence_CPU_and_CUDA": true,
+    "FrozenGraph_identity_preserved_and_graph_channel_retained": true,
+    "correct_augmented_gain_and_finite_tie_gradient": true,
+    "all_15_base_configurations_compatible": true,
+    "physical_train_validation_only_access": true,
+    "all_six_selections_required_before_test": true,
+    "seed1_checkpoint_reused_for_its_own_fold_and_variant": true,
+    "six_GPU_training_batches_finite": true,
+    "independent_implementation_review_GO": true,
+    "baseline_model_unmodified": true,
+    "all_python_files_parse": true
+  },
+  "threshold_boundary_audit": {
+    "prepared_graph_values_equal_float32_0_05": {
+      "fold_1": {
+        "a0": 0,
+        "a_target": 0
+      },
+      "fold_2": {
+        "a0": 0,
+        "a_target": 0
+      },
+      "fold_3": {
+        "a0": 0,
+        "a_target": 0
+      }
+    },
+    "source": "Original prepared_arrays.npz for each fold seed1; read-only"
+  },
+  "forecasts_or_test_performance_reviewed": false,
+  "pending": "Registered forecasting runs and outcome analysis; compact archive utility has been syntax checked but intentionally not executed before completion."
+}

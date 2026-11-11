@@ -1,0 +1,46 @@
+{
+  "schema": "trefin-uniform-local-rollout-tube-v1",
+  "source_model": "C:\\Users\\homa0245\\Documents\\Codex\\2026-11-08\\hello-iclr2027-reviewers-reviewers-reviewers-response\\work\\server_snapshot\\f-concord\\src\\fconcord\\model.py",
+  "source_model_sha256": "097ac9b51db52eda88fd661566cf36b99e60cc9ea956ed7739975cbcc5ab3eee",
+  "bound_script_sha256": "905f5b3c3a6681e07ab67877f9b12a7178ade6845ca9dcee85e3714b74d6d607",
+  "audit_script_sha256": "95efe1b1d91efc60780756a194d6c4da82d2e0848d44b53f78bdd87becc56106",
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "origins_per_fold": 32,
+  "origin_selection": "evenly spaced chronological held-out positions, same for every seed",
+  "concept_radii": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "graph_to_concept_radius": 0.5,
+  "primary_concept_radius": 0.1,
+  "initial_fraction": 0.1,
+  "state_metric": "weighted maximum of concept/graph Frobenius block norms",
+  "held_fixed": [
+    "market state",
+    "fitted parameters",
+    "lead schedule",
+    "positive mean scalar"
+  ],
+  "uses_test_labels": false,
+  "fitting_or_selection": false,
+  "numeric_dtype": "float64",
+  "numerical_cushion": {
+    "relative": 1e-10,
+    "absolute": 1e-12
+  },
+  "scope": "uniform analytic local-neighborhood bounds, distinct from registered-domain bounds and empirical point Jacobians",
+  "no_reference_transition_defect_or_Wasserstein_constant_claim": true
+}

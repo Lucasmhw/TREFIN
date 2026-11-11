@@ -1,0 +1,6 @@
+einops==0.8.1
+reformer-pytorch==1.4.4
+axial-positional-embedding==0.2.1
+local-attention==1.9.15
+product-key-memory==0.2.11
+colt5-attention==0.11.1

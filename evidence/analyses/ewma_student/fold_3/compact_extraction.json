@@ -1,0 +1,20 @@
+{
+  "source_relative_to_original_work": "ewma_student/fold_3/test_predictions.npz",
+  "source_archive_sha256": "0fccb15a787f6e5d521513808f487f11388e68584c62bf4067a1768ed7841924",
+  "retained_keys": [
+    "indices",
+    "origins",
+    "per_origin_mse",
+    "per_origin_mae",
+    "per_origin_energy_score"
+  ],
+  "excluded_keys": [
+    "samples",
+    "mu",
+    "y",
+    "covariance"
+  ],
+  "extraction": "Copy original per-origin losses and indices unchanged; no recomputation or refitting",
+  "loss_means_reproduce_result_json": true,
+  "compact_sha256": "c7ceda2e2cd35f94bc3af09b9f2df30a32dcd544ba07d13f41eb3c54fdef831a"
+}

@@ -1,0 +1,937 @@
+{
+  "status": "passed",
+  "scope": "Six independent one-update TRAIN-batch smoke tests; no fitted study checkpoints or selected/test scores",
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "threads": 2,
+  "source_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "trainer.py": "3391e67a5ce3b484acb2dc9634507f897718d6cccb9449ca2adb797479ff9e85",
+    "losses.py": "a6288b562db7bb30cf5da4e3d73ab1d458626ab3c6651f766ef8fbee028dc368",
+    "calibration.py": "e38d49ba04d31899f957ba9c73b638dc3cbc13530f9ae18fb62a550039a7ecbf",
+    "metrics.py": "a4e96bdba0fc81d8483c66ea524c0a558499f5753d70436be60ef0ba51ac163c",
+    "experiment.py": "c94f73e3e376c44bde9f5a775dd1634917e594f3d9a995eb21b1d81686d477cc",
+    "utils.py": "b349cde603a18ed52684adfb3c090db90330951d678de0b053f6be9a0d1d746d"
+  },
+  "implementation_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "protocol.py": "a4a1c3f30e649a669dabd0d1f16172219efb13ce3c52a1684b5837d96202fdbd",
+    "search_validation.py": "904431231b36b231c416bf1eb84cc02b564248f76e1ed8ac98bda1b06fdadcac",
+    "freeze_selections.py": "f06ac1a6198851cb2a6f0e878c8c4650bde3681d7b2c12f570bfc0f0b7909335",
+    "run_selected.py": "c510e1d8319223b5b5a830ce15107e18666a8c8958375c338355dda8aced3f66"
+  },
+  "preflight_sha256": "526d94d8b7cff345f1a320c60002141e53387b25b4c9f0ed4efce54e5c6dc04e",
+  "all_15_configurations_compatible": true,
+  "nominal_and_unique_candidate_counts_verified": true,
+  "configurations": {
+    "fold_1_seed_1": {
+      "base_sha256": "b7cc5da660c5529994a4a6b01144debaa5020edaac9495e36192a1111030fa3e",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_1_seed_7": {
+      "base_sha256": "03be4d16e7b97e5d69f7b849ad0ba2f07c041169f6cbe81ec6e828a85404f299",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_1_seed_19": {
+      "base_sha256": "98a2a710205c44d4b14792cebd341dfd3bf98a6b6ca12fc9f0bc283aae29b2f4",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_1_seed_37": {
+      "base_sha256": "a63550275bd19d500dd08619c18663b5828f622e3470a64ba67f797b8578aa3c",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_1_seed_73": {
+      "base_sha256": "b80640130347c6293491aafb598a44af0e1306ceb8deca7387cbca9f3c80479c",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_2_seed_1": {
+      "base_sha256": "19a0a2aa5b83e6495000fc18d2476772ee6302671cbebf9cd7b3258e8d92e763",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_2_seed_7": {
+      "base_sha256": "faa4431d13e0b3c5067d26cea59760750725c8863e9eb0bff3b483c7aaec0d8f",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_2_seed_19": {
+      "base_sha256": "fbc3e876e675c19b5641e03611dbd90849ffa02c2a9fb116f130b4ffa24e9ed7",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_2_seed_37": {
+      "base_sha256": "ef34bc0f12da24eff403494b01035d8af9dfb7346f3d49d556dec049babd66b8",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_2_seed_73": {
+      "base_sha256": "d46c6c4d7355a73a6c0631be3990bf108cb594d9cd12ff7b706c259252569edb",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_3_seed_1": {
+      "base_sha256": "0905f476a2177f3ce404a7ed8f99062e4e50f5fd3eac4fcaae6a286e5980d540",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_3_seed_7": {
+      "base_sha256": "643779b5fc11f7e55915722e79ab057f432161577c9a48cc24def09ca46edf7e",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_3_seed_19": {
+      "base_sha256": "b8d4cb134a123863ceca63637639dcf335d8b03fd9a050fcf25b70abee1f72b5",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_3_seed_37": {
+      "base_sha256": "c1fee14df7f0d22ed31c15916c2093518482fc6f9eeec4f8bb26ab80690e47ec",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    },
+    "fold_3_seed_73": {
+      "base_sha256": "ec2e127da4fb39d979d732c512af2f3304f1d60d2a0d06c1ae410474ded3506e",
+      "effective_fingerprints": {
+        "Full": [
+          "eb22aaf26dbebfb0f0a5f6f709127dbeb10b3aed4b9156784d933f57f3c36957",
+          "d6a4aeb8dca2ff2be9d99c64fe410ccb807ff65318944471cf36b583a6814d5d",
+          "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54",
+          "a901789ea11cd9343fd97d2cde8bf42ca1a4e77621c412d2eaeaab788dcd441a"
+        ],
+        "FrozenGraph": [
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "53781c3cec64e4d87a37f1f65a1fd1b753a620e0d35ca334d48324b485b25a2d",
+          "2acc997cdf2e53e13dce29e78617fe450b85df02a607e88077a44f462722234a",
+          "b8e9b4b4cc63c1a228afcc7d15d344fb927248053003ac445243fad88597bb34"
+        ]
+      }
+    }
+  },
+  "checks": [
+    {
+      "fold": 1,
+      "variant": "Full",
+      "training_batch_size": 64,
+      "training_scenarios": 16,
+      "all_outputs_gradients_parameters_finite": true,
+      "frozen_graph_identity_verified": false,
+      "active_gradient_parameters": [
+        "risk_weights_raw",
+        "risk_strength_raw",
+        "lead_embedding.weight",
+        "gamma_net.0.weight",
+        "gamma_net.0.bias",
+        "gamma_net.2.weight",
+        "gamma_net.2.bias",
+        "gamma_net.4.weight",
+        "gamma_net.4.bias",
+        "diffusion_net.0.weight",
+        "diffusion_net.0.bias",
+        "diffusion_net.2.weight",
+        "diffusion_net.2.bias",
+        "diffusion_net.4.weight",
+        "diffusion_net.4.bias",
+        "force_net.0.weight",
+        "force_net.0.bias",
+        "force_net.2.weight",
+        "force_net.2.bias",
+        "force_net.4.weight",
+        "force_net.4.bias",
+        "residual_net.0.weight",
+        "residual_net.0.bias",
+        "residual_net.2.weight",
+        "residual_net.2.bias",
+        "residual_net.4.weight",
+        "residual_net.4.bias",
+        "similarity_encoder.0.weight",
+        "similarity_encoder.0.bias",
+        "similarity_encoder.2.weight",
+        "similarity_encoder.2.bias",
+        "similarity_encoder.4.weight",
+        "similarity_encoder.4.bias",
+        "opposition_encoder.0.weight",
+        "opposition_encoder.0.bias",
+        "opposition_encoder.2.weight",
+        "opposition_encoder.2.bias",
+        "opposition_encoder.4.weight",
+        "opposition_encoder.4.bias",
+        "mu_head.0.weight",
+        "mu_head.0.bias",
+        "mu_head.2.weight",
+        "mu_head.2.bias",
+        "mu_head.4.weight",
+        "mu_head.4.bias",
+        "up_scale_head.0.weight",
+        "up_scale_head.0.bias",
+        "up_scale_head.2.weight",
+        "up_scale_head.2.bias",
+        "up_scale_head.4.weight",
+        "up_scale_head.4.bias",
+        "down_scale_head.0.weight",
+        "down_scale_head.0.bias",
+        "down_scale_head.2.weight",
+        "down_scale_head.2.bias",
+        "down_scale_head.4.weight",
+        "down_scale_head.4.bias",
+        "q_head.0.weight",
+        "q_head.0.bias",
+        "q_head.2.weight",
+        "q_head.2.bias",
+        "q_head.4.weight",
+        "q_head.4.bias",
+        "lambda_q_head.0.weight",
+        "lambda_q_head.0.bias",
+        "lambda_q_head.2.weight",
+        "lambda_q_head.2.bias",
+        "lambda_q_head.4.weight",
+        "lambda_q_head.4.bias",
+        "nu_head.0.weight",
+        "nu_head.0.bias",
+        "nu_head.2.weight",
+        "nu_head.2.bias",
+        "nu_head.4.weight",
+        "nu_head.4.bias"
+      ],
+      "inactive_gradient_parameters": [],
+      "initial_loss_components": {
+        "total": 10.479682922363281,
+        "distribution": 0.0880761370062828,
+        "concept": 4.15625524520874,
+        "graph": 61.90901184082031,
+        "monotonicity": 0.0,
+        "gain": 43.99821853637695,
+        "gain_radius": 7.628115177154541
+      },
+      "elapsed_seconds": 1.8577887210994959,
+      "prepared_sha256": {
+        "prepared_arrays.npz": "298676d881e32367f3b0e5ea64904feb59831dece0a336ec82236086491750f0",
+        "prepared_metadata.json": "b166c1f84722e99f4f05d40a57ce12746e5e8a10a56261afa86e3d297dd075e5"
+      },
+      "guard": {
+        "train_count": 2135,
+        "validation_count": 498,
+        "excluded_test_origin_count": 500,
+        "test_split_key_removed": true,
+        "test_dataset_construction_raises_KeyError": true,
+        "origin_arrays_physically_subset": true
+      }
+    },
+    {
+      "fold": 1,
+      "variant": "FrozenGraph",
+      "training_batch_size": 64,
+      "training_scenarios": 16,
+      "all_outputs_gradients_parameters_finite": true,
+      "frozen_graph_identity_verified": true,
+      "active_gradient_parameters": [
+        "risk_weights_raw",
+        "risk_strength_raw",
+        "lead_embedding.weight",
+        "gamma_net.0.weight",
+        "gamma_net.0.bias",
+        "gamma_net.2.weight",
+        "gamma_net.2.bias",
+        "gamma_net.4.weight",
+        "gamma_net.4.bias",
+        "diffusion_net.0.weight",
+        "diffusion_net.0.bias",
+        "diffusion_net.2.weight",
+        "diffusion_net.2.bias",
+        "diffusion_net.4.weight",
+        "diffusion_net.4.bias",
+        "force_net.0.weight",
+        "force_net.0.bias",
+        "force_net.2.weight",
+        "force_net.2.bias",
+        "force_net.4.weight",
+        "force_net.4.bias",
+        "residual_net.0.weight",
+        "residual_net.0.bias",
+        "residual_net.2.weight",
+        "residual_net.2.bias",
+        "residual_net.4.weight",
+        "residual_net.4.bias",
+        "mu_head.0.weight",
+        "mu_head.0.bias",
+        "mu_head.2.weight",
+        "mu_head.2.bias",
+        "mu_head.4.weight",
+        "mu_head.4.bias",
+        "up_scale_head.0.weight",
+        "up_scale_head.0.bias",
+        "up_scale_head.2.weight",
+        "up_scale_head.2.bias",
+        "up_scale_head.4.weight",
+        "up_scale_head.4.bias",
+        "down_scale_head.0.weight",
+        "down_scale_head.0.bias",
+        "down_scale_head.2.weight",
+        "down_scale_head.2.bias",
+        "down_scale_head.4.weight",
+        "down_scale_head.4.bias",
+        "q_head.0.weight",
+        "q_head.0.bias",
+        "q_head.2.weight",
+        "q_head.2.bias",
+        "q_head.4.weight",
+        "q_head.4.bias",
+        "lambda_q_head.0.weight",
+        "lambda_q_head.0.bias",
+        "lambda_q_head.2.weight",
+        "lambda_q_head.2.bias",
+        "lambda_q_head.4.weight",
+        "lambda_q_head.4.bias",
+        "nu_head.0.weight",
+        "nu_head.0.bias",
+        "nu_head.2.weight",
+        "nu_head.2.bias",
+        "nu_head.4.weight",
+        "nu_head.4.bias"
+      ],
+      "inactive_gradient_parameters": [
+        "similarity_encoder.0.weight",
+        "similarity_encoder.0.bias",
+        "similarity_encoder.2.weight",
+        "similarity_encoder.2.bias",
+        "similarity_encoder.4.weight",
+        "similarity_encoder.4.bias",
+        "opposition_encoder.0.weight",
+        "opposition_encoder.0.bias",
+        "opposition_encoder.2.weight",
+        "opposition_encoder.2.bias",
+        "opposition_encoder.4.weight",
+        "opposition_encoder.4.bias"
+      ],
+      "initial_loss_components": {
+        "total": 1.123825192451477,
+        "distribution": 0.0880446806550026,
+        "concept": 4.1431121826171875,
+        "graph": 24.095935821533203,
+        "monotonicity": 0.0,
+        "gain": 2.4999952074722387e-05,
+        "gain_radius": 1.0
+      },
+      "elapsed_seconds": 0.09211189672350883,
+      "prepared_sha256": {
+        "prepared_arrays.npz": "298676d881e32367f3b0e5ea64904feb59831dece0a336ec82236086491750f0",
+        "prepared_metadata.json": "b166c1f84722e99f4f05d40a57ce12746e5e8a10a56261afa86e3d297dd075e5"
+      },
+      "guard": {
+        "train_count": 2135,
+        "validation_count": 498,
+        "excluded_test_origin_count": 500,
+        "test_split_key_removed": true,
+        "test_dataset_construction_raises_KeyError": true,
+        "origin_arrays_physically_subset": true
+      }
+    },
+    {
+      "fold": 2,
+      "variant": "Full",
+      "training_batch_size": 64,
+      "training_scenarios": 16,
+      "all_outputs_gradients_parameters_finite": true,
+      "frozen_graph_identity_verified": false,
+      "active_gradient_parameters": [
+        "risk_weights_raw",
+        "risk_strength_raw",
+        "lead_embedding.weight",
+        "gamma_net.0.weight",
+        "gamma_net.0.bias",
+        "gamma_net.2.weight",
+        "gamma_net.2.bias",
+        "gamma_net.4.weight",
+        "gamma_net.4.bias",
+        "diffusion_net.0.weight",
+        "diffusion_net.0.bias",
+        "diffusion_net.2.weight",
+        "diffusion_net.2.bias",
+        "diffusion_net.4.weight",
+        "diffusion_net.4.bias",
+        "force_net.0.weight",
+        "force_net.0.bias",
+        "force_net.2.weight",
+        "force_net.2.bias",
+        "force_net.4.weight",
+        "force_net.4.bias",
+        "residual_net.0.weight",
+        "residual_net.0.bias",
+        "residual_net.2.weight",
+        "residual_net.2.bias",
+        "residual_net.4.weight",
+        "residual_net.4.bias",
+        "similarity_encoder.0.weight",
+        "similarity_encoder.0.bias",
+        "similarity_encoder.2.weight",
+        "similarity_encoder.2.bias",
+        "similarity_encoder.4.weight",
+        "similarity_encoder.4.bias",
+        "opposition_encoder.0.weight",
+        "opposition_encoder.0.bias",
+        "opposition_encoder.2.weight",
+        "opposition_encoder.2.bias",
+        "opposition_encoder.4.weight",
+        "opposition_encoder.4.bias",
+        "mu_head.0.weight",
+        "mu_head.0.bias",
+        "mu_head.2.weight",
+        "mu_head.2.bias",
+        "mu_head.4.weight",
+        "mu_head.4.bias",
+        "up_scale_head.0.weight",
+        "up_scale_head.0.bias",
+        "up_scale_head.2.weight",
+        "up_scale_head.2.bias",
+        "up_scale_head.4.weight",
+        "up_scale_head.4.bias",
+        "down_scale_head.0.weight",
+        "down_scale_head.0.bias",
+        "down_scale_head.2.weight",
+        "down_scale_head.2.bias",
+        "down_scale_head.4.weight",
+        "down_scale_head.4.bias",
+        "q_head.0.weight",
+        "q_head.0.bias",
+        "q_head.2.weight",
+        "q_head.2.bias",
+        "q_head.4.weight",
+        "q_head.4.bias",
+        "lambda_q_head.0.weight",
+        "lambda_q_head.0.bias",
+        "lambda_q_head.2.weight",
+        "lambda_q_head.2.bias",
+        "lambda_q_head.4.weight",
+        "lambda_q_head.4.bias",
+        "nu_head.0.weight",
+        "nu_head.0.bias",
+        "nu_head.2.weight",
+        "nu_head.2.bias",
+        "nu_head.4.weight",
+        "nu_head.4.bias"
+      ],
+      "inactive_gradient_parameters": [],
+      "initial_loss_components": {
+        "total": 10.120000839233398,
+        "distribution": 0.08794005215167999,
+        "concept": 4.1191840171813965,
+        "graph": 61.45849609375,
+        "monotonicity": 0.0,
+        "gain": 40.855857849121094,
+        "gain_radius": 7.3868584632873535
+      },
+      "elapsed_seconds": 0.11362132243812084,
+      "prepared_sha256": {
+        "prepared_arrays.npz": "a8c1ff019c49ca86c6aae61c018e43f962f167540934322bd680de827dce18a0",
+        "prepared_metadata.json": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18"
+      },
+      "guard": {
+        "train_count": 2638,
+        "validation_count": 500,
+        "excluded_test_origin_count": 496,
+        "test_split_key_removed": true,
+        "test_dataset_construction_raises_KeyError": true,
+        "origin_arrays_physically_subset": true
+      }
+    },
+    {
+      "fold": 2,
+      "variant": "FrozenGraph",
+      "training_batch_size": 64,
+      "training_scenarios": 16,
+      "all_outputs_gradients_parameters_finite": true,
+      "frozen_graph_identity_verified": true,
+      "active_gradient_parameters": [
+        "risk_weights_raw",
+        "risk_strength_raw",
+        "lead_embedding.weight",
+        "gamma_net.0.weight",
+        "gamma_net.0.bias",
+        "gamma_net.2.weight",
+        "gamma_net.2.bias",
+        "gamma_net.4.weight",
+        "gamma_net.4.bias",
+        "diffusion_net.0.weight",
+        "diffusion_net.0.bias",
+        "diffusion_net.2.weight",
+        "diffusion_net.2.bias",
+        "diffusion_net.4.weight",
+        "diffusion_net.4.bias",
+        "force_net.0.weight",
+        "force_net.0.bias",
+        "force_net.2.weight",
+        "force_net.2.bias",
+        "force_net.4.weight",
+        "force_net.4.bias",
+        "residual_net.0.weight",
+        "residual_net.0.bias",
+        "residual_net.2.weight",
+        "residual_net.2.bias",
+        "residual_net.4.weight",
+        "residual_net.4.bias",
+        "mu_head.0.weight",
+        "mu_head.0.bias",
+        "mu_head.2.weight",
+        "mu_head.2.bias",
+        "mu_head.4.weight",
+        "mu_head.4.bias",
+        "up_scale_head.0.weight",
+        "up_scale_head.0.bias",
+        "up_scale_head.2.weight",
+        "up_scale_head.2.bias",
+        "up_scale_head.4.weight",
+        "up_scale_head.4.bias",
+        "down_scale_head.0.weight",
+        "down_scale_head.0.bias",
+        "down_scale_head.2.weight",
+        "down_scale_head.2.bias",
+        "down_scale_head.4.weight",
+        "down_scale_head.4.bias",
+        "q_head.0.weight",
+        "q_head.0.bias",
+        "q_head.2.weight",
+        "q_head.2.bias",
+        "q_head.4.weight",
+        "q_head.4.bias",
+        "lambda_q_head.0.weight",
+        "lambda_q_head.0.bias",
+        "lambda_q_head.2.weight",
+        "lambda_q_head.2.bias",
+        "lambda_q_head.4.weight",
+        "lambda_q_head.4.bias",
+        "nu_head.0.weight",
+        "nu_head.0.bias",
+        "nu_head.2.weight",
+        "nu_head.2.bias",
+        "nu_head.4.weight",
+        "nu_head.4.bias"
+      ],
+      "inactive_gradient_parameters": [
+        "similarity_encoder.0.weight",
+        "similarity_encoder.0.bias",
+        "similarity_encoder.2.weight",
+        "similarity_encoder.2.bias",
+        "similarity_encoder.4.weight",
+        "similarity_encoder.4.bias",
+        "opposition_encoder.0.weight",
+        "opposition_encoder.0.bias",
+        "opposition_encoder.2.weight",
+        "opposition_encoder.2.bias",
+        "opposition_encoder.4.weight",
+        "opposition_encoder.4.bias"
+      ],
+      "initial_loss_components": {
+        "total": 1.114579439163208,
+        "distribution": 0.08790861070156097,
+        "concept": 4.106673240661621,
+        "graph": 24.095935821533203,
+        "monotonicity": 0.0,
+        "gain": 2.4999952074722387e-05,
+        "gain_radius": 1.0
+      },
+      "elapsed_seconds": 0.09943069703876972,
+      "prepared_sha256": {
+        "prepared_arrays.npz": "a8c1ff019c49ca86c6aae61c018e43f962f167540934322bd680de827dce18a0",
+        "prepared_metadata.json": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18"
+      },
+      "guard": {
+        "train_count": 2638,
+        "validation_count": 500,
+        "excluded_test_origin_count": 496,
+        "test_split_key_removed": true,
+        "test_dataset_construction_raises_KeyError": true,
+        "origin_arrays_physically_subset": true
+      }
+    },
+    {
+      "fold": 3,
+      "variant": "Full",
+      "training_batch_size": 64,
+      "training_scenarios": 16,
+      "all_outputs_gradients_parameters_finite": true,
+      "frozen_graph_identity_verified": false,
+      "active_gradient_parameters": [
+        "risk_weights_raw",
+        "risk_strength_raw",
+        "lead_embedding.weight",
+        "gamma_net.0.weight",
+        "gamma_net.0.bias",
+        "gamma_net.2.weight",
+        "gamma_net.2.bias",
+        "gamma_net.4.weight",
+        "gamma_net.4.bias",
+        "diffusion_net.0.weight",
+        "diffusion_net.0.bias",
+        "diffusion_net.2.weight",
+        "diffusion_net.2.bias",
+        "diffusion_net.4.weight",
+        "diffusion_net.4.bias",
+        "force_net.0.weight",
+        "force_net.0.bias",
+        "force_net.2.weight",
+        "force_net.2.bias",
+        "force_net.4.weight",
+        "force_net.4.bias",
+        "residual_net.0.weight",
+        "residual_net.0.bias",
+        "residual_net.2.weight",
+        "residual_net.2.bias",
+        "residual_net.4.weight",
+        "residual_net.4.bias",
+        "similarity_encoder.0.weight",
+        "similarity_encoder.0.bias",
+        "similarity_encoder.2.weight",
+        "similarity_encoder.2.bias",
+        "similarity_encoder.4.weight",
+        "similarity_encoder.4.bias",
+        "opposition_encoder.0.weight",
+        "opposition_encoder.0.bias",
+        "opposition_encoder.2.weight",
+        "opposition_encoder.2.bias",
+        "opposition_encoder.4.weight",
+        "opposition_encoder.4.bias",
+        "mu_head.0.weight",
+        "mu_head.0.bias",
+        "mu_head.2.weight",
+        "mu_head.2.bias",
+        "mu_head.4.weight",
+        "mu_head.4.bias",
+        "up_scale_head.0.weight",
+        "up_scale_head.0.bias",
+        "up_scale_head.2.weight",
+        "up_scale_head.2.bias",
+        "up_scale_head.4.weight",
+        "up_scale_head.4.bias",
+        "down_scale_head.0.weight",
+        "down_scale_head.0.bias",
+        "down_scale_head.2.weight",
+        "down_scale_head.2.bias",
+        "down_scale_head.4.weight",
+        "down_scale_head.4.bias",
+        "q_head.0.weight",
+        "q_head.0.bias",
+        "q_head.2.weight",
+        "q_head.2.bias",
+        "q_head.4.weight",
+        "q_head.4.bias",
+        "lambda_q_head.0.weight",
+        "lambda_q_head.0.bias",
+        "lambda_q_head.2.weight",
+        "lambda_q_head.2.bias",
+        "lambda_q_head.4.weight",
+        "lambda_q_head.4.bias",
+        "nu_head.0.weight",
+        "nu_head.0.bias",
+        "nu_head.2.weight",
+        "nu_head.2.bias",
+        "nu_head.4.weight",
+        "nu_head.4.bias"
+      ],
+      "inactive_gradient_parameters": [],
+      "initial_loss_components": {
+        "total": 9.908891677856445,
+        "distribution": 0.08745747059583664,
+        "concept": 3.7983343601226807,
+        "graph": 59.13656234741211,
+        "monotonicity": 0.0,
+        "gain": 41.40925598144531,
+        "gain_radius": 7.430002212524414
+      },
+      "elapsed_seconds": 0.14097604900598526,
+      "prepared_sha256": {
+        "prepared_arrays.npz": "caf0564bad829edf8652df34540ebe768975e4fb253a6ca25c8caeef949fe3f3",
+        "prepared_metadata.json": "fc939302818146284cbee90c41d0204c5d18189749f63644adb766aa1b3c010c"
+      },
+      "guard": {
+        "train_count": 3143,
+        "validation_count": 496,
+        "excluded_test_origin_count": 306,
+        "test_split_key_removed": true,
+        "test_dataset_construction_raises_KeyError": true,
+        "origin_arrays_physically_subset": true
+      }
+    },
+    {
+      "fold": 3,
+      "variant": "FrozenGraph",
+      "training_batch_size": 64,
+      "training_scenarios": 16,
+      "all_outputs_gradients_parameters_finite": true,
+      "frozen_graph_identity_verified": true,
+      "active_gradient_parameters": [
+        "risk_weights_raw",
+        "risk_strength_raw",
+        "lead_embedding.weight",
+        "gamma_net.0.weight",
+        "gamma_net.0.bias",
+        "gamma_net.2.weight",
+        "gamma_net.2.bias",
+        "gamma_net.4.weight",
+        "gamma_net.4.bias",
+        "diffusion_net.0.weight",
+        "diffusion_net.0.bias",
+        "diffusion_net.2.weight",
+        "diffusion_net.2.bias",
+        "diffusion_net.4.weight",
+        "diffusion_net.4.bias",
+        "force_net.0.weight",
+        "force_net.0.bias",
+        "force_net.2.weight",
+        "force_net.2.bias",
+        "force_net.4.weight",
+        "force_net.4.bias",
+        "residual_net.0.weight",
+        "residual_net.0.bias",
+        "residual_net.2.weight",
+        "residual_net.2.bias",
+        "residual_net.4.weight",
+        "residual_net.4.bias",
+        "mu_head.0.weight",
+        "mu_head.0.bias",
+        "mu_head.2.weight",
+        "mu_head.2.bias",
+        "mu_head.4.weight",
+        "mu_head.4.bias",
+        "up_scale_head.0.weight",
+        "up_scale_head.0.bias",
+        "up_scale_head.2.weight",
+        "up_scale_head.2.bias",
+        "up_scale_head.4.weight",
+        "up_scale_head.4.bias",
+        "down_scale_head.0.weight",
+        "down_scale_head.0.bias",
+        "down_scale_head.2.weight",
+        "down_scale_head.2.bias",
+        "down_scale_head.4.weight",
+        "down_scale_head.4.bias",
+        "q_head.0.weight",
+        "q_head.0.bias",
+        "q_head.2.weight",
+        "q_head.2.bias",
+        "q_head.4.weight",
+        "q_head.4.bias",
+        "lambda_q_head.0.weight",
+        "lambda_q_head.0.bias",
+        "lambda_q_head.2.weight",
+        "lambda_q_head.2.bias",
+        "lambda_q_head.4.weight",
+        "lambda_q_head.4.bias",
+        "nu_head.0.weight",
+        "nu_head.0.bias",
+        "nu_head.2.weight",
+        "nu_head.2.bias",
+        "nu_head.4.weight",
+        "nu_head.4.bias"
+      ],
+      "inactive_gradient_parameters": [
+        "similarity_encoder.0.weight",
+        "similarity_encoder.0.bias",
+        "similarity_encoder.2.weight",
+        "similarity_encoder.2.bias",
+        "similarity_encoder.4.weight",
+        "similarity_encoder.4.bias",
+        "opposition_encoder.0.weight",
+        "opposition_encoder.0.bias",
+        "opposition_encoder.2.weight",
+        "opposition_encoder.2.bias",
+        "opposition_encoder.4.weight",
+        "opposition_encoder.4.bias"
+      ],
+      "initial_loss_components": {
+        "total": 1.0352904796600342,
+        "distribution": 0.08742829412221909,
+        "concept": 3.791438579559326,
+        "graph": 24.095935821533203,
+        "monotonicity": 0.0,
+        "gain": 2.4999952074722387e-05,
+        "gain_radius": 1.0
+      },
+      "elapsed_seconds": 0.10152090899646282,
+      "prepared_sha256": {
+        "prepared_arrays.npz": "caf0564bad829edf8652df34540ebe768975e4fb253a6ca25c8caeef949fe3f3",
+        "prepared_metadata.json": "fc939302818146284cbee90c41d0204c5d18189749f63644adb766aa1b3c010c"
+      },
+      "guard": {
+        "train_count": 3143,
+        "validation_count": 496,
+        "excluded_test_origin_count": 306,
+        "test_split_key_removed": true,
+        "test_dataset_construction_raises_KeyError": true,
+        "origin_arrays_physically_subset": true
+      }
+    }
+  ],
+  "test_access_count": 0
+}

@@ -1,0 +1,768 @@
+{
+  "schema": "trefin-timemixerpp-seed-worker-merge-v1",
+  "status": "complete",
+  "registered_global_seeds": [
+    1,
+    7,
+    19,
+    37,
+    73
+  ],
+  "global_registered_protocol_sha256": "2cf14d0fa08c42bf445c57624a07934abb7e025554b5d4bbc1cfb5bbab67ef4d",
+  "protocol_normalization": "Remove seeds only; every other JSON value must compare equal",
+  "all_test_origins_and_target_hashes_identical": true,
+  "execution_workers": [
+    {
+      "seed": 1,
+      "source_worker": "fresh_timemixerpp_fast",
+      "source_run": "fresh_timemixerpp_fast/seed_1",
+      "source_result_sha256": "46b9024d0226250e6b5a057d5b32bfaf0daeb547c65a75712353cf1eb7bc3d97",
+      "source_paired_losses_sha256": "4f5aa34473ce4e65d1705974cc6bce0bd79125b44b3f2fd469a49a849a4ebdc8",
+      "execution_protocol_source": "fresh_timemixerpp_fast/protocol.json",
+      "execution_protocol_sha256": "2cf14d0fa08c42bf445c57624a07934abb7e025554b5d4bbc1cfb5bbab67ef4d",
+      "execution_protocol_seeds": [
+        1,
+        7,
+        19,
+        37,
+        73
+      ],
+      "registered_script_sha256": "f9c20a917e1133c13ccd476da5f90bc565f1741ebe253f08ff739c4ca1d89e81",
+      "numerical_acceptance": {
+        "schema": "timemixerpp-numerical-equivalence-acceptance-v2",
+        "recorded_utc": "2026-11-08T07:20:39.450780+00:00",
+        "decision": "accept grouped independent-origin evaluation at outer batch32; training remains batch64",
+        "decision_scope": "Numerical implementation equivalence, not a forecasting-performance or significance result; decided before full optimized training and test evaluation",
+        "criteria": {
+          "return_unit_max_absolute_error": 1e-06,
+          "normalized_max_absolute_error": 0.0001,
+          "normalized_relative_rms_error": 0.0001
+        },
+        "additional_requirements": "finite outputs; exact training losses/gradients; identical tested FFT top-k membership and rank",
+        "checks": {
+          "finite_all_outputs": true,
+          "all_training_checks_exact": true,
+          "all_topk_memberships_identical": true,
+          "all_topk_ranks_identical": true,
+          "return_unit_max_absolute_error": true,
+          "normalized_max_absolute_error": true,
+          "normalized_relative_rms_error": true
+        },
+        "original_strict_normalized_threshold": 2e-05,
+        "original_strict_threshold_passed": false,
+        "original_failures_retained": true,
+        "maximum_observed": {
+          "return_unit_max_absolute_error": 6.165963569088707e-07,
+          "normalized_max_absolute_error": 3.707408905029297e-05,
+          "normalized_relative_rms_error": 2.9532688625565355e-05
+        },
+        "maximum_raw_error_basis_points": 0.006165963569088707,
+        "evidence_file": "timemixerpp_cuda_diagnostic.json",
+        "evidence_sha256": "11e7fe8e419cb45ea47f7399498ef1c0cbfc7d20d4cbe5786939758f0f17a1b9",
+        "evidence_states": [
+          "random_initialization",
+          "two_training_updates",
+          "existing_fitted_checkpoint"
+        ],
+        "checkpoint_sha256": "21465b171121f8466b58cff3cf33d5b649b80687b73da0966fc01603b2d93b35",
+        "tested_validation_origins": 32,
+        "tested_outer_batches": [
+          1,
+          4,
+          16,
+          32
+        ],
+        "production_outer_inference_batch": 32,
+        "training_batch_size": 64,
+        "fast_module_sha256": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+        "torch_cuda_version": "2.8.0+cu128",
+        "TF32": "disabled for matmul and cuDNN in both runner and diagnostic",
+        "interpretation": "Batch1 outputs are exact. Grouped CUDA differences start in finer-scale block outputs, with exact coarse FFT inputs/scores/selections; consistent with batch-shape-dependent float32 kernel roundoff. The fitted forecast RMS-relative discrepancy is about0.00295%, and maximum discrepancy is0.00617basispoints. This is not a bitwise-CUDA-equivalence claim or a guarantee for every possible input.",
+        "rationale": "Retain raw-return tolerance0.01basispoint as the primary observable-unit criterion, add normalized maximum and RMS-relative guards1e-4; the original2e-5 normalized guard was more restrictive than this documented implementation-agreement criterion. No model hyperparameter, data split, fitting objective, calibration rule or test outcome informed this numerical decision."
+      },
+      "numerical_acceptance_sha256": "adfdf8fa8a1b0dff169dfab19d081849e0594de23e08d7ca45d8193b009d9a1e",
+      "source_test_predictions": "fresh_timemixerpp_fast/seed_1/test_predictions.npz",
+      "test_predictions_sha256": "4308daff32e1aca31e038c7662a5e40f14ce28800d4e98ac1f11c35531b1e3d7",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_timemixerpp_fast/seed_1/candidate_01/best.pt",
+          "checkpoint_sha256": "fe6b06bb0e4b9d4b92c9f33ca1913dc3a3fcfee5ffc03981674754e2420219f8",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_timemixerpp_fast/seed_1/candidate_02/best.pt",
+          "checkpoint_sha256": "9e8205c372eed23c17d0c46486d33f05ad24b923502d29eb19733cc77365f7f4",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 7,
+      "source_worker": "fresh_timemixerpp_seed_7",
+      "source_run": "fresh_timemixerpp_seed_7/seed_7",
+      "source_result_sha256": "d74aeea0305a9012998488bf9ea9e9f600a4caf03c58089c420dcad529c93ddc",
+      "source_paired_losses_sha256": "d4a35b43bc1e15a9c0b27ed02156423511861d92643e1d5f737ffdefab51f40d",
+      "execution_protocol_source": "fresh_timemixerpp_seed_7/protocol.json",
+      "execution_protocol_sha256": "87dd84940e9ac80e293d531cd4dabed40e4238f9d779f1fcd30861e6e6a7e31a",
+      "execution_protocol_seeds": [
+        7
+      ],
+      "registered_script_sha256": "f9c20a917e1133c13ccd476da5f90bc565f1741ebe253f08ff739c4ca1d89e81",
+      "numerical_acceptance": {
+        "schema": "timemixerpp-numerical-equivalence-acceptance-v2",
+        "recorded_utc": "2026-11-08T07:20:39.450780+00:00",
+        "decision": "accept grouped independent-origin evaluation at outer batch32; training remains batch64",
+        "decision_scope": "Numerical implementation equivalence, not a forecasting-performance or significance result; decided before full optimized training and test evaluation",
+        "criteria": {
+          "return_unit_max_absolute_error": 1e-06,
+          "normalized_max_absolute_error": 0.0001,
+          "normalized_relative_rms_error": 0.0001
+        },
+        "additional_requirements": "finite outputs; exact training losses/gradients; identical tested FFT top-k membership and rank",
+        "checks": {
+          "finite_all_outputs": true,
+          "all_training_checks_exact": true,
+          "all_topk_memberships_identical": true,
+          "all_topk_ranks_identical": true,
+          "return_unit_max_absolute_error": true,
+          "normalized_max_absolute_error": true,
+          "normalized_relative_rms_error": true
+        },
+        "original_strict_normalized_threshold": 2e-05,
+        "original_strict_threshold_passed": false,
+        "original_failures_retained": true,
+        "maximum_observed": {
+          "return_unit_max_absolute_error": 6.165963569088707e-07,
+          "normalized_max_absolute_error": 3.707408905029297e-05,
+          "normalized_relative_rms_error": 2.9532688625565355e-05
+        },
+        "maximum_raw_error_basis_points": 0.006165963569088707,
+        "evidence_file": "timemixerpp_cuda_diagnostic.json",
+        "evidence_sha256": "11e7fe8e419cb45ea47f7399498ef1c0cbfc7d20d4cbe5786939758f0f17a1b9",
+        "evidence_states": [
+          "random_initialization",
+          "two_training_updates",
+          "existing_fitted_checkpoint"
+        ],
+        "checkpoint_sha256": "21465b171121f8466b58cff3cf33d5b649b80687b73da0966fc01603b2d93b35",
+        "tested_validation_origins": 32,
+        "tested_outer_batches": [
+          1,
+          4,
+          16,
+          32
+        ],
+        "production_outer_inference_batch": 32,
+        "training_batch_size": 64,
+        "fast_module_sha256": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+        "torch_cuda_version": "2.8.0+cu128",
+        "TF32": "disabled for matmul and cuDNN in both runner and diagnostic",
+        "interpretation": "Batch1 outputs are exact. Grouped CUDA differences start in finer-scale block outputs, with exact coarse FFT inputs/scores/selections; consistent with batch-shape-dependent float32 kernel roundoff. The fitted forecast RMS-relative discrepancy is about0.00295%, and maximum discrepancy is0.00617basispoints. This is not a bitwise-CUDA-equivalence claim or a guarantee for every possible input.",
+        "rationale": "Retain raw-return tolerance0.01basispoint as the primary observable-unit criterion, add normalized maximum and RMS-relative guards1e-4; the original2e-5 normalized guard was more restrictive than this documented implementation-agreement criterion. No model hyperparameter, data split, fitting objective, calibration rule or test outcome informed this numerical decision."
+      },
+      "numerical_acceptance_sha256": "adfdf8fa8a1b0dff169dfab19d081849e0594de23e08d7ca45d8193b009d9a1e",
+      "source_test_predictions": "fresh_timemixerpp_seed_7/seed_7/test_predictions.npz",
+      "test_predictions_sha256": "3f069f6330cc288f9b59a4ea879929993efa57de020ff05db30f44ded6e4c68c",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_timemixerpp_seed_7/seed_7/candidate_01/best.pt",
+          "checkpoint_sha256": "5f9dfd5e749a5757ce92ea2e260dd3dd1e238d1bef075019c218284066e2635e",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_timemixerpp_seed_7/seed_7/candidate_02/best.pt",
+          "checkpoint_sha256": "aac581518a46ac2f82866148bd1b5bfcafa0de55c62aa023f7680785e6e84f5c",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 19,
+      "source_worker": "fresh_timemixerpp_seed_19",
+      "source_run": "fresh_timemixerpp_seed_19/seed_19",
+      "source_result_sha256": "93976276a5f01087fb7bf8943205eed79606b88c2e65442834f00bad8d8cb8f8",
+      "source_paired_losses_sha256": "0b004ee2770d7f0e0eb2793bbc1e7eae3e72f1cf881ac0f42bc3c3303907bce7",
+      "execution_protocol_source": "fresh_timemixerpp_seed_19/protocol.json",
+      "execution_protocol_sha256": "b27b902d8661feb8b178e724fd178f2be5c8b468f41819c31c2fee3576d8ec16",
+      "execution_protocol_seeds": [
+        19
+      ],
+      "registered_script_sha256": "f9c20a917e1133c13ccd476da5f90bc565f1741ebe253f08ff739c4ca1d89e81",
+      "numerical_acceptance": {
+        "schema": "timemixerpp-numerical-equivalence-acceptance-v2",
+        "recorded_utc": "2026-11-08T07:20:39.450780+00:00",
+        "decision": "accept grouped independent-origin evaluation at outer batch32; training remains batch64",
+        "decision_scope": "Numerical implementation equivalence, not a forecasting-performance or significance result; decided before full optimized training and test evaluation",
+        "criteria": {
+          "return_unit_max_absolute_error": 1e-06,
+          "normalized_max_absolute_error": 0.0001,
+          "normalized_relative_rms_error": 0.0001
+        },
+        "additional_requirements": "finite outputs; exact training losses/gradients; identical tested FFT top-k membership and rank",
+        "checks": {
+          "finite_all_outputs": true,
+          "all_training_checks_exact": true,
+          "all_topk_memberships_identical": true,
+          "all_topk_ranks_identical": true,
+          "return_unit_max_absolute_error": true,
+          "normalized_max_absolute_error": true,
+          "normalized_relative_rms_error": true
+        },
+        "original_strict_normalized_threshold": 2e-05,
+        "original_strict_threshold_passed": false,
+        "original_failures_retained": true,
+        "maximum_observed": {
+          "return_unit_max_absolute_error": 6.165963569088707e-07,
+          "normalized_max_absolute_error": 3.707408905029297e-05,
+          "normalized_relative_rms_error": 2.9532688625565355e-05
+        },
+        "maximum_raw_error_basis_points": 0.006165963569088707,
+        "evidence_file": "timemixerpp_cuda_diagnostic.json",
+        "evidence_sha256": "11e7fe8e419cb45ea47f7399498ef1c0cbfc7d20d4cbe5786939758f0f17a1b9",
+        "evidence_states": [
+          "random_initialization",
+          "two_training_updates",
+          "existing_fitted_checkpoint"
+        ],
+        "checkpoint_sha256": "21465b171121f8466b58cff3cf33d5b649b80687b73da0966fc01603b2d93b35",
+        "tested_validation_origins": 32,
+        "tested_outer_batches": [
+          1,
+          4,
+          16,
+          32
+        ],
+        "production_outer_inference_batch": 32,
+        "training_batch_size": 64,
+        "fast_module_sha256": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+        "torch_cuda_version": "2.8.0+cu128",
+        "TF32": "disabled for matmul and cuDNN in both runner and diagnostic",
+        "interpretation": "Batch1 outputs are exact. Grouped CUDA differences start in finer-scale block outputs, with exact coarse FFT inputs/scores/selections; consistent with batch-shape-dependent float32 kernel roundoff. The fitted forecast RMS-relative discrepancy is about0.00295%, and maximum discrepancy is0.00617basispoints. This is not a bitwise-CUDA-equivalence claim or a guarantee for every possible input.",
+        "rationale": "Retain raw-return tolerance0.01basispoint as the primary observable-unit criterion, add normalized maximum and RMS-relative guards1e-4; the original2e-5 normalized guard was more restrictive than this documented implementation-agreement criterion. No model hyperparameter, data split, fitting objective, calibration rule or test outcome informed this numerical decision."
+      },
+      "numerical_acceptance_sha256": "adfdf8fa8a1b0dff169dfab19d081849e0594de23e08d7ca45d8193b009d9a1e",
+      "source_test_predictions": "fresh_timemixerpp_seed_19/seed_19/test_predictions.npz",
+      "test_predictions_sha256": "9a0db24730c8e7fcaac1ee80b8ac9328a9e2c4a275179ee5629426fd4d38c014",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_timemixerpp_seed_19/seed_19/candidate_01/best.pt",
+          "checkpoint_sha256": "bb60ccfe5b93ac8f78b0c52214e0a57e3da75202079c927f1542c7ec85d7ff09",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_timemixerpp_seed_19/seed_19/candidate_02/best.pt",
+          "checkpoint_sha256": "cf8e2bd650978dbd1d25cdc8ed3f0c0a3d66c68ac5526ba1d3558d480f20e638",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 37,
+      "source_worker": "fresh_timemixerpp_seed_37",
+      "source_run": "fresh_timemixerpp_seed_37/seed_37",
+      "source_result_sha256": "c6c2322efe384bc7620824e45f596df9a1675e81ed6d6325f5aa468265a2979e",
+      "source_paired_losses_sha256": "6f9594dc438547fbd363e8fd1b70620af093ba39ecc95d1d3b44244302f3abb3",
+      "execution_protocol_source": "fresh_timemixerpp_seed_37/protocol.json",
+      "execution_protocol_sha256": "f624c85e32bcf18e2f19b791560c8507e7c7be0378c18375a93628df6a1edb27",
+      "execution_protocol_seeds": [
+        37
+      ],
+      "registered_script_sha256": "f9c20a917e1133c13ccd476da5f90bc565f1741ebe253f08ff739c4ca1d89e81",
+      "numerical_acceptance": {
+        "schema": "timemixerpp-numerical-equivalence-acceptance-v2",
+        "recorded_utc": "2026-11-08T07:20:39.450780+00:00",
+        "decision": "accept grouped independent-origin evaluation at outer batch32; training remains batch64",
+        "decision_scope": "Numerical implementation equivalence, not a forecasting-performance or significance result; decided before full optimized training and test evaluation",
+        "criteria": {
+          "return_unit_max_absolute_error": 1e-06,
+          "normalized_max_absolute_error": 0.0001,
+          "normalized_relative_rms_error": 0.0001
+        },
+        "additional_requirements": "finite outputs; exact training losses/gradients; identical tested FFT top-k membership and rank",
+        "checks": {
+          "finite_all_outputs": true,
+          "all_training_checks_exact": true,
+          "all_topk_memberships_identical": true,
+          "all_topk_ranks_identical": true,
+          "return_unit_max_absolute_error": true,
+          "normalized_max_absolute_error": true,
+          "normalized_relative_rms_error": true
+        },
+        "original_strict_normalized_threshold": 2e-05,
+        "original_strict_threshold_passed": false,
+        "original_failures_retained": true,
+        "maximum_observed": {
+          "return_unit_max_absolute_error": 6.165963569088707e-07,
+          "normalized_max_absolute_error": 3.707408905029297e-05,
+          "normalized_relative_rms_error": 2.9532688625565355e-05
+        },
+        "maximum_raw_error_basis_points": 0.006165963569088707,
+        "evidence_file": "timemixerpp_cuda_diagnostic.json",
+        "evidence_sha256": "11e7fe8e419cb45ea47f7399498ef1c0cbfc7d20d4cbe5786939758f0f17a1b9",
+        "evidence_states": [
+          "random_initialization",
+          "two_training_updates",
+          "existing_fitted_checkpoint"
+        ],
+        "checkpoint_sha256": "21465b171121f8466b58cff3cf33d5b649b80687b73da0966fc01603b2d93b35",
+        "tested_validation_origins": 32,
+        "tested_outer_batches": [
+          1,
+          4,
+          16,
+          32
+        ],
+        "production_outer_inference_batch": 32,
+        "training_batch_size": 64,
+        "fast_module_sha256": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+        "torch_cuda_version": "2.8.0+cu128",
+        "TF32": "disabled for matmul and cuDNN in both runner and diagnostic",
+        "interpretation": "Batch1 outputs are exact. Grouped CUDA differences start in finer-scale block outputs, with exact coarse FFT inputs/scores/selections; consistent with batch-shape-dependent float32 kernel roundoff. The fitted forecast RMS-relative discrepancy is about0.00295%, and maximum discrepancy is0.00617basispoints. This is not a bitwise-CUDA-equivalence claim or a guarantee for every possible input.",
+        "rationale": "Retain raw-return tolerance0.01basispoint as the primary observable-unit criterion, add normalized maximum and RMS-relative guards1e-4; the original2e-5 normalized guard was more restrictive than this documented implementation-agreement criterion. No model hyperparameter, data split, fitting objective, calibration rule or test outcome informed this numerical decision."
+      },
+      "numerical_acceptance_sha256": "adfdf8fa8a1b0dff169dfab19d081849e0594de23e08d7ca45d8193b009d9a1e",
+      "source_test_predictions": "fresh_timemixerpp_seed_37/seed_37/test_predictions.npz",
+      "test_predictions_sha256": "05a58be64ee2490dc847ae95bfddf454cf71e11e3c9adccacfd274e8435e47a8",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_timemixerpp_seed_37/seed_37/candidate_01/best.pt",
+          "checkpoint_sha256": "0283cc6534f8195c0b434362963ab65131ed9deabed35cd5176cc1e845070272",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_timemixerpp_seed_37/seed_37/candidate_02/best.pt",
+          "checkpoint_sha256": "752be5c41361c85acf163d880d67ddd4a5818abb5fb3f8a31abaa25779b556a3",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    },
+    {
+      "seed": 73,
+      "source_worker": "fresh_timemixerpp_seed_73",
+      "source_run": "fresh_timemixerpp_seed_73/seed_73",
+      "source_result_sha256": "623f1594b539dc37180f5fd09ef1c628c95ca5201472704f450c247f271c5ec5",
+      "source_paired_losses_sha256": "ae19f6c435865ee1df7d2550d7733f2e5538d75b8288dc03683778b180378905",
+      "execution_protocol_source": "fresh_timemixerpp_seed_73/protocol.json",
+      "execution_protocol_sha256": "fa750891f26c07d5d40960653a9a06a2f43395b18ba284d1e2e384665afd739c",
+      "execution_protocol_seeds": [
+        73
+      ],
+      "registered_script_sha256": "f9c20a917e1133c13ccd476da5f90bc565f1741ebe253f08ff739c4ca1d89e81",
+      "numerical_acceptance": {
+        "schema": "timemixerpp-numerical-equivalence-acceptance-v2",
+        "recorded_utc": "2026-11-08T07:20:39.450780+00:00",
+        "decision": "accept grouped independent-origin evaluation at outer batch32; training remains batch64",
+        "decision_scope": "Numerical implementation equivalence, not a forecasting-performance or significance result; decided before full optimized training and test evaluation",
+        "criteria": {
+          "return_unit_max_absolute_error": 1e-06,
+          "normalized_max_absolute_error": 0.0001,
+          "normalized_relative_rms_error": 0.0001
+        },
+        "additional_requirements": "finite outputs; exact training losses/gradients; identical tested FFT top-k membership and rank",
+        "checks": {
+          "finite_all_outputs": true,
+          "all_training_checks_exact": true,
+          "all_topk_memberships_identical": true,
+          "all_topk_ranks_identical": true,
+          "return_unit_max_absolute_error": true,
+          "normalized_max_absolute_error": true,
+          "normalized_relative_rms_error": true
+        },
+        "original_strict_normalized_threshold": 2e-05,
+        "original_strict_threshold_passed": false,
+        "original_failures_retained": true,
+        "maximum_observed": {
+          "return_unit_max_absolute_error": 6.165963569088707e-07,
+          "normalized_max_absolute_error": 3.707408905029297e-05,
+          "normalized_relative_rms_error": 2.9532688625565355e-05
+        },
+        "maximum_raw_error_basis_points": 0.006165963569088707,
+        "evidence_file": "timemixerpp_cuda_diagnostic.json",
+        "evidence_sha256": "11e7fe8e419cb45ea47f7399498ef1c0cbfc7d20d4cbe5786939758f0f17a1b9",
+        "evidence_states": [
+          "random_initialization",
+          "two_training_updates",
+          "existing_fitted_checkpoint"
+        ],
+        "checkpoint_sha256": "21465b171121f8466b58cff3cf33d5b649b80687b73da0966fc01603b2d93b35",
+        "tested_validation_origins": 32,
+        "tested_outer_batches": [
+          1,
+          4,
+          16,
+          32
+        ],
+        "production_outer_inference_batch": 32,
+        "training_batch_size": 64,
+        "fast_module_sha256": "e14c45197d41b0f9115c2498de0622773b82e29aeae4eef82c5d39315558923b",
+        "torch_cuda_version": "2.8.0+cu128",
+        "TF32": "disabled for matmul and cuDNN in both runner and diagnostic",
+        "interpretation": "Batch1 outputs are exact. Grouped CUDA differences start in finer-scale block outputs, with exact coarse FFT inputs/scores/selections; consistent with batch-shape-dependent float32 kernel roundoff. The fitted forecast RMS-relative discrepancy is about0.00295%, and maximum discrepancy is0.00617basispoints. This is not a bitwise-CUDA-equivalence claim or a guarantee for every possible input.",
+        "rationale": "Retain raw-return tolerance0.01basispoint as the primary observable-unit criterion, add normalized maximum and RMS-relative guards1e-4; the original2e-5 normalized guard was more restrictive than this documented implementation-agreement criterion. No model hyperparameter, data split, fitting objective, calibration rule or test outcome informed this numerical decision."
+      },
+      "numerical_acceptance_sha256": "adfdf8fa8a1b0dff169dfab19d081849e0594de23e08d7ca45d8193b009d9a1e",
+      "source_test_predictions": "fresh_timemixerpp_seed_73/seed_73/test_predictions.npz",
+      "test_predictions_sha256": "7cc5ea62abd258779bb1ecf14014cdd44a8a13f9d2224bdcc4390b3949ad00a2",
+      "full_test_predictions_present_at_merge": true,
+      "candidate_checkpoints": [
+        {
+          "candidate": 1,
+          "source_checkpoint": "fresh_timemixerpp_seed_73/seed_73/candidate_01/best.pt",
+          "checkpoint_sha256": "07486882c06822c2fcc41a3f08f2a079af6b7fbdf971112f5414fe28382f0bc6",
+          "checkpoint_present_at_merge": true
+        },
+        {
+          "candidate": 2,
+          "source_checkpoint": "fresh_timemixerpp_seed_73/seed_73/candidate_02/best.pt",
+          "checkpoint_sha256": "a748b8efd116d57ffff0ad2407d0690aff95f9fcd94dc1b64bce5b14a6c3b506",
+          "checkpoint_present_at_merge": true
+        }
+      ],
+      "test_targets_float32_bytes_sha256": "e2e87323ab4e42df546ad3b1876944fd565dabc0b70527377dc5368656c0ffd2"
+    }
+  ],
+  "copied_artifacts": [
+    {
+      "seed": null,
+      "source": "fresh_timemixerpp_fast/protocol.json",
+      "destination": "global_registered_protocol.json",
+      "sha256": "2cf14d0fa08c42bf445c57624a07934abb7e025554b5d4bbc1cfb5bbab67ef4d",
+      "bytes": 8217
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/calibration.json",
+      "destination": "seed_1/calibration.json",
+      "sha256": "214c59cb56424a081ad8ea1fc4c977e9a61bb22cc5705e9c5c630bd0dfa4da66",
+      "bytes": 966
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/candidate_01/complete.json",
+      "destination": "seed_1/candidate_01/complete.json",
+      "sha256": "07b8a01a5f1d2774908adb4f6c046c0723cff14568d4a44da595ecface03e13f",
+      "bytes": 383
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/candidate_01/training_history.csv",
+      "destination": "seed_1/candidate_01/training_history.csv",
+      "sha256": "d6e8d4da96f7c76c23e877fb49e71416582b1ba420d1ce5886435b4dbbfb9367",
+      "bytes": 2060
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/candidate_02/complete.json",
+      "destination": "seed_1/candidate_02/complete.json",
+      "sha256": "3c183520cd90ada9db60bb5cbf7ca5ee7bb40de54e76a6964eb2d1efd09fd265",
+      "bytes": 384
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/candidate_02/training_history.csv",
+      "destination": "seed_1/candidate_02/training_history.csv",
+      "sha256": "9039a9def20df10b631b40ae145ab1b8a35a43b7a273570ddcc2b7d667706557",
+      "bytes": 2418
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/paired_losses.npz",
+      "destination": "seed_1/paired_losses.npz",
+      "sha256": "4f5aa34473ce4e65d1705974cc6bce0bd79125b44b3f2fd469a49a849a4ebdc8",
+      "bytes": 24649
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/result.json",
+      "destination": "seed_1/result.json",
+      "sha256": "46b9024d0226250e6b5a057d5b32bfaf0daeb547c65a75712353cf1eb7bc3d97",
+      "bytes": 2692
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/seed_1/selected_candidate.json",
+      "destination": "seed_1/selected_candidate.json",
+      "sha256": "07b8a01a5f1d2774908adb4f6c046c0723cff14568d4a44da595ecface03e13f",
+      "bytes": 383
+    },
+    {
+      "seed": 1,
+      "source": "fresh_timemixerpp_fast/protocol.json",
+      "destination": "seed_1/execution_protocol.json",
+      "sha256": "2cf14d0fa08c42bf445c57624a07934abb7e025554b5d4bbc1cfb5bbab67ef4d",
+      "bytes": 8217
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/calibration.json",
+      "destination": "seed_7/calibration.json",
+      "sha256": "2ace3c2de6c85e836beabe412d52b1dc2d602380571ca860065b3e14fe34569b",
+      "bytes": 968
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/candidate_01/complete.json",
+      "destination": "seed_7/candidate_01/complete.json",
+      "sha256": "9cb0e131b34c5a6ee468a5eea05ef9fef8f1ff0e4f94dbcd936905e131950a84",
+      "bytes": 381
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/candidate_01/training_history.csv",
+      "destination": "seed_7/candidate_01/training_history.csv",
+      "sha256": "fe8a04a5750d5beaf9ce925c907b8ab92b2aa33a2737e8acf4d7758bc466cd22",
+      "bytes": 2072
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/candidate_02/complete.json",
+      "destination": "seed_7/candidate_02/complete.json",
+      "sha256": "4b78307440bfeb686bde4831983cb9a442242d4e31829b020e530ffec251c800",
+      "bytes": 383
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/candidate_02/training_history.csv",
+      "destination": "seed_7/candidate_02/training_history.csv",
+      "sha256": "0a894779905fb1d7b4b74a809591f3deee24b330a9ddd39bed501c875843774e",
+      "bytes": 2732
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/paired_losses.npz",
+      "destination": "seed_7/paired_losses.npz",
+      "sha256": "d4a35b43bc1e15a9c0b27ed02156423511861d92643e1d5f737ffdefab51f40d",
+      "bytes": 24591
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/result.json",
+      "destination": "seed_7/result.json",
+      "sha256": "d74aeea0305a9012998488bf9ea9e9f600a4caf03c58089c420dcad529c93ddc",
+      "bytes": 2688
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/seed_7/selected_candidate.json",
+      "destination": "seed_7/selected_candidate.json",
+      "sha256": "9cb0e131b34c5a6ee468a5eea05ef9fef8f1ff0e4f94dbcd936905e131950a84",
+      "bytes": 381
+    },
+    {
+      "seed": 7,
+      "source": "fresh_timemixerpp_seed_7/protocol.json",
+      "destination": "seed_7/execution_protocol.json",
+      "sha256": "87dd84940e9ac80e293d531cd4dabed40e4238f9d779f1fcd30861e6e6a7e31a",
+      "bytes": 8186
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/calibration.json",
+      "destination": "seed_19/calibration.json",
+      "sha256": "81da4fa0388d72bc214c7a8ab7b0854eb492c6e93476b79a94c3d2fa9ab0df88",
+      "bytes": 971
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/candidate_01/complete.json",
+      "destination": "seed_19/candidate_01/complete.json",
+      "sha256": "d49eb1a6a901215b17d7b801a2981cd1ec72dba55266121fbeed774d22776405",
+      "bytes": 384
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/candidate_01/training_history.csv",
+      "destination": "seed_19/candidate_01/training_history.csv",
+      "sha256": "7ee7ced9f1307911380c48d2fdd2ef67b19c11565f0e34a4e6e21b8a716357f8",
+      "bytes": 1966
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/candidate_02/complete.json",
+      "destination": "seed_19/candidate_02/complete.json",
+      "sha256": "5e0e6a98a7c08fe0324c39ded6b622209676ddc4e0e1f9f309b0afa2b1795570",
+      "bytes": 385
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/candidate_02/training_history.csv",
+      "destination": "seed_19/candidate_02/training_history.csv",
+      "sha256": "6c77061e8c8828770a155dc3b2d4f065d4ad3917d83634995fbdb181357c96cd",
+      "bytes": 2623
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/paired_losses.npz",
+      "destination": "seed_19/paired_losses.npz",
+      "sha256": "0b004ee2770d7f0e0eb2793bbc1e7eae3e72f1cf881ac0f42bc3c3303907bce7",
+      "bytes": 24610
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/result.json",
+      "destination": "seed_19/result.json",
+      "sha256": "93976276a5f01087fb7bf8943205eed79606b88c2e65442834f00bad8d8cb8f8",
+      "bytes": 2698
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/seed_19/selected_candidate.json",
+      "destination": "seed_19/selected_candidate.json",
+      "sha256": "d49eb1a6a901215b17d7b801a2981cd1ec72dba55266121fbeed774d22776405",
+      "bytes": 384
+    },
+    {
+      "seed": 19,
+      "source": "fresh_timemixerpp_seed_19/protocol.json",
+      "destination": "seed_19/execution_protocol.json",
+      "sha256": "b27b902d8661feb8b178e724fd178f2be5c8b468f41819c31c2fee3576d8ec16",
+      "bytes": 8187
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/calibration.json",
+      "destination": "seed_37/calibration.json",
+      "sha256": "6b5b0987dc8e92e417373a179ad9028e45ee4668384bf224934ca53dc42f9980",
+      "bytes": 976
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/candidate_01/complete.json",
+      "destination": "seed_37/candidate_01/complete.json",
+      "sha256": "6cd3ab9cfe74a90430db69f1b15ca1c177577b7d3767ea57465b88e2535c5761",
+      "bytes": 384
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/candidate_01/training_history.csv",
+      "destination": "seed_37/candidate_01/training_history.csv",
+      "sha256": "eca563a13eda97353aecbbef3104eaa4af39c16277436310d448fcea700c58a0",
+      "bytes": 2069
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/candidate_02/complete.json",
+      "destination": "seed_37/candidate_02/complete.json",
+      "sha256": "4034db09dc3c1699f4123be1fd0cb17d2f995875d85b7e56eb4b4567a8a1677c",
+      "bytes": 384
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/candidate_02/training_history.csv",
+      "destination": "seed_37/candidate_02/training_history.csv",
+      "sha256": "3f3cfa14b8a0b09b8b5b17094abf4babc2c3c67e54bc4569dd90a660f0f2d1aa",
+      "bytes": 2508
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/paired_losses.npz",
+      "destination": "seed_37/paired_losses.npz",
+      "sha256": "6f9594dc438547fbd363e8fd1b70620af093ba39ecc95d1d3b44244302f3abb3",
+      "bytes": 24616
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/result.json",
+      "destination": "seed_37/result.json",
+      "sha256": "c6c2322efe384bc7620824e45f596df9a1675e81ed6d6325f5aa468265a2979e",
+      "bytes": 2696
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/seed_37/selected_candidate.json",
+      "destination": "seed_37/selected_candidate.json",
+      "sha256": "6cd3ab9cfe74a90430db69f1b15ca1c177577b7d3767ea57465b88e2535c5761",
+      "bytes": 384
+    },
+    {
+      "seed": 37,
+      "source": "fresh_timemixerpp_seed_37/protocol.json",
+      "destination": "seed_37/execution_protocol.json",
+      "sha256": "f624c85e32bcf18e2f19b791560c8507e7c7be0378c18375a93628df6a1edb27",
+      "bytes": 8187
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/calibration.json",
+      "destination": "seed_73/calibration.json",
+      "sha256": "f96be21709f45ba27cfed304c788c11c706a7ba218fb5feb59d50cd6bc7edea1",
+      "bytes": 964
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/candidate_01/complete.json",
+      "destination": "seed_73/candidate_01/complete.json",
+      "sha256": "b0c2b099fd5cc93aca75a75ca8acedeac131d91ce75b215b5dbe89285bc2724b",
+      "bytes": 384
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/candidate_01/training_history.csv",
+      "destination": "seed_73/candidate_01/training_history.csv",
+      "sha256": "af40532bd7126ed7515d9f94cb17cc072ee203bd9447851cb4017db0d46ea9a3",
+      "bytes": 1963
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/candidate_02/complete.json",
+      "destination": "seed_73/candidate_02/complete.json",
+      "sha256": "67ba408f3d3321f469550eaa68b87ded07346c4a5655df07a93895eaaf0e83f4",
+      "bytes": 385
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/candidate_02/training_history.csv",
+      "destination": "seed_73/candidate_02/training_history.csv",
+      "sha256": "51bfc2479156ae48435421917118760291de8988cd2c44644b0657df1229dcd5",
+      "bytes": 2403
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/paired_losses.npz",
+      "destination": "seed_73/paired_losses.npz",
+      "sha256": "ae19f6c435865ee1df7d2550d7733f2e5538d75b8288dc03683778b180378905",
+      "bytes": 24575
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/result.json",
+      "destination": "seed_73/result.json",
+      "sha256": "623f1594b539dc37180f5fd09ef1c628c95ca5201472704f450c247f271c5ec5",
+      "bytes": 2700
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/seed_73/selected_candidate.json",
+      "destination": "seed_73/selected_candidate.json",
+      "sha256": "b0c2b099fd5cc93aca75a75ca8acedeac131d91ce75b215b5dbe89285bc2724b",
+      "bytes": 384
+    },
+    {
+      "seed": 73,
+      "source": "fresh_timemixerpp_seed_73/protocol.json",
+      "destination": "seed_73/execution_protocol.json",
+      "sha256": "fa750891f26c07d5d40960653a9a06a2f43395b18ba284d1e2e384665afd739c",
+      "bytes": 8187
+    }
+  ],
+  "summary_sha256": "ebf966a4ced16fa29fedc8ceb5df029fdb05fd31ecf79f859b3757e4b0008283",
+  "assembled_protocol_sha256": "85798cdb21392f27392d0bd7e79b103fb68e4c6d6827349dca765c82279a6900",
+  "source_script_sha256": "c2e3d84b24c28941144fea87ea92e6019150561b312bdc5a2f02ae02546d8dfe",
+  "compact_artifact_note": "Recorded source checkpoint/prediction paths are relative to --root. They are genuine source artifacts; they are not asserted to exist in this compact assembly."
+}

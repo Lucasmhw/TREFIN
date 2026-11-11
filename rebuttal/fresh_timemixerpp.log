@@ -1,0 +1,1 @@
+{"event": "epoch", "family": "timemixerpp", "seed": 1, "candidate": 1, "epoch": 1, "optimizer_updates": 34, "training_loss": 0.9064590930938721, "validation_energy_score": 0.06405056127630104, "validation_mse": 0.0002904655898971231, "learning_rate": 0.000999753282650064, "epoch_seconds": 85.557124376297}

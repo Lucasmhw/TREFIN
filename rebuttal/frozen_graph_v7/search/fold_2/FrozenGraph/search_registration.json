@@ -1,0 +1,91 @@
+{
+  "schema": "trefin-frozen-graph-v7-validation-search",
+  "fold": 2,
+  "variant": "FrozenGraph",
+  "training_seed": 1,
+  "candidates_in_tie_break_order": [
+    {
+      "id": "base",
+      "model": {},
+      "training": {}
+    },
+    {
+      "id": "slow_graph",
+      "model": {
+        "graph_refresh": 0.02
+      },
+      "training": {}
+    },
+    {
+      "id": "stronger_dynamics",
+      "model": {
+        "residual_scale": 0.05,
+        "graph_refresh": 0.1
+      },
+      "training": {}
+    },
+    {
+      "id": "weaker_state_supervision",
+      "model": {},
+      "training": {
+        "lambda_concept": 0.1,
+        "lambda_graph": 0.02
+      }
+    }
+  ],
+  "base_configuration_sha256": "19a0a2aa5b83e6495000fc18d2476772ee6302671cbebf9cd7b3258e8d92e763",
+  "prepared_sha256": {
+    "prepared_arrays.npz": "a8c1ff019c49ca86c6aae61c018e43f962f167540934322bd680de827dce18a0",
+    "prepared_metadata.json": "e14abeae457a5e2957b0078474b0d703d6fbe004e11a1a33d6ccb45a02928f18"
+  },
+  "source_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "trainer.py": "3391e67a5ce3b484acb2dc9634507f897718d6cccb9449ca2adb797479ff9e85",
+    "losses.py": "a6288b562db7bb30cf5da4e3d73ab1d458626ab3c6651f766ef8fbee028dc368",
+    "calibration.py": "e38d49ba04d31899f957ba9c73b638dc3cbc13530f9ae18fb62a550039a7ecbf",
+    "metrics.py": "a4e96bdba0fc81d8483c66ea524c0a558499f5753d70436be60ef0ba51ac163c",
+    "experiment.py": "c94f73e3e376c44bde9f5a775dd1634917e594f3d9a995eb21b1d81686d477cc",
+    "utils.py": "b349cde603a18ed52684adfb3c090db90330951d678de0b053f6be9a0d1d746d"
+  },
+  "implementation_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "protocol.py": "a4a1c3f30e649a669dabd0d1f16172219efb13ce3c52a1684b5837d96202fdbd",
+    "search_validation.py": "904431231b36b231c416bf1eb84cc02b564248f76e1ed8ac98bda1b06fdadcac",
+    "freeze_selections.py": "f06ac1a6198851cb2a6f0e878c8c4650bde3681d7b2c12f570bfc0f0b7909335",
+    "run_selected.py": "c510e1d8319223b5b5a830ce15107e18666a8c8958375c338355dda8aced3f66"
+  },
+  "device": "cuda",
+  "threads": 2,
+  "training_budget": {
+    "epoch_ceiling": 20,
+    "patience": 6,
+    "batch_size": 64,
+    "train_scenarios": 16,
+    "validation_scenarios": 64
+  },
+  "checkpoint_selection": "validation ES before mean calibration; original trainer minimum delta 1e-6",
+  "candidate_selection": "minimum calibrated validation ES; exact ties follow registered candidate order",
+  "positive_mean_calibration": {
+    "split": "validation",
+    "bounds": [
+      0.05,
+      1.0
+    ],
+    "tolerance": 1e-05
+  },
+  "nominal_slots": 4,
+  "known_duplicate": {
+    "FrozenGraph/slow_graph": "FrozenGraph/base"
+  },
+  "duplicate_policy": "skip identical effective candidate; record alias; never reallocate budget",
+  "test_evaluation_permitted": false,
+  "test_used_for_selection": false,
+  "guard": {
+    "train_count": 2638,
+    "validation_count": 500,
+    "excluded_test_origin_count": 496,
+    "test_split_key_removed": true,
+    "test_dataset_construction_raises_KeyError": true,
+    "origin_arrays_physically_subset": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "global_selection_sha256": "140699433fd2713200068945e9696aa6786cd80bff21ae4ce00dac6b7d823bf3",
+  "selection_sha256": "203e7b2d04e5c6e58936244696facda01ca4d159092ed0c7f305c49f7419dd40",
+  "registration_sha256": "0be267dd560b295d3956dad9b271689433b5f91f473d5d92a76749dd4fdc482e",
+  "source_sha256": {
+    "model.py": "ca3dba124637c69fd02495bf336f5de3bb60c1a32d8501680fc559aa948a0ca6",
+    "trainer.py": "3391e67a5ce3b484acb2dc9634507f897718d6cccb9449ca2adb797479ff9e85",
+    "losses.py": "a6288b562db7bb30cf5da4e3d73ab1d458626ab3c6651f766ef8fbee028dc368",
+    "calibration.py": "e38d49ba04d31899f957ba9c73b638dc3cbc13530f9ae18fb62a550039a7ecbf",
+    "metrics.py": "a4e96bdba0fc81d8483c66ea524c0a558499f5753d70436be60ef0ba51ac163c",
+    "experiment.py": "c94f73e3e376c44bde9f5a775dd1634917e594f3d9a995eb21b1d81686d477cc",
+    "utils.py": "b349cde603a18ed52684adfb3c090db90330951d678de0b053f6be9a0d1d746d"
+  },
+  "base_configuration_sha256": "98a2a710205c44d4b14792cebd341dfd3bf98a6b6ca12fc9f0bc283aae29b2f4",
+  "prepared_sha256": {
+    "prepared_arrays.npz": "298676d881e32367f3b0e5ea64904feb59831dece0a336ec82236086491750f0",
+    "prepared_metadata.json": "b166c1f84722e99f4f05d40a57ce12746e5e8a10a56261afa86e3d297dd075e5"
+  },
+  "seed": 19,
+  "fold": 1,
+  "variant": "Full",
+  "candidate": "stronger_dynamics",
+  "test_used_for_selection": false,
+  "all_six_selections_frozen": true,
+  "effective_fingerprint": "5d7868a4579f11c7e3e0c02291b35dbdc82c8a46b7bcc95e461af6f2a5c84a54"
+}

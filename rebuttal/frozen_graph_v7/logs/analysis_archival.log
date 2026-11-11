@@ -1,0 +1,43 @@
+Starting analysis
+Verified fold=1 seed=1 variant=Full
+Verified fold=1 seed=1 variant=FrozenGraph
+Verified fold=1 seed=7 variant=Full
+Verified fold=1 seed=7 variant=FrozenGraph
+Verified fold=1 seed=19 variant=Full
+Verified fold=1 seed=19 variant=FrozenGraph
+Verified fold=1 seed=37 variant=Full
+Verified fold=1 seed=37 variant=FrozenGraph
+Verified fold=1 seed=73 variant=Full
+Verified fold=1 seed=73 variant=FrozenGraph
+Verified fold=2 seed=1 variant=Full
+Verified fold=2 seed=1 variant=FrozenGraph
+Verified fold=2 seed=7 variant=Full
+Verified fold=2 seed=7 variant=FrozenGraph
+Verified fold=2 seed=19 variant=Full
+Verified fold=2 seed=19 variant=FrozenGraph
+Verified fold=2 seed=37 variant=Full
+Verified fold=2 seed=37 variant=FrozenGraph
+Verified fold=2 seed=73 variant=Full
+Verified fold=2 seed=73 variant=FrozenGraph
+Verified fold=3 seed=1 variant=Full
+Verified fold=3 seed=1 variant=FrozenGraph
+Verified fold=3 seed=7 variant=Full
+Verified fold=3 seed=7 variant=FrozenGraph
+Verified fold=3 seed=19 variant=Full
+Verified fold=3 seed=19 variant=FrozenGraph
+Verified fold=3 seed=37 variant=Full
+Verified fold=3 seed=37 variant=FrozenGraph
+Verified fold=3 seed=73 variant=Full
+Verified fold=3 seed=73 variant=FrozenGraph
+{"status": "complete", "runs": 30, "output": "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/frozen_graph_v7/analysis"}
+Starting compact_archive
+Traceback (most recent call last):
+  File "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/frozen_graph_v7/implementation/build_compact_archive.py", line 152, in <module>
+    run(p.parse_args())
+  File "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/frozen_graph_v7/implementation/build_compact_archive.py", line 108, in run
+    shape,dtype=npz_shape(path,'samples')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/trefin_rebuttal_20261108/rebuttal/frozen_graph_v7/implementation/build_compact_archive.py", line 21, in npz_shape
+    shape,_,dtype=np.lib.format._read_array_header(stream,version)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'numpy.lib.format' has no attribute '_read_array_header'. Did you mean: 'read_array_header_1_0'?

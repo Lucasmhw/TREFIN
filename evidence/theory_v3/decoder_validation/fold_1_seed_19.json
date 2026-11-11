@@ -1,0 +1,17 @@
+{
+  "fold": 1,
+  "seed": 19,
+  "checkpoint_sha256": "da690d944587aad4c7d1fca2b74681001908f163cf028b261674eeb02de3b2f3",
+  "dense_head_blocks": 192,
+  "finite_head_pairs": 576,
+  "factor_pairs": 96,
+  "max_dense_ratio": 0.9984910184668883,
+  "max_head_difference_ratio": 0.17250914178865714,
+  "max_factor_difference_ratio": 0.021665127294039566,
+  "max_covariance_factor_identity_error": 2.531308496145357e-13,
+  "max_precision_lower_violation": 0.0,
+  "max_precision_diagonal_upper_violation": 0.0,
+  "max_nu_interval_violation": 0.0,
+  "normalization_clamp_inactive": true,
+  "passed": true
+}

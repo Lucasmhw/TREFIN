@@ -1,0 +1,16 @@
+{
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "torch": "2.8.0+cu128",
+  "cuda_available": true,
+  "cuda_version": "12.8",
+  "numpy": "2.3.2",
+  "pandas": "2.3.3",
+  "scipy": "1.18.1",
+  "scikit_learn": "1.9.1",
+  "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "cublas_workspace_config": ":4096:8",
+  "deterministic_algorithms": false,
+  "gpu": "NVIDIA RTX 6000D",
+  "gpu_count": 1,
+  "git_commit": null
+}
